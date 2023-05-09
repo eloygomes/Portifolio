@@ -7,6 +7,7 @@ import NavBar from './Component/NavBar'
 import Session02 from './Component/Session02'
 import Session03 from './Component/Session03'
 import Session04 from './Component/Session04'
+import Session05 from './Component/Session05'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
       <Session02/>
       <Session03/>
       <Session04/>
+      <Session05/>
     </>
   )
 }

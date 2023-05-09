@@ -7,8 +7,8 @@ function Session03() {
         <div className="container mx-auto mt-40">
           <div className="flex flex-row">
             <div className="w-[50%] flex flex-col">
-              <h1 className="">Portifolio</h1>
-              <p className="max-w-md text-xs">
+              <h1 className="">Portifólio</h1>
+              <p className="max-w-md py-5 text-xs">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
                 unde, dolore, nam ullam commodi laboriosam aliquid odit harum
                 doloremque ex labore totam veniam quod assumenda, nulla earum

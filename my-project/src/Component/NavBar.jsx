@@ -5,11 +5,11 @@ function NavBar() {
     <>
       <div className="bg-[#19142A] w-screen py-5 fixed left-0 top-0">
         <div className="flex flex-row justify-between container mx-auto ">
-          <div className="font-bold text-xl">
-            <a href="#">EVG</a>
+          <div className="font-black text-2xl">
+            <a className="font-extrabold" href="#">EVG</a>
           </div>
           <div className="w-[40%] flex flex-row justify-around cursor-pointer">
-            <a href="#bio" className="pl-1">
+            <a href="#" className="pl-1">
               BIO
             </a>
             <a href="#carreira" className="pl-1">
