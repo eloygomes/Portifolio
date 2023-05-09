@@ -8,12 +8,11 @@ function Session04() {
   return (
     <>
       <div
-        className="bg-[#2A2344] w-screen h-screen flex flex-row"
+        className="bg-[#2A2344] w-screen h-screen items-center flex flex-row"
         id="carreira"
       >
-        <div className="w-full p-4 grid mt-48 overflow-x-auto ">
-          {/* <TimelineYears /> */}
-          {/* <Timeline /> */}
+        <div className="w-full p-4 grid  overflow-x-auto ">
+          <h1 className="text-6xl py-10 absolute mt-[-150px]">Carreira</h1>
           <KrabSession/>
         </div>
       </div>
