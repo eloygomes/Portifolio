@@ -10,7 +10,7 @@ function Session04() {
         id="carreira"
       >
         {/* <div className="w-full p-4  grid h-[50%] overflow-x-auto "> */}
-        <div className="container mx-auto  grid h-[50%] overflow-x-auto ">
+        <div className="container mx-auto  grid h-[50%] overflow-x-auto   ">
           <h1 className="text-6xl py-10 absolute mt-[-150px]">Carreira</h1>
           <p>
             Na seção abaixo, apresento um panorama completo da minha experiência

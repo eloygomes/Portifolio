@@ -1,10 +1,11 @@
-import React from "react";
+// import React from "react";
+import HorizontalScroll from "../HorizontalScroll";
 import EachSession from "./eachSession";
 
 function KrabSession() {
   return (
     <div>
-      <div className="wrapper   flex flex-row ">
+      <div className="wrapper flex flex-row ">
         {/* <ol className="w-max grid grid-rows-1 grid-cols-6"> */}
         <ol className="w-max flex flex-row ">
           <EachSession
@@ -49,6 +50,7 @@ function KrabSession() {
             jobDuration={`set/2021 a atualmente`}
             // descJob={`Folhetos, outdoors, backlights, anúncios, cartazes, documentos, catálogos, material de PDV, merchandising, diagramação de conteúdo, fotografia de produtos e eventos`}
           />
+          
         </ol>
       </div>
     </div>

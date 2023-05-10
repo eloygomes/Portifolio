@@ -1,6 +1,6 @@
-import React from "react";
+// import React from "react";
 
-function EachSession({ jobPosition, jobName, jobSegment , jobDuration, descJob }) {
+function EachSession({ jobPosition, jobName, jobSegment , jobDuration, descJob } ) {
   return (
     <div className="relative sm:mb-0 w-[300px]  h-full bottom-0">
       <div className="flex items-center">
