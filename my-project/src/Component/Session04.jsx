@@ -2,7 +2,7 @@ import React from "react";
 
 import KrabSession from "./session4/krabSession";
 
-function Session04() {
+function Session04({ openModal}) {
   return (
     <>
       <div
@@ -16,7 +16,7 @@ function Session04() {
             profissional até o presente momento.”
           </p>
           <div className="flex flex-row justify-between text-4xl font-extralight  h-[100px] ">
-            <h1 className="h-full opacity-10 hover:opacity-70 cursor-pointer">
+            <h1 className="h-full opacity-10 hover:opacity-70 cursor-pointer" onClick={openModal}>
               2017
             </h1>
             <h1 className="h-full opacity-10 hover:opacity-70 cursor-pointer">
@@ -32,7 +32,7 @@ function Session04() {
               2021...
             </h1>
           </div>
-          <KrabSession />
+          <KrabSession openModal={openModal} />
         </div>
       </div>
     </>

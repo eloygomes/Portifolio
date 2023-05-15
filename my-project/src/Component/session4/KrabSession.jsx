@@ -2,7 +2,7 @@
 
 import EachSession from "./eachSession";
 
-function KrabSession() {
+function KrabSession({ openModal}) {
   return (
     <div>
       <div className="wrapper flex flex-row  ">
@@ -13,6 +13,8 @@ function KrabSession() {
             jobName={`Empresa UM agencia & editora`}
             jobSegment={`Agencia de publicidade e editora`}
             jobDuration={`mai/2013 a out/2014`}
+            openModal={openModal}
+            
             // descJob={`Folhetos, outdoors, backlights, anúncios, cartazes, documentos, catálogos, material de PDV, merchandising, diagramação de conteúdo, fotografia de produtos e eventos.`}
           />
           <EachSession

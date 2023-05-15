@@ -1,14 +1,21 @@
 // import React from "react";
 
+
+
 function EachSession({
   jobPosition,
   jobName,
   jobSegment,
   jobDuration,
   descJob,
+  openModal,
 }) {
+  
   return (
-    <div className="relative sm:mb-0 w-[300px] h-full bottom-0 mx-2  py-8 px-5 rounded-xl border-[1px] border-[#19142A] border-solid cursor-pointer hover:bg-red-400 hover:bg-[#19142A] hover:rounded-xl drop-shadow-md">
+    <div className="relative sm:mb-0 w-[300px] h-full bottom-0 mx-2  py-8 px-5 rounded-xl border-[1px] border-[#19142A] border-solid cursor-pointer  hover:bg-[#19142A] hover:rounded-xl drop-shadow-md" onClick={()=>{
+      console.log('open Modal')
+      openModal()
+    }} >
       <div className="flex items-center">
         <div className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
           <svg
@@ -44,6 +51,7 @@ function EachSession({
           {jobDuration}
         </p>
       </div>
+      
     </div>
   );
 }
