@@ -1,15 +1,15 @@
 // import React from "react";
-import HorizontalScroll from "../HorizontalScroll";
+
 import EachSession from "./eachSession";
 
 function KrabSession() {
   return (
     <div>
-      <div className="wrapper flex flex-row ">
+      <div className="wrapper flex flex-row  ">
         {/* <ol className="w-max grid grid-rows-1 grid-cols-6"> */}
         <ol className="w-max flex flex-row ">
           <EachSession
-            jobPosition={`DESIGNER GRÁFICO            `}
+            jobPosition={`DESIGNER GRÁFICO`}
             jobName={`Empresa UM agencia & editora`}
             jobSegment={`Agencia de publicidade e editora`}
             jobDuration={`mai/2013 a out/2014`}
@@ -26,14 +26,14 @@ function KrabSession() {
             jobPosition={`DIRETOR DE ARTE`}
             jobName={`Coletek`}
             jobSegment={`Fabricante e distribuidora de materiais de informática`}
-            jobDuration={`out/2019 a set/2021`}
+            jobDuration={`jan/2015 a dez/2018`}
             // descJob={`Atuando no desenvolvimento de briefings, planejamento e execução de ações de branding e co-coordenação de equipe, junto ao time de gerentes de projetos na implementação de estratégias de conteúdo, ações digitais, gestão de ações em redes sociais, coordenação de trabalho junto ao time e emissão de relatórios de acompanhamento, criação e gestão de material on e offline(atualização e manutenção de sites, landing pages, banners, posts para mídias sociais, emails marketing, newsletters e outros, além de folhetos, outdoors, backlights, anúncios, cartazes, documentos, catálogos, material de PDV, merchandising, diagramação de conteúdo, fotografia de produtos e eventos, etc.)`}
           />
           <EachSession
             jobPosition={`SUPERVISOR DE E-COMMERCE`}
             jobName={`Coletek`}
             jobSegment={`Loja virtual / Marketplace`}
-            jobDuration={`jan/2015 a dez/2018`}
+            jobDuration={`jan/2018 a dez/2018`}
             // descJob={`Gestão da plataforma online PANDA BLACK(e-commerce voltado a produtos de informática), Atuando a frente no planejamento(pesquisa de mercado, controle de preço e estoque) e administração(gestão de equipe, pós venda, SAC) e marketing(campanhas de lançamento de produtos para clientes(B2C)).`}
           />
           <EachSession
@@ -47,7 +47,7 @@ function KrabSession() {
             jobPosition={`FULL STACK DEVELOPER`}
             jobName={`FREELANCE`}
             // jobSegment={`DESIGNER GRÁFICO`}
-            jobDuration={`set/2021 a atualmente`}
+            jobDuration={`out/2021 a atualmente`}
             // descJob={`Folhetos, outdoors, backlights, anúncios, cartazes, documentos, catálogos, material de PDV, merchandising, diagramação de conteúdo, fotografia de produtos e eventos`}
           />
           

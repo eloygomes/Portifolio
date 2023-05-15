@@ -1,8 +1,14 @@
 // import React from "react";
 
-function EachSession({ jobPosition, jobName, jobSegment , jobDuration, descJob } ) {
+function EachSession({
+  jobPosition,
+  jobName,
+  jobSegment,
+  jobDuration,
+  descJob,
+}) {
   return (
-    <div className="relative sm:mb-0 w-[300px]  h-full bottom-0">
+    <div className="relative sm:mb-0 w-[300px] h-full bottom-0 mx-2 p-8 rounded-xl border-[1px] border-[#19142A] border-solid cursor-pointer hover:bg-red-400 hover:bg-[#19142A] hover:rounded-xl">
       <div className="flex items-center">
         <div className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
           <svg
@@ -22,20 +28,20 @@ function EachSession({ jobPosition, jobName, jobSegment , jobDuration, descJob }
         <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
       </div>
       <div className="mt-3 sm:pr-8 flex flex-col">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white whitespace-nowrap">
           {jobPosition}
         </h3>
-        <h3 className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+        <h3 className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 ">
           {jobName}
         </h3>
         <h3 className="block mb-2 text-xs font-normal leading-none text-gray-400 dark:text-gray-600">
           {jobSegment}
         </h3>
-        <time className="block text-xs font-normal leading-none text-gray-100 dark:text-gray-200">
-           {descJob} 
+        <time className="block text-xs font-normal leading-none text-gray-100 dark:text-gray-200 whitespace-nowrap">
+          {descJob}
         </time>
-        <p className="text-sm font-normal text-gray-500 dark:text-gray-400 mt-1 max-w-lg">
-           {jobDuration}
+        <p className="text-xs font-normal text-gray-500 dark:text-gray-400 mt-1 max-w-lg whitespace-nowrap">
+          {jobDuration}
         </p>
       </div>
     </div>

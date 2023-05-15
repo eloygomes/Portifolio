@@ -3,7 +3,7 @@
 function NavBar() {
   return (
     <>
-      <div className="bg-[#19142A] w-screen py-5 fixed left-0 top-0">
+      <div className="bg-[#19142A] w-screen py-5 fixed left-0 top-0 drop-shadow-md z-10">
         <div className="flex flex-row justify-between container mx-auto ">
           <div className="font-black text-2xl">
             <a className="font-extrabold" href="#">EVG</a>

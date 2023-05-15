@@ -22,7 +22,7 @@ function App() {
       <Session03/>
       <Session04/>
       <Session05/>
-      <S6/>
+      {/* <S6/> */}
     </>
   )
 }

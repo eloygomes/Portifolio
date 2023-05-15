@@ -20,11 +20,8 @@ function TimelineYears() {
           <h1 className="py-5">2019</h1>
         </div>
         <div className="w-[20%]">
-          <h1 className="py-5">2021</h1>
-        </div>
-        <div className="w-[20%]">
-          <h1 className="py-5">2022</h1>
-        </div>        
+          <h1 className="py-5">2021...</h1>
+        </div> 
       </div>
     </>
   );
