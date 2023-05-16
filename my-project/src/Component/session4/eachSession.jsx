@@ -1,7 +1,3 @@
-// import React from "react";
-
-
-
 function EachSession({
   jobPosition,
   jobName,
@@ -9,13 +5,29 @@ function EachSession({
   jobDuration,
   descJob,
   openModal,
+  setModalJobName,
+  setModalJobSegment,
+  setModalJobDuration,
+  setModalDescJob,
+  setMPos,
 }) {
-  
+  const customStyles = () => {
+    setModalJobName(jobName);
+    setModalJobSegment(jobSegment);
+    setModalJobDuration(jobDuration);
+    setModalDescJob(descJob);
+    setMPos(jobPosition);
+  };
+
   return (
-    <div className="relative sm:mb-0 w-[300px] h-full bottom-0 mx-2  py-8 px-5 rounded-xl border-[1px] border-[#19142A] border-solid cursor-pointer  hover:bg-[#19142A] hover:rounded-xl drop-shadow-md" onClick={()=>{
-      console.log('open Modal')
-      openModal()
-    }} >
+    <div
+      className="relative sm:mb-0 w-[300px] h-full bottom-0 mx-2  py-8 px-5 rounded-xl border-[1px] border-[#19142A] border-solid cursor-pointer  hover:bg-[#19142A] hover:rounded-xl hover:border-[#d6223b] drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 "
+      onClick={() => {
+        console.log("open Modal");
+        openModal();
+        customStyles();
+      }}
+    >
       <div className="flex items-center">
         <div className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
           <svg
@@ -45,13 +57,12 @@ function EachSession({
           {jobSegment}
         </h3>
         <time className="block text-xs font-normal leading-none text-gray-100 dark:text-gray-200 whitespace-nowrap">
-          {descJob}
+          {/* {descJob} */}
         </time>
         <p className="text-xs font-normal text-gray-500 dark:text-gray-400 mt-1 max-w-lg whitespace-nowrap">
           {jobDuration}
         </p>
       </div>
-      
     </div>
   );
 }
