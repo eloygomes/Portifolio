@@ -14,7 +14,8 @@ function KrabSession({
     <div className="">
       <div className="wrapper flex flex-row  ">
         {/* <ol className="w-max grid grid-rows-1 grid-cols-6"> */}
-        <ol className="w-max flex flex-row ">
+        {/* <ol className="w-max flex flex-row "> */}
+        <ol className="w-full grid grid-cols-6 ">
           <EachSession
             jobPosition={`DESIGNER GRÁFICO`}
             jobName={`Empresa UM agencia & editora`}

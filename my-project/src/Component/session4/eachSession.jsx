@@ -21,7 +21,7 @@ function EachSession({
 
   return (
     <div
-      className="relative sm:mb-0 w-[300px] h-full bottom-0 mx-2  py-8 px-5 rounded-xl border-[1px] border-[#19142A] border-solid cursor-pointer  hover:bg-[#19142A] hover:rounded-xl hover:border-[#d6223b] drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 "
+      className="relative sm:mb-0  h-full bottom-0 mx-2  py-8 px-5 rounded-xl border-[1px] border-[#19142A] border-solid cursor-pointer  hover:bg-[#19142A] hover:rounded-xl hover:border-[#d6223b] drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 "
       onClick={() => {
         console.log("open Modal");
         openModal();
@@ -47,7 +47,7 @@ function EachSession({
         <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
       </div>
       <div className="mt-3 sm:pr-8 flex flex-col">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white whitespace-nowrap">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white h-20">
           {jobPosition}
         </h3>
         <h3 className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 ">
@@ -56,9 +56,6 @@ function EachSession({
         <h3 className="block mb-2 text-xs font-normal leading-none text-gray-400 dark:text-gray-600">
           {jobSegment}
         </h3>
-        <time className="block text-xs font-normal leading-none text-gray-100 dark:text-gray-200 whitespace-nowrap">
-          {/* {descJob} */}
-        </time>
         <p className="text-xs font-normal text-gray-500 dark:text-gray-400 mt-1 max-w-lg whitespace-nowrap">
           {jobDuration}
         </p>

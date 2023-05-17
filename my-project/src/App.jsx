@@ -17,7 +17,7 @@ const customStyles = {
     bottom: "auto",
     // marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    transition: 'all 3s ease-in-out 1s',
+    transition: "all 3s ease-in-out 1s",
     backgroundColor: "rgb(214, 34, 59)",
     borderRadius: "12px",
     padding: "3px",
@@ -78,21 +78,7 @@ function App() {
           style={customStyles}
           contentLabel="Example Modal"
         >
-          {/* <div className="w-full min-w-full h-full bg-[#2A2344] p-10 rounded-xl ">
-            <div className="flex flex-row justify-between">
-              <div>{modalPos}</div>
-              <div>
-                <button onClick={closeModal}>close</button>
-              </div>
-            </div>
-              <div>{modalJobSegment}</div>
-            <div className="flex flex-col justify-between">
-              <div>{modalJobName}</div>
-              <div>{modalDescJob}</div>
-              <div>{modalJobDuration}</div>
-            </div>
-          </div> */}
-          <div className="w-full bg-[#2A2344] rounded-xl  ">
+          <div className="w-full min-w-[800px] bg-[#2A2344] rounded-xl  ">
             <div className="flex flex-col justify-between  rounded-xl  bg-[#19142A]">
               <div className="flex flex-row justify-around border-b-2 border-opacity-5 py-5 ">
                 <div className="w-[90%] font-light text-3xl px-5">
@@ -105,21 +91,43 @@ function App() {
                   X
                 </div>
               </div>
+
               <div className="flex flex-col justify-around py-2 px-5 bg-[#2A2344]">
                 <div className="flex flex-row justify-between">
-                  <div className=" flex flex-col justify-between">
-                    <div className="text-sm font-semibold">{modalJobName}</div>
-                    <div className="text-sm font-light pr-5">{modalJobSegment}</div>
+                  <div className="w-[30%] p-5">
+                    <div className="flex flex-col">
+                      <img
+                        src="http://static.baubauhaus.com/assets/42748_270.jpg"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                  <div className="text-xs font-semibold">
-                    {modalJobDuration}
+                  <div className="w-[70%] p-5">
+                    <div className="flex flex-col">
+                      <div className="flex flex-row justify-between">
+                        <div className="text-left py-5">
+                          <h4 className="text-xs">Empresa</h4>
+                          <h2 className="font-semibold text-base">
+                            {modalJobName}
+                          </h2>
+                          <h4 className="text-xs mt-2">Período</h4>
+                          <div className="text-xs">{modalJobDuration}</div>
+                        </div>
+                        <div className="text-right py-5">
+                          <h4 className="text-xs">Segmento</h4>
+                          <h2 className="font-semibold text-base">
+                            {modalJobSegment}
+                          </h2>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-xs">Atribuições</h4>
+                        <p className="text-sm py-2">
+                          {modalDescJob}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="flex flex-row justify-around px-5 pt-5 pb-10 bg-[#2A2344] rounded-b-lg">
-                {/* <div className="w-[30%]">IMAGEM AQUI</div> */}
-                <div className=" text-sm">
-                  {modalDescJob}
                 </div>
               </div>
             </div>
