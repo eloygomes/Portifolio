@@ -1,7 +1,7 @@
 import KrabSession from "./session4/krabSession";
-import PropTypes from "prop-types";
 
-function Session04({
+
+function Carreira({
   openModal,
   setModalJobName,
   setModalJobSegment,
@@ -52,4 +52,4 @@ function Session04({
   );
 }
 
-export default Session04;
+export default Carreira;

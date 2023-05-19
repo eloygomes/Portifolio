@@ -1,10 +1,10 @@
-// import React from "react";
 
-function Session05() {
+
+function Contact() {
   return (
     <>
       <div
-        className="bg-[#19142A] w-screen h-screen flex flex-col"
+        className="bg-[#2A2344] w-screen h-screen flex flex-col"
         id="contato"
       >
         <div className="container mx-auto mt-28">
@@ -27,4 +27,4 @@ function Session05() {
   );
 }
 
-export default Session05;
+export default Contact;

@@ -1,6 +1,6 @@
-import React from "react";
 
-function Session03() {
+
+function Portfolio() {
   return (
     <>
       <div className="bg-[#19142A] w-screen h-screen flex flex-col" id="port">
@@ -70,13 +70,13 @@ function Session03() {
               />
             </div>
           </div>
-          <div className="flex flex-row justify-center">
+          {/* <div className="flex flex-row justify-center">
             <button className="bg-[#D6223B] m-10">Veja mais</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
   );
 }
 
-export default Session03;
+export default Portfolio;

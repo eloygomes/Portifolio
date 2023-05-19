@@ -1,6 +1,6 @@
-import React from "react";
 
-function Session02() {
+
+function HighlightRow() {
   return (
     <>
       <div className="bg-[#2A2344] w-screen  flex flex-row ">
@@ -36,4 +36,4 @@ function Session02() {
   );
 }
 
-export default Session02;
+export default HighlightRow;

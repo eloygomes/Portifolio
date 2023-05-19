@@ -2,12 +2,19 @@ import Modal from "react-modal";
 import { useState } from "react";
 
 import "./App.css";
-import Session01 from "./Component/Session01";
+
 import NavBar from "./Component/NavBar";
-import Session02 from "./Component/Session02";
-import Session03 from "./Component/Session03";
-import Session04 from "./Component/Session04";
-import Session05 from "./Component/Session05";
+
+
+
+
+import BioSession from "./Component/BioSession";
+import ServicesSession from "./Component/ServicesSession";
+import Contact from "./Component/Contact";
+import Home from "./Component/Home";
+import HighlightRow from "./Component/HighlightRow";
+import Portfolio from "./Component/Portfolio";
+import Carreira from "./Component/Carreira";
 
 const customStyles = {
   content: {
@@ -58,10 +65,11 @@ function App() {
   return (
     <>
       <NavBar />
-      <Session01 />
-      <Session02 />
-      <Session03 />
-      <Session04
+      <Home />
+      <BioSession/>
+      <HighlightRow />
+      <Portfolio />
+      <Carreira
         openModal={openModal}
         setModalJobName={setModalJobName}
         setModalJobSegment={setModalJobSegment}
@@ -69,7 +77,10 @@ function App() {
         setModalDescJob={setModalDescJob}
         setMPos={setMPos}
       />
-      <Session05 />
+      <ServicesSession/>
+      <Contact />
+
+
       <div className="">
         <Modal
           isOpen={modalIsOpen}
@@ -139,3 +150,4 @@ function App() {
 }
 
 export default App;
+  

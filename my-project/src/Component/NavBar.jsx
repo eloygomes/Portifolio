@@ -1,4 +1,4 @@
-// import React from "react";
+
 
 function NavBar() {
   return (
@@ -9,14 +9,17 @@ function NavBar() {
             <a className="font-extrabold " href="#">EVG</a>
           </div>
           <div className="w-[40%] flex flex-row justify-around cursor-pointer">
-            <a href="#" className="px-2">
+            <a href="#bio" className="px-2">
               BIO
-            </a>
-            <a href="#carreira" className="px-2">
-              CARREIRA
             </a>
             <a href="#port" className="px-2">
               PORTFÓLIO
+            </a>            
+            <a href="#carreira" className="px-2">
+              CARREIRA
+            </a>
+            <a href="#services" className="px-2">
+              SERVIÇOS
             </a>
             <a href="#contato" className="px-2">
               CONTATO
