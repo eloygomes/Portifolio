@@ -6,7 +6,7 @@ function Home() {
       <div className="bg-[#19142A] w-screen h-screen flex flex-col">
         <div className="container mx-auto mt-28">
           <div className="flex flex-row">
-            <div className="w-[50%] ">
+            <div className="w-[50%] mt-24">
               <div className="h-full flex flex-col items-start justify-center  mx-auto">
                 <h1 className="py-1 text-8xl font-medium">Eloy Gomes</h1>
                 <h4 className="px-1 py-1 text-xl font-semibold text-left">
