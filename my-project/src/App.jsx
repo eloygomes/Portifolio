@@ -139,60 +139,7 @@ function App() {
             </div>
           </div>
 
-          {/* <div className="w-full min-w-[800px] bg-[#2A2344] rounded-xl  ">
-            <div className="flex flex-col justify-between  rounded-xl  bg-[#19142A]">
-              <div className="flex flex-row justify-around border-b-2 border-opacity-5 py-5 ">
-                <div className="w-[90%] font-light text-3xl px-5">
-                  {modalPos}
-                </div>
-                <div
-                  className="w-[10%] text-right px-8 font-black cursor-pointer"
-                  onClick={closeModal}
-                >
-                  X
-                </div>
-              </div>
-
-              <div className="flex flex-col justify-around py-2 px-5 bg-[#2A2344]">
-                <div className="flex flex-row justify-between">
-                  <div className="w-[30%] p-5">
-                    <div className="flex flex-col">
-                      <img
-                        src="http://static.baubauhaus.com/assets/42748_270.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div className="w-[70%] p-5">
-                    <div className="flex flex-col">
-                      <div className="flex flex-row justify-between">
-                        <div className="text-left py-5">
-                          <h4 className="text-xs">Empresa</h4>
-                          <h2 className="font-semibold text-base">
-                            {modalJobName}
-                          </h2>
-                          <h4 className="text-xs mt-2">Período</h4>
-                          <div className="text-xs">{modalJobDuration}</div>
-                        </div>
-                        <div className="text-right py-5">
-                          <h4 className="text-xs">Segmento</h4>
-                          <h2 className="font-semibold text-base">
-                            {modalJobSegment}
-                          </h2>
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="text-xs">Atribuições</h4>
-                        <p className="text-sm py-2">
-                          {modalDescJob}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
+    
         </Modal>
       </div>
     </>

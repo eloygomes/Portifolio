@@ -1,22 +1,37 @@
 import { useState } from "react";
 
-import img1 from "../assets/bg-img-1.jpg";
-import img2 from "../assets/bg-img-2.jpg";
-
 function ServicesSession() {
-  const [servBg, setServBg] = useState(`bg-pink-400`);
+  const [servBg, setServBg] = useState(`session-uiiu`);
 
   const setWall = (sessioon) => {
-    if (sessioon === "branding") {
-      setServBg(`bg-orange-400`);
-    } else {
-      setServBg(`bg-[url('${img1}')]`);
+    if (sessioon === "iuui") {
+      setServBg("session-uiiu");
     }
+
+    if (sessioon === "branding") {
+      setServBg("session-branding");
+    }
+
+    if (sessioon === "impressos") {
+      setServBg("session-impressos");
+    }
+
+    if (sessioon === "foto") {
+      setServBg("session-foto");
+    }
+
+    if (sessioon === "edicao") {
+      setServBg("session-edicao");
+    }
+
+    if (sessioon === "podcast") {
+      setServBg("session-podcast");
+    }
+
+
   };
 
-  // console.log(servBg);
-  console.log(img1)
-  console.log(img2)
+  console.log(servBg);
 
   return (
     <>
@@ -29,7 +44,7 @@ function ServicesSession() {
         id="services"
       >
         <div
-          className={`w-screen h-screen flex bg-black absolute opacity-90 `}
+          className={`inner-service w-screen h-screen flex bg-black absolute opacity-[.85] `}
         ></div>
         <h1 className="text-6xl">UI/UX</h1>
         <div className="container mx-auto mt-28">
@@ -54,22 +69,32 @@ function ServicesSession() {
             </div>
             <div
               className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300"
-              onMouseEnter={() => {
-                setWall("branding");
-              }}
+              onMouseEnter={() => setWall("branding")}
             >
               BRANDING
             </div>
-            <div className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300">
+            <div
+              className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300"
+              onMouseEnter={() => setWall("impressos")}
+            >
               IMPRESSOS
             </div>
-            <div className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300">
+            <div
+              className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300"
+              onMouseEnter={() => setWall("foto")}
+            >
               FOTOGRAFIA
             </div>
-            <div className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300">
+            <div
+              className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300"
+              onMouseEnter={() => setWall("edicao")}
+            >
               EDIÇÃO
             </div>
-            <div className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300">
+            <div
+              className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300"
+              onMouseEnter={() => setWall("podcast")}
+            >
               PODCAST
             </div>
           </div>

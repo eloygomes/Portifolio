@@ -44,3 +44,61 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+
+.session-uiiu {
+  background-image: url(./assets/bg-img-1.jpg);
+  background-image: cover;
+  background-position: center;
+  opacity: 1;
+  transition: background-image 1s linear;
+}
+
+
+.session-branding {
+  background-image: url(./assets/bg-img-2.jpg);
+  background-image: cover;
+  background-position: center;
+  opacity: 1;
+  transition: background-image 1s linear;
+}
+
+
+.session-impressos {
+  background-image: url(./assets/bg-img-3.jpg);
+  background-image: cover;
+  background-position: center;
+  opacity: 1;
+  transition: background-image 1s linear;
+  
+}
+
+.session-foto{
+  background-image: url(./assets/bg-img-4.jpg);
+  background-image: cover;
+  background-position: center;
+  opacity: 1;
+  transition: background-image 1s linear;
+  
+}
+
+.session-edicao {
+  background-image: url(./assets/bg-img-5.jpg);
+  background-image: cover;
+  background-position: center;
+  opacity: 1;
+  transition: background-image 1s linear;
+  
+}
+
+.session-podcast {
+  background-image: url(./assets/bg-img-6.jpg);
+  background-image: cover;
+  background-position: center;
+  opacity: 1;
+  transition: background-image 1s linear;
+  
+}
+

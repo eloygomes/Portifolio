@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.session-uiiu {
+    background-image: url(../assets/bg-img-1.jpg);
+}
