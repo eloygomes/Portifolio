@@ -1,13 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
+
 
 .logo {
   height: 6em;
@@ -53,7 +47,7 @@
   background-image: cover;
   background-position: center;
   opacity: 1;
-  transition: background-image 1s linear;
+  transition: background-image .5s ease-in-out;
 }
 
 
@@ -62,7 +56,7 @@
   background-image: cover;
   background-position: center;
   opacity: 1;
-  transition: background-image 1s linear;
+  transition: background-image .5s ease-in-out;
 }
 
 
@@ -71,7 +65,7 @@
   background-image: cover;
   background-position: center;
   opacity: 1;
-  transition: background-image 1s linear;
+  transition: background-image .5s ease-in-out;
   
 }
 
@@ -80,7 +74,7 @@
   background-image: cover;
   background-position: center;
   opacity: 1;
-  transition: background-image 1s linear;
+  transition: background-image .5s ease-in-out;
   
 }
 
@@ -89,7 +83,7 @@
   background-image: cover;
   background-position: center;
   opacity: 1;
-  transition: background-image 1s linear;
+  transition: background-image .5s ease-in-out;
   
 }
 
@@ -98,7 +92,7 @@
   background-image: cover;
   background-position: center;
   opacity: 1;
-  transition: background-image 1s linear;
+  transition: background-image .5s ease-in-out;
   
 }
 

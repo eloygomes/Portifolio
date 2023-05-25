@@ -1,18 +1,6 @@
 import Modal from "react-modal";
 import { useState } from "react";
 
-import "./App.css";
-
-import NavBar from "./Component/NavBar";
-
-import BioSession from "./Component/BioSession";
-import ServicesSession from "./Component/ServicesSession";
-import Contact from "./Component/Contact";
-import Home from "./Component/Home";
-// import HighlightRow from "./Component/HighlightRow";
-import Portfolio from "./Component/Portfolio";
-import Carreira from "./Component/Carreira";
-
 const customStyles = {
   content: {
     top: "50%",
@@ -28,12 +16,9 @@ const customStyles = {
   },
 };
 
-// drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300
-
-// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement("#root");
 
-function App() {
+function ModalWindow() {
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const [modalPos, setMPos] = useState("");
@@ -47,37 +32,17 @@ function App() {
     setIsOpen(true);
   }
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-  // subtitle.style.color = "#f00";
-  }
 
   function closeModal() {
     setIsOpen(false);
   }
-  
-  return (
-    <>
-      <NavBar />
-      <Home />
-      <BioSession />
-      {/* <HighlightRow /> */}
-      <Portfolio />
-      <Carreira
-        openModal={openModal}
-        setModalJobName={setModalJobName}
-        setModalJobSegment={setModalJobSegment}
-        setModalJobDuration={setModalJobDuration}
-        setModalDescJob={setModalDescJob}
-        setMPos={setMPos}
-      />
-      <ServicesSession />
-      <Contact />
 
+  return (
+    <div>
       <div className="">
         <Modal
           isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
+            // onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
           style={customStyles}
           contentLabel="Example Modal"
@@ -135,12 +100,10 @@ function App() {
               </div>
             </div>
           </div>
-
-    
         </Modal>
       </div>
-    </>
+    </div>
   );
 }
 
-export default App;
+export default ModalWindow;
