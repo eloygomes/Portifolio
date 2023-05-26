@@ -28,9 +28,6 @@ const customStyles = {
   },
 };
 
-// drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300
-
-// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement("#root");
 
 function App() {
@@ -49,13 +46,13 @@ function App() {
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
-  // subtitle.style.color = "#f00";
+    // subtitle.style.color = "#f00";
   }
 
   function closeModal() {
     setIsOpen(false);
   }
-  
+
   return (
     <>
       <NavBar />
@@ -135,8 +132,6 @@ function App() {
               </div>
             </div>
           </div>
-
-    
         </Modal>
       </div>
     </>
