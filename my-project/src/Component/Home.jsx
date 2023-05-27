@@ -9,7 +9,7 @@ function Home() {
             <div className="w-[50%] mt-24">
               <div className="h-full flex flex-col items-start justify-center  mx-auto">
                 <h1 className="py-1 text-8xl font-medium">Eloy Gomes</h1>
-                <h4 className="px-1 py-1 text-xl font-semibold text-left">
+                <h4 className="px-1 py-1 text-4xl font-light text-left">
                   Full Stack Developer
                 </h4>
               </div>

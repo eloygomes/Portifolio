@@ -1,5 +1,8 @@
 import KrabSession from "./session4/krabSession";
 
+import { useEffect, useRef } from "react";
+
+import { motion, useInView, useAnimation } from "framer-motion";
 
 function Carreira({
   openModal,
@@ -9,34 +12,113 @@ function Carreira({
   setModalDescJob,
   setMPos,
 }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      console.log(isInView);
+
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
   return (
     <>
       <div
         className="bg-[#2A2344] w-screen h-screen items-center flex flex-row "
         id="carreira"
       >
-        <div className="container mx-auto grid  h-[50%]   h-screen">
-          <h1 className="text-6xl py-10 absolute mt-[100px] mx-5">Carreira</h1>
-          <p className="mt-[250px] absolute mx-5">
+        <div ref={ref} className="container mx-auto grid  h-[50%]   h-screen">
+          <motion.h1
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            className="text-6xl py-10 absolute mt-[100px] mx-5"
+          >
+            Carreira
+          </motion.h1>
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="mt-[250px] absolute mx-5"
+          >
             Na seção abaixo, apresento um panorama completo da minha experiência
             profissional até o presente momento.”
-          </p>
+          </motion.p>
+          
           <div className="flex flex-row justify-between text-4xl font-extralight mt-96">
-            <h1 className="h-full opacity-[0.1] hover:opacity-[0.5] cursor-pointer mx-5 transition ease-in-out delay-50 duration-300 ">
+            <motion.h1
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 0.1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.35 }}
+              className="h-full opacity-[0.1] hover:opacity-[0.5] cursor-pointer mx-5  "
+            >
               2013
-            </h1>
-            <h1 className="h-full opacity-[0.2] hover:opacity-[0.6] cursor-pointer mx-5  transition ease-in-out delay-50 duration-300 ">
+            </motion.h1>
+            <motion.h1
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 0.2, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.40 }}
+              className="h-full opacity-[0.2] hover:opacity-[0.6] cursor-pointer mx-5   "
+            >
               2014
-            </h1>
-            <h1 className="h-full opacity-[0.3] hover:opacity-[0.7] cursor-pointer mx-5  transition ease-in-out delay-50 duration-300 ">
+            </motion.h1>
+            <motion.h1
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 0.3, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.45 }}
+              className="h-full opacity-[0.3] hover:opacity-[0.7] cursor-pointer mx-5   "
+            >
               2018
-            </h1>
-            <h1 className="h-full opacity-[0.4] hover:opacity-[0.8] cursor-pointer mx-5  transition ease-in-out delay-50 duration-300 ">
+            </motion.h1>
+            <motion.h1
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 0.4, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.50 }}
+              className="h-full opacity-[0.4] hover:opacity-[0.8] cursor-pointer mx-5   "
+            >
               2021
-            </h1>
-            <h1 className="h-full opacity-[0.5] hover:opacity-[0.9] cursor-pointer mx-5  transition ease-in-out delay-50 duration-300 ">
+            </motion.h1>
+            <motion.h1
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 0.5, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.55 }}
+              className="h-full opacity-[0.5] hover:opacity-[0.9] cursor-pointer mx-5   "
+            >
               Hoje
-            </h1>
+            </motion.h1>
           </div>
           <KrabSession
             openModal={openModal}

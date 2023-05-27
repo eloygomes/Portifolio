@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
+
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const servicesDescriptions = {
   iuui: `   Eu sou um desenvolvedor de UX/UI apaixonado por criar experiências
@@ -24,6 +26,19 @@ function ServicesSession() {
   const [servBg, setServBg] = useState(`session-uiiu`);
   const [textOnScreen, setTextOnScreen] = useState(`UI/UX`);
   const [servDesc, setServDesc] = useState(servicesDescriptions.iuui);
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      console.log(isInView);
+
+      mainControls.start("visible");
+    }
+  }, [isInView]);
 
   const setWall = (sessioon) => {
     if (sessioon === "iuui") {
@@ -63,14 +78,8 @@ function ServicesSession() {
     }
   };
 
-  console.log(servBg);
-
   return (
     <>
-      {/* <div
-        className={`w-screen h-screen flex flex-col bg-cover bg-center bg-no-repeat bg-[url('${servBg}')]`}
-        id="services"
-      > */}
       <div
         className={`w-screen h-screen flex flex-col bg-cover bg-center bg-no-repeat ${servBg}`}
         id="services"
@@ -78,62 +87,143 @@ function ServicesSession() {
         <div
           className={`inner-service w-screen h-screen flex bg-black absolute opacity-[.85] `}
         ></div>
-        <h1 className="text-9xl opacity-5 relative top-[80%] transition ease-in-out  duration-300">
+        <motion.h1
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 0.05, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.5, delay: 0.05 }}
+          className="text-[150px] opacity-5 relative top-[80%] "
+        >
           {textOnScreen}
-        </h1>
-        <div className="container mx-auto mt-28">
+        </motion.h1>
+        <div ref={ref} className="container mx-auto mt-28">
           <div className="flex flex-row">
-            <h1 className="text-6xl py-10 absolute mt-[70px] mx-5 text-gray-400">
+            <motion.h1
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="text-6xl py-10 absolute mt-[20px] mx-5 text-gray-400"
+            >
               Serviços
-            </h1>
-            <p className="mt-[200px] absolute mx-5 text-gray-400">
+            </motion.h1>
+            <motion.p
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="mt-[150px] absolute mx-5 text-gray-400"
+            >
               Na seção abaixo, apresento um panorama completo da minha
               experiência profissional até o presente momento.”
-            </p>
+            </motion.p>
           </div>
         </div>
 
         <div className="container mx-auto mt-64 ">
           <div className="flex flex-row cursor-pointer absolute">
-            <div
-              className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300 text-gray-400"
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mx-5 hover:text-[#D6223B] text-3xl  text-gray-400"
               onMouseEnter={() => setWall("iuui")}
+              
             >
               UI/UX
-            </div>
-            <div
-              className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300 text-gray-400"
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.35 }}
+              className="mx-5 hover:text-[#D6223B] text-3xl  text-gray-400"
               onMouseEnter={() => setWall("branding")}
             >
               BRANDING
-            </div>
-            <div
-              className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300 text-gray-400"
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mx-5 hover:text-[#D6223B] text-3xl  text-gray-400"
               onMouseEnter={() => setWall("impressos")}
             >
               IMPRESSOS
-            </div>
-            <div
-              className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300 text-gray-400"
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.45 }}
+              className="mx-5 hover:text-[#D6223B] text-3xl  text-gray-400"
               onMouseEnter={() => setWall("foto")}
             >
               FOTOGRAFIA
-            </div>
-            <div
-              className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300 text-gray-400"
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mx-5 hover:text-[#D6223B] text-3xl  text-gray-400"
               onMouseEnter={() => setWall("edicao")}
             >
               EDIÇÃO
-            </div>
-            <div
-              className="mx-5 hover:text-[#D6223B] text-3xl transition ease-in-out hover:scale-125 duration-300 text-gray-400"
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.55 }}
+              className="mx-5 hover:text-[#D6223B] text-3xl  text-gray-400"
               onMouseEnter={() => setWall("podcast")}
             >
               PODCAST
-            </div>
+            </motion.div>
           </div>
           <div className="flex flex-row mt-24 z-40 absolute mx-5 text-gray-400 max-w-[1200px]">
-            <p className="transition ease-in-out delay-150 duration-300 text-gray-400">{servDesc}</p>
+            <motion.p
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.6, ease: "easeInOut" }}
+              className=" text-gray-400"
+            >
+              {servDesc}
+            </motion.p>
           </div>
         </div>
         {/* <img src={img2} className=" absolute w-screen left-0" alt="" /> */}
