@@ -2,6 +2,9 @@ import { useEffect, useRef } from "react";
 
 import { motion, useInView, useAnimation } from "framer-motion";
 
+import Lottie from "lottie-react";
+import animationData from "../assets/63487-programming-computer.json";
+
 function BioSession() {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -15,6 +18,8 @@ function BioSession() {
       mainControls.start("visible");
     }
   }, [isInView]);
+
+  const someAnimation = useRef(null) ;
 
   return (
     <>
@@ -48,7 +53,6 @@ function BioSession() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.25 }}
-                
                 className="py-1 text-8xl font-medium hover:text-[#D6223B]"
               >
                 Desenvolvedor
@@ -111,7 +115,13 @@ function BioSession() {
               </motion.h5>
             </div>
             <div className="w-[50%] mt-24 flex flex-col">
-              {/* <img src={pic01} alt="f" className="max-w-lg mx-auto" /> */}
+              <Lottie
+                onComplete={() => {
+                  someAnimation.current?.goToAndPlay(45, true);
+                }}
+                lottieRef={someAnimation}
+                animationData={animationData}
+              />
             </div>
           </div>
         </div>
