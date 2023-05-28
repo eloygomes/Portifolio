@@ -59,8 +59,10 @@ function Portfolio() {
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="mt-5 h-[50px] bg-[#19142A] text-white border border-white"
+                transition={{ duration: 0.5, delay: 0.35, type: "spring", stiffness: 400, damping: 17 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="mt-5 py-1 h-[50px] bg-[#19142A] text-white border border-white"
               >
                 Projetos Pessoais
               </motion.button>
@@ -71,8 +73,11 @@ function Portfolio() {
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.35 }}
-                className="mt-5 h-[50px] bg-[#19142A] text-white border border-white ml-10"
+                transition={{ duration: 0.5, delay: 0.35, type: "spring", stiffness: 400, damping: 17 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                
+                className="mt-5 py-1 h-[50px]  bg-[#19142A] text-white border border-white ml-10"
               >
                 Projetos Profissionais
               </motion.button>

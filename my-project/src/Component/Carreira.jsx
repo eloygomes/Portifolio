@@ -39,7 +39,7 @@ function Carreira({
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.05 }}
+            transition={{ duration: 0.5, delay: 0.70 }}
             className="text-6xl py-10 absolute mt-[100px] mx-5"
           >
             Carreira
@@ -51,7 +51,7 @@ function Carreira({
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.25 }}
+            transition={{ duration: 0.5, delay: 0.75 }}
             className="mt-[250px] absolute mx-5"
           >
             Na seção abaixo, apresento um panorama completo da minha experiência
@@ -66,7 +66,7 @@ function Carreira({
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.35 }}
+              transition={{ duration: 0.5, delay: 0.80 }}
               className="h-full opacity-[0.1] hover:opacity-[0.5] cursor-pointer mx-5  "
             >
               2013
@@ -78,7 +78,7 @@ function Carreira({
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.40 }}
+              transition={{ duration: 0.5, delay: 0.85 }}
               className="h-full opacity-[0.2] hover:opacity-[0.6] cursor-pointer mx-5   "
             >
               2014
@@ -90,7 +90,7 @@ function Carreira({
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.45 }}
+              transition={{ duration: 0.5, delay: 0.90 }}
               className="h-full opacity-[0.3] hover:opacity-[0.7] cursor-pointer mx-5   "
             >
               2018
@@ -102,7 +102,7 @@ function Carreira({
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.50 }}
+              transition={{ duration: 0.5, delay: 0.95   }}
               className="h-full opacity-[0.4] hover:opacity-[0.8] cursor-pointer mx-5   "
             >
               2021
@@ -114,7 +114,7 @@ function Carreira({
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.55 }}
+              transition={{ duration: 0.5, delay: 1.00 }}
               className="h-full opacity-[0.5] hover:opacity-[0.9] cursor-pointer mx-5   "
             >
               Hoje

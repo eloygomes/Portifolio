@@ -14,24 +14,23 @@ function BioSession() {
   useEffect(() => {
     if (isInView) {
       console.log(isInView);
-
+  
       mainControls.start("visible");
     }
   }, [isInView]);
 
-  const someAnimation = useRef(null) ;
+  const someAnimation = useRef(null);
 
   return (
     <>
       <div className="bg-[#2A2344] w-screen h-screen flex flex-col" id="bio">
         {/* <div className="bg-pink-300 w-screen h-screen flex flex-col" id="bio"> */}
-        <div ref={ref} className="container mx-auto mt-28">
+        {/* <div ref={ref} className="container mx-auto mt-28"> */}
+        <div ref={ref} className="container mx-auto h-screen flex flex-col justify-center">
           <div className="flex flex-row">
             <div
-              className="w
-            -[50%] h-screen flex flex-col mx-auto"
-            >
-              <div className="w-fit mt-52"></div>
+              className="w-[50%] h-screen flex flex-col mx-auto justify-center">
+              <div className="w-fit"></div>
               <motion.h4
                 variants={{
                   hidden: { opacity: 0, y: 75 },
@@ -39,7 +38,7 @@ function BioSession() {
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.05 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
                 className="mx-1"
               >
                 Olá!, Sou um...{" "}
@@ -52,7 +51,7 @@ function BioSession() {
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.25 }}
+                transition={{ duration: 0.5, delay: 0.45 }}
                 className="py-1 text-8xl font-medium hover:text-[#D6223B]"
               >
                 Desenvolvedor
@@ -79,7 +78,7 @@ function BioSession() {
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.75 }}
+                transition={{ duration: 0.5, delay: 0.55 }}
                 className="py-3 text-sm max-w-lg"
               >
                 Iniciei da minha jornada como designer UI/UX, criando interfaces
@@ -93,7 +92,7 @@ function BioSession() {
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.5, delay: 1.0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
                 className="py-3 text-sm max-w-lg"
               >
                 Também tenho vivencia em criação de wireframes de baixa/alta
@@ -106,7 +105,7 @@ function BioSession() {
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.5, delay: 1.25 }}
+                transition={{ duration: 0.5, delay: 0.65 }}
                 className="py-3 text-sm max-w-lg"
               >
                 Hoje atuo como Full Stack Developer, utilizo principalmente
@@ -114,8 +113,9 @@ function BioSession() {
                 dos projetos.
               </motion.h5>
             </div>
-            <div className="w-[50%] mt-24 flex flex-col">
+            <div className="w-[50%]  flex flex-col justify-center">
               <Lottie
+                className="w-[100%] h-[100%]"
                 onComplete={() => {
                   someAnimation.current?.goToAndPlay(45, true);
                 }}
