@@ -24,7 +24,8 @@ function ParticlesBackground() {
     id="particles-component"
     init={particlesInit}
     loaded={particlesLoaded}
-    options={particlesConfig} /> 
+    options={particlesConfig}
+    className="absolute -z-10" /> 
   )
 }
 

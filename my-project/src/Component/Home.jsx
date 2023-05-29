@@ -38,7 +38,7 @@ function Home() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.05 }}
-                  className="py-1 text-8xl font-medium mx-1"
+                  className="text-8xl font-medium  bg-[#2A2344] w-fit"
                 >
                   Eloy Gomes
                 </motion.h1>
@@ -50,7 +50,7 @@ function Home() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.25 }}
-                  className="px-1 py-1 text-4xl font-light text-left"
+                  className="bg-[#D6223B] w-fit pl-1 text-4xl font-light text-left"
                 >
                   Full Stack Developer
                 </motion.h4>

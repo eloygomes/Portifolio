@@ -4,6 +4,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 import Lottie from "lottie-react";
 import animationData from "../assets/63487-programming-computer.json";
+import ParticlesBackground from "./particles/ParticlesBackground";
 
 function BioSession() {
   const ref = useRef(null);
@@ -23,9 +24,11 @@ function BioSession() {
 
   return (
     <>
-      <div className="bg-[#2A2344] w-screen h-screen flex flex-col" id="bio">
-        {/* <div className="bg-pink-300 w-screen h-screen flex flex-col" id="bio"> */}
-        {/* <div ref={ref} className="container mx-auto mt-28"> */}
+    <ParticlesBackground/>
+      <div className=" w-screen h-screen flex flex-col" id="bio">
+      {/* <div className="bg-[#2A2344] w-screen h-screen flex flex-col" id="bio"> */}
+        
+        
         <div ref={ref} className="container mx-auto h-screen flex flex-col justify-center">
           <div className="flex flex-row">
             <div
@@ -39,7 +42,7 @@ function BioSession() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="mx-1"
+                className=" bg-[#2A2344] w-fit"
               >
                 Olá!, Sou um...{" "}
               </motion.h4>
@@ -52,7 +55,7 @@ function BioSession() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.45 }}
-                className="py-1 text-8xl font-medium hover:text-[#D6223B]"
+                className="bg-[#2A2344] w-fit -ml-1 py-1 text-8xl font-medium hover:text-[#D6223B]"
               >
                 Desenvolvedor
                 <br /> Full Stack
@@ -79,7 +82,7 @@ function BioSession() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.55 }}
-                className="py-3 text-sm max-w-lg"
+                className="py-3 text-sm max-w-lg bg-[#2A2344] w-fit"
               >
                 Iniciei da minha jornada como designer UI/UX, criando interfaces
                 de produtos e propondo melhorias de usabilidade na experiência
@@ -93,7 +96,7 @@ function BioSession() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="py-3 text-sm max-w-lg"
+                className="py-3 text-sm max-w-lg bg-[#2A2344] w-fit"
               >
                 Também tenho vivencia em criação de wireframes de baixa/alta
                 fidelidade e em desenvolvimento de protótipos navegáveis.
@@ -106,7 +109,7 @@ function BioSession() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.65 }}
-                className="py-3 text-sm max-w-lg"
+                className="py-3 text-sm max-w-lg bg-[#2A2344] w-fit"
               >
                 Hoje atuo como Full Stack Developer, utilizo principalmente
                 HTML5, CSS3, React Js e Wordpress para dar vida a interfaces web
