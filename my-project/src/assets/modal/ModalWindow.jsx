@@ -10,7 +10,7 @@ const customStyles = {
     // marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     transition: "all 3s ease-in-out 1s",
-    backgroundColor: "rgb(214, 34, 59)",
+    backgroundColor: "rgb(27, 5, 172)",
     borderRadius: "12px",
     padding: "3px",
   },
@@ -18,8 +18,7 @@ const customStyles = {
 
 Modal.setAppElement("#root");
 
-function ModalWindow() {
-  const [modalIsOpen, setIsOpen] = useState(false);
+function ModalWindow({ modalStatus, setModalStatus }) {
 
   const [modalPos, setMPos] = useState("");
 
@@ -32,19 +31,18 @@ function ModalWindow() {
     setIsOpen(true);
   }
 
-
   function closeModal() {
-    setIsOpen(false);
+    setModalStatus(false);
   }
 
   return (
     <div>
       <div className="">
         <Modal
-          isOpen={modalIsOpen}
-            // onAfterOpen={afterOpenModal}
+          isOpen={modalStatus}
+          // onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
-          style={customStyles}
+          // style={customStyles}
           contentLabel="Example Modal"
         >
           <div className="w-full min-w-[1200px] bg-[#19142A] rounded-xl  ">

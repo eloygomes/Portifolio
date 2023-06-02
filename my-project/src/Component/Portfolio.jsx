@@ -1,8 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { motion, useInView, useAnimation } from "framer-motion";
+import ModalWindow from "../assets/modal/ModalWindow";
 
 function Portfolio() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalStatus, setModalStatus] = useState(false);
+
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -10,7 +14,7 @@ function Portfolio() {
 
   useEffect(() => {
     if (isInView) {
-      console.log(isInView);
+      // console.log(isInView);
 
       mainControls.start("visible");
     }
@@ -18,6 +22,12 @@ function Portfolio() {
 
   return (
     <>
+      <ModalWindow 
+        
+        modalStatus={modalStatus}
+        setModalStatus={setModalStatus}
+
+        />
       <div className="bg-[#19142A] w-screen h-screen flex flex-col" id="port">
         <div ref={ref} className="container mx-auto mt-40">
           <div className="flex flex-row">
@@ -43,12 +53,11 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className="max-w-md py-5 text-xs"
+                className="max-w-md py-5 text-sm"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                unde, dolore, nam ullam commodi laboriosam aliquid odit harum
-                doloremque ex labore totam veniam quod assumenda, nulla earum
-                rerum explicabo ipsa!
+                Aqui você encontrará uma coleção diversificada de projetos em
+                que trabalhei ao longo dos anos. Meu portfólio abrange uma ampla
+                gama de trabalhos, desde branding até desenvolvimento web.
               </motion.p>
             </div>
             <div className="w-[50%] flex flex-row justify-end ">
@@ -59,7 +68,13 @@ function Portfolio() {
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.35, type: "spring", stiffness: 400, damping: 17 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.35,
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="mt-5 py-1 h-[50px] bg-[#19142A] text-white border border-white"
@@ -73,10 +88,15 @@ function Portfolio() {
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.35, type: "spring", stiffness: 400, damping: 17 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.35,
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                
                 className="mt-5 py-1 h-[50px]  bg-[#19142A] text-white border border-white ml-10"
               >
                 Projetos Profissionais
@@ -94,6 +114,10 @@ function Portfolio() {
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.35 }}
               className="bg-black h-[400px]"
+              onClick={() => {
+                console.log("teste");
+                setModalStatus(true);
+              }}
             >
               <img
                 className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full"
