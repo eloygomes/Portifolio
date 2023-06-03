@@ -10,16 +10,26 @@ const customStyles = {
     // marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     transition: "all 3s ease-in-out 1s",
-    backgroundColor: "rgb(27, 5, 172)",
+    // backgroundColor: "rgb(27, 5, 172)",  
     borderRadius: "12px",
     padding: "3px",
+  },
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    // backgroundColor: 'rgba(0, 0, 0, 0.75)'
+    // backgroundColor: '#19142A',
+    backgroundColor: 'rgba(25, 20, 42, 0.75)',
+    
   },
 };
 
 Modal.setAppElement("#root");
 
 function ModalWindow({ modalStatus, setModalStatus }) {
-
   const [modalPos, setMPos] = useState("");
 
   const [modalJobName, setModalJobName] = useState("");
@@ -27,9 +37,9 @@ function ModalWindow({ modalStatus, setModalStatus }) {
   const [modalJobDuration, setModalJobDuration] = useState("");
   const [modalDescJob, setModalDescJob] = useState("");
 
-  function openModal() {
-    setIsOpen(true);
-  }
+  // function openModal() {
+  //   setIsOpen(true);
+  // }
 
   function closeModal() {
     setModalStatus(false);
@@ -37,17 +47,18 @@ function ModalWindow({ modalStatus, setModalStatus }) {
 
   return (
     <div>
-      <div className="">
+      <div className="bg-pink-300 ">
         <Modal
           isOpen={modalStatus}
           // onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
-          // style={customStyles}
+          style={customStyles}
           contentLabel="Example Modal"
+          className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3"
         >
-          <div className="w-full min-w-[1200px] bg-[#19142A] rounded-xl  ">
-            <div className="flex flex-col justify-between  rounded-xl  bg-[#19142A]">
-              <div className="flex flex-col justify-around rounded-xl p-5 px-5 bg-[#2A2344]">
+          <div className="w-full min-w-[1200px] rounded-xl  ">
+            <div className="flex flex-col justify-between  rounded-xl">
+              <div className="flex flex-col justify-around rounded-xl p-5 px-5  backdrop-blur-xl bg-white/10">
                 <div className="flex flex-row justify-between">
                   <div className="w-[30%] p-5">
                     <div className="flex flex-col">
@@ -65,7 +76,7 @@ function ModalWindow({ modalStatus, setModalStatus }) {
                             {modalPos}
                           </div>
                           <h4 className="text-xs uppercase">Empresa</h4>
-                          <h2 className="font-semibold text-base mb-5">
+                          <h2 className="font-semibold text-base mb-5"> 
                             {modalJobName}
                           </h2>
                         </div>
