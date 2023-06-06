@@ -1,33 +1,70 @@
+
 import { useEffect, useRef, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import { motion, useInView, useAnimation } from "framer-motion";
 import ModalWindow from "../assets/modal/ModalWindow";
 
+import port01 from "../assets/port/Profissional/01/behance_c3tech.png";
+
+//Redux
+
+function freezeScroll() {
+  return { type: 'hold' };
+}
+
+function hideNavbar() {
+  return { type: 'hide' };
+}
+
 function Portfolio() {
-  const [modalIsOpen, setIsOpen] = useState(false);
   const [modalStatus, setModalStatus] = useState(false);
+  const [postImg, setPostImg] = useState(port01);
+
+  // Handle page scroll
+  const [scrollEnabled, setScrollEnabled] = useState(false);
 
   const ref = useRef(null);
   const isInView = useInView(ref);
 
   const mainControls = useAnimation();
 
+
+
+  const scrollBodyModalOn = useSelector((state) => state.scrollBodyModalOn);
+  
+
+
+  const dispatch = useDispatch();
+
+  //Handle page scroll
+  const handleToggleScroll = () => {
+    if (scrollEnabled) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    setScrollEnabled(!scrollEnabled);
+  };
+
   useEffect(() => {
     if (isInView) {
-      // console.log(isInView);
-
       mainControls.start("visible");
     }
   }, [isInView]);
 
+  //Handle page scroll
+  useEffect(() => {
+    handleToggleScroll()
+  }, [scrollBodyModalOn]);
+
   return (
     <>
-      <ModalWindow 
-        
+      <ModalWindow
         modalStatus={modalStatus}
         setModalStatus={setModalStatus}
-
-        />
+        postImg={postImg}
+      />
       <div className="bg-[#19142A] w-screen h-screen flex flex-col" id="port">
         <div ref={ref} className="container mx-auto mt-40">
           <div className="flex flex-row">
@@ -115,8 +152,11 @@ function Portfolio() {
               transition={{ duration: 0.5, delay: 0.35 }}
               className="bg-black h-[400px]"
               onClick={() => {
-                console.log("teste");
+                console.log("CLICOUUUUU");
                 setModalStatus(true);
+                dispatch(hideNavbar())
+                dispatch(freezeScroll())
+                
               }}
             >
               <img

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "framer-motion": "^10.12.16",
     "lottie-react": "^2.4.0",
     "prop-types": "^15.8.1",
@@ -17,8 +18,10 @@
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
     "react-particles": "^2.9.3",
+    "react-redux": "^8.0.7",
     "react-simple-horizontal-scroll": "^1.1.12",
     "react-tsparticles": "^2.9.3",
+    "redux": "^4.2.1",
     "tsparticles": "^2.9.3",
     "tsparticles-engine": "^2.9.3"
   },

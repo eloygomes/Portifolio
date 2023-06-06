@@ -1,9 +1,15 @@
+import { useSelector} from "react-redux";
+
+
 
 
 function NavBar() {
+  //Redux
+  const navbarZindex = useSelector((state) => state.navbarZindex);
+
   return (
     <>
-      <div className="bg-[#19142A] w-screen py-5 fixed left-0 top-0 drop-shadow-md z-10">
+      <div className={`bg-[#19142A] w-screen py-5 fixed left-0 top-0 drop-shadow-md ${navbarZindex === 'show'? 'z-10' :'-z-10' }`}>
         <div className="flex flex-row justify-between container mx-auto ">
           <div className="font-black text-2xl hover:scale-105">
             <a className="font-extrabold " href="#">EVG</a>

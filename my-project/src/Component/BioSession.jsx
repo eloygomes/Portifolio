@@ -25,9 +25,8 @@ function BioSession() {
 
   return (
     <>
-      <ParticlesBackground />
+      {/* <ParticlesBackground /> */}
       <div className=" w-screen flex flex-col " id="bio">
-        {/* <div className="bg-[#2A2344] w-screen h-screen flex flex-col" id="bio"> */}
         <div
           ref={ref}
           className="container mx-auto flex flex-col justify-center"
