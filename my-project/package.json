@@ -19,6 +19,7 @@
     "react-modal": "^3.16.1",
     "react-particles": "^2.9.3",
     "react-redux": "^8.0.7",
+    "react-responsive-carousel": "^3.2.23",
     "react-simple-horizontal-scroll": "^1.1.12",
     "react-tsparticles": "^2.9.3",
     "redux": "^4.2.1",

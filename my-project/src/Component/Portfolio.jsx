@@ -64,6 +64,7 @@ function Portfolio() {
         modalStatus={modalStatus}
         setModalStatus={setModalStatus}
         postImg={postImg}
+        setPostImg={setPostImg}
       />
       <div className="bg-[#19142A] w-screen h-screen flex flex-col" id="port">
         <div ref={ref} className="container mx-auto mt-40">
@@ -156,6 +157,21 @@ function Portfolio() {
                 setModalStatus(true);
                 dispatch(hideNavbar())
                 dispatch(freezeScroll())
+                setPostImg([
+                  "https://picsum.photos/seed/picsum1/1000/",
+                  "https://picsum.photos/seed/picsum2/500/500",
+                  "https://picsum.photos/seed/picsum3/500/500",
+                  "https://picsum.photos/seed/picsum4/500/500",
+                  "https://picsum.photos/seed/picsum5/500/500",
+                  "https://picsum.photos/seed/picsum6/1000/",
+                  "https://picsum.photos/seed/picsum7/500/500",
+                  "https://picsum.photos/seed/picsum8/500/500",
+                  "https://picsum.photos/seed/picsum9/500/500",
+                  "https://picsum.photos/seed/picsum10/500/500",
+                  "https://picsum.photos/seed/picsum11/1000/",
+                  "https://picsum.photos/seed/picsum12/500/500",
+                  
+                ])
                 
               }}
             >
@@ -175,6 +191,20 @@ function Portfolio() {
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.4 }}
               className="bg-black h-[400px]"
+              onClick={() => {
+                console.log("CLICOUUUUU N2");
+                setModalStatus(true);
+                dispatch(hideNavbar())
+                dispatch(freezeScroll())
+                setPostImg([
+                  "https://picsum.photos/seed/picsum7/1000/",
+                  "https://picsum.photos/seed/picsum8/500/500",
+                  "https://picsum.photos/seed/picsum9/500/500",
+                  "https://picsum.photos/seed/picsum10/500/500",
+                  "https://picsum.photos/seed/picsum11/500/500",
+                ])
+                
+              }}
             >
               <img
                 className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full"

@@ -2,15 +2,8 @@
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
 
-import Carousel from "./Carousel/Carousel";
 
-
-const images = [
-  'https://picsum.photos/seed/picsum/500/500',
-  'https://picsum.photos/seed/picsum/500/500',
-  'https://picsum.photos/seed/picsum/500/500',
-];
-
+import ImageCarousel from "./Carousel/Carousel";
 
 const customStyles = {
   content: {
@@ -48,9 +41,14 @@ function showNavbar() {
   return { type: "show" };
 }
 
-function ModalWindow({ modalStatus, setModalStatus, postImg }) {
+// eslint-disable-next-line no-unused-vars
+function ModalWindow({ modalStatus, setModalStatus, postImg, setPostImg }) {
   function closeModal() {
     setModalStatus(false);
+  }
+
+  function eraseModalImages() {
+    setPostImg('');
   }
 
   const dispatch = useDispatch();
@@ -77,6 +75,7 @@ function ModalWindow({ modalStatus, setModalStatus, postImg }) {
                     closeModal();
                     dispatch(showNavbar());
                     dispatch(leaveScroll());
+                    
                   }}
                 >
                   FECHAR
@@ -84,15 +83,8 @@ function ModalWindow({ modalStatus, setModalStatus, postImg }) {
               </div>
               {/* ROW 2 */}
               <div className="h-[65%] flex flex-row ">
-                <div className="w-1/2">a</div>
-                <div className="w-1/2 ">
-                  {/* <img
-                    className="w-256 h-256 object-cover rounded-xl"
-                    src={postImg}
-                    alt="Your image description"
-                  /> */}
-                  <Carousel images={images} />
-                </div>
+                {/* <ImageCarousel images={images} /> */}
+                <ImageCarousel images={postImg} />
               </div>
               {/* ROW 3 */}
               <div className="h-[25%] flex flex-row justify-between">
