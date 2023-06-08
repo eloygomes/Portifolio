@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+// eslint-disable-next-line react/prop-types
 const ImageCarousel = ({ images }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
@@ -35,7 +36,8 @@ const ImageCarousel = ({ images }) => {
             selectedItem={selectedImageIndex}
             className="mx-10 rounded-xl"
           >
-            {images.map((image, index) => (
+            {// eslint-disable-next-line react/prop-types
+            images.map((image, index) => (
               <div key={index}>
                 <img
                   className="rounded-lg object-cover p-10  items-center"
