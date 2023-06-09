@@ -1,46 +1,31 @@
-
 import { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { motion, useInView, useAnimation } from "framer-motion";
+
 import ModalWindow from "../assets/modal/ModalWindow";
 
-import port01 from "../assets/port/Profissional/01/behance_c3tech.png";
+import images from "./PortS/PortCovers";
 
+import port01 from "../assets/port/Profissional/01/behance_c3tech.png";
 
 //Redux
 
 function freezeScroll() {
-  return { type: 'hold' };
+  return { type: "hold" };
 }
 
 function hideNavbar() {
-  return { type: 'hide' };
+  return { type: "hide" };
 }
 
-
-
-// ARRAYS
-const images = {
-  pro:{
-    img1: "https://images.unsplash.com/photo-1515191107209-c28698631303?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
-    img2: "https://images.unsplash.com/photo-1526929804231-3de5919d43ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-    img3: "https://images.unsplash.com/photo-1506480704700-d4a381ecd2f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-    img4: "https://images.unsplash.com/photo-1535268244390-8b989b92d2bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-    img5: "https://images.unsplash.com/photo-1450297350677-623de575f31c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-    img6: "https://images.unsplash.com/photo-1545315003-c5ad6226c272?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
-  },
-  personal : {
-    img1: "https://images.unsplash.com/photo-1542596594-649edbc13630?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-    img2: "https://images.unsplash.com/photo-1453175324447-6864b23ecf23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-    img3: "https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-    img4: "https://images.unsplash.com/photo-1524046346361-5a9c9592fb74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80",
-    img5: "https://images.unsplash.com/photo-1648550733986-22e9139d6533?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-    img6: "https://images.unsplash.com/photo-1598719830762-055a6665a463?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-  }
+function particlesOff() {
+  return { type: "off" };
 }
 
-
+function particlesOn() {
+  return { type: "on" };
+}
 
 function Portfolio() {
   const [modalStatus, setModalStatus] = useState(false);
@@ -51,52 +36,107 @@ function Portfolio() {
   // Handle page scroll
   const [scrollEnabled, setScrollEnabled] = useState(false);
 
-  const [portWorkStatus, setPortWorkStatus] = useState('personal');
+  // Handle image changes when portfolio buttons are clicked
+  const [portWorkStatus, setPortWorkStatus] = useState("uiux");
+
+  //SRC of images
+  const [imgSrc01, setImgSrc01] = useState("");
+  const [imgSrc02, setImgSrc02] = useState("");
+  const [imgSrc03, setImgSrc03] = useState("");
+  const [imgSrc04, setImgSrc04] = useState("");
+  const [imgSrc05, setImgSrc05] = useState("");
+  const [imgSrc06, setImgSrc06] = useState("");
+
+  const scrollBodyModalOn = useSelector((state) => state.scrollBodyModalOn);
+
+  const dispatch = useDispatch();
 
   const ref = useRef(null);
   const isInView = useInView(ref);
 
   const mainControls = useAnimation();
 
-
-
-
-
-  const scrollBodyModalOn = useSelector((state) => state.scrollBodyModalOn);
-  
-  const dispatch = useDispatch();
-
-
-  var portStatus = 'pro';
-
-  //Handle port work status
-  useEffect(() => {
-
-
-  }, [portWorkStatus]);
-
-
-
   //Handle page scroll
   const handleToggleScroll = () => {
     if (scrollEnabled) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
     setScrollEnabled(!scrollEnabled);
   };
 
   useEffect(() => {
     if (isInView) {
+      console.log(isInView);
+      dispatch(particlesOn());
       mainControls.start("visible");
     }
   }, [isInView]);
 
   //Handle page scroll
   useEffect(() => {
-    handleToggleScroll()
+    handleToggleScroll();
   }, [scrollBodyModalOn]);
+
+  const handleImages = () => {
+    console.log(portWorkStatus);
+  };
+
+  useEffect(() => {
+    if (portWorkStatus === "uiux") {
+      console.log("uiux");
+      setImgSrc01(images.uiux.img1);
+      setImgSrc02(images.uiux.img2);
+      setImgSrc03(images.uiux.img3);
+      setImgSrc04(images.uiux.img4);
+      setImgSrc05(images.uiux.img5);
+      setImgSrc06(images.uiux.img6);
+    }
+
+    if (portWorkStatus === "impressos") {
+      console.log("impressos");
+      setImgSrc02(images.impressos.img2);
+      setImgSrc01(images.impressos.img1);
+      setImgSrc03(images.impressos.img3);
+      setImgSrc04(images.impressos.img4);
+      setImgSrc05(images.impressos.img5);
+      setImgSrc06(images.impressos.img6);
+    }
+
+    if (portWorkStatus === "branding") {
+      console.log("branding");
+      setImgSrc01(images.branding.img1);
+      setImgSrc02(images.branding.img2);
+      setImgSrc03(images.branding.img3);
+      setImgSrc04(images.branding.img4);
+      setImgSrc05(images.branding.img5);
+      setImgSrc06(images.branding.img6);
+    }
+
+    if (portWorkStatus === "foto") {
+      console.log("foto");
+      setImgSrc01(images.foto.img1);
+      setImgSrc02(images.foto.img2);
+      setImgSrc03(images.foto.img3);
+      setImgSrc04(images.foto.img4);
+      setImgSrc05(images.foto.img5);
+      setImgSrc06(images.foto.img6);
+    }
+
+    if (portWorkStatus === "edicao") {
+      console.log("edicao");
+      setImgSrc01(images.edicao.img1);
+      setImgSrc02(images.edicao.img2);
+      setImgSrc03(images.edicao.img3);
+      setImgSrc04(images.edicao.img4);
+      setImgSrc05(images.edicao.img5);
+      setImgSrc06(images.edicao.img6);
+    }
+  }, [portWorkStatus]);
+
+  // console.log(portWorkStatus);
+  // console.log(imgSrc01);
 
   return (
     <>
@@ -140,8 +180,9 @@ function Portfolio() {
               </motion.p>
             </div>
 
+            {/* /////////////////////////////////////////////////////////////////////////BUTTONS///////////////////////////////////////////////////////////////////////// */}
+
             <div className="w-[50%] flex flex-row justify-end ">
-
               <motion.button
                 variants={{
                   hidden: { opacity: 0, y: 75 },
@@ -158,10 +199,16 @@ function Portfolio() {
                 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={() => setPortWorkStatus('personal')}
-                className="mt-5 py-1 h-[50px] bg-[#19142A] text-white border border-white"
+                onClick={() => {
+                  setPortWorkStatus("uiux");
+                }}
+                className={`w-full mt-5 py-1 h-[50px] ${
+                  portWorkStatus === "uiux"
+                    ? "bg-[#D6223B] text-white"
+                    : "bg-[#19142A] border border-gray-500 text-gray-500"
+                } whitespace-nowrap`}
               >
-                Projetos Pessoais
+                UI / UX
               </motion.button>
 
               <motion.button
@@ -180,18 +227,101 @@ function Portfolio() {
                 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={() => setPortWorkStatus('pro')}
-                className="mt-5 py-1 h-[50px]  bg-[#19142A] text-white border border-white ml-10"
+                onClick={() => {
+                  setPortWorkStatus("impressos");
+
+                  handleImages();
+                }}
+                className={`mt-5 py-1 h-[50px] ${
+                  portWorkStatus === "impressos"
+                    ? "bg-[#D6223B] text-white"
+                    : "bg-[#19142A] border border-gray-500 text-gray-500"
+                } ml-10 whitespace-nowrap`}
               >
-                Projetos Profissionais
+                IMPRESSOS
               </motion.button>
 
+              <motion.button
+                variants={{
+                  hidden: { opacity: 0, y: 75 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate={mainControls}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.35,
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setPortWorkStatus("branding")}
+                className={`mt-5 py-1 h-[50px] ${
+                  portWorkStatus === "branding"
+                    ? "bg-[#D6223B] text-white"
+                    : "bg-[#19142A] border border-gray-500 text-gray-500"
+                } ml-10 uppercase whitespace-nowrap`}
+              >
+                Branding
+              </motion.button>
+              <motion.button
+                variants={{
+                  hidden: { opacity: 0, y: 75 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate={mainControls}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.35,
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setPortWorkStatus("foto")}
+                className={`mt-5 py-1 h-[50px] ${
+                  portWorkStatus === "foto"
+                    ? "bg-[#D6223B] text-white"
+                    : "bg-[#19142A] border border-gray-500 text-gray-500"
+                } ml-10 uppercase whitespace-nowrap`}
+              >
+                Fotografia
+              </motion.button>
+              <motion.button
+                variants={{
+                  hidden: { opacity: 0, y: 75 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate={mainControls}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.35,
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setPortWorkStatus("edicao")}
+                className={`mt-5 py-1 h-[50px] ${
+                  portWorkStatus === "edicao"
+                    ? "bg-[#D6223B] text-white"
+                    : "bg-[#19142A] border border-gray-500 text-gray-500"
+                } ml-10 uppercase whitespace-nowrap`}
+              >
+                Edição
+              </motion.button>
             </div>
-
           </div>
 
-          <div className="grid gap-4 grid-cols-6 grid-rows-1 text-center pt-10 cursor-pointer">
+          {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
 
+          <div className="grid gap-4 grid-cols-6 grid-rows-1 text-center pt-10 cursor-pointer">
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 75 },
@@ -204,8 +334,9 @@ function Portfolio() {
               onClick={() => {
                 console.log("CLICOUUUUU");
                 setModalStatus(true);
-                dispatch(hideNavbar())
-                dispatch(freezeScroll())
+                dispatch(hideNavbar());
+                dispatch(freezeScroll());
+                dispatch(particlesOff());
                 setPostImg([
                   "https://picsum.photos/seed/picsum1/1000/",
                   "https://picsum.photos/seed/picsum2/500/500",
@@ -219,21 +350,19 @@ function Portfolio() {
                   "https://picsum.photos/seed/picsum10/500/500",
                   "https://picsum.photos/seed/picsum11/1000/",
                   "https://picsum.photos/seed/picsum12/500/500",
-                  
-                ])
+                ]);
                 setPortWorkInfo({
                   kindOfProject: "ReBranding",
                   companyName: "C3Tech",
                   techs: ["React", "NextJS", "TailwindCSS"],
                   jobDescription: "Era uma merda, agora é uma bosta",
                 });
-
               }}
             >
               <img
                 className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                // src={images.pro.img1}
-                src={portWorkStatus === 'personal' ? images.personal.img1 : images.pro.img1}
+                // src={`${images}${portWorkStatus}.img1`}
+                src={imgSrc01}
                 alt=""
               />
             </motion.div>
@@ -250,31 +379,30 @@ function Portfolio() {
               onClick={() => {
                 console.log("CLICOUUUUU N2");
                 setModalStatus(true);
-                dispatch(hideNavbar())
-                dispatch(freezeScroll())
+                dispatch(hideNavbar());
+                dispatch(freezeScroll());
                 setPostImg([
                   "https://picsum.photos/seed/picsum7/1000/",
                   "https://picsum.photos/seed/picsum8/500/500",
                   "https://picsum.photos/seed/picsum9/500/500",
                   "https://picsum.photos/seed/picsum10/500/500",
                   "https://picsum.photos/seed/picsum11/500/500",
-                ])
+                ]);
                 setPortWorkInfo({
                   kindOfProject: "ReBranding",
                   companyName: "GIBSON TECH E DESASTRES",
                   techs: ["React", "NextJS", "TailwindCSS"],
                   jobDescription: "Era uma merda, agora é uma bosta",
                 });
-
-                
               }}
             >
               <img
                 className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                src={portWorkStatus === 'personal' ? images.personal.img2 : images.pro.img2}
+                src={imgSrc02}
                 alt=""
               />
             </motion.div>
+
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 75 },
@@ -287,7 +415,7 @@ function Portfolio() {
             >
               <img
                 className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                src={portWorkStatus === 'personal' ? images.personal.img3 : images.pro.img3}
+                src={imgSrc03}
                 alt=""
               />
             </motion.div>
@@ -303,7 +431,7 @@ function Portfolio() {
             >
               <img
                 className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                src={portWorkStatus === 'personal' ? images.personal.img4 : images.pro.img4}
+                src={imgSrc04}
                 alt=""
               />
             </motion.div>
@@ -319,7 +447,7 @@ function Portfolio() {
             >
               <img
                 className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                src={portWorkStatus === 'personal' ? images.personal.img5 : images.pro.img5}
+                src={imgSrc05}
                 alt=""
               />
             </motion.div>
@@ -336,15 +464,11 @@ function Portfolio() {
             >
               <img
                 className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                src={portWorkStatus === 'personal' ? images.personal.img6 : images.pro.img6}
+                src={imgSrc06}
                 alt=""
               />
             </motion.div>
-
-        
-
           </div>
-          
         </div>
       </div>
     </>

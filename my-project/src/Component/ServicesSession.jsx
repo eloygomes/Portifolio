@@ -81,152 +81,184 @@ function ServicesSession() {
   return (
     <>
       <div
-        className={`w-screen h-screen flex flex-col bg-cover bg-center bg-no-repeat ${servBg}`}
+        className={`w-screen h-screen flex flex-col bg-cover bg-center bg-no-repeat ${servBg} drop-shadow-md`}
         id="services"
       >
-        <div
-          className={`inner-service w-screen h-screen flex bg-black absolute opacity-[.85] `}
-        ></div>
-        <motion.h1
-          variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 0.05, y: 0 },
-          }}
-          initial="hidden"
-          animate={mainControls}
-          transition={{ duration: 0.5, delay: 0.05 }}
-          className="text-[150px] opacity-5 relative top-[80%] "
-        >
-          {textOnScreen}
-        </motion.h1>
-        <div ref={ref} className="container mx-auto mt-28">
-          <div className="flex flex-row">
+        <div className="container mx-auto h-screen flex flex-col justify-center">
+          <div className="h-[80vh] mt-[10vh] m-10 p-5 backdrop-blur-xl bg-white/10 rounded-xl">
             <motion.h1
               variants={{
                 hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
+                visible: { opacity: 0.05, y: 0 },
               }}
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.05 }}
-              className="text-6xl py-10 absolute mt-[20px] mx-5 text-gray-400"
+              className="text-[150px] opacity-5 top-[80%] absolute  "
             >
-              Serviços
+              {textOnScreen}
             </motion.h1>
-            <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.25 }}
-              className="mt-[150px] absolute mx-5 text-gray-400"
-            >
-              Na seção abaixo, apresento um panorama completo da minha
-              experiência profissional até o presente momento.”
-            </motion.p>
-          </div>
-        </div>
 
-        <div className="container mx-auto mt-64 ">
-          <div className="flex flex-row cursor-pointer absolute">
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="mx-5 hover:text-[#D6223B] text-3xl  text-gray-400"
-              onMouseEnter={() => setWall("iuui")}
-              
-            >
-              UI/UX
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.35 }}
-              className="mx-5 hover:text-[#D6223B] text-3xl  text-gray-400"
-              onMouseEnter={() => setWall("branding")}
-            >
-              BRANDING
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mx-5 hover:text-[#D6223B] text-3xl  text-gray-400"
-              onMouseEnter={() => setWall("impressos")}
-            >
-              IMPRESSOS
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.45 }}
-              className="mx-5 hover:text-[#D6223B] text-3xl  text-gray-400"
-              onMouseEnter={() => setWall("foto")}
-            >
-              FOTOGRAFIA
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mx-5 hover:text-[#D6223B] text-3xl  text-gray-400"
-              onMouseEnter={() => setWall("edicao")}
-            >
-              EDIÇÃO
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.55 }}
-              className="mx-5 hover:text-[#D6223B] text-3xl  text-gray-400"
-              onMouseEnter={() => setWall("podcast")}
-            >
-              PODCAST
-            </motion.div>
+            <div ref={ref} className="container mx-auto   ">
+              <div className="flex flex-row justify-between ">
+                <motion.h1
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.05 }}
+                  className="text-6xl text-white p-10"
+                >
+                  Serviços
+                </motion.h1>
+                <motion.p
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.25 }}
+                  className="w-[40%] mt-5 text-right text-white py-10"
+                >
+                  Na seção abaixo, apresento um panorama completo da minha
+                  experiência profissional até o presente momento.”
+                </motion.p>
+              </div>
+            </div>
+
+            <div className="container mx-auto py-10 px-5 ">
+              <div className="w-full flex flex-row justify-start cursor-pointer p-5">
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:text-gray-800] text-sm  text-white"
+                  onMouseEnter={() => setWall("iuui")}
+                >
+                  UI/UX
+                </motion.button>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.35 }}
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:text-gray-800] text-sm  text-white"
+                  onMouseEnter={() => setWall("branding")}
+                >
+                  BRANDING
+                </motion.button>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:text-gray-800] text-sm  text-white"
+                  onMouseEnter={() => setWall("impressos")}
+                >
+                  IMPRESSOS
+                </motion.button>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.45 }}
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:text-gray-800] text-sm  text-white"
+                  onMouseEnter={() => setWall("foto")}
+                >
+                  FOTOGRAFIA
+                </motion.button>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:text-gray-800] text-sm  text-white"
+                  onMouseEnter={() => setWall("edicao")}
+                >
+                  EDIÇÃO
+                </motion.button>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.55 }}
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:text-gray-800] text-sm  text-white"
+                  onMouseEnter={() => setWall("podcast")}
+                >
+                  PODCAST
+                </motion.button>
+              </div>
+
+              <div className=" flex flex-row justify-between">
+                <div className="w-1/2 p-5 mt-10">
+                  <motion.p
+                    variants={{
+                      hidden: { opacity: 0, y: 75 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    initial="hidden"
+                    animate={mainControls}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.6,
+                      ease: "easeInOut",
+                    }}
+                    className=" text-white"
+                  >
+                    {servDesc}
+                  </motion.p>
+                </div>
+                <div className="w-1/2 -mt-52">
+                  <div className="absolute top-[23rem] left-[48vw]  flex flex-row mt-10 z-40  mx-5 text-white max-w-[1200px] drop-shadow-xl">
+                    <img
+                      className="w-72 h-72 object-cover rounded-xl"
+                      src="https://images.unsplash.com/photo-1587355760421-b9de3226a046?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2342&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div className="absolute top-[30rem] left-[60vw]  flex flex-row mt-10 z-40  mx-5 text-white max-w-[1200px] drop-shadow-xl">
+                    <img
+                      className="w-52 h-52 object-cover rounded-xl"
+                      src="https://images.unsplash.com/photo-1629752187687-3d3c7ea3a21b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2342&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div className="absolute top-[25rem] left-[65vw]  flex flex-row mt-10 z-40  mx-5 text-white max-w-[1200px] drop-shadow-xl">
+                    <img
+                      className="w-36 h-36 object-cover rounded-xl"
+                      src="https://plus.unsplash.com/premium_photo-1661572997144-066a404b67bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2664&q=80"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex flex-row mt-24 z-40 absolute mx-5 text-gray-400 max-w-[1200px]">
-            <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.6, ease: "easeInOut" }}
-              className=" text-gray-400"
-            >
-              {servDesc}
-            </motion.p>
-          </div>
+
+          {/* <img src={img2} className=" absolute w-screen left-0" alt="" /> */}
         </div>
-        {/* <img src={img2} className=" absolute w-screen left-0" alt="" /> */}
       </div>
     </>
   );

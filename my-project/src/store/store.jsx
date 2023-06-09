@@ -33,10 +33,22 @@ function scrollBodyModalOn(state = "leave", action) {
   }
 }
 
+function controlParticles(state = "on", action) {
+  switch (action.type) {
+    case "off":
+      return (state = "off");
+    case "on":
+      return (state = "on");
+    default:
+      return state;
+  }
+}
+
 const reducer = combineReducers({
   counterReducer: counterReducer,
   navbarZindex: navbarZindex,
   scrollBodyModalOn:scrollBodyModalOn,
+  controlParticles:controlParticles,
 });
 
 const store = configureStore({

@@ -1,4 +1,5 @@
 import KrabSession from "./session4/krabSession";
+import { useSelector, useDispatch } from "react-redux";
 
 import { useEffect, useRef } from "react";
 
@@ -16,11 +17,16 @@ function Carreira({
   const isInView = useInView(ref);
 
   const mainControls = useAnimation();
+  const dispatch = useDispatch();
+
+  function particlesOff() {
+    return { type: "off" };
+  }
 
   useEffect(() => {
     if (isInView) {
       console.log(isInView);
-
+      dispatch(particlesOff());
       mainControls.start("visible");
     }
   }, [isInView]);
@@ -28,10 +34,11 @@ function Carreira({
   return (
     <>
       <div
+        ref={ref}
         className="bg-[#2A2344] w-screen h-screen items-center flex flex-row "
         id="carreira"
       >
-        <div ref={ref} className="container mx-auto grid  h-[50%]   h-screen">
+        <div className="container mx-auto grid  h-[50%]   h-screen">
           <motion.h1
             variants={{
               hidden: { opacity: 0, y: 75 },
@@ -39,7 +46,7 @@ function Carreira({
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.70 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
             className="text-6xl py-10 absolute mt-[100px] mx-5"
           >
             Carreira
@@ -57,7 +64,7 @@ function Carreira({
             Na seção abaixo, apresento um panorama completo da minha experiência
             profissional até o presente momento.”
           </motion.p>
-          
+
           <div className="flex flex-row justify-between text-4xl font-extralight mt-96">
             <motion.h1
               variants={{
@@ -66,7 +73,7 @@ function Carreira({
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.80 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
               className="h-full opacity-[0.1] hover:opacity-[0.5] cursor-pointer mx-5  "
             >
               2013
@@ -90,7 +97,7 @@ function Carreira({
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.90 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
               className="h-full opacity-[0.3] hover:opacity-[0.7] cursor-pointer mx-5   "
             >
               2018
@@ -102,7 +109,7 @@ function Carreira({
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.95   }}
+              transition={{ duration: 0.5, delay: 0.95 }}
               className="h-full opacity-[0.4] hover:opacity-[0.8] cursor-pointer mx-5   "
             >
               2021
@@ -114,7 +121,7 @@ function Carreira({
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5, delay: 1.00 }}
+              transition={{ duration: 0.5, delay: 1.0 }}
               className="h-full opacity-[0.5] hover:opacity-[0.9] cursor-pointer mx-5   "
             >
               Hoje

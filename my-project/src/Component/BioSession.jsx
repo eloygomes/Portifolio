@@ -4,7 +4,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 import Lottie from "lottie-react";
 import animationData from "../assets/63487-programming-computer.json";
-import ParticlesBackground from "./particles/ParticlesBackground";
+
 import BioSessionCard from "./BioS/BioSessionCard";
 
 function BioSession() {
@@ -15,8 +15,6 @@ function BioSession() {
 
   useEffect(() => {
     if (isInView) {
-      // console.log(isInView);
-
       mainControls.start("visible");
     }
   }, [isInView]);
@@ -25,7 +23,6 @@ function BioSession() {
 
   return (
     <>
-      {/* <ParticlesBackground /> */}
       <div className=" w-screen flex flex-col " id="bio">
         <div
           ref={ref}

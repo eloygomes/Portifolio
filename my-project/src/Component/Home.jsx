@@ -22,11 +22,12 @@ function Home() {
 
   return (
     <>
-                <ParticlesBackground/>
+      <ParticlesBackground />
       <div className=" w-screen h-screen flex flex-col">
-      {/* <div className="bg-[#19142A] w-screen h-screen flex flex-col"> */}
-        
-        <div ref={ref} className="container mx-auto h-screen flex flex-col justify-center">
+        <div
+          ref={ref}
+          className="container mx-auto h-screen flex flex-col justify-center"
+        >
           <div className="flex flex-row">
             <div className="w-[50%] mt-24">
               <div className="h-full flex flex-col justify-center container  mx-auto">
