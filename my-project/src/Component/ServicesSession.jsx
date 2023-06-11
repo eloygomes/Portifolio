@@ -262,9 +262,9 @@ function ServicesSession() {
                     {servDesc}
                   </motion.p>
                 </div>
-                <div className="w-1/2 -mt-52">
+                <div className="w-1/2 -mt-52 flex flex-col justify-center">
                   <Lottie
-                    className="w-[100%] h-[100%] p-20"
+                    className="w-[100%] h-[800px] p-20"
                     onComplete={() => {
                       someAnimation.current?.goToAndPlay(45, true);
                     }}

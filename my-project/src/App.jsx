@@ -9,7 +9,7 @@ import BioSession from "./Component/BioSession";
 import ServicesSession from "./Component/ServicesSession";
 import Contact from "./Component/Contact";
 import Home from "./Component/Home";
-// import HighlightRow from "./Component/HighlightRow";
+
 import Portfolio from "./Component/Portfolio";
 import Carreira from "./Component/Carreira";
 
@@ -19,21 +19,22 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    // marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     transition: "all 3s ease-in-out 1s",
-    backgroundColor: "rgb(214, 34, 59)",
     borderRadius: "12px",
     padding: "3px",
+    height: "100vh",
+    overflow: "scroll",
+    // marginTop: "50px",
+    zIndex: "20",
   },
   overlay: {
-    position: 'fixed',
+    position: "fixed",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.75)'
-    
+    backgroundColor: "rgba(25, 20, 42, 0.75)",
   },
 };
 
@@ -67,7 +68,6 @@ function App() {
       <NavBar />
       <Home />
       <BioSession />
-      {/* <HighlightRow /> */}
       <Portfolio />
       <Carreira
         openModal={openModal}
@@ -87,59 +87,46 @@ function App() {
           onRequestClose={closeModal}
           style={customStyles}
           contentLabel="Example Modal"
+          className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3"
         >
-          <div className="w-full min-w-[1200px] bg-[#19142A] rounded-xl  ">
-            <div className="flex flex-col justify-between  rounded-xl  bg-[#19142A]">
-              <div className="flex flex-col justify-around rounded-xl p-5 px-5 bg-[#2A2344]">
-                <div className="flex flex-row justify-between">
-                  <div className="w-[30%] p-5">
-                    <div className="flex flex-col">
-                      <img
-                        src="http://static.baubauhaus.com/assets/42748_270.jpg"
-                        alt=""
-                      />
-                    </div>
+          <div className="w-full min-w-[1200px] rounded-xl">
+            <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-[80vh] m-20 z-20">
+              {/* ROW 1 */}
+              <div className="h-[10%] flex flex-row justify-between p-5  ">
+                <div className="uppercase text-6xl">Portfólio</div>
+                <div
+                  className="cursor-pointer text-2xl"
+                  onClick={() => {
+                    closeModal();
+                    // dispatch(showNavbar());
+                    // dispatch(leaveScroll());
+                    // dispatch(particlesOn());
+                  }}
+                >
+                  FECHAR
+                </div>
+              </div>
+              {/* ROW 2 */}
+              <div className="h-[65%] flex flex-row "></div>
+              {/* ROW 3 */}
+              <div className="h-[25%] flex flex-row justify-between">
+                <div className="w-[30%] pl-5 ">
+                  <div className="uppercase text-sm">
+                    {/* {portWorkInfo.kindOfProject} */}
                   </div>
-                  <div className="w-[70%] p-5">
-                    <div className="flex flex-col">
-                      <div className="flex flex-row justify-between">
-                        <div className="text-left">
-                          <div className="font-light text-xl mb-5 ">
-                            {modalPos}
-                          </div>
-                          <h4 className="text-xs uppercase">Empresa</h4>
-                          <h2 className="font-semibold text-base mb-5">
-                            {modalJobName}
-                          </h2>
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="text-xs">Atribuições</h4>
-                        <p className="text-sm py-2">{modalDescJob}</p>
-                      </div>
-                      <div className="flex flex-row justify-between">
-                        <div className="text-left py-5">
-                          <h4 className="text-xs mt-2">Período</h4>
-                          <div className="text-xs">{modalJobDuration}</div>
-                        </div>
-                        <div className="text-right py-5">
-                          <h4 className="text-xs mt-2">Segmento</h4>
-                          <div className="font-semibold text-xs">
-                            {modalJobSegment}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div className="uppercase text-4xl">
+                    {/* {portWorkInfo.companyName} */}
                   </div>
-                  <div
-                    className="w-[10%] text-right px-8 font-black cursor-pointer"
-                    onClick={closeModal}
-                  >
-                    X
+                  {/* <p className="text-sm py-5">{portWorkInfo.jobDescription}</p> */}
+                  <div className="uppercase text-xs">Techs</div>
+                  <div className="uppercase text-sm flex flex-row ">
+                    {/* {portWorkInfo.techs} */}
                   </div>
                 </div>
               </div>
             </div>
+            {/* </div> */}
+            {/* </div> */}
           </div>
         </Modal>
       </div>

@@ -64,7 +64,7 @@ function ModalWindow({
 
   return (
     <div>
-      <div className="">
+      <div >
         <Modal
           isOpen={modalStatus}
           onRequestClose={closeModal}
