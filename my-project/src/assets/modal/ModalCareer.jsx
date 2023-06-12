@@ -109,9 +109,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                     <div className="uppercase text-base  ">
                       Endereço da empresa, 123123
                     </div>
-                    {/* <div className="rounded-xl py-1">
-                      <SimpleMap />
-                    </div> */}
+                 
                   </div>
                 </div>
 

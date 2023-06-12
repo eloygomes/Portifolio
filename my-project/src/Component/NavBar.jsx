@@ -1,7 +1,4 @@
-import { useSelector} from "react-redux";
-
-
-
+import { useSelector } from "react-redux";
 
 function NavBar() {
   //Redux
@@ -9,10 +6,16 @@ function NavBar() {
 
   return (
     <>
-      <div className={`bg-[#19142A] w-screen py-5 fixed left-0 top-0 drop-shadow-md ${navbarZindex === 'show'? 'z-10' :'-z-10' }`}>
-        <div className="flex flex-row justify-between container mx-auto ">
+      <div
+        className={`sm:bg-[#19142A] w-screen py-5 fixed left-0 top-0 drop-shadow-md ${
+          navbarZindex === "show" ? "z-10" : "-z-10"
+        }`}
+      >
+        <div className="sm:flex hidden flex flex-row justify-between container mx-auto ">
           <div className="font-black text-2xl hover:scale-105">
-            <a className="font-extrabold " href="#">EVG</a>
+            <a className="font-extrabold " href="#">
+              EVG
+            </a>
           </div>
           <div className="w-[40%] flex flex-row justify-around cursor-pointer">
             <a href="#bio" className="px-2">
@@ -20,7 +23,7 @@ function NavBar() {
             </a>
             <a href="#port" className="px-2">
               PORTFÓLIO
-            </a>            
+            </a>
             <a href="#carreira" className="px-2">
               CARREIRA
             </a>
@@ -31,7 +34,9 @@ function NavBar() {
               CONTATO
             </a>
             <div className="pl-5">
-              <p className="bg-[#D6223B] text-xs p-1.5 whitespace-nowrap rounded">DOWNLOAD CV</p>
+              <p className="bg-[#D6223B] text-xs p-1.5 whitespace-nowrap rounded">
+                DOWNLOAD CV
+              </p>
             </div>
           </div>
         </div>
