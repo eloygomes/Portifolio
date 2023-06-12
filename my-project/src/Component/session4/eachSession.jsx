@@ -1,31 +1,18 @@
 function EachSession({
-  jobPosition,
-  jobName,
-  jobSegment,
-  jobDuration,
-  descJob,
-  openModal,
-  setModalJobName,
-  setModalJobSegment,
-  setModalJobDuration,
-  setModalDescJob,
-  setMPos,
+  // eslint-disable-next-line react/prop-types
+  jobPosition,  jobName,  jobSegment,  jobDuration,  setModalStatus,  setcareerModalInfo,  jobDesc
 }) {
-  const customStyles = () => {
-    setModalJobName(jobName);
-    setModalJobSegment(jobSegment);
-    setModalJobDuration(jobDuration);
-    setModalDescJob(descJob);
-    setMPos(jobPosition);
-  };
-
   return (
     <div
       className="relative sm:mb-0  h-full bottom-0 mx-2  py-8 px-5 rounded-xl border-[1px] border-[#19142A] border-solid cursor-pointer  hover:bg-[#19142A] hover:rounded-xl hover:border-[#d6223b] drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 "
       onClick={() => {
-        console.log("open Modal");
-        openModal();
-        customStyles();
+        setModalStatus(true);
+        setcareerModalInfo({
+          jobPosition: jobPosition,
+          jobName: jobName,
+          jobSegment: jobSegment,
+          jobDescription: jobDesc,
+        });
       }}
     >
       <div className="flex items-center">

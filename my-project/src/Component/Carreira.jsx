@@ -1,18 +1,20 @@
-import KrabSession from "./session4/krabSession";
-import {  useDispatch } from "react-redux";
-
-import { useEffect, useRef } from "react";
-
+import { useState, useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
+import { useDispatch } from "react-redux";
 
-function Carreira({
-  openModal,
-  setModalJobName,
-  setModalJobSegment,
-  setModalJobDuration,
-  setModalDescJob,
-  setMPos,
-}) {
+import KrabSession from "./session4/krabSession";
+
+import ModalCareer from "../assets/modal/ModalCareer";
+
+
+
+function Carreira() {
+  
+  // Control modal state
+  const [modalStatus, setModalStatus] = useState(false);
+  
+  const [careerModalInfo, setcareerModalInfo] = useState({});
+
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -33,6 +35,11 @@ function Carreira({
 
   return (
     <>
+      <ModalCareer
+        modalStatus={modalStatus}
+        setModalStatus={setModalStatus}
+        careerModalInfo={careerModalInfo}
+      />
       <div
         ref={ref}
         className="bg-[#2A2344] w-screen h-screen items-center flex flex-row "
@@ -128,12 +135,9 @@ function Carreira({
             </motion.h1>
           </div>
           <KrabSession
-            openModal={openModal}
-            setModalJobName={setModalJobName}
-            setModalJobSegment={setModalJobSegment}
-            setModalJobDuration={setModalJobDuration}
-            setModalDescJob={setModalDescJob}
-            setMPos={setMPos}
+            modalStatus={modalStatus}
+            setModalStatus={setModalStatus}
+            setcareerModalInfo={setcareerModalInfo}
           />
         </div>
       </div>

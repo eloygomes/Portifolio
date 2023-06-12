@@ -13,6 +13,8 @@ import Home from "./Component/Home";
 import Portfolio from "./Component/Portfolio";
 import Carreira from "./Component/Carreira";
 
+import { useDispatch } from "react-redux";
+
 const customStyles = {
   content: {
     top: "50%",
@@ -50,6 +52,8 @@ function App() {
   const [modalJobDuration, setModalJobDuration] = useState("");
   const [modalDescJob, setModalDescJob] = useState("");
 
+  const dispatch = useDispatch();
+
   function openModal() {
     setIsOpen(true);
   }
@@ -63,73 +67,28 @@ function App() {
     setIsOpen(false);
   }
 
+  // Redux
+  function leaveScroll() {
+    return { type: "leave" };
+  }
+
+  function showNavbar() {
+    return { type: "show" };
+  }
+
+  function particlesOn() {
+    return { type: "on" };
+  }
+
   return (
     <>
       <NavBar />
       <Home />
       <BioSession />
       <Portfolio />
-      <Carreira
-        openModal={openModal}
-        setModalJobName={setModalJobName}
-        setModalJobSegment={setModalJobSegment}
-        setModalJobDuration={setModalJobDuration}
-        setModalDescJob={setModalDescJob}
-        setMPos={setMPos}
-      />
+      <Carreira />
       <ServicesSession />
       <Contact />
-
-      <div className="">
-        <Modal
-          isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
-          onRequestClose={closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
-          className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3"
-        >
-          <div className="w-full min-w-[1200px] rounded-xl">
-            <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-[80vh] m-20 z-20">
-              {/* ROW 1 */}
-              <div className="h-[10%] flex flex-row justify-between p-5  ">
-                <div className="uppercase text-6xl">Portfólio</div>
-                <div
-                  className="cursor-pointer text-2xl"
-                  onClick={() => {
-                    closeModal();
-                    // dispatch(showNavbar());
-                    // dispatch(leaveScroll());
-                    // dispatch(particlesOn());
-                  }}
-                >
-                  FECHAR
-                </div>
-              </div>
-              {/* ROW 2 */}
-              <div className="h-[65%] flex flex-row "></div>
-              {/* ROW 3 */}
-              <div className="h-[25%] flex flex-row justify-between">
-                <div className="w-[30%] pl-5 ">
-                  <div className="uppercase text-sm">
-                    {/* {portWorkInfo.kindOfProject} */}
-                  </div>
-                  <div className="uppercase text-4xl">
-                    {/* {portWorkInfo.companyName} */}
-                  </div>
-                  {/* <p className="text-sm py-5">{portWorkInfo.jobDescription}</p> */}
-                  <div className="uppercase text-xs">Techs</div>
-                  <div className="uppercase text-sm flex flex-row ">
-                    {/* {portWorkInfo.techs} */}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* </div> */}
-            {/* </div> */}
-          </div>
-        </Modal>
-      </div>
     </>
   );
 }

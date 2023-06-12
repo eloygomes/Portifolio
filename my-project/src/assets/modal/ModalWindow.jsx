@@ -40,6 +40,10 @@ function showNavbar() {
   return { type: "show" };
 }
 
+function particlesOn() {
+  return { type: "on" };
+}
+
 // eslint-disable-next-line no-unused-vars
 function ModalWindow({
   modalStatus,
@@ -54,10 +58,6 @@ function ModalWindow({
 
   function eraseModalImages() {
     setPostImg("");
-  }
-
-  function particlesOn() {
-    return { type: "on" };
   }
 
   const dispatch = useDispatch();

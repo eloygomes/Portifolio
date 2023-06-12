@@ -9,8 +9,6 @@ import images from "./PortS/PortCovers";
 
 import port01 from "../assets/port/Profissional/01/behance_c3tech.png";
 
-
-
 //Redux
 function freezeScroll() {
   return { type: "hold" };
@@ -29,6 +27,7 @@ function particlesOn() {
 }
 
 function Portfolio() {
+  //
   const [modalStatus, setModalStatus] = useState(false);
   const [postImg, setPostImg] = useState(port01);
 
