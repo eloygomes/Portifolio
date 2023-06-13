@@ -14,7 +14,7 @@ function Home() {
 
   useEffect(() => {
     if (isInView) {
-      console.log(isInView);
+      // console.log(isInView);
 
       mainControls.start("visible");
     }
@@ -30,7 +30,7 @@ function Home() {
         >
           <div className="flex sm:flex-row flex-col-reverse">
             <div className="sm:w-[50%] w-full mt-24">
-              <div className="h-full flex flex-col justify-center container  mx-auto">
+              <div className="h-full flex flex-col justify-center container  ">
                 <motion.h1
                   variants={{
                     hidden: { opacity: 0, y: 75 },
@@ -39,7 +39,7 @@ function Home() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.05 }}
-                  className="sm:text-8xl text-5xl  font-medium  bg-[#2A2344] w-fit sm:mx-none mx-auto "
+                  className="sm:text-8xl text-5xl  font-medium  bg-[#2A2344] w-fit sm:mx-none sm:mx-auto "
                 >
                   Eloy Gomes
                 </motion.h1>
@@ -57,7 +57,7 @@ function Home() {
                 </motion.h4>
               </div>
             </div>
-            <div className="sm:w-[50%] w-full mt-24 flex flex-col sm:p-0 p-10 mx-auto sm:items-center">
+            <div className="sm:w-[50%] w-full mt-24 flex flex-col sm:p-0 p-20 mx-auto sm:items-center">
               <motion.img
                 variants={{
                   hidden: { opacity: 0, y: 75 },
