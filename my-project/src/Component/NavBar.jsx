@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 
 import { AiOutlineMenu } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 function NavBar() {
   //Redux
@@ -75,6 +76,7 @@ function NavBar() {
                     SERVIÇOS
                   </a>
                 </div>
+
                 <div
                   className="h-1/6 flex items-center justify-center text-xl rounded-xl backdrop-blur-xl bg-[#19142A]/10 hover:bg-white/10 hover:scale-105   my-2"
                   onClick={() => setMobileShowMenu(!mobileShowMenu)}
@@ -83,7 +85,8 @@ function NavBar() {
                     CONTATO
                   </a>
                 </div>
-                <div className="h-1/6 flex items-center justify-center bg-[#D6223B] text-xs whitespace-nowrap rounded m-10 p-5  ">
+
+                <div className=" flex items-center justify-center bg-[#D6223B] text-xs whitespace-nowrap rounded-full mx-36 my-10 p-5 cursor-pointer ">
                   DOWNLOAD CV
                 </div>
               </div>

@@ -149,8 +149,8 @@ function Portfolio() {
       />
       <div className="bg-[#19142A] w-screen h-screen flex flex-col" id="port">
         <div ref={ref} className="container mx-auto mt-40">
-          <div className="flex flex-row">
-            <div className="w-[50%] flex flex-col">
+          <div className="flex sm:flex-row flex-col p-5">
+            <div className="sm:w-[50%] w-full flex flex-col">
               <motion.h1
                 variants={{
                   hidden: { opacity: 0, y: 75 },
@@ -182,7 +182,8 @@ function Portfolio() {
 
             {/* /////////////////////////////////////////////////////////////////////////BUTTONS///////////////////////////////////////////////////////////////////////// */}
 
-            <div className="w-[50%] flex flex-row justify-end ">
+            <div className="sm:w-[50%] w-full flex sm:flex-row flex-col justify-end ">
+              
               <motion.button
                 variants={{
                   hidden: { opacity: 0, y: 75 },
@@ -236,7 +237,7 @@ function Portfolio() {
                   portWorkStatus === "impressos"
                     ? "bg-[#D6223B] text-white"
                     : "bg-[#19142A] border border-gray-500 text-gray-500"
-                } ml-10 whitespace-nowrap`}
+                } sm:ml-10 whitespace-nowrap`}
               >
                 IMPRESSOS
               </motion.button>
@@ -262,7 +263,7 @@ function Portfolio() {
                   portWorkStatus === "branding"
                     ? "bg-[#D6223B] text-white"
                     : "bg-[#19142A] border border-gray-500 text-gray-500"
-                } ml-10 uppercase whitespace-nowrap`}
+                } sm:ml-10 uppercase whitespace-nowrap`}
               >
                 Branding
               </motion.button>
@@ -287,7 +288,7 @@ function Portfolio() {
                   portWorkStatus === "foto"
                     ? "bg-[#D6223B] text-white"
                     : "bg-[#19142A] border border-gray-500 text-gray-500"
-                } ml-10 uppercase whitespace-nowrap`}
+                } sm:ml-10 uppercase whitespace-nowrap`}
               >
                 Fotografia
               </motion.button>
@@ -312,7 +313,7 @@ function Portfolio() {
                   portWorkStatus === "edicao"
                     ? "bg-[#D6223B] text-white"
                     : "bg-[#19142A] border border-gray-500 text-gray-500"
-                } ml-10 uppercase whitespace-nowrap`}
+                } sm:ml-10 uppercase whitespace-nowrap`}
               >
                 Edição
               </motion.button>

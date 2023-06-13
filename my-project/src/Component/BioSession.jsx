@@ -29,9 +29,9 @@ function BioSession() {
           className="container mx-auto flex flex-col justify-center"
         >
           <div className="flex flex-col">
-            <div className="backdrop-blur-xl bg-white/10 p-10 my-40 rounded-xl">
-              <div className="flex flex-row">
-                <div className="w-[50%] h-full flex flex-col mx-auto justify-center">
+            <div className="backdrop-blur-xl bg-white/10 p-10 m-5 sm:my-40 my-20 rounded-xl ">
+              <div className="flex sm:flex-row flex-col-reverse">
+                <div className="sm:w-[50%] w-full h-full flex flex-col mx-auto justify-center">
                   <div className="w-fit"></div>
                   <motion.h4
                     variants={{
@@ -55,10 +55,9 @@ function BioSession() {
                     initial="hidden"
                     animate={mainControls}
                     transition={{ duration: 0.5, delay: 0.45 }}
-                    className=" w-fit -ml-1 py-5 text-8xl font-medium hover:text-[#D6223B]"
+                    className=" w-fit -ml-1 py-5 sm:text-8xl text-6xl font-medium hover:text-[#D6223B]"
                   >
-                    Desenvolvedor
-                    <br /> Full Stack
+                    Desenvolvedor <br /> Full Stack
                   </motion.h1>
 
                   <motion.h3
@@ -116,7 +115,7 @@ function BioSession() {
                     web dos projetos.
                   </motion.h5>
                 </div>
-                <div className="w-[50%]  flex flex-col justify-center">
+                <div className="sm:w-[50%] w-full  flex flex-col justify-center">
                   <Lottie
                     className="w-[100%] h-[100%]"
                     onComplete={() => {
@@ -130,15 +129,16 @@ function BioSession() {
             </div>
 
             <div className="container mx-auto">
-              <div className="flex flex-col h-full mb-96">
-                <div className="flex flex-row justify-between mx-5">
-                  <div className="w-[50%]">
+              <div className="flex flex-col h-full mb-52">
+
+                <div className="flex sm:flex-row flex-col justify-between mx-5">
+                  <div className="sm:w-[50%] w-full">
                     <h1 className="bg-[#2A2344] w-fit uppercase font-semibold">
                       Formação
                     </h1>
                   </div>
-                  <div className="w-[50%]">
-                    <p className="max-w-fit text-right">
+                  <div className="sm:w-[50%] w-full">
+                    <p className="max-w-fit sm:text-right py-5">
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Tempore nesciunt illum dignissimos?
                     </p>
@@ -146,16 +146,16 @@ function BioSession() {
                 </div>
 
                 {/* ROW #1 */}
-                <div className="flex flex-row py-5 justify-between  rounded-xl">
+                <div className="flex sm:flex-row flex-col py-5 justify-between  ">
                   <BioSessionCard
-                    PositionName="Learn React Testing"
+                    PositionName="React Testing"
                     CompanyName="CODEACADEMY"
                     Date="DEZ/2022"
                     Description="Introdução a testes unitários."
                   />
 
                   <BioSessionCard
-                    PositionName="Learn React Router"
+                    PositionName="React Router"
                     CompanyName="CODEACADEMY"
                     Date="OUT/2022"
                     Description="Criação de rotas em react."
@@ -178,7 +178,7 @@ function BioSession() {
                 </div>
 
                 {/* ROW #2 */}
-                <div className="flex flex-row py-5 justify-between  rounded-xl">
+                <div className="flex sm:flex-row flex-col py-5 justify-between  ">
                   <BioSessionCard
                     PositionName="React JS"
                     CompanyName="UDEMY"
@@ -212,7 +212,7 @@ function BioSession() {
                 </div>
 
                 {/* ROW #3 */}
-                <div className="flex flex-row py-5 justify-between  rounded-xl">
+                <div className="flex sm:flex-row flex-col py-5 justify-between  ">
                   <BioSessionCard
                     PositionName="Estratégias de marketing e e-commerce"
                     CompanyName="SENAC"
@@ -247,7 +247,7 @@ function BioSession() {
                 </div>
 
                 {/* ROW #4 */}
-                <div className="flex flex-row py-5 justify-between  rounded-xl">
+                <div className="flex sm:flex-row flex-col py-5 justify-between  ">
                   <BioSessionCard
                     PositionName="Design gráfico com enfãse em comunicação digital"
                     CompanyName="UNIVERSIDADE PAULISTA"

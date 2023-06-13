@@ -29,7 +29,7 @@ function Home() {
           className="container mx-auto h-screen flex flex-col justify-center"
         >
           <div className="flex sm:flex-row flex-col-reverse">
-            <div className="sm:w-[50%] w-full mt-24">
+            <div className="sm:w-[50%] w-full sm:mt-[61px] mt-0">
               <div className="h-full flex flex-col justify-center container  ">
                 <motion.h1
                   variants={{
@@ -39,7 +39,7 @@ function Home() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.05 }}
-                  className="sm:text-8xl text-5xl  font-medium  bg-[#2A2344] w-fit sm:mx-none sm:mx-auto "
+                  className="sm:text-8xl text-5xl  font-medium  bg-[#2A2344] w-fit sm:mx-none mx-auto z-2"
                 >
                   Eloy Gomes
                 </motion.h1>
@@ -51,13 +51,13 @@ function Home() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.25 }}
-                  className="bg-[#D6223B] w-fit pl-1 text-4xl font-light text-left sm:mx-none mx-auto"
+                  className="bg-[#D6223B] w-fit pl-1 text-4xl font-light text-left sm:mx-none mx-auto z-1"
                 >
                   Full Stack Developer
                 </motion.h4>
               </div>
             </div>
-            <div className="sm:w-[50%] w-full mt-24 flex flex-col sm:p-0 p-20 mx-auto sm:items-center">
+            <div className="sm:w-[50%] w-full sm:mt-24 flex flex-col sm:p-0 p-10 mx-auto sm:items-center">
               <motion.img
                 variants={{
                   hidden: { opacity: 0, y: 75 },
@@ -68,7 +68,7 @@ function Home() {
                 transition={{ duration: 0.5, delay: 0.35 }}
                 src={pic01}
                 alt="f"
-                className="max-w-lg sm:max-w-lg max-w-none"
+                className="sm:max-w-lg max-w-sm w-full mx-auto "
               />
             </div>
           </div>
