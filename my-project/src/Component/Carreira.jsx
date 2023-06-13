@@ -6,13 +6,10 @@ import KrabSession from "./session4/krabSession";
 
 import ModalCareer from "../assets/modal/ModalCareer";
 
-
-
 function Carreira() {
-  
   // Control modal state
   const [modalStatus, setModalStatus] = useState(false);
-  
+
   const [careerModalInfo, setcareerModalInfo] = useState({});
 
   const ref = useRef(null);
@@ -42,10 +39,10 @@ function Carreira() {
       />
       <div
         ref={ref}
-        className="bg-[#2A2344] w-screen h-screen items-center flex flex-row "
+        className="bg-[#2A2344] w-screen h-full  items-center flex flex-row "
         id="carreira"
       >
-        <div className="container mx-auto grid  h-[50%]   h-screen">
+        <div className="container mx-auto grid sm:h-screen h-full sm:mb-0 mb-20">
           <motion.h1
             variants={{
               hidden: { opacity: 0, y: 75 },
@@ -72,7 +69,8 @@ function Carreira() {
             profissional até o presente momento.”
           </motion.p>
 
-          <div className="flex flex-row justify-between text-4xl font-extralight mt-96">
+          {/* //////////////////////////////////////////////////////////////////////// :: CARREIRAS :: //////////////////////////////////////////////////////////////////////// */}
+          <div className="h-full flex flex-row justify-between text-4xl font-extralight mt-96 overflow-x-scroll ">
             <motion.h1
               variants={{
                 hidden: { opacity: 0, y: 75 },
@@ -134,6 +132,7 @@ function Carreira() {
               Hoje
             </motion.h1>
           </div>
+
           <KrabSession
             modalStatus={modalStatus}
             setModalStatus={setModalStatus}

@@ -147,8 +147,13 @@ function Portfolio() {
         setPostImg={setPostImg}
         portWorkInfo={portWorkInfo}
       />
-      <div className="bg-[#19142A] w-screen h-screen flex flex-col" id="port">
-        <div ref={ref} className="container mx-auto mt-40">
+      {/* {window.innerWidth <= 961 ? (
+        
+        ) : (
+          
+        )} */}
+      <div className="bg-[#19142A] w-screen h-full sm:h-screen flex flex-col " id="port">
+        <div ref={ref} className="container mx-auto sm:mt-40 mt-16">
           <div className="flex sm:flex-row flex-col p-5">
             <div className="sm:w-[50%] w-full flex flex-col">
               <motion.h1
@@ -182,147 +187,286 @@ function Portfolio() {
 
             {/* /////////////////////////////////////////////////////////////////////////BUTTONS///////////////////////////////////////////////////////////////////////// */}
 
-            <div className="sm:w-[50%] w-full flex sm:flex-row flex-col justify-end ">
-              
-              <motion.button
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.35,
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 17,
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => {
-                  setPortWorkStatus("uiux");
-                }}
-                className={`w-full mt-5 py-1 h-[50px] ${
-                  portWorkStatus === "uiux"
-                    ? "bg-[#D6223B] text-white"
-                    : "bg-[#19142A] border border-gray-500 text-gray-500"
-                } whitespace-nowrap`}
-              >
-                UI / UX
-              </motion.button>
+            {window.innerWidth <= 961 ? (
+              <div className="w-full flex flex-row  justify-between ">
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.35,
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => {
+                    setPortWorkStatus("uiux");
+                  }}
+                  className={`w-full mt-5 py-1 h-[50px] ${
+                    portWorkStatus === "uiux"
+                      ? "bg-[#D6223B] text-white"
+                      : "bg-[#19142A] border border-gray-500 text-gray-500"
+                  } whitespace-nowrap mx-2`}
+                >
+                  UI / UX
+                </motion.button>
 
-              <motion.button
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.35,
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 17,
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => {
-                  setPortWorkStatus("impressos");
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.35,
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => {
+                    setPortWorkStatus("impressos");
 
-                  handleImages();
-                }}
-                className={`mt-5 py-1 h-[50px] ${
-                  portWorkStatus === "impressos"
-                    ? "bg-[#D6223B] text-white"
-                    : "bg-[#19142A] border border-gray-500 text-gray-500"
-                } sm:ml-10 whitespace-nowrap`}
-              >
-                IMPRESSOS
-              </motion.button>
+                    handleImages();
+                  }}
+                  className={`mt-5 py-1 h-[50px] ${
+                    portWorkStatus === "impressos"
+                      ? "bg-[#D6223B] text-white"
+                      : "bg-[#19142A] border border-gray-500 text-gray-500"
+                  } mx-2 whitespace-nowrap`}
+                >
+                  IMPRESSOS
+                </motion.button>
 
-              <motion.button
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.35,
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 17,
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setPortWorkStatus("branding")}
-                className={`mt-5 py-1 h-[50px] ${
-                  portWorkStatus === "branding"
-                    ? "bg-[#D6223B] text-white"
-                    : "bg-[#19142A] border border-gray-500 text-gray-500"
-                } sm:ml-10 uppercase whitespace-nowrap`}
-              >
-                Branding
-              </motion.button>
-              <motion.button
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.35,
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 17,
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setPortWorkStatus("foto")}
-                className={`mt-5 py-1 h-[50px] ${
-                  portWorkStatus === "foto"
-                    ? "bg-[#D6223B] text-white"
-                    : "bg-[#19142A] border border-gray-500 text-gray-500"
-                } sm:ml-10 uppercase whitespace-nowrap`}
-              >
-                Fotografia
-              </motion.button>
-              <motion.button
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.35,
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 17,
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setPortWorkStatus("edicao")}
-                className={`mt-5 py-1 h-[50px] ${
-                  portWorkStatus === "edicao"
-                    ? "bg-[#D6223B] text-white"
-                    : "bg-[#19142A] border border-gray-500 text-gray-500"
-                } sm:ml-10 uppercase whitespace-nowrap`}
-              >
-                Edição
-              </motion.button>
-            </div>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.35,
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => setPortWorkStatus("branding")}
+                  className={`mt-5 py-1 h-[50px] ${
+                    portWorkStatus === "branding"
+                      ? "bg-[#D6223B] text-white"
+                      : "bg-[#19142A] border border-gray-500 text-gray-500"
+                  } mx-2 uppercase whitespace-nowrap`}
+                >
+                  Branding
+                </motion.button>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.35,
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => setPortWorkStatus("foto")}
+                  className={`mt-5 py-1 h-[50px] ${
+                    portWorkStatus === "foto"
+                      ? "bg-[#D6223B] text-white"
+                      : "bg-[#19142A] border border-gray-500 text-gray-500"
+                  } mx-2 uppercase whitespace-nowrap`}
+                >
+                  Fotografia
+                </motion.button>
+
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.35,
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => setPortWorkStatus("edicao")}
+                  className={`mx-2 mt-5 py-1 h-[50px] ${
+                    portWorkStatus === "edicao"
+                      ? "bg-[#D6223B] text-white"
+                      : "bg-[#19142A] border border-gray-500 text-gray-500"
+                  }  uppercase whitespace-nowrap`}
+                >
+                  Edição
+                </motion.button>
+              </div>
+            ) : (
+              <div className="sm:w-[50%] w-full flex sm:flex-row flex-col justify-end ">
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.35,
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => {
+                    setPortWorkStatus("uiux");
+                  }}
+                  className={`w-full mt-5 py-1 h-[50px] ${
+                    portWorkStatus === "uiux"
+                      ? "bg-[#D6223B] text-white"
+                      : "bg-[#19142A] border border-gray-500 text-gray-500"
+                  } whitespace-nowrap`}
+                >
+                  UI / UX
+                </motion.button>
+
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.35,
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => {
+                    setPortWorkStatus("impressos");
+
+                    handleImages();
+                  }}
+                  className={`mt-5 py-1 h-[50px] ${
+                    portWorkStatus === "impressos"
+                      ? "bg-[#D6223B] text-white"
+                      : "bg-[#19142A] border border-gray-500 text-gray-500"
+                  } sm:ml-10 whitespace-nowrap`}
+                >
+                  IMPRESSOS
+                </motion.button>
+
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.35,
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => setPortWorkStatus("branding")}
+                  className={`mt-5 py-1 h-[50px] ${
+                    portWorkStatus === "branding"
+                      ? "bg-[#D6223B] text-white"
+                      : "bg-[#19142A] border border-gray-500 text-gray-500"
+                  } sm:ml-10 uppercase whitespace-nowrap`}
+                >
+                  Branding
+                </motion.button>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.35,
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => setPortWorkStatus("foto")}
+                  className={`mt-5 py-1 h-[50px] ${
+                    portWorkStatus === "foto"
+                      ? "bg-[#D6223B] text-white"
+                      : "bg-[#19142A] border border-gray-500 text-gray-500"
+                  } sm:ml-10 uppercase whitespace-nowrap`}
+                >
+                  Fotografia
+                </motion.button>
+
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.35,
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => setPortWorkStatus("edicao")}
+                  className={`mt-5 py-1 h-[50px] ${
+                    portWorkStatus === "edicao"
+                      ? "bg-[#D6223B] text-white"
+                      : "bg-[#19142A] border border-gray-500 text-gray-500"
+                  } sm:ml-10 uppercase whitespace-nowrap`}
+                >
+                  Ediçãooooo
+                </motion.button>
+              </div>
+            )}
           </div>
 
           {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
 
-          <div className="grid gap-4 grid-cols-6 grid-rows-1 text-center pt-10 cursor-pointer">
+          <div className="grid gap-6 grid-cols-6 grid-rows-1 text-center cursor-pointer p-10 mb-10">
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 75 },

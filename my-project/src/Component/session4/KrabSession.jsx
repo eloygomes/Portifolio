@@ -2,13 +2,12 @@ import EachSession from "./eachSession";
 
 function KrabSession({
   // eslint-disable-next-line react/prop-types
-  setModalStatus,
-  setcareerModalInfo,
+  setModalStatus, setcareerModalInfo,
 }) {
   return (
-    <div className="">
+    <div className="sm:mt-0 mt-20">
       <div className="wrapper flex flex-row  ">
-        <ol className="w-full grid grid-cols-6 ">
+        <ol className="w-full grid sm:grid-cols-6 grid-cols-2 gap-3 p-5">
           <EachSession
             jobPosition={`DESIGNER GRÁFICO`}
             jobName={`Empresa UM agencia & editora`}

@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 
 import { AiOutlineMenu } from "react-icons/ai";
-import { motion } from "framer-motion";
+
 
 function NavBar() {
   //Redux
