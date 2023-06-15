@@ -111,7 +111,166 @@ function ServicesSession() {
 
   return (
     <>
-      <div
+    {window.innerWidth <= 961 ? (
+        <div
+        className={`w-screen  flex flex-col bg-cover bg-center bg-no-repeat ${servBg} drop-shadow-md z-0 overflow-hidden`}
+        id="services"
+      >
+        <div className="w-screen h-screen bg-black z-1 absolute opacity-80"></div>
+        <div className="container mx-auto h-screen flex flex-col justify-center">
+          <div className="h-[80vh] mt-[10vh] m-5 p-5 backdrop-blur-xl bg-white/10 rounded-xl">
+            <motion.h1
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 0.05, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="text-[150px] opacity-5 top-[80%] absolute  "
+            >
+              {textOnScreen}
+            </motion.h1>
+
+            <div ref={ref} className="container mx-auto   ">
+              <div className="flex flex-col justify-between pl-2">
+                <motion.h1
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.05 }}
+                  className="text-6xl text-white "
+                >
+                  Serviços
+                </motion.h1>
+                <motion.p
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.25 }}
+                  className=" mt-5  text-white py-5"
+                >
+                  Na seção abaixo, apresento um panorama completo da minha
+                  experiência profissional até o presente momento.”
+                </motion.p>
+              </div>
+            </div>
+
+            <div className="container mx-auto py-10 ">
+              <div className="w-full flex flex-row justify-start cursor-pointer overflow-x-hidden">
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-sm  text-white"
+                  onMouseEnter={() => setWall("iuui")}
+                >
+                  UI/UX
+                </motion.button>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.35 }}
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-sm  text-white"
+                  onMouseEnter={() => setWall("branding")}
+                >
+                  BRANDING
+                </motion.button>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-sm  text-white"
+                  onMouseEnter={() => setWall("impressos")}
+                >
+                  IMPRESSOS
+                </motion.button>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.45 }}
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-sm  text-white"
+                  onMouseEnter={() => setWall("foto")}
+                >
+                  FOTOGRAFIA
+                </motion.button>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-sm  text-white"
+                  onMouseEnter={() => setWall("edicao")}
+                >
+                  EDIÇÃO
+                </motion.button>
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.55 }}
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-sm  text-white"
+                  onMouseEnter={() => setWall("podcast")}
+                >
+                  PODCAST
+                </motion.button>
+              </div>
+
+              <div className=" flex flex-row justify-between">
+                <div className="w-full p-2 mt-10">
+                  <motion.p
+                    variants={{
+                      hidden: { opacity: 0, y: 75 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    initial="hidden"
+                    animate={mainControls}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.6,
+                      ease: "easeInOut",
+                    }}
+                    className=" text-white"
+                  >
+                    {servDesc}
+                  </motion.p>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        ) : (
+          <div
         className={`w-screen h-screen flex flex-col bg-cover bg-center bg-no-repeat ${servBg} drop-shadow-md z-0`}
         id="services"
       >
@@ -277,6 +436,8 @@ function ServicesSession() {
           </div>
         </div>
       </div>
+        )}
+      
     </>
   );
 }

@@ -152,7 +152,10 @@ function Portfolio() {
         ) : (
           
         )} */}
-      <div className="bg-[#19142A] w-screen h-full sm:h-screen flex flex-col " id="port">
+      <div
+        className="bg-[#19142A] w-screen h-full sm:h-screen flex flex-col "
+        id="port"
+      >
         <div ref={ref} className="container mx-auto sm:mt-40 mt-16">
           <div className="flex sm:flex-row flex-col p-5">
             <div className="sm:w-[50%] w-full flex flex-col">
@@ -188,7 +191,7 @@ function Portfolio() {
             {/* /////////////////////////////////////////////////////////////////////////BUTTONS///////////////////////////////////////////////////////////////////////// */}
 
             {window.innerWidth <= 961 ? (
-              <div className="w-full flex flex-row  justify-between ">
+              <div className="w-full flex flex-row  justify-between overflow-y-hidden ">
                 <motion.button
                   variants={{
                     hidden: { opacity: 0, y: 75 },
@@ -458,7 +461,7 @@ function Portfolio() {
                       : "bg-[#19142A] border border-gray-500 text-gray-500"
                   } sm:ml-10 uppercase whitespace-nowrap`}
                 >
-                  Ediçãooooo
+                  Edição
                 </motion.button>
               </div>
             )}

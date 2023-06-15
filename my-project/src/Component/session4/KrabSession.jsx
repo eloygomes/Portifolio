@@ -5,9 +5,9 @@ function KrabSession({
   setModalStatus, setcareerModalInfo,
 }) {
   return (
-    <div className="sm:mt-0 mt-20">
+    <div className="sm:mt-0 mt-80">
       <div className="wrapper flex flex-row  ">
-        <ol className="w-full grid sm:grid-cols-6 grid-cols-2 gap-3 p-5">
+        <ol className="w-full grid sm:grid-cols-6 grid-cols-2 gap-3 p-5 grid-flow-row-dense ">
           <EachSession
             jobPosition={`DESIGNER GRÁFICO`}
             jobName={`Empresa UM agencia & editora`}
