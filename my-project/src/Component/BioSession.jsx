@@ -55,7 +55,7 @@ function BioSession() {
                     initial="hidden"
                     animate={mainControls}
                     transition={{ duration: 0.5, delay: 0.45 }}
-                    className=" w-fit -ml-1 py-5 sm:text-8xl text-6xl font-medium hover:text-[#D6223B]"
+                    className=" w-fit -ml-1 py-5 sm:text-8xl text-4xl font-medium hover:text-[#D6223B]"
                   >
                     Desenvolvedor <br /> Full Stack
                   </motion.h1>
@@ -68,7 +68,7 @@ function BioSession() {
                     initial="hidden"
                     animate={mainControls}
                     transition={{ duration: 0.5, delay: 0.5 }}
-                    className="bg-[#D6223B] text-xl w-fit mb-5 "
+                    className="bg-[#D6223B] sm:text-xl text-lg w-fit mb-5 "
                   >
                     15 anos de experiência.
                   </motion.h3>
