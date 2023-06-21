@@ -29,7 +29,7 @@ function BioSession() {
           className="container mx-auto flex flex-col justify-center"
         >
           <div className="flex flex-col">
-            <div className="backdrop-blur-xl bg-white/10 p-10 m-5 sm:my-40 my-20 rounded-xl ">
+            <div className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 m-5 sm:my-40 my-20 rounded-xl ">
               <div className="flex sm:flex-row flex-col-reverse">
                 <div className="sm:w-[50%] w-full h-full flex flex-col mx-auto justify-center">
                   <div className="w-fit"></div>
