@@ -1,22 +1,31 @@
+import { useState } from "react";
+
 function BioSessionCard(props) {
+  // eslint-disable-next-line no-unused-vars
+  const [CollapseStatus, setCollapseStatus] = useState(false);
+
   return (
     <>
       {window.innerWidth <= 961 ? (
-        <div className="w-auto min-w-1/4 mx-5 mb-5 py-1 rounded-xl backdrop-blur-xl drop-shadow-md   cursor-pointer">
+        <div className="w-auto min-w-1/4 mx-5 mb-5 py-1 rounded-xl backdrop-blur-xl drop-shadow-md cursor-pointer">
           <div id="accordionExample">
-            <div className="rounded-t-lg backdrop-blur-xl bg-white/10 hover:bg-white/20 ">
+            <div className="rounded-lg backdrop-blur-xl bg-white/10 hover:bg-white/20 ">
               <h2 className="mb-0" id="headingOne">
                 <button
-                  className="group relative flex w-full backdrop-blur-xl bg-white/10 hover:bg-white/20"
+                  className="group relative flex w-full backdrop-blur-xl bg-white/10 hover:bg-white/20 text-left"
                   type="button"
                   data-te-collapse-init
                   data-te-target="#collapseOne"
                   aria-expanded="true"
                   aria-controls="collapseOne"
+                  onClick={() => {
+                    setCollapseStatus(!CollapseStatus);
+                  }}
                 >
-                  
-                  {// eslint-disable-next-line react/prop-types
-                  props.PositionName}
+                  {
+                    // eslint-disable-next-line react/prop-types
+                    props.PositionName
+                  }
                   <span className="ml-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -37,22 +46,31 @@ function BioSessionCard(props) {
               </h2>
               <div
                 id="collapseOne"
-                className="!visible"
-                data-te-collapse-item
-                data-te-collapse-show
-                aria-labelledby="headingOne"
-                data-te-parent="#accordionExample"
+                // eslint-disable-next-line react/prop-types
+                className={`${
+                  CollapseStatus ? "flex flex-col" : "hidden"
+                } text-start`}
+                // className={props.FormationCollapseStatus01 ? "flex" : "hidden"}
               >
-                <div className="px-5 py-4">
-                  <strong>This is the first item's accordion body.</strong> It
-                  is shown by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the{" "}
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                <div className="w-full  flex flex-row justify-between px-5 py-2 mb-3  top-32">
+                  <h2 className=" text-sm font-bold">
+                    {
+                      // eslint-disable-next-line react/prop-types
+                      props.CompanyName
+                    }
+                  </h2>
+                  <h4 className=" text-xs font-bold">
+                    {
+                      // eslint-disable-next-line react/prop-types
+                      props.Date
+                    }
+                  </h4>
+                </div>
+                <div className="px-5 py-4 rounded-xl">
+                  {
+                    // eslint-disable-next-line react/prop-types
+                    props.Description
+                  }
                 </div>
               </div>
             </div>
@@ -61,7 +79,7 @@ function BioSessionCard(props) {
       ) : (
         <div className="w-auto sm:w-1/4 min-w-1/4 sm:mr-5 mx-5 mb-5 h-80 p-2 py-1 rounded-xl backdrop-blur-xl bg-white/10 hover:bg-white/20 drop-shadow-md   cursor-pointer">
           <div className=" pr-5">
-            <h1 className=" text-xl uppercase font-bold p-2 mb-2 mt-3 h-20 flex items-center justify-start ">
+            <h1 className=" text-xl uppercase font-bold p-2 mb-2 mt-3 h-20 flex items-center justify-start text-start ">
               {
                 // eslint-disable-next-line react/prop-types
                 props.PositionName

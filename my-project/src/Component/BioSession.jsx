@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { motion, useInView, useAnimation } from "framer-motion";
 
@@ -8,6 +8,9 @@ import animationData from "../assets/63487-programming-computer.json";
 import BioSessionCard from "./BioS/BioSessionCard";
 
 function BioSession() {
+  const [FormationCollapseStatus01, setFormationCollapseStatus01] = useState('false');
+  
+  
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -133,12 +136,12 @@ function BioSession() {
 
                 <div className="flex sm:flex-row flex-col justify-between mx-5">
                   <div className="sm:w-[50%] w-full">
-                    <h1 className="bg-[#2A2344] w-fit uppercase font-semibold">
+                    <h1 className="bg-[#2A2344] w-fit uppercase font-semibold p-2">
                       Formação
                     </h1>
                   </div>
                   <div className="sm:w-[50%] w-full">
-                    <p className="max-w-fit sm:text-right py-5">
+                    <p className="max-w-fit sm:text-right py-5 p-2">
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Tempore nesciunt illum dignissimos?
                     </p>
@@ -152,6 +155,8 @@ function BioSession() {
                     CompanyName="CODEACADEMY"
                     Date="DEZ/2022"
                     Description="Introdução a testes unitários."
+                    FormationCollapseStatus01={FormationCollapseStatus01}
+                    setFormationCollapseStatus01={setFormationCollapseStatus01}
                   />
 
                   <BioSessionCard
@@ -247,7 +252,7 @@ function BioSession() {
                 </div>
 
                 {/* ROW #4 */}
-                <div className="flex sm:flex-row flex-col py-5 justify-between  ">
+                <div className="flex sm:flex-row flex-col py-5 justify-between text-left">
                   <BioSessionCard
                     PositionName="Design gráfico com enfãse em comunicação digital"
                     CompanyName="UNIVERSIDADE PAULISTA"
@@ -285,6 +290,7 @@ function BioSession() {
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
