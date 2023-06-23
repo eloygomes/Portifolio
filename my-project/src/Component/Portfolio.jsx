@@ -469,7 +469,7 @@ function Portfolio() {
 
           {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
 
-          <div className="grid gap-6 grid-cols-6 grid-rows-1 text-center cursor-pointer p-10 mb-10">
+          <div className="grid gap-6 sm:grid-cols-6 grid-cols-3 sm:grid-rows-1 grid-rows-2 text-center cursor-pointer p-10 mb-10">
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 75 },
@@ -478,7 +478,7 @@ function Portfolio() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.35 }}
-              className="bg-black h-[400px]"
+              className="bg-black sm:h-[400px] h-[200px]"
               onClick={() => {
                 console.log("CLICOUUUUU");
                 setModalStatus(true);
@@ -523,7 +523,7 @@ function Portfolio() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-black h-[400px]"
+              className="bg-black sm:h-[400px] h-[200px]"
               onClick={() => {
                 console.log("CLICOUUUUU N2");
                 setModalStatus(true);
@@ -559,7 +559,7 @@ function Portfolio() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.45 }}
-              className="bg-black h-[400px]"
+              className="bg-black sm:h-[400px] h-[200px]"
             >
               <img
                 className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
@@ -575,7 +575,7 @@ function Portfolio() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="bg-black h-[400px]"
+              className="bg-black sm:h-[400px] h-[200px]"
             >
               <img
                 className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
@@ -591,7 +591,7 @@ function Portfolio() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.55 }}
-              className="bg-black h-[400px]"
+              className="bg-black sm:h-[400px] h-[200px]"
             >
               <img
                 className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
@@ -608,7 +608,7 @@ function Portfolio() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="bg-black h-[400px]"
+              className="bg-black sm:h-[400px] h-[200px]"
             >
               <img
                 className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
