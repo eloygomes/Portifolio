@@ -191,7 +191,7 @@ function Portfolio() {
             {/* /////////////////////////////////////////////////////////////////////////BUTTONS///////////////////////////////////////////////////////////////////////// */}
 
             {window.innerWidth <= 961 ? (
-              <div className="w-full flex flex-row  justify-between overflow-y-hidden ">
+              <div className="w-full flex flex-row  justify-between overflow-y-hidden py-5">
                 <motion.button
                   variants={{
                     hidden: { opacity: 0, y: 75 },

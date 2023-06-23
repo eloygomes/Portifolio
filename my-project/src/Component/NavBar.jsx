@@ -21,7 +21,7 @@ function NavBar() {
           }`}
         >
           <AiOutlineMenu
-            className="text-3xl text-white m-10 cursor-pointer absolute top-0 right-0 z-10"
+            className="text-4xl text-white m-5 cursor-pointer absolute top-0 right-0 z-10  backdrop-blur-xl bg-white/10 rounded-full p-2 " 
             onClick={() => {
               setMobileShowMenu(!mobileShowMenu);
               console.log(mobileShowMenu);
@@ -86,7 +86,7 @@ function NavBar() {
                   </a>
                 </div>
 
-                <div className=" flex items-center justify-center bg-[#D6223B] text-xs whitespace-nowrap rounded-full mx-36 my-10 p-5 cursor-pointer ">
+                <div className="w-full flex items-center justify-center bg-[#D6223B] text-xs whitespace-nowrap rounded-lg my-10 p-5 cursor-pointer ">
                   DOWNLOAD CV
                 </div>
               </div>
@@ -96,7 +96,7 @@ function NavBar() {
               <div className="font-black text-2xl hover:scale-105">
                 <a
                   className="font-extrabold text-center "
-                  href="#"
+                  
                   onClick={() => setMobileShowMenu(!mobileShowMenu)}
                 >
                   FECHAR

@@ -135,7 +135,7 @@ function BioSession() {
               <div className="flex flex-col h-full mb-52">
                 <div className="flex sm:flex-row flex-col justify-between mx-5 mt-20">
                   <div className="sm:w-[50%] w-full ">
-                    <h1 className="bg-[#2A2344] w-fit uppercase font-semibold p-2">
+                    <h1 className="bg-[#2A2344] w-fit  p-2">
                       Formação
                     </h1>
                   </div>

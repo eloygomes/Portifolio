@@ -111,14 +111,16 @@ function ServicesSession() {
 
   return (
     <>
-    {window.innerWidth <= 961 ? (
+    
+    { // Mobile
+    window.innerWidth <= 961 ? (
         <div
         className={`w-screen  flex flex-col bg-cover bg-center bg-no-repeat ${servBg} drop-shadow-md z-0 overflow-hidden`}
         id="services"
       >
         <div className="w-screen h-screen bg-black z-1 absolute opacity-80"></div>
         <div className="container mx-auto h-screen flex flex-col justify-center">
-          <div className="h-[80vh] mt-[10vh] m-5 p-5 backdrop-blur-xl bg-white/10 rounded-xl">
+          <div className="min-h-[85vh] mb-[10vh] mt-[15vh] mx-5 p-5 backdrop-blur-xl bg-white/10 rounded-xl">
             <motion.h1
               variants={{
                 hidden: { opacity: 0, y: 75 },
@@ -163,7 +165,7 @@ function ServicesSession() {
             </div>
 
             <div className="container mx-auto py-10 ">
-              <div className="w-full flex flex-row justify-start cursor-pointer overflow-x-hidden">
+              <div className="w-full flex flex-row justify-start cursor-pointer overflow-x-hidden py-2 overflow-x-scroll">
                 <motion.button
                   variants={{
                     hidden: { opacity: 0, y: 75 },
@@ -172,7 +174,7 @@ function ServicesSession() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-sm  text-white"
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-base  text-white"
                   onMouseEnter={() => setWall("iuui")}
                 >
                   UI/UX
@@ -185,7 +187,7 @@ function ServicesSession() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.35 }}
-                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-sm  text-white"
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-base  text-white"
                   onMouseEnter={() => setWall("branding")}
                 >
                   BRANDING
@@ -198,7 +200,7 @@ function ServicesSession() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.4 }}
-                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-sm  text-white"
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-base  text-white"
                   onMouseEnter={() => setWall("impressos")}
                 >
                   IMPRESSOS
@@ -211,7 +213,7 @@ function ServicesSession() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.45 }}
-                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-sm  text-white"
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-base  text-white"
                   onMouseEnter={() => setWall("foto")}
                 >
                   FOTOGRAFIA
@@ -224,7 +226,7 @@ function ServicesSession() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.5 }}
-                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-sm  text-white"
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-base  text-white"
                   onMouseEnter={() => setWall("edicao")}
                 >
                   EDIÇÃO
@@ -237,7 +239,7 @@ function ServicesSession() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.55 }}
-                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-sm  text-white"
+                  className="mx-1 backdrop-blur-xl bg-white/10 hover:bg-[#D6223B]/90 hover:text-white text-base  text-white"
                   onMouseEnter={() => setWall("podcast")}
                 >
                   PODCAST
@@ -258,7 +260,7 @@ function ServicesSession() {
                       delay: 0.6,
                       ease: "easeInOut",
                     }}
-                    className=" text-white"
+                    className=" text-white text-sm"
                   >
                     {servDesc}
                   </motion.p>
@@ -270,6 +272,7 @@ function ServicesSession() {
         </div>
       </div>
         ) : (
+          // Desktop
           <div
         className={`w-screen h-screen flex flex-col bg-cover bg-center bg-no-repeat ${servBg} drop-shadow-md z-0`}
         id="services"
