@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import { AiOutlineMenu } from "react-icons/ai";
 
-
 function NavBar() {
   //Redux
   const navbarZindex = useSelector((state) => state.navbarZindex);
@@ -21,10 +20,10 @@ function NavBar() {
           }`}
         >
           <AiOutlineMenu
-            className="text-4xl text-white m-5 cursor-pointer absolute top-0 right-0 z-10  backdrop-blur-xl bg-white/10 rounded-full p-2 " 
+            className="text-4xl text-white m-5 cursor-pointer absolute top-0 right-0 z-10  backdrop-blur-xl bg-white/10 rounded-full p-2 "
             onClick={() => {
               setMobileShowMenu(!mobileShowMenu);
-              console.log(mobileShowMenu);
+              
             }}
           />
           <div
@@ -38,14 +37,14 @@ function NavBar() {
                 className="h-1/6 flex items-center justify-center text-xl rounded-xl backdrop-blur-xl bg-[#19142A]/10  hover:scale-105   my-2"
                 onClick={() => setMobileShowMenu(!mobileShowMenu)}
               >
-                <a href="#bio" className="px-2 text-4xl font-black">
+                <a href="#" className="px-2 text-4xl font-black">
                   EVG
                 </a>
               </div>
 
               <div className="h-[80%] flex flex-col justify-between">
                 <div
-                  className="h-1/6 flex items-center justify-center text-xl rounded-xl backdrop-blur-xl bg-[#19142A]/10 hover:bg-white/10 hover:scale-105   my-2"
+                  className="h-1/6 flex items-center justify-center text-xl rounded-xl backdrop-blur-xl  hover:scale-105   my-2"
                   onClick={() => setMobileShowMenu(!mobileShowMenu)}
                 >
                   <a href="#bio" className="px-2">
@@ -96,7 +95,6 @@ function NavBar() {
               <div className="font-black text-2xl hover:scale-105">
                 <a
                   className="font-extrabold text-center "
-                  
                   onClick={() => setMobileShowMenu(!mobileShowMenu)}
                 >
                   FECHAR

@@ -74,6 +74,7 @@ function ModalWindow({
             className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3"
           >
             <div className="w-full min-w-auto rounded-xl">
+
               <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-[90vh] m-10 z-20">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
@@ -95,8 +96,8 @@ function ModalWindow({
                   <ImageCarousel images={postImg} />
                 </div>
                 {/* ROW 3 */}
-                <div className="h-[25%] flex flex-col justify-between">
-                  <div className="w-[30%] pl-5 ">
+                <div className="sm:h-[25%] h-full flex sm:flex-col flex-row justify-between">
+                  <div className="sm:h-[30%] h-full  pl-5 ">
                     <div className="uppercase text-sm">
                       {portWorkInfo.kindOfProject}
                     </div>
@@ -112,7 +113,9 @@ function ModalWindow({
                     </div>
                   </div>
                 </div>
+
               </div>
+
             </div>
           </Modal>
         ) : (

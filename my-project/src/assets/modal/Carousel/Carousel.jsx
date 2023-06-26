@@ -14,7 +14,7 @@ const ImageCarousel = ({ images }) => {
     <>
       {window.innerWidth <= 961 ? (
         <div className="flex flex-col-reverse items-center justify-around">
-          <div className="w-auto m-5 p-2 max-w-2xl mt-8 grid grid-cols-6 gap-4 ">
+          <div className="w-auto m-5 p-2 max-w-2xl mt-8 grid grid-cols-6 gap-2 ">
             {
               // eslint-disable-next-line react/prop-types
               images.map((image, index) => (
@@ -22,18 +22,18 @@ const ImageCarousel = ({ images }) => {
                   key={index}
                   src={image}
                   alt={`Image ${index + 1}`}
-                  className="cursor-pointer rounded-xl"
+                  className="cursor-pointer rounded-sm shadow-sm"
                   onClick={() => handleImageClick(index)}
                 />
               ))
             }
           </div>
-          <div className="w-full h-fit p-1 flex flex-col justify-center mt-10 relative">
+          <div className="w-full h-fit flex flex-col justify-center mt-10 relative">
             <div className="container mx-auto">
               <Carousel
                 showArrows={true}
-                showStatus={false}
-                showIndicators={true}
+                showStatus={true}
+                showIndicators={false}
                 showThumbs={false}
                 selectedItem={selectedImageIndex}
                 className="mx-10 rounded-xl"
@@ -55,6 +55,7 @@ const ImageCarousel = ({ images }) => {
           </div>
         </div>
       ) : (
+        // Desktop
         <div className="flex flex-row items-center justify-around">
           <div className="w-[50%] m-5 p-2 max-w-2xl mt-8 grid grid-cols-6 gap-4 ">
             {
