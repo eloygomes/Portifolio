@@ -1,25 +1,29 @@
 import { useState, useEffect } from "react";
 import { BsArrowDownShort, BsArrowUpShort } from "react-icons/bs";
 
+
+
 function BioSessionCard(props) {
-  // eslint-disable-next-line no-unused-vars
-  const [CollapseStatus, setCollapseStatus] = useState(false);
+  // eslint-disable-next-line no-unused-vars, react/prop-types
+  const [CollapseStatus, setCollapseStatus] = useState(props.FormationCollapseStatus );
 
   useEffect(() => {
-    window.innerWidth >= 961
-      ? setCollapseStatus(true)
-      : setCollapseStatus(false);
-  }, []);
+    // eslint-disable-next-line react/prop-types
+    setCollapseStatus(props.FormationCollapseStatus)
+  // eslint-disable-next-line react/prop-types
+  }, [props.FormationCollapseStatus]);
+
+
 
   return (
     <>
       {window.innerWidth <= 961 ? (
         <div className="w-auto min-w-1/4 mx-2 mb-5 py-1 rounded-xl drop-shadow-md cursor-pointer">
           <div id="accordionExample">
-            <div className="rounded-lg backdrop-blur-xl bg-white/10 hover:bg-white/20 ">
+            <div className="rounded-lg backdrop-blur-xl bg-white/10 hover:bg-white/20 max-w-md min-w-full ">
               <h2 className="mb-0" id="headingOne">
                 <button
-                  className="group relative flex w-full ] backdrop-blur-xl bg-white/10 hover:bg-white/20 text-left "
+                  className="group relative flex sm:w-full w-full md:w-full backdrop-blur-xl bg-white/10 hover:bg-white/20 text-left md:min-w-[150px] md:max-w-[250px] "
                   type="button"
                   data-te-collapse-init
                   data-te-target="#collapseOne"
@@ -44,7 +48,7 @@ function BioSessionCard(props) {
                 className={`${
                   CollapseStatus ? "flex flex-col" : "hidden"
                 } text-start`}
-                // className={props.FormationCollapseStatus01 ? "flex" : "hidden"}
+                // className={props.FormationCollapseStatus ? "flex" : "hidden"}
               >
                 <div className="w-full  flex flex-row justify-between px-5 py-2 mb-3  top-32">
                   <h2 className=" text-sm font-bold">
@@ -72,8 +76,10 @@ function BioSessionCard(props) {
         </div>
       ) : (
         <div className="min-w-[25%] p-2 rounded-xl drop-shadow-md cursor-pointer">
+          
+          
           <div className="rounded-lg backdrop-blur-xl bg-white/10 hover:bg-white/20 ">
-            <h2 className="" id="headingOne ">
+            <div className="" id="headingOne ">
               <button
                 className="group relative flex w-full backdrop-blur-xl bg-white/10 hover:bg-white/20 text-left min-h-[80px] py-5 "
                 type="button"
@@ -93,16 +99,15 @@ function BioSessionCard(props) {
                   {CollapseStatus ? <BsArrowDownShort /> : <BsArrowUpShort />}
                 </span>
               </button>
-            </h2>
+            </div>
             <div
               id="collapseOne"
               // eslint-disable-next-line react/prop-types
               className={`${
                 CollapseStatus ? "flex flex-col" : "hidden"
-              } text-start min-h-[250px]`}
-              
+              } text-start min-h-[200px]`}
             >
-              <div className="w-full  flex flex-row justify-between px-5 py-2 mb-3 mt-5  top-32">
+              <div className="w-full  flex flex-row justify-between px-5 py-2 mb-3 mt-5 border-b-[0.5px]  top-32">
                 <h2 className=" text-sm font-bold">
                   {
                     // eslint-disable-next-line react/prop-types
@@ -125,6 +130,7 @@ function BioSessionCard(props) {
             </div>
           </div>
         </div>
+        
       )}
     </>
   );

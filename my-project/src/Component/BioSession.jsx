@@ -2,14 +2,15 @@ import { useEffect, useRef, useState } from "react";
 
 import { motion, useInView, useAnimation } from "framer-motion";
 
+import { BsArrowsAngleContract, BsArrowsAngleExpand } from "react-icons/bs";
+
 import Lottie from "lottie-react";
 import animationData from "../assets/63487-programming-computer.json";
 
 import BioSessionCard from "./BioS/BioSessionCard";
 
 function BioSession() {
-  const [FormationCollapseStatus01, setFormationCollapseStatus01] =
-    useState("false");
+  const [FormationCollapseStatus, setFormationCollapseStatus] = useState(false);
 
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -32,9 +33,9 @@ function BioSession() {
           className="container mx-auto flex flex-col justify-center"
         >
           <div className="flex flex-col">
-            <div className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 m-5 sm:my-40 my-00 rounded-xl ">
-              <div className="flex sm:flex-row flex-col-reverse">
-                <div className="sm:w-[50%] w-full h-full flex flex-col mx-auto justify-center">
+            <div className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-10 m-5 sm:my-40 my-00 rounded-xl ">
+              <div className="flex flex-col-reverse sm:flex-row md:flex-col-reverse lg:flex-row">
+                <div className="sm:w-[50%] md:w-full lg:w-[50%] h-full flex flex-col mx-auto justify-center md:py-5 lg:p-5">
                   <div className="w-fit"></div>
                   <motion.h4
                     variants={{
@@ -58,7 +59,7 @@ function BioSession() {
                     initial="hidden"
                     animate={mainControls}
                     transition={{ duration: 0.5, delay: 0.45 }}
-                    className=" w-fit -ml-1 py-5 sm:text-8xl text-4xl font-medium hover:text-[#D6223B]"
+                    className=" w-fit -ml-1 py-5 sm:text-8xl md:text-6xl text-5xl font-medium hover:text-[#D6223B]"
                   >
                     Desenvolvedor <br /> Full Stack
                   </motion.h1>
@@ -118,9 +119,9 @@ function BioSession() {
                     web dos projetos.
                   </motion.h5>
                 </div>
-                <div className="sm:w-[50%] w-full  flex flex-col justify-center">
+                <div className="sm:w-[50%] md:w-[50%] lg:w-[50%] sm:relative md:absolute lg:relative  md:right-[-60px] md:top-[60px] lg:top-[0px]   flex-col justify-center">
                   <Lottie
-                    className="w-[100%] h-[100%]"
+                    className="w-[100%] h-[100%] flex"
                     onComplete={() => {
                       someAnimation.current?.goToAndPlay(45, true);
                     }}
@@ -133,38 +134,62 @@ function BioSession() {
 
             <div className="container mx-auto">
               <div className="flex flex-col h-full mb-52">
-                <div className="flex sm:flex-row flex-col justify-between mx-5 mt-20">
-                  <div className="sm:w-[50%] w-full ">
-                    <h1 className="bg-[#2A2344] w-fit  p-2">
-                      Formação
-                    </h1>
+                <div className="flex sm:flex-row md:flex-row justify-between mx-5 mt-20">
+                  <div className="flex flex-col justify-between">
+                    <div className="sm:w-[50%] w-full ">
+                      <h1 className="bg-[#2A2344] w-fit  p-2">Formação</h1>
+                    </div>
+                    <div className="sm:w-[50%] md:w-full w-full">
+                      <p className="bg-[#2A2344] w-fit  py-5 p-2">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Tempore nesciunt illum dignissimos?
+                      </p>
+                    </div>
                   </div>
-                  <div className="sm:w-[50%] w-full">
-                    <p className="bg-[#2A2344] w-fit sm:text-right py-5 p-2">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Tempore nesciunt illum dignissimos?
-                    </p>
+                  <div className="flex-row hidden sm:hidden md:flex lg:flex items-center justify-center">
+                    <button
+                      className={` p-5 ml-5 backdrop-blur-xl drop-shadow-lg  ${
+                        FormationCollapseStatus
+                          ? "bg-white/10 hover:bg-white/50"
+                          : "bg-white/50 hover:bg-white/80"
+                      } `}
+                      onClick={() => {
+                        console.log("false");
+                        setFormationCollapseStatus(false);
+                      }}
+                    >
+                      <BsArrowsAngleContract />
+                    </button>
+                    <button
+                      className={`p-5 ml-5 backdrop-blur-xl drop-shadow-lg ${
+                        FormationCollapseStatus
+                          ? "bg-white/50 hover:bg-white/80"
+                          : "bg-white/10 hover:bg-white/50"
+                      } `}
+                      onClick={() => {
+                        setFormationCollapseStatus(true);
+                      }}
+                    >
+                      <BsArrowsAngleExpand />
+                    </button>
                   </div>
                 </div>
 
-                {window.innerWidth <= 961 ? (
+                {/* {window.innerWidth <= 961 ? ( */}
+                {window.innerWidth <= 768 ? (
                   <div className="flex flex-col sm:flex-row justify-between px-2 py-5 backdrop-blur-xl bg-white/10 mx-5 rounded-xl ">
                     <BioSessionCard
                       PositionName="React Testing"
                       CompanyName="CODEACADEMY"
                       Date="DEZ/2022"
-                      Description="Introdução a testes unitários."
-                      FormationCollapseStatus01={FormationCollapseStatus01}
-                      setFormationCollapseStatus01={
-                        setFormationCollapseStatus01
-                      }
+                      Description="Introdução a testes unitários usando Jest, Cypress, Enzyme, Mocha, Jasmine e React Testing Library."
                     />
 
                     <BioSessionCard
                       PositionName="React Router"
                       CompanyName="CODEACADEMY"
                       Date="OUT/2022"
-                      Description="Criação de rotas em react."
+                      Description="Criação de rotas em react. Rotear usuarios para diferentes URL's,usando rotas dinamicas"
                     />
 
                     <BioSessionCard
@@ -253,7 +278,7 @@ function BioSession() {
                     />
 
                     <BioSessionCard
-                      PositionName="Direção de arte, criatividade e prática"
+                      PositionName="Direção de arte, criatividade aplicada e design na prática"
                       CompanyName="COLOSSEO"
                       Date="NOV/2016"
                       Description="Curso ministrado por Saulo Mileti, onde debatemos a função
@@ -283,23 +308,22 @@ function BioSession() {
                 ) : (
                   // Desktop
                   <>
-                    <div className="w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-5 rounded-xl ">
+                  
+                    <div className=" w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-0 lg:m-5 rounded-xl ">
                       <BioSessionCard
                         PositionName="React Testing"
                         CompanyName="CODEACADEMY"
                         Date="DEZ/2022"
-                        Description="Introdução a testes unitários."
-                        FormationCollapseStatus01={FormationCollapseStatus01}
-                        setFormationCollapseStatus01={
-                          setFormationCollapseStatus01
-                        }
+                        Description="Introdução a testes unitários usando Jest, Cypress, Enzyme, Mocha, Jasmine e React Testing Library."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
 
                       <BioSessionCard
                         PositionName="React Router"
                         CompanyName="CODEACADEMY"
                         Date="OUT/2022"
-                        Description="Criação de rotas em react."
+                        Description="Criação de rotas em react. Rotear usuarios para diferentes URL's,usando rotas dinamicas"
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
 
                       <BioSessionCard
@@ -307,6 +331,7 @@ function BioSession() {
                         CompanyName="CODEACADEMY"
                         Date="AGO/2022"
                         Description="Introdução aos conceitos para desenvolvimento de interfaces."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
 
                       <BioSessionCard
@@ -314,16 +339,18 @@ function BioSession() {
                         CompanyName="CODEACADEMY"
                         Date="FEV/2022"
                         Description="Introdução a SCRUM e KANBAN."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
                     </div>
 
-                    <div className="w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-5 rounded-xl ">
+                    <div className="w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-0 lg:m-5 md:my-5  rounded-xl ">
                       <BioSessionCard
                         PositionName="React JS"
                         CompanyName="UDEMY"
                         Date="DEZ/2021"
                         Description="Prop.Types, CSS-in-JS (Styled Components), Vite, Tailwind
                     CSS, Redux."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
 
                       <BioSessionCard
@@ -331,6 +358,7 @@ function BioSession() {
                         CompanyName="UDEMY"
                         Date="DEZ/2019"
                         Description="Criação de rotas em react."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
 
                       <BioSessionCard
@@ -339,6 +367,7 @@ function BioSession() {
                         Date="AGO/2018"
                         Description="Introdução aos conceitos para desenvolvimento de
                     interfaces."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
 
                       <BioSessionCard
@@ -347,9 +376,10 @@ function BioSession() {
                         Date="SET/2018"
                         Description="Desenvolvimento ágil de CSS com Variables, Transitions,
                     Dropdowns, Overlays."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
                     </div>
-                    <div className="w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-5 rounded-xl ">
+                    <div className="w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-0 lg:m-5 md:my-5 rounded-xl ">
                       <BioSessionCard
                         PositionName="Est. de mkt e e-commerce"
                         CompanyName="SENAC"
@@ -357,6 +387,7 @@ function BioSession() {
                         Description="Analise a criação de estratégias e ações de marketing com
                     foco em conversão de usuários em plataformas digitais e
                     e-commerce."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
 
                       <BioSessionCard
@@ -366,6 +397,7 @@ function BioSession() {
                         Description="Analise a criação de estratégias e ações de marketing com
                     foco em conversão de usuários em plataformas digitais e
                     e-commerce."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
 
                       <BioSessionCard
@@ -373,6 +405,7 @@ function BioSession() {
                         CompanyName="UDEMY"
                         Date="SET/2017"
                         Description="Formatação de Layouts com media queries, flexbox and grid."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
 
                       <BioSessionCard
@@ -380,23 +413,26 @@ function BioSession() {
                         CompanyName="UDEMY"
                         Date="AGO/2016"
                         Description="Elaboração e desenvolvimento de layouts semanticos."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
                     </div>
-                    <div className="w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-5 rounded-xl ">
+                    <div className="w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-0 lg:m-5 md:my-5 rounded-xl ">
                       <BioSessionCard
                         PositionName="Design gráfico com enfãse em comunicação digital"
                         CompanyName="UNIVERSIDADE PAULISTA"
                         Date="DEZ/2016"
                         Description="Designer Gráfico com enfâse em comunicação digital."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
 
                       <BioSessionCard
-                        PositionName="Direção de arte, criatividade e prática"
+                        PositionName="Direção de arte, criatividade aplicada e design na prática"
                         CompanyName="COLOSSEO"
                         Date="NOV/2016"
                         Description="Curso ministrado por Saulo Mileti, onde debatemos a função
                     do diretor de arte, seu dever de transcrever criatividade
                     de muitas midias diferentes em algo prático.."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
 
                       <BioSessionCard
@@ -406,6 +442,7 @@ function BioSession() {
                         Description="Curso ministrado por Saulo Mileti, onde debatemos a função
                     do diretor de arte, seu dever de transcrever criatividade
                     de muitas midias diferentes em algo prático.."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
 
                       <BioSessionCard
@@ -413,6 +450,7 @@ function BioSession() {
                         CompanyName="COLOSSEO"
                         Date="MAR/2016"
                         Description="Curso ministrado por Saulo Mileti, onde discutimos o design de uma forma ampla, desde o conceito de projetos, passando por suas funcões e impacto na sociedade e a sua influência quanto a criação de padrões estéticos."
+                        FormationCollapseStatus={FormationCollapseStatus}
                       />
                     </div>
                   </>
