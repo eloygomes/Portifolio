@@ -1,23 +1,24 @@
 import { useState, useEffect } from "react";
 import { BsArrowDownShort, BsArrowUpShort } from "react-icons/bs";
 
-
-
 function BioSessionCard(props) {
   // eslint-disable-next-line no-unused-vars, react/prop-types
-  const [CollapseStatus, setCollapseStatus] = useState(props.FormationCollapseStatus );
+  const [CollapseStatus, setCollapseStatus] = useState(
+    props.FormationCollapseStatus
+  );
 
   useEffect(() => {
     // eslint-disable-next-line react/prop-types
-    setCollapseStatus(props.FormationCollapseStatus)
-  // eslint-disable-next-line react/prop-types
+    setCollapseStatus(props.FormationCollapseStatus);
+    // eslint-disable-next-line react/prop-types
   }, [props.FormationCollapseStatus]);
 
-
+  console.log(CollapseStatus);
 
   return (
     <>
-      {window.innerWidth <= 961 ? (
+      {/* {window.innerWidth <= 961 ? ( */}
+      {window.innerWidth <= 767 ? (
         <div className="w-auto min-w-1/4 mx-2 mb-5 py-1 rounded-xl drop-shadow-md cursor-pointer">
           <div id="accordionExample">
             <div className="rounded-lg backdrop-blur-xl bg-white/10 hover:bg-white/20 max-w-md min-w-full ">
@@ -76,12 +77,14 @@ function BioSessionCard(props) {
         </div>
       ) : (
         <div className="min-w-[25%] p-2 rounded-xl drop-shadow-md cursor-pointer">
-          
-          
-          <div className="rounded-lg backdrop-blur-xl bg-white/10 hover:bg-white/20 ">
+          <div
+            className={`rounded-lg backdrop-blur-xl bg-white/10 hover:bg-white/20 ${
+              CollapseStatus ? "venia" : "min-h-[380px]"
+            }  volta aquiiiiiiiiiiiiiii`}
+          >
             <div className="" id="headingOne ">
               <button
-                className="group relative flex w-full backdrop-blur-xl bg-white/10 hover:bg-white/20 text-left min-h-[80px] py-5 "
+                className="group relative flex w-full backdrop-blur-xl bg-white/10 hover:bg-white/20 text-left md:text-xs lg:text-sm min-h-[50px] h-fit pt-4 pb-4 text-[.6rem]"
                 type="button"
                 data-te-collapse-init
                 data-te-target="#collapseOne"
@@ -95,9 +98,6 @@ function BioSessionCard(props) {
                   // eslint-disable-next-line react/prop-types
                   props.PositionName
                 }
-                <span className="ml-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
-                  {CollapseStatus ? <BsArrowDownShort /> : <BsArrowUpShort />}
-                </span>
               </button>
             </div>
             <div
@@ -107,7 +107,7 @@ function BioSessionCard(props) {
                 CollapseStatus ? "flex flex-col" : "hidden"
               } text-start min-h-[200px]`}
             >
-              <div className="w-full  flex flex-row justify-between px-5 py-2 mb-3 mt-5 border-b-[0.5px]  top-32">
+              <div className="w-full  flex flex-row md:flex-col lg:flex-row justify-between p-3 mb-3  border-b-[0.5px]  top-28 mt-0">
                 <h2 className=" text-sm font-bold">
                   {
                     // eslint-disable-next-line react/prop-types
@@ -121,7 +121,7 @@ function BioSessionCard(props) {
                   }
                 </h4>
               </div>
-              <div className="px-5 py-4 rounded-xl text-xs">
+              <div className="p-3 rounded-xl text-xs">
                 {
                   // eslint-disable-next-line react/prop-types
                   props.Description
@@ -130,7 +130,6 @@ function BioSessionCard(props) {
             </div>
           </div>
         </div>
-        
       )}
     </>
   );

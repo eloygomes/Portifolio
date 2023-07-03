@@ -133,7 +133,7 @@ function BioSession() {
             </div>
 
             <div className="container mx-auto">
-              <div className="flex flex-col h-full mb-52">
+              <div className="flex flex-col h-full mb-52 md:p-5">
                 <div className="flex sm:flex-row md:flex-row justify-between mx-5 mt-20">
                   <div className="flex flex-col justify-between">
                     <div className="sm:w-[50%] w-full ">
@@ -176,8 +176,8 @@ function BioSession() {
                 </div>
 
                 {/* {window.innerWidth <= 961 ? ( */}
-                {window.innerWidth <= 768 ? (
-                  <div className="flex flex-col sm:flex-row justify-between px-2 py-5 backdrop-blur-xl bg-white/10 mx-5 rounded-xl ">
+                {window.innerWidth <= 767 ? (
+                  <div className="flex flex-col sm:flex-row justify-between px-2 py-5 backdrop-blur-xl bg-white/10 mx-5 rounded-xl  ">
                     <BioSessionCard
                       PositionName="React Testing"
                       CompanyName="CODEACADEMY"
@@ -308,7 +308,6 @@ function BioSession() {
                 ) : (
                   // Desktop
                   <>
-                  
                     <div className=" w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-0 lg:m-5 rounded-xl ">
                       <BioSessionCard
                         PositionName="React Testing"
@@ -419,7 +418,7 @@ function BioSession() {
                     <div className="w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-0 lg:m-5 md:my-5 rounded-xl ">
                       <BioSessionCard
                         PositionName="Design gráfico com enfãse em comunicação digital"
-                        CompanyName="UNIVERSIDADE PAULISTA"
+                        CompanyName="UNIP"
                         Date="DEZ/2016"
                         Description="Designer Gráfico com enfâse em comunicação digital."
                         FormationCollapseStatus={FormationCollapseStatus}
@@ -436,7 +435,7 @@ function BioSession() {
                       />
 
                       <BioSessionCard
-                        PositionName="Estética, lógica, harmonia e a contrução do belo"
+                        PositionName="Design além do obvio: Estética, lógica, harmonia e a contrução do belo"
                         CompanyName="COLOSSEO"
                         Date="AGO/2016"
                         Description="Curso ministrado por Saulo Mileti, onde debatemos a função
@@ -446,7 +445,7 @@ function BioSession() {
                       />
 
                       <BioSessionCard
-                        PositionName="Design, Origem, função e principio estético"
+                        PositionName="Base e fundamento: Design, Origem, função e principio estético"
                         CompanyName="COLOSSEO"
                         Date="MAR/2016"
                         Description="Curso ministrado por Saulo Mileti, onde discutimos o design de uma forma ampla, desde o conceito de projetos, passando por suas funcões e impacto na sociedade e a sua influência quanto a criação de padrões estéticos."
