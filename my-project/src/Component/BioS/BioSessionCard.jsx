@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
 import { BsArrowDownShort, BsArrowUpShort } from "react-icons/bs";
 
 function BioSessionCard(props) {
@@ -7,13 +8,23 @@ function BioSessionCard(props) {
     props.FormationCollapseStatus
   );
 
+  const ref = useRef();
+
   useEffect(() => {
     // eslint-disable-next-line react/prop-types
     setCollapseStatus(props.FormationCollapseStatus);
     // eslint-disable-next-line react/prop-types
   }, [props.FormationCollapseStatus]);
 
-  console.log(CollapseStatus);
+  useEffect(() => {
+    // console.log(ref.current?.clientHeight);
+    // console.log(ref.current?.clientWidth);
+    console.log(typeof(props.PositionName));
+  }, [props.PositionName]);
+
+
+  // console.log(props.PositionName);
+  // console.log(props.PositionName.innerHeight)
 
   return (
     <>
@@ -24,6 +35,7 @@ function BioSessionCard(props) {
             <div className="rounded-lg backdrop-blur-xl bg-white/10 hover:bg-white/20 max-w-md min-w-full ">
               <h2 className="mb-0" id="headingOne">
                 <button
+                  ref={ref}
                   className="group relative flex sm:w-full w-full md:w-full backdrop-blur-xl bg-white/10 hover:bg-white/20 text-left md:min-w-[150px] md:max-w-[250px] "
                   type="button"
                   data-te-collapse-init
@@ -45,7 +57,6 @@ function BioSessionCard(props) {
               </h2>
               <div
                 id="collapseOne"
-                // eslint-disable-next-line react/prop-types
                 className={`${
                   CollapseStatus ? "flex flex-col" : "hidden"
                 } text-start`}
@@ -76,11 +87,10 @@ function BioSessionCard(props) {
           </div>
         </div>
       ) : (
+        // Desktop
         <div className="min-w-[25%] p-2 rounded-xl drop-shadow-md cursor-pointer">
           <div
-            className={`rounded-lg backdrop-blur-xl bg-white/10 hover:bg-white/20 ${
-              CollapseStatus ? "venia" : "min-h-[380px]"
-            }  volta aquiiiiiiiiiiiiiii`}
+            className={`rounded-lg backdrop-blur-xl bg-white/10 hover:bg-white/20 `}
           >
             <div className="" id="headingOne ">
               <button
@@ -105,7 +115,7 @@ function BioSessionCard(props) {
               // eslint-disable-next-line react/prop-types
               className={`${
                 CollapseStatus ? "flex flex-col" : "hidden"
-              } text-start min-h-[200px]`}
+              } text-start min-h-[200px] amazoniaaaaa`}
             >
               <div className="w-full  flex flex-row md:flex-col lg:flex-row justify-between p-3 mb-3  border-b-[0.5px]  top-28 mt-0">
                 <h2 className=" text-sm font-bold">
