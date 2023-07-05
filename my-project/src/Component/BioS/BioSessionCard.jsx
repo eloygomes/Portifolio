@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 import { BsArrowDownShort, BsArrowUpShort } from "react-icons/bs";
+import PopoverWrapper from "../suport/PopoverWrapper";
 
 function BioSessionCard(props) {
   // eslint-disable-next-line no-unused-vars, react/prop-types
@@ -19,12 +20,42 @@ function BioSessionCard(props) {
   useEffect(() => {
     // console.log(ref.current?.clientHeight);
     // console.log(ref.current?.clientWidth);
-    console.log(typeof(props.PositionName));
+    console.log(typeof props.PositionName);
   }, [props.PositionName]);
-
 
   // console.log(props.PositionName);
   // console.log(props.PositionName.innerHeight)
+
+  const headingOneRef = useRef(null);
+
+  useEffect(() => {
+    if (headingOneRef.current) {
+      console.log(headingOneRef.current.offsetHeight);
+    }
+  }, []);
+
+  const dealWithTextTitle = () => {
+    const positionName = props.PositionName;
+    // eslint-disable-next-line no-unused-vars
+
+    if (window.innerWidth <= 961) {
+      const shortenedPositionName =
+        // eslint-disable-next-line react/prop-types
+        positionName.length > 20
+          ? positionName.slice(0, 17) + "..."
+          : positionName;
+
+      return shortenedPositionName;
+    }
+
+    if (window.innerWidth > 961) {
+      const shortenedPositionName =
+        // eslint-disable-next-line react/prop-types
+        positionName;
+
+      return shortenedPositionName;
+    }
+  };
 
   return (
     <>
@@ -92,30 +123,48 @@ function BioSessionCard(props) {
           <div
             className={`rounded-lg backdrop-blur-xl bg-white/10 hover:bg-white/20 `}
           >
-            <div className="" id="headingOne ">
-              <button
-                className="group relative flex w-full backdrop-blur-xl bg-white/10 hover:bg-white/20 text-left md:text-xs lg:text-sm min-h-[50px] h-fit pt-4 pb-4 text-[.6rem]"
-                type="button"
-                data-te-collapse-init
-                data-te-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-                onClick={() => {
-                  setCollapseStatus(!CollapseStatus);
-                }}
-              >
-                {
-                  // eslint-disable-next-line react/prop-types
-                  props.PositionName
-                }
-              </button>
+            <div className="headingOne" ref={headingOneRef}>
+              {headingOneRef.current?.offsetHeight > 50 ? (
+                
+                <button
+                  className="group relative flex w-full backdrop-blur-xl bg-white/10 hover:bg-white/20 text-left md:text-xs lg:text-sm min-h-[50px] h-fit pt-4 pb-4 text-[.6rem]"
+                  type="button"
+                  onClick={() => {
+                    setCollapseStatus(!CollapseStatus);
+                  }}
+                >
+                  {
+                    // eslint-disable-next-line react/prop-types
+                    // props.PositionName + "..."
+                    // shortenedPositionName
+                    dealWithTextTitle()
+                  }
+                </button>
+              ) : (
+                <PopoverWrapper dealWithTextTitle={dealWithTextTitle} PositionName={props.PositionName}>
+                  <button
+                    className="group relative flex w-full backdrop-blur-xl bg-white/10 hover:bg-white/20 text-left md:text-xs lg:text-sm min-h-[50px] h-fit pt-4 pb-4 text-[.6rem]"
+                    type="button"
+                    onClick={() => {
+                      setCollapseStatus(!CollapseStatus);
+                    }}
+                  >
+                    {
+                      // eslint-disable-next-line react/prop-types
+                      // props.PositionName
+                      // shortenedPositionName
+                      dealWithTextTitle()
+                    }
+                  </button>
+                </PopoverWrapper>
+              )}
             </div>
             <div
               id="collapseOne"
               // eslint-disable-next-line react/prop-types
               className={`${
                 CollapseStatus ? "flex flex-col" : "hidden"
-              } text-start min-h-[200px] amazoniaaaaa`}
+              } text-start min-h-[300px] amazoniaaaaa`}
             >
               <div className="w-full  flex flex-row md:flex-col lg:flex-row justify-between p-3 mb-3  border-b-[0.5px]  top-28 mt-0">
                 <h2 className=" text-sm font-bold">
