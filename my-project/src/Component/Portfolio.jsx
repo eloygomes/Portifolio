@@ -153,8 +153,8 @@ function Portfolio() {
           id="port"
         >
           <div ref={ref} className="container mx-auto sm:mt-10 mt-16">
-            <div className="flex sm:flex-row flex-col p-5">
-              <div className="sm:w-[50%] w-full flex flex-col">
+            <div className="flex flex-col sm:flex-col md:flex-col lg:flex-col p-5 sm:p-5 md:p-8">
+              <div className="sm:w-[50%] md:w-full w-full flex flex-col">
                 <motion.h1
                   variants={{
                     hidden: { opacity: 0, y: 75 },
@@ -325,7 +325,7 @@ function Portfolio() {
                   </motion.button>
                 </div>
               ) : (
-                <div className="w-full h-screen flex sm:flex-row flex-col items-center justify-center  "> 
+                <div className="w-full h-screen flex sm:flex-row flex-col items-center justify-center  ">
                   {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
                   <motion.button
                     variants={{
@@ -467,7 +467,7 @@ function Portfolio() {
 
             {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
 
-            <div className="grid gap-6 sm:grid-cols-6 grid-cols-3 sm:grid-rows-1 grid-rows-2 text-center cursor-pointer p-10 mb-10">
+            <div className="grid gap-6 sm:grid-cols-6 grid-cols-3 sm:grid-rows-1 grid-rows-2 text-center cursor-pointer p-5 sm:p-5 md:p-10 mb-10">
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 75 },
@@ -618,8 +618,14 @@ function Portfolio() {
           </div>
         </div>
       ) : (
-        <div className="bg-[#19142A] w-screen h-full sm:h-screen flex flex-col "id="port">
-          <div ref={ref} className="container mx-auto mt-16 flex flex-col items-center justify-center h-screen">
+        <div
+          className="bg-[#19142A] w-screen h-full sm:h-screen flex flex-col "
+          id="port"
+        >
+          <div
+            ref={ref}
+            className="container mx-auto mt-16 flex flex-col items-center justify-center h-screen"
+          >
             <div className="w-full flex flex-row p-5">
               <div className="sm:w-[50%] w-full flex flex-col">
                 <motion.h1

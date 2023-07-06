@@ -37,7 +37,7 @@ function BioSession() {
           <div className="flex flex-col">
             <div className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-10 m-5 sm:my-40 my-00 rounded-xl ">
               <div className="flex flex-col-reverse sm:flex-row md:flex-col-reverse lg:flex-row">
-                <div className="sm:w-[50%] md:w-full lg:w-[50%] h-full flex flex-col mx-auto justify-center md:py-5 lg:p-5">
+                <div className="sm:w-[50%] md:w-full lg:w-[50%] h-full flex flex-col mx-auto justify-center md:p-5 lg:p-5">
                   <div className="w-fit"></div>
                   <motion.h4
                     variants={{
@@ -121,7 +121,7 @@ function BioSession() {
                     web dos projetos.
                   </motion.h5>
                 </div>
-                <div className="sm:w-[50%] md:w-[50%] lg:w-[50%] sm:relative md:absolute lg:relative  md:right-[-60px] md:top-[60px] lg:top-[0px]   flex-col justify-center">
+                <div className="sm:w-[50%] md:w-[50%] lg:w-[50%] sm:relative md:absolute lg:relative  md:right-[-20px] md:top-[60px] lg:top-[0px] flex-col justify-center max-w-xs ">
                   <Lottie
                     className="w-[100%] h-[100%] flex"
                     onComplete={() => {

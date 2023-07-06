@@ -61,7 +61,7 @@ function Carreira() {
               transition={{ duration: 0.5, delay: 0.7 }}
               className="text-6xl py-10 absolute mt-10 mx-10"
             >
-              Carreira 
+              Carreira
             </motion.h1>
             <motion.p
               variants={{
@@ -78,13 +78,11 @@ function Carreira() {
             </motion.p>
 
             {/* //////////////////////////////////////////////////////////////////////// :: CARREIRAS :: //////////////////////////////////////////////////////////////////////// */}
-            
 
             <KrabSession
               modalStatus={modalStatus}
               setModalStatus={setModalStatus}
               setcareerModalInfo={setcareerModalInfo}
-              
             />
           </div>
         </div>

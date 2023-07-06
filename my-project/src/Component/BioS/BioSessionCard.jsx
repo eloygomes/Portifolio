@@ -6,6 +6,7 @@ import PopoverWrapper from "../suport/PopoverWrapper";
 function BioSessionCard(props) {
   // eslint-disable-next-line no-unused-vars, react/prop-types
   const [CollapseStatus, setCollapseStatus] = useState(
+    // eslint-disable-next-line react/prop-types
     props.FormationCollapseStatus
   );
 
@@ -18,13 +19,10 @@ function BioSessionCard(props) {
   }, [props.FormationCollapseStatus]);
 
   useEffect(() => {
-    // console.log(ref.current?.clientHeight);
-    // console.log(ref.current?.clientWidth);
+    // eslint-disable-next-line react/prop-types
     console.log(typeof props.PositionName);
+  // eslint-disable-next-line react/prop-types
   }, [props.PositionName]);
-
-  // console.log(props.PositionName);
-  // console.log(props.PositionName.innerHeight)
 
   const headingOneRef = useRef(null);
 
@@ -35,13 +33,14 @@ function BioSessionCard(props) {
   }, []);
 
   const dealWithTextTitle = () => {
+    // eslint-disable-next-line react/prop-types
     const positionName = props.PositionName;
-    // eslint-disable-next-line no-unused-vars
-
+    
     if (window.innerWidth <= 961) {
       const shortenedPositionName =
         // eslint-disable-next-line react/prop-types
         positionName.length > 20
+          // eslint-disable-next-line react/prop-types
           ? positionName.slice(0, 17) + "..."
           : positionName;
 
@@ -141,6 +140,7 @@ function BioSessionCard(props) {
                   }
                 </button>
               ) : (
+                // eslint-disable-next-line react/prop-types
                 <PopoverWrapper dealWithTextTitle={dealWithTextTitle} PositionName={props.PositionName}>
                   <button
                     className="group relative flex w-full backdrop-blur-xl bg-white/10 hover:bg-white/20 text-left md:text-xs lg:text-sm min-h-[50px] h-fit pt-4 pb-4 text-[.6rem]"

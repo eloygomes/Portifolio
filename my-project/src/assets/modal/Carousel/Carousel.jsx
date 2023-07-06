@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -28,7 +28,7 @@ const ImageCarousel = ({ images }) => {
               ))
             }
           </div>
-          <div className="w-full h-fit flex flex-col justify-center mt-10 relative">
+          <div className="sm:w-full md:w-1/2 lg:w-full h-fit flex flex-col justify-center mt-10 relative">
             <div className="container mx-auto">
               <Carousel
                 showArrows={true}
@@ -71,7 +71,7 @@ const ImageCarousel = ({ images }) => {
               ))
             }
           </div>
-          <div className="w-[50%] h-fit p-5 flex flex-col justify-center mt-10 relative">
+          <div className="w-[50%] h-fit p-12 flex flex-col justify-center mt-10 relative">
             <div className="container mx-auto">
               <Carousel
                 showArrows={true}
