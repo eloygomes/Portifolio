@@ -37,7 +37,8 @@ function BioSession() {
           <div className="flex flex-col">
             <div className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-10 m-5 sm:my-40 my-00 rounded-xl ">
               <div className="flex flex-col-reverse sm:flex-row md:flex-col-reverse lg:flex-row">
-                <div className="sm:w-[50%] md:w-full lg:w-[50%] h-full flex flex-col mx-auto justify-center md:p-5 lg:p-5">
+                
+                <div className="sm:w-[50%] md:w-full lg:w-full w-full h-full flex flex-col mx-auto justify-center md:p-5 lg:p-5">
                   <div className="w-fit"></div>
                   <motion.h4
                     variants={{
@@ -61,7 +62,7 @@ function BioSession() {
                     initial="hidden"
                     animate={mainControls}
                     transition={{ duration: 0.5, delay: 0.45 }}
-                    className=" w-fit -ml-1 py-5 sm:text-8xl md:text-6xl text-5xl font-medium hover:text-[#D6223B]"
+                    className=" w-fit -ml-1 py-5 sm:text-8xl md:text-6xl text-5xl lg:text-8xl font-medium hover:text-[#D6223B]"
                   >
                     Desenvolvedor <br /> Full Stack
                   </motion.h1>
@@ -89,9 +90,7 @@ function BioSession() {
                     transition={{ duration: 0.5, delay: 0.55 }}
                     className="py-3 text-sm max-w-lg mt-5  w-fit"
                   >
-                    Iniciei da minha jornada como designer UI/UX, criando
-                    interfaces de produtos e propondo melhorias de usabilidade
-                    na experiência do usuário.
+                    Iniciei da minha jornada como designer UI/UX, criando interfaces de produtos e propondo melhorias de usabilidade na experiência do usuário.
                   </motion.h5>
                   <motion.h5
                     variants={{
@@ -103,8 +102,7 @@ function BioSession() {
                     transition={{ duration: 0.5, delay: 0.6 }}
                     className="py-3 text-sm max-w-lg  w-fit"
                   >
-                    Também tenho vivencia em criação de wireframes de baixa/alta
-                    fidelidade e em desenvolvimento de protótipos navegáveis.
+                    Tenho sólida vivencia em criação de wireframes de baixa/alta fidelidade e em desenvolvimento de protótipos navegáveis.
                   </motion.h5>
                   <motion.h5
                     variants={{
@@ -116,12 +114,10 @@ function BioSession() {
                     transition={{ duration: 0.5, delay: 0.65 }}
                     className="py-3 text-sm max-w-lg  w-fit"
                   >
-                    Hoje atuo como Full Stack Developer, utilizo principalmente
-                    HTML5, CSS3, React Js e Wordpress para dar vida a interfaces
-                    web dos projetos.
+                    Hoje atuo como Full Stack Developer, utilizo principalmente HTML5, CSS3, React Js e Wordpress para dar vida a interfaces web dos projetos.
                   </motion.h5>
                 </div>
-                <div className="sm:w-[50%] md:w-[50%] lg:w-[50%] sm:relative md:absolute lg:relative  md:right-[-20px] md:top-[60px] lg:top-[0px] flex-col justify-center max-w-xs ">
+                <div className="sm:w-[50%] md:w-[50%] lg:w-full lg:max-w-fit w-full sm:relative md:absolute lg:relative  md:right-[-20px] md:top-[60px] lg:top-[0px] flex-col justify-center max-w-xs ">
                   <Lottie
                     className="w-[100%] h-[100%] flex"
                     onComplete={() => {
