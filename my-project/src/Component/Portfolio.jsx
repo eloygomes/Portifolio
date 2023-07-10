@@ -528,11 +528,14 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   setPostImg([
-                    "https://picsum.photos/seed/picsum7/1000/",
-                    "https://picsum.photos/seed/picsum8/500/500",
-                    "https://picsum.photos/seed/picsum9/500/500",
-                    "https://picsum.photos/seed/picsum10/500/500",
-                    "https://picsum.photos/seed/picsum11/500/500",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_00.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_01.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_02.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_03.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_00.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_01.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_02.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_03.png",
                   ]);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
@@ -1000,11 +1003,15 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   setPostImg([
-                    "https://picsum.photos/seed/picsum7/1000/",
-                    "https://picsum.photos/seed/picsum8/500/500",
-                    "https://picsum.photos/seed/picsum9/500/500",
-                    "https://picsum.photos/seed/picsum10/500/500",
-                    "https://picsum.photos/seed/picsum11/500/500",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_00.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_01.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_02.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_03.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_00.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_01.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_02.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_03.png",
+                    
                   ]);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
