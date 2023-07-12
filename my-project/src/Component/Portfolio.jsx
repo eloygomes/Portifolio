@@ -484,18 +484,14 @@ function Portfolio() {
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
                   setPostImg([
-                    "https://picsum.photos/seed/picsum1/1000/",
-                    "https://picsum.photos/seed/picsum2/500/500",
-                    "https://picsum.photos/seed/picsum3/500/500",
-                    "https://picsum.photos/seed/picsum4/500/500",
-                    "https://picsum.photos/seed/picsum5/500/500",
-                    "https://picsum.photos/seed/picsum6/1000/",
-                    "https://picsum.photos/seed/picsum7/500/500",
-                    "https://picsum.photos/seed/picsum8/500/500",
-                    "https://picsum.photos/seed/picsum9/500/500",
-                    "https://picsum.photos/seed/picsum10/500/500",
-                    "https://picsum.photos/seed/picsum11/1000/",
-                    "https://picsum.photos/seed/picsum12/500/500",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_01.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_02.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_03.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_04.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_05.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_06.png",
+                    
+                    
                   ]);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
@@ -561,6 +557,30 @@ function Portfolio() {
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.45 }}
                 className="bg-black sm:h-[400px] h-[200px]"
+                onClick={() => {
+                  console.log("CLICOUUUUU N2");
+                  setModalStatus(true);
+                  dispatch(hideNavbar());
+                  dispatch(freezeScroll());
+                  setPostImg([
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_00.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_01.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_02.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_03.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_04.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_00.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_01.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_02.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_03.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_04.png",
+                  ]);
+                  setPortWorkInfo({
+                    kindOfProject: "ReBranding",
+                    companyName: "EVG - Resist",
+                    techs: ["React", "NextJS", "TailwindCSS"],
+                    jobDescription: "Musica de garbo e elegancia",
+                  });
+                }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
@@ -577,6 +597,27 @@ function Portfolio() {
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="bg-black sm:h-[400px] h-[200px]"
+                onClick={() => {
+                  console.log("CLICOUUUUU N2");
+                  setModalStatus(true);
+                  dispatch(hideNavbar());
+                  dispatch(freezeScroll());
+                  setPostImg([
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_00.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_01.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_02.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_03.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_04.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_05.png",
+                    
+                  ]);
+                  setPortWorkInfo({
+                    kindOfProject: "ReBranding",
+                    companyName: "Overcast",
+                    techs: ["React", "NextJS", "TailwindCSS"],
+                    jobDescription: "Appzin maroto de podcast",
+                  });
+                }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
@@ -959,18 +1000,14 @@ function Portfolio() {
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
                   setPostImg([
-                    "https://picsum.photos/seed/picsum1/1000/",
-                    "https://picsum.photos/seed/picsum2/500/500",
-                    "https://picsum.photos/seed/picsum3/500/500",
-                    "https://picsum.photos/seed/picsum4/500/500",
-                    "https://picsum.photos/seed/picsum5/500/500",
-                    "https://picsum.photos/seed/picsum6/1000/",
-                    "https://picsum.photos/seed/picsum7/500/500",
-                    "https://picsum.photos/seed/picsum8/500/500",
-                    "https://picsum.photos/seed/picsum9/500/500",
-                    "https://picsum.photos/seed/picsum10/500/500",
-                    "https://picsum.photos/seed/picsum11/1000/",
-                    "https://picsum.photos/seed/picsum12/500/500",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_01.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_02.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_03.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_04.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_05.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_06.png",
+                    
+                    
                   ]);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
@@ -1011,7 +1048,6 @@ function Portfolio() {
                     "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_01.png",
                     "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_02.png",
                     "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_03.png",
-                    
                   ]);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
@@ -1037,6 +1073,30 @@ function Portfolio() {
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.45 }}
                 className="bg-black sm:h-[400px] h-[200px]"
+                onClick={() => {
+                  console.log("CLICOUUUUU N2");
+                  setModalStatus(true);
+                  dispatch(hideNavbar());
+                  dispatch(freezeScroll());
+                  setPostImg([
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_00.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_01.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_02.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_03.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_04.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_00.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_01.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_02.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_03.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_04.png",
+                  ]);
+                  setPortWorkInfo({
+                    kindOfProject: "ReBranding",
+                    companyName: "EVG - Resist",
+                    techs: ["React", "NextJS", "TailwindCSS"],
+                    jobDescription: "Musica de garbo e elegancia",
+                  });
+                }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
@@ -1053,6 +1113,27 @@ function Portfolio() {
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="bg-black sm:h-[400px] h-[200px]"
+                onClick={() => {
+                  console.log("CLICOUUUUU N2");
+                  setModalStatus(true);
+                  dispatch(hideNavbar());
+                  dispatch(freezeScroll());
+                  setPostImg([
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_00.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_01.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_02.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_03.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_04.png",
+                    "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_05.png",
+                    
+                  ]);
+                  setPortWorkInfo({
+                    kindOfProject: "ReBranding",
+                    companyName: "Overcast",
+                    techs: ["React", "NextJS", "TailwindCSS"],
+                    jobDescription: "Appzin maroto de podcast",
+                  });
+                }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"

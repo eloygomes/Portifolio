@@ -3,11 +3,11 @@
 
 const images = {
   uiux: {
-    img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/overcast00.png",
-    img2: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/skillConsulting00.png",
-    img3: "https://images.unsplash.com/photo-1506480704700-d4a381ecd2f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-    img4: "https://images.unsplash.com/photo-1535268244390-8b989b92d2bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-    img5: "https://images.unsplash.com/photo-1450297350677-623de575f31c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+    img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_00.png",
+    img2: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/skillConsulting00.png",
+    img3: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/cover.png",
+    img4: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/cover.png",
+    img5: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_00.png",
     img6: "https://images.unsplash.com/photo-1545315003-c5ad6226c272?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
   },
   impressos: {

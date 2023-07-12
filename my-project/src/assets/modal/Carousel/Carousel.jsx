@@ -28,7 +28,7 @@ const ImageCarousel = ({ images }) => {
               ))
             }
           </div>
-          <div className="sm:w-full md:w-1/2 lg:w-full h-fit flex flex-col justify-center mt-10 relative">
+          <div className="sm:w-full md:w-full lg:w-full h-fit flex flex-col justify-center mt-10 relative ">
             <div className="container mx-auto">
               <Carousel
                 showArrows={true}
@@ -57,7 +57,7 @@ const ImageCarousel = ({ images }) => {
       ) : (
         // Desktop
         <div className="flex flex-row items-center justify-around">
-          <div className="w-[50%] m-5 p-2 max-w-2xl mt-8 grid grid-cols-6 gap-4 ">
+          <div className="w-[50%] m-5 p-2 max-w-2xl mt-8 grid grid-cols-6 gap-4 lg:gap-1 ">
             {
               // eslint-disable-next-line react/prop-types
               images.map((image, index) => (
@@ -71,7 +71,7 @@ const ImageCarousel = ({ images }) => {
               ))
             }
           </div>
-          <div className="w-[50%] h-fit p-12 flex flex-col justify-center mt-10 relative">
+          <div className="w-[50%] h-fit p-12 lg:p-0 flex flex-col justify-center mt-10 relative">
             <div className="container mx-auto">
               <Carousel
                 showArrows={true}
@@ -97,7 +97,7 @@ const ImageCarousel = ({ images }) => {
             </div>
           </div>
         </div>
-      )}
+      )}  
     </>
   );
 };
