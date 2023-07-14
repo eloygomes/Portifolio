@@ -113,9 +113,7 @@ function ModalWindow({
                     </div>
                   </div>
                 </div>
-
               </div>
-
             </div>
           </Modal>
         ) : (

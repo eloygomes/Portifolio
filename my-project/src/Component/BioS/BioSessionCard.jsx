@@ -20,7 +20,7 @@ function BioSessionCard(props) {
 
   useEffect(() => {
     // eslint-disable-next-line react/prop-types
-    console.log(typeof props.PositionName);
+    // console.log(typeof props.PositionName);
   // eslint-disable-next-line react/prop-types
   }, [props.PositionName]);
 
@@ -28,7 +28,7 @@ function BioSessionCard(props) {
 
   useEffect(() => {
     if (headingOneRef.current) {
-      console.log(headingOneRef.current.offsetHeight);
+      // console.log(headingOneRef.current.offsetHeight);
     }
   }, []);
 

@@ -9,8 +9,8 @@ function NavBar() {
 
   const [mobileShowMenu, setMobileShowMenu] = useState(false);
 
-  console.log(mobileShowMenu);
-  console.log("window.innerWidth < 961?" + window.innerWidth < 961);
+  // console.log(mobileShowMenu);
+  // console.log("window.innerWidth < 961?" + window.innerWidth < 961);
   return (
     <>
       {window.innerWidth <= 961 ? (
