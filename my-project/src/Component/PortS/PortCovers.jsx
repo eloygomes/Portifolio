@@ -12,7 +12,7 @@ const images = {
   },
   impressos: {
     img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_02.png",
-    img2: "https://images.unsplash.com/photo-1453175324447-6864b23ecf23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+    img2: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_00.png",
     img3: "https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
     img4: "https://images.unsplash.com/photo-1524046346361-5a9c9592fb74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80",
     img5: "https://images.unsplash.com/photo-1648550733986-22e9139d6533?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",

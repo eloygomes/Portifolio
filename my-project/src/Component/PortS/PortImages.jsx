@@ -59,21 +59,19 @@ export const PortImages = {
   },
   impressos: {
     container01: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_03.png",
+        "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_02.png",
+        "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_03.png",
+        "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_01.png",
       
     ],
     container02: [
-      // "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/skillConsulting_desktop_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_03.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_01.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_02.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_03.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_04.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_05.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_06.png",
+
     ],
     container03: [
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_00.png",
