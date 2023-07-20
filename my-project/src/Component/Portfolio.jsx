@@ -1150,7 +1150,7 @@ function Portfolio() {
                   setPostImg(modalImgContainer.container03);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
-                    companyName: "EVG - Resist",
+                    companyName: "Aponta Facil",
                     techs: ["React", "NextJS", "TailwindCSS"],
                     jobDescription: "Musica de garbo e elegancia",
                   });
