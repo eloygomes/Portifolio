@@ -1152,7 +1152,7 @@ function Portfolio() {
                     kindOfProject: "ReBranding",
                     companyName: "Aponta Facil",
                     techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription: "Musica de garbo e elegancia",
+                    jobDescription: "",
                   });
                 }}
               >

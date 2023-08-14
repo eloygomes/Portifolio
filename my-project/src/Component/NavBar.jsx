@@ -14,7 +14,7 @@ function NavBar() {
   return (
     <>
       {window.innerWidth <= 961 ? (
-        <div
+        <div  
           className={` w-screen py-5 fixed left-0 top-0 drop-shadow-md ${
             navbarZindex === "show" ? "z-10" : "-z-10"
           }`}
@@ -23,7 +23,6 @@ function NavBar() {
             className="text-4xl text-white m-5 cursor-pointer absolute top-0 right-0 z-10  backdrop-blur-xl bg-white/10 rounded-full p-2 "
             onClick={() => {
               setMobileShowMenu(!mobileShowMenu);
-              
             }}
           />
           <div
@@ -105,7 +104,8 @@ function NavBar() {
         </div>
       ) : (
         <div
-          className={`sm:bg-[#19142A] md:w-screen w-screen py-5 fixed left-0 top-0 drop-shadow-md hidden lg:block ${
+          // className={`sm:bg-[#19142A] md:w-screen w-screen py-5 fixed left-0 top-0 drop-shadow-md hidden lg:block ${
+          className={`sm:bg-[#100c20] md:w-screen w-screen py-5 fixed left-0 top-0 drop-shadow-md hidden lg:block ${
             navbarZindex === "show" ? "z-10" : "-z-10"
           }`}
         >

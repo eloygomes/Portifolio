@@ -2,6 +2,7 @@ export const PortImages = {
   uiux: {
     // C3TECH UI UX
     container01: [
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/C3TECH-FULLPRESENTATION.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_01.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_02.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_03.png",
