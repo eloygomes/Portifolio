@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 import ImageCarousel from "./Carousel/Carousel";
 
@@ -18,6 +19,8 @@ const customStyles = {
     overflow: "scroll",
     // marginTop: "50px",
     zIndex: "20",
+    border: "none",
+    outline: "none",
   },
   overlay: {
     position: "fixed",
@@ -88,7 +91,8 @@ function ModalWindow({
                       dispatch(particlesOn());
                     }}
                   >
-                    FECHAR
+                    {/* FECHAR */}
+                    <AiFillCloseCircle />
                   </div>
                 </div>
                 {/* ROW 2 */}
@@ -130,7 +134,7 @@ function ModalWindow({
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
                   <div className="uppercase text-6xl">Portfólio</div>
                   <div
-                    className="cursor-pointer text-2xl"
+                    className="cursor-pointer text-2xl z-50"
                     onClick={() => {
                       closeModal();
                       dispatch(showNavbar());
@@ -138,7 +142,8 @@ function ModalWindow({
                       dispatch(particlesOn());
                     }}
                   >
-                    FECHAR
+                    {/* FECHAR */}
+                    <AiFillCloseCircle />
                   </div>
                 </div>
                 {/* ROW 2 */}

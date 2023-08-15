@@ -43,7 +43,7 @@ const ImageCarousel = ({ images }) => {
                   images.map((image, index) => (
                     <div key={index}>
                       <img
-                        className="rounded-lg object-cover   items-center"
+                        className="rounded-lg object-cover p-10  items-center"
                         src={image}
                         alt={`Image ${index + 1}`}
                       />
@@ -56,8 +56,14 @@ const ImageCarousel = ({ images }) => {
         </div>
       ) : (
         // Desktop
-        <div className="flex flex-row items-center justify-around" id="imageCarouselHere">
-          <div className="w-[50%] m-5 p-2 max-w-2xl mt-8 grid grid-cols-6 gap-4 lg:gap-1 " id="THUMBPREVIEW">
+        <div
+          className="flex flex-row items-center justify-around"
+          id="imageCarouselHere"
+        >
+          {/* <div
+            className="w-[50%] m-5 p-2 max-w-2xl mt-8 grid grid-cols-6 gap-4 lg:gap-1 "
+            id="THUMBPREVIEW"
+          >
             {
               // eslint-disable-next-line react/prop-types
               images.map((image, index) => (
@@ -70,9 +76,12 @@ const ImageCarousel = ({ images }) => {
                 />
               ))
             }
-          </div>
-          <div className="w-[50%] h-screen p-12 lg:p-0 flex flex-col justify-center mt-10 relative" id="FULL IMAGE HERE">
-            <div className="container mx-auto h-screen mt-96">
+          </div> */}
+          <div
+            className="w-[70%]  p-16 lg:pt-2 lg:p-5 flex flex-col justify-center absolute right-0"
+            id="FULL IMAGE HERE"
+          >
+            <div className="container mx-auto h-auto mt-96 max-h-[89vh]">
               <Carousel
                 showArrows={true}
                 showStatus={false}
@@ -84,11 +93,13 @@ const ImageCarousel = ({ images }) => {
                 {
                   // eslint-disable-next-line react/prop-types
                   images.map((image, index) => (
-                    <div key={index} className="h-screen overflow-scroll flex items-start justify-center">
+                    <div
+                      key={index}
+                      // className="h-screen overflow-scroll flex items-start justify-center"
+                      className="h-screen overflow-scroll flex items-start justify-center"
+                    >
                       <img
-                        // className="rounded-lg object-cover p-10  items-center"
-                        // className="rounded-lg object-contain p-10 max-h-[580px] items-center"
-                        className="rounded-lg object-cover p-10  items-center"
+                        className="rounded-lg object-cover p-10 pb-96 items-center"
                         src={image}
                         alt={`Image ${index + 1}`}
                       />
@@ -99,7 +110,7 @@ const ImageCarousel = ({ images }) => {
             </div>
           </div>
         </div>
-      )}  
+      )}
     </>
   );
 };
