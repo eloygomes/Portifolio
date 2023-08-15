@@ -125,7 +125,7 @@ function ModalWindow({
             className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3"
           >
             <div className="w-full min-w-[1200px] rounded-xl">
-              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-[90vh] m-10 z-20">
+              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-[90vh] m-10 z-20 overflow-hidden">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
                   <div className="uppercase text-6xl">Portfólio</div>
@@ -142,7 +142,7 @@ function ModalWindow({
                   </div>
                 </div>
                 {/* ROW 2 */}
-                <div className="h-[65%] flex flex-row ">
+                <div className="h-[65%] flex flex-row " >
                   <ImageCarousel images={postImg} />
                 </div>
                 {/* ROW 3 */}

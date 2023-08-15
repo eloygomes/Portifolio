@@ -56,8 +56,8 @@ const ImageCarousel = ({ images }) => {
         </div>
       ) : (
         // Desktop
-        <div className="flex flex-row items-center justify-around">
-          <div className="w-[50%] m-5 p-2 max-w-2xl mt-8 grid grid-cols-6 gap-4 lg:gap-1 ">
+        <div className="flex flex-row items-center justify-around" id="imageCarouselHere">
+          <div className="w-[50%] m-5 p-2 max-w-2xl mt-8 grid grid-cols-6 gap-4 lg:gap-1 " id="THUMBPREVIEW">
             {
               // eslint-disable-next-line react/prop-types
               images.map((image, index) => (
@@ -71,23 +71,24 @@ const ImageCarousel = ({ images }) => {
               ))
             }
           </div>
-          <div className="w-[50%] h-auto p-12 lg:p-0 flex flex-col justify-center mt-10 relative">
-            <div className="container mx-auto">
+          <div className="w-[50%] h-screen p-12 lg:p-0 flex flex-col justify-center mt-10 relative" id="FULL IMAGE HERE">
+            <div className="container mx-auto h-screen mt-96">
               <Carousel
                 showArrows={true}
                 showStatus={false}
                 showIndicators={true}
                 showThumbs={false}
                 selectedItem={selectedImageIndex}
-                className="mx-10 rounded-xl"
+                className=" rounded-xl"
               >
                 {
                   // eslint-disable-next-line react/prop-types
                   images.map((image, index) => (
-                    <div key={index}>
+                    <div key={index} className="h-screen overflow-scroll flex items-start justify-center">
                       <img
                         // className="rounded-lg object-cover p-10  items-center"
-                        className="rounded-lg object-contain p-10 max-h-[580px] items-center"
+                        // className="rounded-lg object-contain p-10 max-h-[580px] items-center"
+                        className="rounded-lg object-cover p-10  items-center"
                         src={image}
                         alt={`Image ${index + 1}`}
                       />
