@@ -28,7 +28,7 @@ const ImageCarousel = ({ images }) => {
               ))
             }
           </div>
-          <div className="sm:w-full md:w-full lg:w-full h-fit flex flex-col justify-center mt-10 relative ">
+          <div className="sm:w-full md:w-full lg:w-full h-full flex flex-col justify-center mt-10 relative ">
             <div className="container mx-auto">
               <Carousel
                 showArrows={true}
@@ -43,7 +43,7 @@ const ImageCarousel = ({ images }) => {
                   images.map((image, index) => (
                     <div key={index}>
                       <img
-                        className="rounded-lg object-cover p-10  items-center"
+                        className="rounded-lg object-cover   items-center"
                         src={image}
                         alt={`Image ${index + 1}`}
                       />
