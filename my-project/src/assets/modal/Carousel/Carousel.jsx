@@ -6,9 +6,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const ImageCarousel = ({ images }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  const handleImageClick = (index) => {
-    setSelectedImageIndex(index);
-  };
+  // const handleImageClick = (index) => {
+  //   setSelectedImageIndex(index);
+  // };
 
   return (
     <>
@@ -17,7 +17,7 @@ const ImageCarousel = ({ images }) => {
           {
             // eslint-disable-next-line react/prop-types
             images.map((image, index) => (
-              <div key={index}>
+              <div key={index} className="p-3">
                 <img
                   className="rounded-lg object-cover   items-center"
                   src={image}
@@ -33,23 +33,7 @@ const ImageCarousel = ({ images }) => {
           className="flex flex-row items-center justify-around"
           id="imageCarouselHere"
         >
-          {/* <div
-            className="w-[50%] m-5 p-2 max-w-2xl mt-8 grid grid-cols-6 gap-4 lg:gap-1 "
-            id="THUMBPREVIEW"
-          >
-            {
-              // eslint-disable-next-line react/prop-types
-              images.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`Image ${index + 1}`}
-                  className="cursor-pointer rounded-xl"
-                  onClick={() => handleImageClick(index)}
-                />
-              ))
-            }
-          </div> */}
+         
           <div
             className="w-[70%]  p-16 lg:pt-2 lg:p-5 flex flex-col justify-center absolute right-0"
             id="FULL IMAGE HERE"

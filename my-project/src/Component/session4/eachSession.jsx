@@ -4,11 +4,17 @@ import { motion, useInView, useAnimation } from "framer-motion";
 function EachSession({
   // eslint-disable-next-line react/prop-types
   jobPosition,
+  // eslint-disable-next-line react/prop-types
   jobName,
+  // eslint-disable-next-line react/prop-types
   jobSegment,
+  // eslint-disable-next-line react/prop-types
   jobDuration,
+  // eslint-disable-next-line react/prop-types
   setModalStatus,
+  // eslint-disable-next-line react/prop-types
   setcareerModalInfo,
+  // eslint-disable-next-line react/prop-types
   jobDesc,
 }) {
   const mainControls = useAnimation();
@@ -25,7 +31,14 @@ function EachSession({
 
   return (
     <div ref={ref}>
-      <div
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.3, delay: 0.5 }}
         className="relative sm:mb-0  h-full bottom-0 mx-2  py-8 px-5 rounded-xl backdrop-blur-xl bg-white/10 cursor-pointer  hover:bg-[#19142A] hover:rounded-xl drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 "
         onClick={() => {
           setModalStatus(true);
@@ -68,17 +81,44 @@ function EachSession({
           >
             {jobPosition}
           </motion.h3>
-          <h3 className="block mb-2 text-sm font-normal  text-gray-100 ">
+          <motion.h3
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="block mb-2 text-sm font-normal  text-gray-100 "
+          >
             {jobName}
-          </h3>
-          <h3 className="block mb-2 text-xs font-normal text-gray-100">
+          </motion.h3>
+          <motion.h3
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="block mb-2 text-xs font-normal text-gray-100"
+          >
             {jobSegment}
-          </h3>
-          <p className="text-xs font-normal text-gray-100 dark:text-gray-400 mt-1 max-w-lg whitespace-nowrap">
+          </motion.h3>
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="text-xs font-normal text-gray-100 dark:text-gray-400 mt-1 max-w-lg whitespace-nowrap"
+          >
             {jobDuration}
-          </p>
+          </motion.p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

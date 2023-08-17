@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
-import SimpleMap from "./SimpleMap";
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 const customStyles = {
   content: {
@@ -17,6 +17,8 @@ const customStyles = {
     overflow: "scroll",
     // marginTop: "50px",
     zIndex: "20",
+    border: "none",
+    outline: "none",
   },
   overlay: {
     position: "fixed",
@@ -75,7 +77,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                       dispatch(particlesOn());
                     }}
                   >
-                    FECHAR
+                    <AiFillCloseCircle />
                   </div>
                 </div>
                 {/* ROW 2 */}
@@ -179,7 +181,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                       dispatch(particlesOn());
                     }}
                   >
-                    FECHAR
+                   <AiFillCloseCircle />
                   </div>
                 </div>
                 {/* ROW 2 */}
