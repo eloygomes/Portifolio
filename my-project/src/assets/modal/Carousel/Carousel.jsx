@@ -13,46 +13,19 @@ const ImageCarousel = ({ images }) => {
   return (
     <>
       {window.innerWidth <= 961 ? (
-        <div className="flex flex-col-reverse items-center justify-around">
-          <div className="w-auto m-5 p-2 max-w-2xl mt-8 grid grid-cols-6 gap-2 ">
-            {
-              // eslint-disable-next-line react/prop-types
-              images.map((image, index) => (
+        <div className="flex flex-col items-center justify-around">
+          {
+            // eslint-disable-next-line react/prop-types
+            images.map((image, index) => (
+              <div key={index}>
                 <img
-                  key={index}
+                  className="rounded-lg object-cover   items-center"
                   src={image}
                   alt={`Image ${index + 1}`}
-                  className="cursor-pointer rounded-sm shadow-sm"
-                  onClick={() => handleImageClick(index)}
                 />
-              ))
-            }
-          </div>
-          <div className="sm:w-full md:w-full lg:w-full h-full flex flex-col justify-center mt-10 relative ">
-            <div className="container mx-auto">
-              <Carousel
-                showArrows={true}
-                showStatus={true}
-                showIndicators={false}
-                showThumbs={false}
-                selectedItem={selectedImageIndex}
-                className="mx-10 rounded-xl"
-              >
-                {
-                  // eslint-disable-next-line react/prop-types
-                  images.map((image, index) => (
-                    <div key={index}>
-                      <img
-                        className="rounded-lg object-cover   items-center"
-                        src={image}
-                        alt={`Image ${index + 1}`}
-                      />
-                    </div>
-                  ))
-                }
-              </Carousel>
-            </div>
-          </div>
+              </div>
+            ))
+          }
         </div>
       ) : (
         // Desktop
