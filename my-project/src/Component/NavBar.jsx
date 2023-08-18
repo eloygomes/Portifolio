@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
+import { AiFillCloseCircle } from "react-icons/ai";
+
 import { AiOutlineMenu } from "react-icons/ai";
 
 function NavBar() {
@@ -9,12 +11,14 @@ function NavBar() {
 
   const [mobileShowMenu, setMobileShowMenu] = useState(false);
 
+  const [desktopMenuActive, setDesktopMenuActive] = useState("");
+
   // console.log(mobileShowMenu);
   // console.log("window.innerWidth < 961?" + window.innerWidth < 961);
   return (
     <>
       {window.innerWidth <= 961 ? (
-        <div  
+        <div
           className={` w-screen py-5 fixed left-0 top-0 drop-shadow-md ${
             navbarZindex === "show" ? "z-10" : "-z-10"
           }`}
@@ -103,8 +107,12 @@ function NavBar() {
           </div>
         </div>
       ) : (
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <div
-          // className={`sm:bg-[#19142A] md:w-screen w-screen py-5 fixed left-0 top-0 drop-shadow-md hidden lg:block ${
           className={`sm:bg-[#100c20] md:w-screen w-screen py-5 fixed left-0 top-0 drop-shadow-md hidden lg:block ${
             navbarZindex === "show" ? "z-10" : "-z-10"
           }`}
@@ -116,21 +124,56 @@ function NavBar() {
               </a>
             </div>
             <div className="w-[40%] flex flex-row justify-around cursor-pointer">
-              <a href="#bio" className="px-2">
-                BIO
-              </a>
-              <a href="#port" className="px-2">
-                PORTFÓLIO
-              </a>
-              <a href="#carreira" className="px-2">
-                CARREIRA
-              </a>
-              <a href="#services" className="px-2">
-                SERVIÇOS
-              </a>
-              <a href="#contato" className="px-2">
-                CONTATO
-              </a>
+              <div
+                onClick={() => {
+                  setDesktopMenuActive("bio");
+                }}
+                className="hover:text-[#d6223b]"
+              >
+                <a href="#bio" className={`px-2 font-semibold ${desktopMenuActive === 'bio' ? 'text-[#d6223b]': 'text-white'} `}>
+                  BIO
+                </a>
+              </div>
+              <div
+                onClick={() => {
+                  setDesktopMenuActive("port");
+                }}
+                className="hover:text-[#d6223b]"
+              >
+                <a href="#port"  className={`px-2 font-semibold ${desktopMenuActive === 'port' ? 'text-[#d6223b]': 'text-white'} `}>
+                  PORTFÓLIO
+                </a>
+              </div>
+              <div
+                onClick={() => {
+                  setDesktopMenuActive("carreira");
+                }}
+                className="hover:text-[#d6223b]"
+              >
+                <a href="#carreira"  className={`px-2 font-semibold ${desktopMenuActive === 'carreira' ? 'text-[#d6223b]': 'text-white'} `}>
+                  CARREIRA
+                </a>
+              </div>
+              <div
+                onClick={() => {
+                  setDesktopMenuActive("services");
+                }}
+                className="hover:text-[#d6223b]"
+              >
+                <a href="#services"  className={`px-2 font-semibold ${desktopMenuActive === 'services' ? 'text-[#d6223b]': 'text-white'} `}>
+                  SERVIÇOS
+                </a>
+              </div>
+              <div
+                onClick={() => {
+                  setDesktopMenuActive("contato");
+                }}
+                className="hover:text-[#d6223b]"
+              >
+                <a href="#contato"  className={`px-2 font-semibold ${desktopMenuActive === 'contato' ? 'text-[#d6223b]': 'text-white'} `}>
+                  CONTATO
+                </a>
+              </div>
               <div className="pl-5">
                 <p className="bg-[#D6223B] text-xs p-1.5 whitespace-nowrap rounded">
                   DOWNLOAD CV
