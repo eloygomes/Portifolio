@@ -44,11 +44,31 @@ function controlParticles(state = "on", action) {
   }
 }
 
+function menuDisplayOpt(state = "home", action) {
+  switch (action.type) {
+    case "home":
+      return (state = "home");
+    case "bio":
+      return (state = "bio");
+    case "port":
+      return (state = "port");
+    case "services":
+      return (state = "services");
+    case "carreira":
+      return (state = "carreira");
+    case "contato":
+      return (state = "contato");
+    default:
+      return state;
+  }
+}
+
 const reducer = combineReducers({
   counterReducer: counterReducer,
   navbarZindex: navbarZindex,
-  scrollBodyModalOn:scrollBodyModalOn,
-  controlParticles:controlParticles,
+  scrollBodyModalOn: scrollBodyModalOn,
+  controlParticles: controlParticles,
+  menuDisplayOpt: menuDisplayOpt,
 });
 
 const store = configureStore({

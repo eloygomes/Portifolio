@@ -8,6 +8,9 @@ import { AiOutlineMenu } from "react-icons/ai";
 function NavBar() {
   //Redux
   const navbarZindex = useSelector((state) => state.navbarZindex);
+  const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
+
+  console.log(menuDisplayOpt);
 
   const [mobileShowMenu, setMobileShowMenu] = useState(false);
 
@@ -130,7 +133,15 @@ function NavBar() {
                 }}
                 className="hover:text-[#d6223b]"
               >
-                <a href="#bio" className={`px-2 font-semibold ${desktopMenuActive === 'bio' ? 'text-[#d6223b]': 'text-white'} `}>
+                <a
+                  href="#bio"
+                  className={`px-2 font-semibold ${
+                    // desktopMenuActive === "bio" || 
+                    menuDisplayOpt === "bio"
+                      ? "text-[#d6223b]"
+                      : "text-white"
+                  } `}
+                >
                   BIO
                 </a>
               </div>
@@ -140,7 +151,15 @@ function NavBar() {
                 }}
                 className="hover:text-[#d6223b]"
               >
-                <a href="#port"  className={`px-2 font-semibold ${desktopMenuActive === 'port' ? 'text-[#d6223b]': 'text-white'} `}>
+                <a
+                  href="#port"
+                  className={`px-2 font-semibold ${
+                    // desktopMenuActive === "port" || 
+                    menuDisplayOpt === "port"
+                      ? "text-[#d6223b]"
+                      : "text-white"
+                  } `}
+                >
                   PORTFÓLIO
                 </a>
               </div>
@@ -150,7 +169,15 @@ function NavBar() {
                 }}
                 className="hover:text-[#d6223b]"
               >
-                <a href="#carreira"  className={`px-2 font-semibold ${desktopMenuActive === 'carreira' ? 'text-[#d6223b]': 'text-white'} `}>
+                <a
+                  href="#carreira"
+                  className={`px-2 font-semibold ${
+                    // desktopMenuActive === "carreira" ||
+                    menuDisplayOpt === "carreira"
+                      ? "text-[#d6223b]"
+                      : "text-white"
+                  } `}
+                >
                   CARREIRA
                 </a>
               </div>
@@ -160,7 +187,15 @@ function NavBar() {
                 }}
                 className="hover:text-[#d6223b]"
               >
-                <a href="#services"  className={`px-2 font-semibold ${desktopMenuActive === 'services' ? 'text-[#d6223b]': 'text-white'} `}>
+                <a
+                  href="#services"
+                  className={`px-2 font-semibold ${
+                    // desktopMenuActive === "services" ||
+                    menuDisplayOpt === "services"
+                      ? "text-[#d6223b]"
+                      : "text-white"
+                  } `}
+                >
                   SERVIÇOS
                 </a>
               </div>
@@ -170,7 +205,15 @@ function NavBar() {
                 }}
                 className="hover:text-[#d6223b]"
               >
-                <a href="#contato"  className={`px-2 font-semibold ${desktopMenuActive === 'contato' ? 'text-[#d6223b]': 'text-white'} `}>
+                <a
+                  href="#contato"
+                  className={`px-2 font-semibold ${
+                    // desktopMenuActive === "contato" ||
+                    menuDisplayOpt === "contato"
+                      ? "text-[#d6223b]"
+                      : "text-white"
+                  } `}
+                >
                   CONTATO
                 </a>
               </div>

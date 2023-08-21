@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-
 import { motion, useInView, useAnimation } from "framer-motion";
-
 import { BsArrowsAngleContract, BsArrowsAngleExpand } from "react-icons/bs";
-
 import Lottie from "lottie-react";
 import animationData from "../assets/63487-programming-computer.json";
-
 import BioSessionCard from "./BioS/BioSessionCard";
+import { useSelector, useDispatch } from "react-redux";
+
 
 function BioSession() {
   const [FormationCollapseStatus, setFormationCollapseStatus] = useState(false);
@@ -17,26 +15,43 @@ function BioSession() {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
+  const dispatch = useDispatch();
+
   const mainControls = useAnimation();
 
+  // This trigger the animation when the component is in view
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
+      // console.log(isInView);
+      dispatch(currentSession());
     }
   }, [isInView]);
 
   const someAnimation = useRef(null);
 
+
+  function currentSession() {
+    return { type: "bio" };
+  }
+
+
+
+  const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
+
+  console.log(menuDisplayOpt);
+
   return (
     <>
-      <div className=" w-screen flex flex-col " id="bio">
+      <div className=" w-screen flex flex-col  " id="bio">
         <div
-          ref={ref}
+          
           className="container mx-auto flex flex-col justify-center"
         >
           
             <div className="flex flex-col">
-              <div className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-10 m-5 sm:my-40 my-00 rounded-xl ">
+              <div ref={ref}
+              className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-10 m-5 sm:my-40 my-00 rounded-xl ">
                 <div className="flex flex-col-reverse sm:flex-row md:flex-col-reverse lg:flex-row">
                   <div className="sm:w-[50%] md:w-full lg:w-full w-full h-full flex flex-col mx-auto justify-center md:p-5 lg:p-5">
                     <div className="w-fit"></div>

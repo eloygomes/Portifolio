@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-
+import { useSelector, useDispatch } from "react-redux";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 function Contact() {
@@ -7,14 +7,23 @@ function Contact() {
   const isInView = useInView(ref);
 
   const mainControls = useAnimation();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (isInView) {
-      console.log(isInView);
-
+      // console.log(isInView);
+      dispatch(currentSession());
       mainControls.start("visible");
     }
   }, [isInView]);
+
+  function currentSession() {
+    return { type: "contato" };
+  }
+
+  const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
+
+  console.log(menuDisplayOpt);
 
   return (
     <>
@@ -23,10 +32,11 @@ function Contact() {
           className="bg-[#2A2344] w-screen h-screen flex flex-col p-5"
           id="contato"
         >
-          <div ref={ref} className="flex flex-col justify-center h-full">
+          <div className="flex flex-col justify-center h-full">
             <div className="flex  items-center justify-center">
               <div className="w-full h-full container mx-auto">
                 <motion.h1
+                  ref={ref}
                   variants={{
                     hidden: { opacity: 0, y: 75 },
                     visible: { opacity: 1, y: 0 },
@@ -62,9 +72,9 @@ function Contact() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="py-2 mt-10 text-xs max-w-lg"
                 >
-                  Nossos serviços são a escolha certa para quem busca qualidade e satisfação.
-                  
-                </motion.h5>                     
+                  Nossos serviços são a escolha certa para quem busca qualidade
+                  e satisfação.
+                </motion.h5>
                 <motion.h5
                   variants={{
                     hidden: { opacity: 0, y: 75 },
@@ -75,9 +85,9 @@ function Contact() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="py-2 text-xs max-w-lg"
                 >
-                Junte-se aos nossos clientes satisfeitos e descubra como podemos ajudá-lo a atingir seus objetivos.
-                  
-                </motion.h5>                
+                  Junte-se aos nossos clientes satisfeitos e descubra como
+                  podemos ajudá-lo a atingir seus objetivos.
+                </motion.h5>
                 <motion.h5
                   variants={{
                     hidden: { opacity: 0, y: 75 },
@@ -88,7 +98,7 @@ function Contact() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="py-5 text-xs max-w-lg"
                 >
-                   Clique no meu email e vamos tomar uma café!”
+                  Clique no meu email e vamos tomar uma café!”
                 </motion.h5>
               </div>
             </div>
@@ -99,10 +109,11 @@ function Contact() {
           className="bg-[#2A2344] w-screen h-screen flex flex-col"
           id="contato"
         >
-          <div ref={ref} className="container mx-auto mt-28">
+          <div className="container mx-auto mt-28">
             <div className="flex flex-row">
               <div className="w-full h-full container mx-auto">
                 <motion.h1
+                  ref={ref}
                   variants={{
                     hidden: { opacity: 0, y: 75 },
                     visible: { opacity: 1, y: 0 },

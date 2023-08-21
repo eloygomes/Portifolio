@@ -6,19 +6,33 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 import ParticlesBackground from "./particles/ParticlesBackground";
 
+import { useSelector, useDispatch } from "react-redux";
+
 function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
   const mainControls = useAnimation();
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
     if (isInView) {
       // console.log(isInView);
-
+      dispatch(currentSession());
       mainControls.start("visible");
     }
   }, [isInView]);
+
+
+  function currentSession() {
+    return { type: "home" };
+  }
+
+  const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
+
+  console.log(menuDisplayOpt);
+
 
   return (
     <>
@@ -27,10 +41,10 @@ function Home() {
 
       <div className=" w-screen h-screen flex flex-col">
         <div
-          ref={ref}
+          
           className="container mx-auto h-screen flex flex-col justify-center"
         >
-          <div className="flex sm:flex-row md:flex-col-reverse flex-col-reverse">
+          <div className="flex sm:flex-row md:flex-col-reverse flex-col-reverse" ref={ref}>
             <div className="sm:w-[50%] md:w-full w-full sm:mt-[61px] mt-0">
               <div className="h-full flex flex-col justify-center container  ">
                 <motion.h1

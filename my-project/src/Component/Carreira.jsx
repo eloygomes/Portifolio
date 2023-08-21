@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import KrabSession from "./session4/krabSession";
 
@@ -27,8 +27,17 @@ function Carreira() {
       console.log(isInView);
       dispatch(particlesOff());
       mainControls.start("visible");
+      dispatch(currentSession());
     }
   }, [isInView]);
+
+  function currentSession() {
+    return { type: "carreira" };
+  }
+
+  const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
+
+  console.log(menuDisplayOpt);
 
   return (
     <>
@@ -46,12 +55,12 @@ function Carreira() {
          */}
       {window.innerWidth <= 961 ? (
         <div
-          ref={ref}
           className="bg-[#2A2344] w-screen h-full  items-center flex flex-row "
           id="carreira"
         >
           <div className="container mx-auto grid sm:h-screen h-full sm:mb-0 mb-20">
             <motion.h1
+              ref={ref}
               variants={{
                 hidden: { opacity: 0, y: 75 },
                 visible: { opacity: 1, y: 0 },
@@ -93,12 +102,12 @@ function Carreira() {
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <div
-          ref={ref}
           className="bg-[#2A2344] w-screen h-full  items-center flex flex-row "
           id="carreira"
         >
           <div className="container mx-auto grid sm:h-screen h-full sm:mb-0 mb-20">
             <motion.h1
+              ref={ref}
               variants={{
                 hidden: { opacity: 0, y: 75 },
                 visible: { opacity: 1, y: 0 },

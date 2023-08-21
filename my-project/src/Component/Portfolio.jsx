@@ -73,6 +73,14 @@ function Portfolio() {
   useEffect(() => {
     if (isInView) {
       // console.log(isInView);
+      dispatch(currentSession());
+    }
+  }, [isInView]);
+
+  useEffect(() => {
+    if (isInView) {
+      // console.log(isInView);
+
       dispatch(particlesOn());
       mainControls.start("visible");
     }
@@ -149,6 +157,14 @@ function Portfolio() {
   // console.log(modalImgContainer)
   // console.log(modalImgContainer.container01);
 
+  function currentSession() {
+    return { type: "port" };
+  }
+
+  const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
+
+  console.log(menuDisplayOpt);
+
   return (
     <>
       <ModalWindow
@@ -163,10 +179,11 @@ function Portfolio() {
           className="bg-[#19142A] w-screen h-full sm:h-screen flex flex-col "
           id="port"
         >
-          <div ref={ref} className="container mx-auto sm:mt-10 mt-16">
+          <div className="container mx-auto sm:mt-10 mt-16">
             <div className="flex flex-col sm:flex-col md:flex-col lg:flex-col p-5 sm:p-5 md:p-8">
               <div className="sm:w-[50%] md:w-full w-full flex flex-col">
                 <motion.h1
+                  ref={ref}
                   variants={{
                     hidden: { opacity: 0, y: 75 },
                     visible: { opacity: 1, y: 0 },
@@ -336,9 +353,10 @@ function Portfolio() {
                   </motion.button>
                 </div>
               ) : (
-                <div className="w-full h-screen flex sm:flex-row flex-col items-center justify-center  ">
+                <div className="w-full h-screen flex sm:flex-row flex-col items-center justify-center">
                   {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
                   <motion.button
+                    ref={ref}
                     variants={{
                       hidden: { opacity: 0, y: 75 },
                       visible: { opacity: 1, y: 0 },
