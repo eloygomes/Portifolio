@@ -37,9 +37,10 @@ function BioSession() {
 
 
 
+  // eslint-disable-next-line no-unused-vars
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
 
-  console.log(menuDisplayOpt);
+  // console.log(menuDisplayOpt);
 
   return (
     <>

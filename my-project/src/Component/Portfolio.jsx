@@ -28,19 +28,18 @@ function particlesOn() {
   return { type: "on" };
 }
 
+function currentSession() {
+  return { type: "port" };
+}
+
 function Portfolio() {
-  //
   const [modalStatus, setModalStatus] = useState(false);
   const [postImg, setPostImg] = useState(port01);
-
   const [portWorkInfo, setPortWorkInfo] = useState({});
-
   // Handle page scroll
   const [scrollEnabled, setScrollEnabled] = useState(false);
-
   // Handle image changes when portfolio buttons are clicked
   const [portWorkStatus, setPortWorkStatus] = useState("uiux");
-
   const [modalImgContainer, setModalImgContainer] = useState(PortImages.uiux);
 
   //SRC of images
@@ -51,7 +50,10 @@ function Portfolio() {
   const [imgSrc05, setImgSrc05] = useState("");
   const [imgSrc06, setImgSrc06] = useState("");
 
+  // REDUX STORAGE //
   const scrollBodyModalOn = useSelector((state) => state.scrollBodyModalOn);
+  // eslint-disable-next-line no-unused-vars
+  const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
 
   const dispatch = useDispatch();
 
@@ -60,6 +62,7 @@ function Portfolio() {
 
   const mainControls = useAnimation();
 
+  // FUNCTIONS //
   //Handle page scroll
   const handleToggleScroll = () => {
     if (scrollEnabled) {
@@ -70,19 +73,17 @@ function Portfolio() {
     setScrollEnabled(!scrollEnabled);
   };
 
+  const handleImages = () => {
+    console.log(portWorkStatus);
+  };
+
+  // USER EFFECTS //
+  // Starts particles animation
   useEffect(() => {
     if (isInView) {
-      // console.log(isInView);
-      dispatch(currentSession());
-    }
-  }, [isInView]);
-
-  useEffect(() => {
-    if (isInView) {
-      // console.log(isInView);
-
-      dispatch(particlesOn());
+      // dispatch(particlesOn());
       mainControls.start("visible");
+      dispatch(currentSession());
     }
   }, [isInView]);
 
@@ -91,9 +92,15 @@ function Portfolio() {
     handleToggleScroll();
   }, [scrollBodyModalOn]);
 
-  const handleImages = () => {
-    console.log(portWorkStatus);
-  };
+  //This useEffect is to handle the particles when the modal is open
+  useEffect(() => {
+    if (modalStatus) {
+      dispatch(particlesOff());
+    } else {
+      dispatch(particlesOn());
+    }
+    handleToggleScroll();
+  }, [modalStatus]);
 
   useEffect(() => {
     if (portWorkStatus === "uiux") {
@@ -151,19 +158,19 @@ function Portfolio() {
     }
   }, [portWorkStatus]);
 
+  // CONSOLE ZONE //
+
   // console.log(portWorkStatus);
   // console.log(imgSrc01);
 
   // console.log(modalImgContainer)
   // console.log(modalImgContainer.container01);
 
-  function currentSession() {
-    return { type: "port" };
-  }
+  // console.log(menuDisplayOpt);
 
-  const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
+  // console.log(modalStatus);
 
-  console.log(menuDisplayOpt);
+  console.log(scrollBodyModalOn)
 
   return (
     <>

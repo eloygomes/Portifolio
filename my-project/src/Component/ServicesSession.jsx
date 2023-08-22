@@ -60,7 +60,7 @@ function ServicesSession() {
 
   useEffect(() => {
     if (isInView) {
-      console.log(isInView);
+      // console.log(isInView);
       dispatch(currentSession());
       mainControls.start("visible");
     }
@@ -72,9 +72,10 @@ function ServicesSession() {
 
 
 
+  // eslint-disable-next-line no-unused-vars
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
 
-  console.log(menuDisplayOpt);
+  // console.log(menuDisplayOpt);
 
 
   const setWall = (sessioon) => {

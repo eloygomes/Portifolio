@@ -1,11 +1,7 @@
 import pic01 from "../assets/img01.01.png";
-
 import { useEffect, useRef } from "react";
-
 import { motion, useInView, useAnimation } from "framer-motion";
-
 import ParticlesBackground from "./particles/ParticlesBackground";
-
 import { useSelector, useDispatch } from "react-redux";
 
 function Home() {
@@ -24,27 +20,29 @@ function Home() {
     }
   }, [isInView]);
 
-
   function currentSession() {
     return { type: "home" };
   }
 
+  // eslint-disable-next-line no-unused-vars
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
-
-  console.log(menuDisplayOpt);
-
+  // console.log(menuDisplayOpt);
 
   return (
     <>
-      <ParticlesBackground />
-     
-
+      {menuDisplayOpt === "home" ||
+      menuDisplayOpt === "bio" ||
+      menuDisplayOpt === "port" ? (
+        <ParticlesBackground />
+      ) : (
+        []
+      )}
       <div className=" w-screen h-screen flex flex-col">
-        <div
-          
-          className="container mx-auto h-screen flex flex-col justify-center"
-        >
-          <div className="flex sm:flex-row md:flex-col-reverse flex-col-reverse" ref={ref}>
+        <div className="container mx-auto h-screen flex flex-col justify-center">
+          <div
+            className="flex sm:flex-row md:flex-col-reverse flex-col-reverse"
+            ref={ref}
+          >
             <div className="sm:w-[50%] md:w-full w-full sm:mt-[61px] mt-0">
               <div className="h-full flex flex-col justify-center container  ">
                 <motion.h1

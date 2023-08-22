@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
-import { AiFillCloseCircle } from "react-icons/ai";
+// import { AiFillCloseCircle } from "react-icons/ai";
 
 import { AiOutlineMenu } from "react-icons/ai";
 
@@ -10,10 +10,11 @@ function NavBar() {
   const navbarZindex = useSelector((state) => state.navbarZindex);
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
 
-  console.log(menuDisplayOpt);
+  // console.log(menuDisplayOpt);
 
   const [mobileShowMenu, setMobileShowMenu] = useState(false);
 
+  // eslint-disable-next-line no-unused-vars
   const [desktopMenuActive, setDesktopMenuActive] = useState("");
 
   // console.log(mobileShowMenu);
@@ -21,6 +22,11 @@ function NavBar() {
   return (
     <>
       {window.innerWidth <= 961 ? (
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////// MOBILE ////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <div
           className={` w-screen py-5 fixed left-0 top-0 drop-shadow-md ${
             navbarZindex === "show" ? "z-10" : "-z-10"
@@ -136,10 +142,8 @@ function NavBar() {
                 <a
                   href="#bio"
                   className={`px-2 font-semibold ${
-                    // desktopMenuActive === "bio" || 
-                    menuDisplayOpt === "bio"
-                      ? "text-[#d6223b]"
-                      : "text-white"
+                    // desktopMenuActive === "bio" ||
+                    menuDisplayOpt === "bio" ? "text-[#d6223b]" : "text-white"
                   } `}
                 >
                   BIO
@@ -154,10 +158,8 @@ function NavBar() {
                 <a
                   href="#port"
                   className={`px-2 font-semibold ${
-                    // desktopMenuActive === "port" || 
-                    menuDisplayOpt === "port"
-                      ? "text-[#d6223b]"
-                      : "text-white"
+                    // desktopMenuActive === "port" ||
+                    menuDisplayOpt === "port" ? "text-[#d6223b]" : "text-white"
                   } `}
                 >
                   PORTFÓLIO
