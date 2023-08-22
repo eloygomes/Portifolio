@@ -9,7 +9,8 @@ import ModalCareer from "../assets/modal/ModalCareer";
 function Carreira() {
   // Control modal state
   const [modalStatus, setModalStatus] = useState(false);
-
+  // Handle page scroll
+  const [scrollEnabled, setScrollEnabled] = useState(false);
   const [careerModalInfo, setcareerModalInfo] = useState({});
 
   const ref = useRef(null);
@@ -18,27 +19,56 @@ function Carreira() {
   const mainControls = useAnimation();
   const dispatch = useDispatch();
 
+  // Redux
   function particlesOff() {
     return { type: "off" };
   }
 
-  useEffect(() => {
-    if (isInView) {
-      console.log(isInView);
-      dispatch(particlesOff());
-      mainControls.start("visible");
-      dispatch(currentSession());
-    }
-  }, [isInView]);
+  function particlesOn() {
+    return { type: "on" };
+  }
 
   function currentSession() {
     return { type: "carreira" };
   }
 
+    // FUNCTIONS //
+  //Handle page scroll
+  const handleToggleScroll = () => {
+    if (scrollEnabled) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    setScrollEnabled(!scrollEnabled);
+  };
+
+  // USER EFFECTS //
+  // Starts particles animation
+  useEffect(() => {
+    if (isInView) {
+      // dispatch(particlesOn());
+      mainControls.start("visible");
+      dispatch(currentSession());
+    }
+  }, [isInView]);
+
+  useEffect(() => {
+    if (modalStatus) {
+      dispatch(particlesOff());
+    } else {
+      dispatch(particlesOn());
+    }
+    handleToggleScroll();
+  }, [modalStatus]);
+
+
   // eslint-disable-next-line no-unused-vars
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
 
   // console.log(menuDisplayOpt);
+
+  // console.log(modalStatus)
 
   return (
     <>

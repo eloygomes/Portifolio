@@ -170,7 +170,7 @@ function Portfolio() {
 
   // console.log(modalStatus);
 
-  console.log(scrollBodyModalOn)
+  // console.log(scrollBodyModalOn)
 
   return (
     <>

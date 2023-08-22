@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
-import { AiFillCloseCircle } from 'react-icons/ai';
+import { AiFillCloseCircle } from "react-icons/ai";
 
 const customStyles = {
   content: {
@@ -49,6 +49,9 @@ function particlesOn() {
 function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
   function closeModal() {
     setModalStatus(false);
+    dispatch(leaveScroll());
+    dispatch(particlesOn());
+    dispatch(showNavbar());
   }
 
   const dispatch = useDispatch();
@@ -181,7 +184,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                       dispatch(particlesOn());
                     }}
                   >
-                   <AiFillCloseCircle />
+                    <AiFillCloseCircle />
                   </div>
                 </div>
                 {/* ROW 2 */}

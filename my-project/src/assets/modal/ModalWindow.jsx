@@ -57,6 +57,9 @@ function ModalWindow({
 }) {
   function closeModal() {
     setModalStatus(false);
+    dispatch(leaveScroll());
+    dispatch(particlesOn());
+    dispatch(showNavbar());
   }
 
   // eslint-disable-next-line no-unused-vars
