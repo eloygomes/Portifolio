@@ -70,7 +70,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
               <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-full m-10 mt- z-20">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-1  ">
-                  <div className="uppercase text-xl">Carreira</div>
+                  <div className=" text-xl">Carreira</div>
                   <div
                     className="cursor-pointer text-base font-semibold"
                     onClick={() => {
@@ -174,7 +174,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
               <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-[80vh] m-20 mt-32 z-20">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
-                  <div className="uppercase text-6xl">Carreira</div>
+                  <div className=" text-6xl">Carreira</div>
                   <div
                     className="cursor-pointer text-2xl"
                     onClick={() => {
@@ -239,22 +239,22 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                         Ferramentas e tecnologias
                       </div>
                       <div className="flex flex-row pt-1">
-                        <button className="my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
+                        <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
                           React
                         </button>
-                        <button className="my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
+                        <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
                           Javascript
                         </button>
-                        <button className="my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50  hover:font-semibold">
+                        <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50  hover:font-semibold">
                           Tailwind
                         </button>
-                        <button className="my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
+                        <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
                           PHP
                         </button>
-                        <button className="my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
+                        <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
                           SQL
                         </button>
-                        <button className="my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
+                        <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
                           Firebase
                         </button>
                       </div>
