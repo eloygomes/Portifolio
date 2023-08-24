@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 function EachSession({
@@ -21,10 +21,8 @@ function EachSession({
   const ref = useRef(null);
   const isInView = useInView(ref);
 
-  useEffect(() => {
-    if (isInView) {
-      console.log(isInView);
-
+  useLayoutEffect(() => {
+    if (isInView) {      
       mainControls.start("visible");
     }
   }, [isInView]);

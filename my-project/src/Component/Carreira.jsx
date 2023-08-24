@@ -65,7 +65,6 @@ function Carreira() {
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
 
   // console.log(menuDisplayOpt);
-
   // console.log(modalStatus)
 
   return (

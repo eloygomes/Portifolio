@@ -48,12 +48,10 @@ function ServicesSession() {
   const [servBg, setServBg] = useState(`session-uiiu`);
   const [textOnScreen, setTextOnScreen] = useState(`UI/UX`);
   const [servDesc, setServDesc] = useState(servicesDescriptions.iuui);
-
   const [servAnim, setServAnim] = useState(animate00);
 
   const ref = useRef(null);
   const isInView = useInView(ref);
-
   const mainControls = useAnimation();
   const dispatch = useDispatch();
 

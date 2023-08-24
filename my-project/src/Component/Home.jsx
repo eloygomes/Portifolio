@@ -12,14 +12,6 @@ function Home() {
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   if (isInView) {
-  //     // console.log(isInView);
-  //     dispatch(currentSession());
-  //     mainControls.start("visible");
-  //   }
-  // }, [isInView]);
-
   useLayoutEffect(() => {
     if (isInView) {
       // console.log(isInView);
