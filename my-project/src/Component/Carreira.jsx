@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useLayoutEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -32,7 +32,7 @@ function Carreira() {
     return { type: "carreira" };
   }
 
-    // FUNCTIONS //
+  // FUNCTIONS //
   //Handle page scroll
   const handleToggleScroll = () => {
     if (scrollEnabled) {
@@ -44,8 +44,7 @@ function Carreira() {
   };
 
   // USER EFFECTS //
-  // Starts particles animation
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isInView) {
       // dispatch(particlesOn());
       mainControls.start("visible");
@@ -53,7 +52,7 @@ function Carreira() {
     }
   }, [isInView]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (modalStatus) {
       dispatch(particlesOff());
     } else {
@@ -61,7 +60,6 @@ function Carreira() {
     }
     handleToggleScroll();
   }, [modalStatus]);
-
 
   // eslint-disable-next-line no-unused-vars
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);

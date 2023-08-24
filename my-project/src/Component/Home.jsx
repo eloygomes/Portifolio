@@ -1,5 +1,5 @@
 import pic01 from "../assets/img01.01.png";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import ParticlesBackground from "./particles/ParticlesBackground";
 import { useSelector, useDispatch } from "react-redux";
@@ -12,7 +12,15 @@ function Home() {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   if (isInView) {
+  //     // console.log(isInView);
+  //     dispatch(currentSession());
+  //     mainControls.start("visible");
+  //   }
+  // }, [isInView]);
+
+  useLayoutEffect(() => {
     if (isInView) {
       // console.log(isInView);
       dispatch(currentSession());

@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useLayoutEffect, useState, useRef } from "react";
 
 import { motion, useInView, useAnimation } from "framer-motion";
 
@@ -57,8 +57,7 @@ function ServicesSession() {
   const mainControls = useAnimation();
   const dispatch = useDispatch();
 
-
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isInView) {
       // console.log(isInView);
       dispatch(currentSession());
@@ -70,13 +69,10 @@ function ServicesSession() {
     return { type: "services" };
   }
 
-
-
   // eslint-disable-next-line no-unused-vars
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
 
   // console.log(menuDisplayOpt);
-
 
   const setWall = (sessioon) => {
     if (sessioon === "iuui") {
@@ -149,10 +145,10 @@ function ServicesSession() {
                   {textOnScreen}
                 </motion.h1>
 
-                <div  className="container mx-auto   ">
+                <div className="container mx-auto   ">
                   <div className="flex flex-col justify-between pl-2">
                     <motion.h1
-                    ref={ref}
+                      ref={ref}
                       variants={{
                         hidden: { opacity: 0, y: 75 },
                         visible: { opacity: 1, y: 0 },
@@ -312,10 +308,10 @@ function ServicesSession() {
                   {textOnScreen}
                 </motion.h1>
 
-                <div  className="container mx-auto ">
+                <div className="container mx-auto ">
                   <div className="flex flex-row justify-between ">
                     <motion.h1
-                    ref={ref}
+                      ref={ref}
                       variants={{
                         hidden: { opacity: 0, y: 75 },
                         visible: { opacity: 1, y: 0 },

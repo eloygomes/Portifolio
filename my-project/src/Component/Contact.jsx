@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { motion, useInView, useAnimation } from "framer-motion";
 
@@ -9,7 +9,7 @@ function Contact() {
   const mainControls = useAnimation();
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isInView) {
       // console.log(isInView);
       dispatch(currentSession());

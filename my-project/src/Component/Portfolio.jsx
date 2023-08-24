@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { motion, useInView, useAnimation } from "framer-motion";
@@ -78,22 +78,21 @@ function Portfolio() {
   };
 
   // USER EFFECTS //
-  // Starts particles animation
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isInView) {
-      // dispatch(particlesOn());
       mainControls.start("visible");
+      // console.log(isInView);
       dispatch(currentSession());
     }
   }, [isInView]);
 
   //Handle page scroll
-  useEffect(() => {
+  useLayoutEffect(() => {
     handleToggleScroll();
   }, [scrollBodyModalOn]);
 
   //This useEffect is to handle the particles when the modal is open
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (modalStatus) {
       dispatch(particlesOff());
     } else {
@@ -102,7 +101,7 @@ function Portfolio() {
     handleToggleScroll();
   }, [modalStatus]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (portWorkStatus === "uiux") {
       // console.log("uiux");
       setImgSrc01(images.uiux.img1);
@@ -157,6 +156,62 @@ function Portfolio() {
       setImgSrc06(images.edicao.img6);
     }
   }, [portWorkStatus]);
+
+  // useEffect(() => {
+  //   if (portWorkStatus === "uiux") {
+  //     // console.log("uiux");
+  //     setImgSrc01(images.uiux.img1);
+  //     setImgSrc02(images.uiux.img2);
+  //     setImgSrc03(images.uiux.img3);
+  //     setImgSrc04(images.uiux.img4);
+  //     setImgSrc05(images.uiux.img5);
+  //     setImgSrc06(images.uiux.img6);
+
+  //     setModalImgContainer(PortImages.uiux);
+  //   }
+
+  //   if (portWorkStatus === "impressos") {
+  //     // console.log("impressos");
+  //     setImgSrc02(images.impressos.img2);
+  //     setImgSrc01(images.impressos.img1);
+  //     setImgSrc03(images.impressos.img3);
+  //     setImgSrc04(images.impressos.img4);
+  //     setImgSrc05(images.impressos.img5);
+  //     setImgSrc06(images.impressos.img6);
+
+  //     setModalImgContainer(PortImages.impressos);
+  //   }
+
+  //   if (portWorkStatus === "branding") {
+  //     // console.log("branding");
+  //     setImgSrc01(images.branding.img1);
+  //     setImgSrc02(images.branding.img2);
+  //     setImgSrc03(images.branding.img3);
+  //     setImgSrc04(images.branding.img4);
+  //     setImgSrc05(images.branding.img5);
+  //     setImgSrc06(images.branding.img6);
+  //   }
+
+  //   if (portWorkStatus === "foto") {
+  //     // console.log("foto");
+  //     setImgSrc01(images.foto.img1);
+  //     setImgSrc02(images.foto.img2);
+  //     setImgSrc03(images.foto.img3);
+  //     setImgSrc04(images.foto.img4);
+  //     setImgSrc05(images.foto.img5);
+  //     setImgSrc06(images.foto.img6);
+  //   }
+
+  //   if (portWorkStatus === "edicao") {
+  //     // console.log("edicao");
+  //     setImgSrc01(images.edicao.img1);
+  //     setImgSrc02(images.edicao.img2);
+  //     setImgSrc03(images.edicao.img3);
+  //     setImgSrc04(images.edicao.img4);
+  //     setImgSrc05(images.edicao.img5);
+  //     setImgSrc06(images.edicao.img6);
+  //   }
+  // }, [portWorkStatus]);
 
   // CONSOLE ZONE //
 
