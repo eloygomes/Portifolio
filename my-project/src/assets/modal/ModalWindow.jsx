@@ -84,7 +84,7 @@ function ModalWindow({
               <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-full md:h-full m-10 z-20">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
-                  <div className="uppercase text-xl">Portfólio</div>
+                  <div className=" text-xl">Portfólio</div>
                   <div
                     className="cursor-pointer text-base z-30"
                     onClick={() => {
@@ -135,7 +135,7 @@ function ModalWindow({
               <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-[90vh] m-10 z-20 overflow-hidden">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
-                  <div className="uppercase text-6xl">Portfólio</div>
+                  <div className="text-6xl">Portfólio</div>
                   <div
                     className="cursor-pointer text-2xl z-50"
                     onClick={() => {
