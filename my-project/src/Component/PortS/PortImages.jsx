@@ -139,15 +139,16 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/docpay/%5B%20mockup%20%5D%20docpay%2006.png",
       
     ],
-    //
+    // TRIPLE ONE
     container03: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_05.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_06.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_07.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/triple%20One/%5B%20presentation%20%5D%20Triple%20One.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/triple%20One/%5B%20mockup%20%5D%20Triple%20One%2001.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/triple%20One/%5B%20mockup%20%5D%20Triple%20One%2002.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/triple%20One/%5B%20mockup%20%5D%20Triple%20One%2003.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/triple%20One/%5B%20mockup%20%5D%20Triple%20One%2004.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/triple%20One/%5B%20mockup%20%5D%20Triple%20One%2005.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/triple%20One/%5B%20mockup%20%5D%20Triple%20One%2006.png",
+      
     ],
     //
     container04: [
