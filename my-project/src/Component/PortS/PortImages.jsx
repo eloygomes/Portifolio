@@ -172,14 +172,16 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/grupo%20skill/%5B%20mockup%20%5D%20Grupo%20Skill%2006.png",
       
     ],
+    // TAPERA
     container06: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_05.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_06.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_07.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/tapera/%5B%20presentation%20%5D%20Tapera.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/tapera/%5B%20mockup%20%5D%20Tapera%2001.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/tapera/%5B%20mockup%20%5D%20Tapera%2002.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/tapera/%5B%20mockup%20%5D%20Tapera%2003.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/tapera/%5B%20mockup%20%5D%20Tapera%2004.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/tapera/%5B%20mockup%20%5D%20Tapera%2005.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/tapera/%5B%20mockup%20%5D%20Tapera%2006.png",
+      
     ],
   },
   foto: {
