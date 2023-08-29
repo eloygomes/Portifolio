@@ -150,14 +150,16 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/triple%20One/%5B%20mockup%20%5D%20Triple%20One%2006.png",
       
     ],
-    //
+    // c3tech
     container04: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/01.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/02.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/03.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/04.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/05.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/06.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20presentation%20%5D%20C3Tech%2001%20.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2001.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2002.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2003.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2004.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2005.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2006.png",
+      
     ],
     container05: [
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_00.png",
