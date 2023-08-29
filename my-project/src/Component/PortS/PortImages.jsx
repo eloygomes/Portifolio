@@ -161,13 +161,16 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2006.png",
       
     ],
+    // GRUPO SKILL
     container05: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_05.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/grupo%20skill/%5B%20presentation%20%5D%20Grupo%20Skill.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/grupo%20skill/%5B%20mockup%20%5D%20Grupo%20Skill%2001.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/grupo%20skill/%5B%20mockup%20%5D%20Grupo%20Skill%2002.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/grupo%20skill/%5B%20mockup%20%5D%20Grupo%20Skill%2003.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/grupo%20skill/%5B%20mockup%20%5D%20Grupo%20Skill%2004.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/grupo%20skill/%5B%20mockup%20%5D%20Grupo%20Skill%2005.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/grupo%20skill/%5B%20mockup%20%5D%20Grupo%20Skill%2006.png",
+      
     ],
     container06: [
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_01.png",
