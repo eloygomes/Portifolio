@@ -201,15 +201,14 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/02.jpg",
       
     ],
-    //
+    // CASAMENTO
     container03: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_05.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_06.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_07.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/01.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/02.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/03.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/04.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/05.jpg",
+      
     ],
     //
     container04: [
@@ -228,14 +227,12 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_04.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_05.png",
     ],
+    // ARTISTICAS
     container06: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_05.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_06.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_07.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/01.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/02.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/03.jpg",
+      
     ],
   },
   edicao: {
