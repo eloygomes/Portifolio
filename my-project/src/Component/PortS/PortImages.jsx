@@ -185,11 +185,15 @@ export const PortImages = {
     ],
   },
   foto: {
-    // GALDINO
+    // SESC
     container01: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_01.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/01.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/02.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/03.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/04.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/05.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/06.jpg",
+      
     ],
     //
     container02: [

@@ -27,7 +27,7 @@ const images = {
     img6: "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/tapera/%5B%20presentation%20%5D%20Tapera.png",
   },
   foto: {
-    img1: "https://images.unsplash.com/photo-1542596594-649edbc13630?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+    img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/01.jpg",
     img2: "https://images.unsplash.com/photo-1453175324447-6864b23ecf23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
     img3: "https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
     img4: "https://images.unsplash.com/photo-1524046346361-5a9c9592fb74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80",
