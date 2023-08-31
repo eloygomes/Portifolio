@@ -208,6 +208,9 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/03.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/04.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/05.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/06.jpeg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/07.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/08.jpg",
       
     ],
     //
