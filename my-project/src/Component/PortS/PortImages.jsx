@@ -199,6 +199,9 @@ export const PortImages = {
     container02: [
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/01.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/02.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/03.jpeg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/04.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/05.jpg",
       
     ],
     // CASAMENTO
@@ -235,6 +238,8 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/01.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/02.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/03.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/06.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/07.jpg",
       
     ],
   },
