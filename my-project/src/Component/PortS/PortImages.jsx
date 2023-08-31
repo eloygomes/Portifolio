@@ -195,14 +195,11 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/06.jpg",
       
     ],
-    //
+    // EVENTOS SOCIAIS 
     container02: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_05.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_06.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/01.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/02.jpg",
+      
     ],
     //
     container03: [
