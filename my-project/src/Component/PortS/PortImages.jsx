@@ -126,7 +126,6 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/galdino/%5B%20mockup%20%5D%20GALDINO%2004.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/galdino/%5B%20mockup%20%5D%20GALDINO%2005.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/galdino/%5B%20mockup%20%5D%20GALDINO%2006.png",
-      
     ],
     // DOCPAY
     container02: [
@@ -137,7 +136,6 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/docpay/%5B%20mockup%20%5D%20docpay%2004.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/docpay/%5B%20mockup%20%5D%20docpay%2005.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/docpay/%5B%20mockup%20%5D%20docpay%2006.png",
-      
     ],
     // TRIPLE ONE
     container03: [
@@ -148,7 +146,6 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/triple%20One/%5B%20mockup%20%5D%20Triple%20One%2004.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/triple%20One/%5B%20mockup%20%5D%20Triple%20One%2005.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/triple%20One/%5B%20mockup%20%5D%20Triple%20One%2006.png",
-      
     ],
     // c3tech
     container04: [
@@ -159,7 +156,6 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2004.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2005.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2006.png",
-      
     ],
     // GRUPO SKILL
     container05: [
@@ -170,7 +166,6 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/grupo%20skill/%5B%20mockup%20%5D%20Grupo%20Skill%2004.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/grupo%20skill/%5B%20mockup%20%5D%20Grupo%20Skill%2005.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/grupo%20skill/%5B%20mockup%20%5D%20Grupo%20Skill%2006.png",
-      
     ],
     // TAPERA
     container06: [
@@ -181,7 +176,6 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/tapera/%5B%20mockup%20%5D%20Tapera%2004.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/tapera/%5B%20mockup%20%5D%20Tapera%2005.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/tapera/%5B%20mockup%20%5D%20Tapera%2006.png",
-      
     ],
   },
   foto: {
@@ -193,16 +187,14 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/04.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/05.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/06.jpg",
-      
     ],
-    // EVENTOS SOCIAIS 
+    // EVENTOS SOCIAIS
     container02: [
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/01.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/02.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/03.jpeg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/04.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/05.jpg",
-      
     ],
     // CASAMENTO
     container03: [
@@ -214,23 +206,32 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/06.jpeg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/07.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/08.jpg",
-      
     ],
     // CATALOGO MIROA
     container04: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/catalog_00.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/catalog_02.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/catalog_03.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%201.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%202.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%203.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%204.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%205.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%206.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%207.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%208.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%209.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%2010.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%2011.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%2012.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%2013.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%2014.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/catalog_04.jpg",
-      
     ],
     container05: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_05.png",
+      // Buddah Spa
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Buddah/1.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Buddah/2.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Buddah/3.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Buddah/4.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Buddah/5.jpg",
     ],
     // ARTISTICAS
     container06: [
@@ -239,7 +240,6 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/03.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/06.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/07.jpg",
-      
     ],
   },
   edicao: {

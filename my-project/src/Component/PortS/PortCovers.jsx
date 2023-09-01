@@ -30,8 +30,8 @@ const images = {
     img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/01.jpg",
     img2: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/01.jpg",
     img3: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/01.jpg",
-    img4: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/catalog_00.jpg",
-    img5: "https://images.unsplash.com/photo-1648550733986-22e9139d6533?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+    img4: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%201.jpg",
+    img5: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Buddah/1.jpg",
     img6: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/01.jpg",
   },
   edicao: {
