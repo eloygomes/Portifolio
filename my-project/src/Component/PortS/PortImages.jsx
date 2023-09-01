@@ -216,14 +216,13 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/08.jpg",
       
     ],
-    //
+    // CATALOGO MIROA
     container04: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/01.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/02.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/03.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/04.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/05.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/06.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/catalog_00.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/catalog_02.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/catalog_03.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/catalog_04.jpg",
+      
     ],
     container05: [
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_00.png",
