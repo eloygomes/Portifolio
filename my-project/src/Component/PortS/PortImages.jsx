@@ -98,6 +98,7 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/05.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/06.jpg",
     ],
+    // Rede D'or
     container05: [
       "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/01.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/02.jpg",
@@ -105,14 +106,11 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/04.jpg",
       
     ],
+    // Grupo Skill
     container06: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_05.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_06.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_07.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/apontafacil/cartao-mock.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/apontafacil/totem-mock.png",
+      
     ],
   },
   branding: {
