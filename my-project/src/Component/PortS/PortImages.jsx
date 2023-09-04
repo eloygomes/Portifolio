@@ -99,12 +99,11 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/06.jpg",
     ],
     container05: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_05.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/01.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/02.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/03.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/04.jpg",
+      
     ],
     container06: [
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_01.png",
