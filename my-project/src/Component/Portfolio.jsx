@@ -533,14 +533,6 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
-                  // setPostImg([
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_04.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_05.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_06.png",
-                  // ]);
                   setPostImg(modalImgContainer.container01);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
@@ -724,34 +716,26 @@ function Portfolio() {
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.6 }}
+                transition={{ duration: 0.5, delay: 0.35 }}
                 className="bg-black sm:h-[400px] h-[200px]"
                 onClick={() => {
-                  console.log("CLICOUUUUU N2");
+                  console.log("CLICOUUUUU");
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
-                  // setPostImg([
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_04.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_05.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_06.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_07.png",
-
-                  // ]);
+                  dispatch(particlesOff());
                   setPostImg(modalImgContainer.container06);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
-                    companyName: "Seeking 4 Elements",
+                    companyName: "C3Tech",
                     techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription: "Registrando momentos inesqueciveis",
+                    jobDescription: "Era uma merda, agora é uma bosta",
                   });
                 }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
+                  // src={`${images}${portWorkStatus}.img1`}
                   src={imgSrc06}
                   alt=""
                 />
@@ -764,6 +748,19 @@ function Portfolio() {
           className="bg-[#19142A] w-screen h-full sm:h-screen flex flex-col "
           id="port"
         >
+          {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
+          {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
+          {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
+          {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
+          {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
+          {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
+          {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
+          {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
+          {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
+          {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
+          {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
+          {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
+
           <div
             ref={ref}
             className="container mx-auto mt-16 flex flex-col items-center justify-center h-screen"
@@ -1096,14 +1093,6 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
-                  // setPostImg([
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_04.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_05.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_06.png",
-                  // ]);
                   setPostImg(modalImgContainer.container01);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
@@ -1115,7 +1104,6 @@ function Portfolio() {
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  // src={`${images}${portWorkStatus}.img1`}
                   src={imgSrc01}
                   alt=""
                 />
@@ -1134,17 +1122,6 @@ function Portfolio() {
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
-                  // setPostImg([
-                  //   // "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/skillConsulting_desktop_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_03.png",
-                  // ]);
                   setPostImg(modalImgContainer.container02);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
@@ -1174,18 +1151,6 @@ function Portfolio() {
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
-                  // setPostImg([
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_04.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_04.png",
-                  // ]);
                   setPostImg(modalImgContainer.container03);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
@@ -1201,6 +1166,7 @@ function Portfolio() {
                   alt=""
                 />
               </motion.div>
+
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 75 },
@@ -1214,14 +1180,6 @@ function Portfolio() {
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
-                  // setPostImg([
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_04.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_05.png",
-                  // ]);
                   setPostImg(modalImgContainer.container04);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
@@ -1251,14 +1209,6 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
-                  // setPostImg([
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_04.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_05.png",
-                  // ]);
                   setPostImg(modalImgContainer.container05);
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
@@ -1275,43 +1225,67 @@ function Portfolio() {
                 />
               </motion.div>
 
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="bg-black sm:h-[400px] h-[200px]"
-                onClick={() => {
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-                  dispatch(freezeScroll());
-                  // setPostImg([
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_04.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_05.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_06.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_07.png",
-                  // ]);
-                  setPostImg(modalImgContainer.container06);
-                  setPortWorkInfo({
-                    kindOfProject: "ReBranding",
-                    companyName: "Seeking 4 Elements",
-                    techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription: "Registrando momentos inesqueciveis",
-                  });
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={imgSrc06}
-                  alt=""
-                />
-              </motion.div>
+              {imgSrc06 === images.impressos.img6 ? (
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                  className="bg-black sm:h-[400px] hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
+                  onClick={() => {
+                    setModalStatus(true);
+                    dispatch(hideNavbar());
+                    dispatch(freezeScroll());
+                    dispatch(particlesOff());
+                    setPostImg(modalImgContainer.container06);
+                    setPortWorkInfo({
+                      kindOfProject: "ReBranding",
+                      companyName: "C3Tech",
+                      techs: ["React", "NextJS", "TailwindCSS"],
+                      jobDescription: "Era uma merda, agora é uma bosta",
+                    });
+                  }}
+                >
+                  <img
+                    className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
+                    src={imgSrc06}
+                    alt=""
+                  />
+                </motion.div>
+              ) : (
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                  className="bg-black sm:h-[400px] h-[200px]"
+                  onClick={() => {
+                    setModalStatus(true);
+                    dispatch(hideNavbar());
+                    dispatch(freezeScroll());
+                    dispatch(particlesOff());
+                    setPostImg(modalImgContainer.container06);
+                    setPortWorkInfo({
+                      kindOfProject: "ReBranding",
+                      companyName: "C3Tech",
+                      techs: ["React", "NextJS", "TailwindCSS"],
+                      jobDescription: "Era uma merda, agora é uma bosta",
+                    });
+                  }}
+                >
+                  <img
+                    className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
+                    src={imgSrc06}
+                    alt=""
+                  />
+                </motion.div>
+              )}
             </div>
           </div>
         </div>

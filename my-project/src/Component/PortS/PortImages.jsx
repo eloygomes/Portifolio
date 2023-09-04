@@ -108,8 +108,8 @@ export const PortImages = {
     ],
     // Grupo Skill
     container06: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/apontafacil/cartao-mock.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/apontafacil/totem-mock.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/apontafacil/01.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/apontafacil/02.png",
       
     ],
   },

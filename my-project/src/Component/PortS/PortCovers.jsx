@@ -16,7 +16,7 @@ const images = {
     img3: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_05.png",
     img4: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/01.jpg",
     img5: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/01.jpg",
-    img6: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/apontafacil/cartao-mock.png",
+    img6: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/apontafacil/01.png",
   },
   branding: {
     img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/galdino/%5B%20presentation%20%5D%20GALDINO.png",
