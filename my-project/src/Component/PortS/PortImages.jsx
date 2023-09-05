@@ -240,56 +240,33 @@ export const PortImages = {
     ],
   },
   edicao: {
-    // 
+    // TARTUFE
     container01: [
-      "https://www.youtube.com/embed/EJAgt3QJU9Q?si=RW-Btamc3IzX3WWa",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_01.png",
+      "https://www.youtube.com/embed/fhgoQ35TS38?si=jE-OAkPuK943Q899",
+      
     ],
     //
     container02: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_05.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_06.png",
+      "https://www.youtube.com/embed/NWvug9NIqjY?si=CyQJ26Z727gX5cuq",
+      
     ],
     //
     container03: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_05.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_06.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_07.png",
+      "https://www.youtube.com/embed/Dl_NhtMzIgs?si=IFRI3e0-nmLDcybW",
+  
     ],
     //
     container04: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/01.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/02.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/03.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/04.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/05.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/06.jpg",
+      "https://www.youtube.com/embed/_SJu3J6VaVI?si=JNlyVUO_n2z-vqgX",
+
     ],
     container05: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_05.png",
+      "https://www.youtube.com/embed/QGocXl_bVUs?si=QgxZSp3-1cjOE1no",
+      
     ],
     container06: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_05.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_06.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_07.png",
+      "https://www.youtube.com/embed/DSqpND2uMVM?si=Nd3ZIzAhZtnGeR-z",
+      
     ],
   },
 };

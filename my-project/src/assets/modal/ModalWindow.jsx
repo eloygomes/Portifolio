@@ -103,7 +103,6 @@ function ModalWindow({
                 </div>
                 {/* ROW 2 */}
                 <div className=" flex flex-col ">
-
                   {portWorkStatus === "edicao" ? (
                     <div className="flex flex-row-reverse">
                       <iframe
@@ -119,7 +118,6 @@ function ModalWindow({
                   ) : (
                     <ImageCarousel images={postImg} />
                   )}
-
                 </div>
                 {/* ROW 3 */}
                 <div className="sm:h-[25%] h-full flex sm:flex-col flex-row justify-between">
@@ -171,7 +169,6 @@ function ModalWindow({
                 {/* ROW 2 */}
 
                 <div className=" flex flex-col ">
-
                   {portWorkStatus === "edicao" ? (
                     <div className="flex flex-row-reverse">
                       <iframe
@@ -182,14 +179,13 @@ function ModalWindow({
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
+                        className="m-5 mr-16"
                       ></iframe>
                     </div>
                   ) : (
                     <ImageCarousel images={postImg} />
                   )}
-
                 </div>
-
 
                 {/* ROW 3 */}
                 <div className="h-[25%] flex flex-row justify-between">
