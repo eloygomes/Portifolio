@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
-import { AiFillCloseCircle } from 'react-icons/ai';
+import { AiFillCloseCircle } from "react-icons/ai";
 
 import ImageCarousel from "./Carousel/Carousel";
 
@@ -54,6 +54,7 @@ function ModalWindow({
   postImg,
   setPostImg,
   portWorkInfo,
+  portWorkStatus,
 }) {
   function closeModal() {
     setModalStatus(false);
@@ -68,6 +69,8 @@ function ModalWindow({
   }
 
   const dispatch = useDispatch();
+
+  console.log(portWorkStatus);
 
   return (
     <div>
@@ -100,7 +103,23 @@ function ModalWindow({
                 </div>
                 {/* ROW 2 */}
                 <div className=" flex flex-col ">
-                  <ImageCarousel images={postImg} />
+
+                  {portWorkStatus === "edicao" ? (
+                    <div className="flex flex-row-reverse">
+                      <iframe
+                        width="768"
+                        height="432"
+                        src={`${postImg}`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  ) : (
+                    <ImageCarousel images={postImg} />
+                  )}
+
                 </div>
                 {/* ROW 3 */}
                 <div className="sm:h-[25%] h-full flex sm:flex-col flex-row justify-between">
@@ -150,9 +169,28 @@ function ModalWindow({
                   </div>
                 </div>
                 {/* ROW 2 */}
-                <div className="h-[65%] flex flex-row " >
-                  <ImageCarousel images={postImg} />
+
+                <div className=" flex flex-col ">
+
+                  {portWorkStatus === "edicao" ? (
+                    <div className="flex flex-row-reverse">
+                      <iframe
+                        width="768"
+                        height="432"
+                        src={`${postImg}`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  ) : (
+                    <ImageCarousel images={postImg} />
+                  )}
+
                 </div>
+
+
                 {/* ROW 3 */}
                 <div className="h-[25%] flex flex-row justify-between">
                   <div className="w-[30%] pl-5 ">

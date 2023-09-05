@@ -178,6 +178,7 @@ function Portfolio() {
         postImg={postImg}
         setPostImg={setPostImg}
         portWorkInfo={portWorkInfo}
+        portWorkStatus={portWorkStatus}
       />
       {window.innerWidth <= 961 ? (
         <div
