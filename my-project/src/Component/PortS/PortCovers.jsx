@@ -27,12 +27,12 @@ const images = {
     img6: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/03%20-%20branding/branding01.png",
   },
   foto: {
-    img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Sesc/01.jpg",
-    img2: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Eventos%20Sociais/01.jpg",
-    img3: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Casamento/01.jpg",
-    img4: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Miroa/Arquivo%201.jpg",
-    img5: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Buddah/1.jpg",
-    img6: "https://www.koncretejungle.com.br/eloygomes/assets/port/fotografia/Artisticas/01.jpg",
+    img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/04%20-%20foto/foto06.png",
+    img2: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/04%20-%20foto/foto05.png",
+    img3: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/04%20-%20foto/foto04.png",
+    img4: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/04%20-%20foto/foto03.png",
+    img5: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/04%20-%20foto/foto02.png",
+    img6: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/04%20-%20foto/foto01.png",
   },
   edicao: {
     img1: "https://images.unsplash.com/photo-1542596594-649edbc13630?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
