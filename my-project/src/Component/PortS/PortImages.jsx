@@ -104,13 +104,11 @@ export const PortImages = {
       "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/02.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/03.jpg",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/04.jpg",
-      
     ],
     // Grupo Skill
     container06: [
       "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/apontafacil/01.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/apontafacil/02.png",
-      
     ],
   },
   branding: {
@@ -243,30 +241,24 @@ export const PortImages = {
     // TARTUFE
     container01: [
       "https://www.youtube.com/embed/fhgoQ35TS38?si=jE-OAkPuK943Q899",
-      
     ],
     //
     container02: [
       "https://www.youtube.com/embed/NWvug9NIqjY?si=CyQJ26Z727gX5cuq",
-      
     ],
     //
     container03: [
       "https://www.youtube.com/embed/Dl_NhtMzIgs?si=IFRI3e0-nmLDcybW",
-  
     ],
     //
     container04: [
       "https://www.youtube.com/embed/_SJu3J6VaVI?si=JNlyVUO_n2z-vqgX",
-
     ],
     container05: [
       "https://www.youtube.com/embed/QGocXl_bVUs?si=QgxZSp3-1cjOE1no",
-      
     ],
     container06: [
       "https://www.youtube.com/embed/DSqpND2uMVM?si=Nd3ZIzAhZtnGeR-z",
-      
     ],
   },
 };

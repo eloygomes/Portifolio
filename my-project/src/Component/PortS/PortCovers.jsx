@@ -3,14 +3,20 @@
 
 const images = {
   uiux: {
-    img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_00.png",
-    img2: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/skillConsulting00.png",
-    img3: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/cover.png",
-    img4: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/cover.png",
-    img5: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_COVER.png",
-    img6: "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_00-COVER.png",
+    img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/01%20-%20uiux/uiux06.png",
+    img2: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/01%20-%20uiux/uiux05.png",
+    img3: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/01%20-%20uiux/uiux04.png",
+    img4: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/01%20-%20uiux/uiux03.png",
+    img5: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/01%20-%20uiux/uiux02.png",
+    img6: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/01%20-%20uiux/uiux01.png",
   },
   impressos: {
+    // img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_02.png",
+    // img2: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_00.png",
+    // img3: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_05.png",
+    // img4: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/01.jpg",
+    // img5: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/01.jpg",
+    // img6: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/apontafacil/01.png",
     img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_02.png",
     img2: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_00.png",
     img3: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_05.png",
