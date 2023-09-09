@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 // eslint-disable-next-line react/prop-types
 const ImageCarousel = ({ images }) => {
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [selectedImageIndex] = useState(0);
 
   // const handleImageClick = (index) => {
   //   setSelectedImageIndex(index);
@@ -13,6 +13,9 @@ const ImageCarousel = ({ images }) => {
   return (
     <>
       {window.innerWidth <= 961 ? (
+        //////////////////////////////////////////// Mobile ////////////////////////////////////////////
+        //////////////////////////////////////////// Mobile ////////////////////////////////////////////
+        //////////////////////////////////////////// Mobile ////////////////////////////////////////////
         <div className="flex flex-col items-center justify-around">
           {
             // eslint-disable-next-line react/prop-types
@@ -28,12 +31,13 @@ const ImageCarousel = ({ images }) => {
           }
         </div>
       ) : (
-        // Desktop
+        //////////////////////////////////////////// Desktop ////////////////////////////////////////////
+        //////////////////////////////////////////// Desktop ////////////////////////////////////////////
+        //////////////////////////////////////////// Desktop ////////////////////////////////////////////
         <div
           className="flex flex-row items-center justify-around"
           id="imageCarouselHere"
         >
-         
           <div
             className="w-[70%]  p-16 lg:pt-2 lg:p-5 flex flex-col justify-center absolute right-0"
             id="FULL IMAGE HERE"
