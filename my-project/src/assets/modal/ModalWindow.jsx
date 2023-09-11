@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 import ImageCarousel from "./Carousel/Carousel";
+import { jobDesc } from "../../Component/PortS/jobDesc";
 
 const customStyles = {
   content: {
@@ -70,7 +71,8 @@ function ModalWindow({
 
   const dispatch = useDispatch();
 
-  console.log(portWorkStatus);
+  console.log(jobDesc);
+  console.log(jobDesc.uiux.data01.tools);
 
   return (
     <div>
@@ -129,11 +131,15 @@ function ModalWindow({
                       {portWorkInfo.companyName}
                     </div>
                     <p className="text-sm py-5">
-                      {portWorkInfo.jobDescription}
+                      {jobDesc.uiux.data01.jobTitle}
                     </p>
                     <div className="uppercase text-xs">Techs</div>
-                    <div className="uppercase text-sm flex flex-row ">
-                      {portWorkInfo.techs}
+                    <div className="uppercase text-sm ">
+                      <ul className="flex flex-row">
+                        {jobDesc.uiux.data01.tools.map((tech, index) => (
+                          <li key={index}>{tech}</li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -166,8 +172,8 @@ function ModalWindow({
                     <AiFillCloseCircle />
                   </div>
                 </div>
-                {/* ROW 2 */}
 
+                {/* ROW 2 */}
                 <div className=" flex flex-col ">
                   {portWorkStatus === "edicao" ? (
                     <div className="flex flex-row-reverse">
@@ -191,17 +197,21 @@ function ModalWindow({
                 <div className="h-[25%] flex flex-row justify-between">
                   <div className="w-[30%] pl-5 ">
                     <div className="uppercase text-sm">
-                      {portWorkInfo.kindOfProject}
+                      {jobDesc.uiux.data01.jobTitle}
                     </div>
                     <div className="uppercase text-4xl">
-                      {portWorkInfo.companyName}
+                      {jobDesc.uiux.data01.companyName}
                     </div>
                     <p className="text-sm py-5">
-                      {portWorkInfo.jobDescription}
+                      {jobDesc.uiux.data01.jobDescription}
                     </p>
                     <div className="uppercase text-xs">Techs</div>
-                    <div className="uppercase text-sm flex flex-row ">
-                      {portWorkInfo.techs}
+                    <div className="uppercase text-sm ">
+                      <ul className="flex flex-row justify-start ">
+                        {jobDesc.uiux.data01.tools.map((tech, index) => (
+                          <li className="mr-5" key={index}>{tech}</li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
