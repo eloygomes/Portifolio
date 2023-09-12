@@ -207,10 +207,10 @@ function ModalWindow({
                       {postInfo.jobDescription}
                     </p>
                     <div className="uppercase text-xs">Techs</div>
-                    <div className="uppercase text-sm ">
+                    <div className=" text-sm ">
                       <ul className="flex flex-row">
                         {postInfo? postInfo.tools.map((tech, index) => (
-                          <li key={index}>{tech}</li>
+                          <li className="mr-5" key={index}>{tech}</li>
                         )) : null}
                       </ul>
                     </div>
