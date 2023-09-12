@@ -36,14 +36,12 @@ function currentSession() {
 
 function Portfolio() {
   const [modalStatus, setModalStatus] = useState(false);
-  
+
   // Handle images inside the modal
   const [postImg, setPostImg] = useState(port01);
 
   // Handle infos inside the modal
-  const [postInfo, setPostInfo] = useState('');
-  
-  const [portWorkInfo, setPortWorkInfo] = useState({});
+  const [postInfo, setPostInfo] = useState("");
 
   // Handle page scroll
   const [scrollEnabled, setScrollEnabled] = useState(false);
@@ -57,7 +55,6 @@ function Portfolio() {
   // handle structure of infos
   const [modalInfoContainer, setModalInfoContainer] = useState(jobDesc.uiux);
 
-
   //SRC of images
   const [imgSrc01, setImgSrc01] = useState("");
   const [imgSrc02, setImgSrc02] = useState("");
@@ -65,9 +62,6 @@ function Portfolio() {
   const [imgSrc04, setImgSrc04] = useState("");
   const [imgSrc05, setImgSrc05] = useState("");
   const [imgSrc06, setImgSrc06] = useState("");
-
-  
-
 
   // REDUX STORAGE //
   const scrollBodyModalOn = useSelector((state) => state.scrollBodyModalOn);
@@ -128,8 +122,7 @@ function Portfolio() {
       setImgSrc05(images.uiux.img5);
       setImgSrc06(images.uiux.img6);
       setModalImgContainer(PortImages.uiux);
-      setModalInfoContainer(jobDesc.uiux)
-      
+      setModalInfoContainer(jobDesc.uiux);
     }
 
     if (portWorkStatus === "impressos") {
@@ -142,7 +135,7 @@ function Portfolio() {
       setImgSrc06(images.impressos.img6);
       setModalImgContainer(PortImages.impressos);
       // set infos to modal
-      
+      setModalInfoContainer(jobDesc.impressos);
     }
 
     if (portWorkStatus === "branding") {
@@ -155,7 +148,7 @@ function Portfolio() {
       setImgSrc06(images.branding.img6);
       setModalImgContainer(PortImages.branding);
       // set infos to modal
-      
+      setModalInfoContainer(jobDesc.branding);
     }
 
     if (portWorkStatus === "foto") {
@@ -168,7 +161,7 @@ function Portfolio() {
       setImgSrc06(images.foto.img6);
       setModalImgContainer(PortImages.foto);
       // set infos to modal
-      
+      setModalInfoContainer(jobDesc.foto);
     }
 
     if (portWorkStatus === "edicao") {
@@ -181,7 +174,7 @@ function Portfolio() {
       setImgSrc06(images.edicao.img6);
       setModalImgContainer(PortImages.edicao);
       // set infos to modal
-      
+      setModalInfoContainer(jobDesc.edicao);
     }
   }, [portWorkStatus]);
 
@@ -206,11 +199,8 @@ function Portfolio() {
         setModalStatus={setModalStatus}
         postImg={postImg}
         setPostImg={setPostImg}
-        portWorkInfo={portWorkInfo}
         portWorkStatus={portWorkStatus}
         postInfo={postInfo}
-  
-        
       />
       {window.innerWidth <= 961 ? (
         <div
@@ -567,12 +557,6 @@ function Portfolio() {
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container01);
-                  setPortWorkInfo({
-                    kindOfProject: "ReBranding",
-                    companyName: "C3Tech",
-                    techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription: "Era uma merda, agora é uma bosta",
-                  });
                 }}
               >
                 <img
@@ -597,24 +581,7 @@ function Portfolio() {
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
-                  // setPostImg([
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_03.png",
-                  // ]);
                   setPostImg(modalImgContainer.container02);
-                  setPortWorkInfo({
-                    kindOfProject: "ReBranding",
-                    companyName: "Skill Consulting",
-                    techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription:
-                      "Sistema de manuais para suporte das operações",
-                  });
                 }}
               >
                 <img
@@ -638,26 +605,7 @@ function Portfolio() {
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
-                  // setPostImg([
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_04.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_04.png",
-                  // ]);
                   setPostImg(modalImgContainer.container03);
-                  setPortWorkInfo({
-                    kindOfProject: "ReBranding",
-                    companyName: "EVG - Resist",
-                    techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription:
-                      "Musica de garbo e elegancia feita pelo pai",
-                  });
                 }}
               >
                 <img
@@ -680,21 +628,7 @@ function Portfolio() {
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
-                  // setPostImg([
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_04.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_05.png",
-                  // ]);
                   setPostImg(modalImgContainer.container04);
-                  setPortWorkInfo({
-                    kindOfProject: "ReBranding",
-                    companyName: "Overcast",
-                    techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription: "Appzin maroto de podcast",
-                  });
                 }}
               >
                 <img
@@ -718,21 +652,7 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
-                  // setPostImg([
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_00.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_01.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_02.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_03.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_04.png",
-                  //   "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_05.png",
-                  // ]);
                   setPostImg(modalImgContainer.container05);
-                  setPortWorkInfo({
-                    kindOfProject: "ReBranding",
-                    companyName: "Wellness Hub",
-                    techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription: "Era uma merda, agora é uma bosta",
-                  });
                 }}
               >
                 <img
@@ -758,12 +678,6 @@ function Portfolio() {
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container06);
-                  setPortWorkInfo({
-                    kindOfProject: "ReBranding",
-                    companyName: "C3Tech",
-                    techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription: "Era uma merda, agora é uma bosta",
-                  });
                 }}
               >
                 <img
@@ -1127,13 +1041,7 @@ function Portfolio() {
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container01);
-                  setPostInfo(modalInfoContainer.data01)
-                  setPortWorkInfo({
-                    kindOfProject: "ReBranding",
-                    companyName: "C3Tech",
-                    techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription: "Era uma merda, agora é uma bosta",
-                  });
+                  setPostInfo(modalInfoContainer.data01);
                 }}
               >
                 <img
@@ -1157,13 +1065,7 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   setPostImg(modalImgContainer.container02);
-                  setPostInfo(modalInfoContainer.data02)
-                  setPortWorkInfo({
-                    kindOfProject: "ReBranding",
-                    companyName: "GIBSON TECH E DESASTRES",
-                    techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription: "Era uma merda, agora é uma bosta",
-                  });
+                  setPostInfo(modalInfoContainer.data02);
                 }}
               >
                 <img
@@ -1187,12 +1089,7 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   setPostImg(modalImgContainer.container03);
-                  setPortWorkInfo({
-                    kindOfProject: "ReBranding",
-                    companyName: "Aponta Facil",
-                    techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription: "",
-                  });
+                  setPostInfo(modalInfoContainer.data03);
                 }}
               >
                 <img
@@ -1216,12 +1113,7 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   setPostImg(modalImgContainer.container04);
-                  setPortWorkInfo({
-                    kindOfProject: "ReBranding",
-                    companyName: "Overcast",
-                    techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription: "Appzin maroto de podcast",
-                  });
+                  setPostInfo(modalInfoContainer.data04);
                 }}
               >
                 <img
@@ -1245,12 +1137,7 @@ function Portfolio() {
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container05);
-                  setPortWorkInfo({
-                    kindOfProject: "ReBranding",
-                    companyName: "Wellness Hub",
-                    techs: ["React", "NextJS", "TailwindCSS"],
-                    jobDescription: "Era uma merda, agora é uma bosta",
-                  });
+                  setPostInfo(modalInfoContainer.data05);
                 }}
               >
                 <img
@@ -1276,12 +1163,7 @@ function Portfolio() {
                     dispatch(freezeScroll());
                     dispatch(particlesOff());
                     setPostImg(modalImgContainer.container06);
-                    setPortWorkInfo({
-                      kindOfProject: "ReBranding",
-                      companyName: "C3Tech",
-                      techs: ["React", "NextJS", "TailwindCSS"],
-                      jobDescription: "Era uma merda, agora é uma bosta",
-                    });
+                    setPostInfo(modalInfoContainer.data06);
                   }}
                 >
                   <img
@@ -1306,12 +1188,7 @@ function Portfolio() {
                     dispatch(freezeScroll());
                     dispatch(particlesOff());
                     setPostImg(modalImgContainer.container06);
-                    setPortWorkInfo({
-                      kindOfProject: "ReBranding",
-                      companyName: "C3Tech",
-                      techs: ["React", "NextJS", "TailwindCSS"],
-                      jobDescription: "Era uma merda, agora é uma bosta",
-                    });
+                    setPostInfo(modalInfoContainer.data06);
                   }}
                 >
                   <img

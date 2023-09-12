@@ -73,9 +73,7 @@ function ModalWindow({
 
   const dispatch = useDispatch();
 
-  console.log(jobDesc);
-  // console.log(jobDesc.uiux.data01.tools);
-  console.log(jobDesc.uiux.data01);
+
 
   return (
     <div>
@@ -211,9 +209,9 @@ function ModalWindow({
                     <div className="uppercase text-xs">Techs</div>
                     <div className="uppercase text-sm ">
                       <ul className="flex flex-row">
-                        {postInfo.tools.map((tech, index) => (
+                        {postInfo? postInfo.tools.map((tech, index) => (
                           <li key={index}>{tech}</li>
-                        ))}
+                        )) : null}
                       </ul>
                     </div>
                   </div>
