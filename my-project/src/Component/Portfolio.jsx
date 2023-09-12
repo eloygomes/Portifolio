@@ -9,6 +9,8 @@ import images from "./PortS/PortCovers";
 
 import { PortImages } from "./PortS/PortImages";
 
+import { jobDesc } from "./PortS/jobDesc";
+
 import port01 from "../assets/port/Profissional/01/behance_c3tech.png";
 
 //Redux
@@ -34,13 +36,27 @@ function currentSession() {
 
 function Portfolio() {
   const [modalStatus, setModalStatus] = useState(false);
+  
+  // Handle images inside the modal
   const [postImg, setPostImg] = useState(port01);
+
+  // Handle infos inside the modal
+  const [postInfo, setPostInfo] = useState('');
+  
   const [portWorkInfo, setPortWorkInfo] = useState({});
+
   // Handle page scroll
   const [scrollEnabled, setScrollEnabled] = useState(false);
+
   // Handle image changes when portfolio buttons are clicked
   const [portWorkStatus, setPortWorkStatus] = useState("uiux");
+
+  // handle structure of images
   const [modalImgContainer, setModalImgContainer] = useState(PortImages.uiux);
+
+  // handle structure of infos
+  const [modalInfoContainer, setModalInfoContainer] = useState(jobDesc.uiux);
+
 
   //SRC of images
   const [imgSrc01, setImgSrc01] = useState("");
@@ -49,6 +65,9 @@ function Portfolio() {
   const [imgSrc04, setImgSrc04] = useState("");
   const [imgSrc05, setImgSrc05] = useState("");
   const [imgSrc06, setImgSrc06] = useState("");
+
+  
+
 
   // REDUX STORAGE //
   const scrollBodyModalOn = useSelector((state) => state.scrollBodyModalOn);
@@ -109,6 +128,8 @@ function Portfolio() {
       setImgSrc05(images.uiux.img5);
       setImgSrc06(images.uiux.img6);
       setModalImgContainer(PortImages.uiux);
+      setModalInfoContainer(jobDesc.uiux)
+      
     }
 
     if (portWorkStatus === "impressos") {
@@ -120,6 +141,8 @@ function Portfolio() {
       setImgSrc05(images.impressos.img5);
       setImgSrc06(images.impressos.img6);
       setModalImgContainer(PortImages.impressos);
+      // set infos to modal
+      
     }
 
     if (portWorkStatus === "branding") {
@@ -131,6 +154,8 @@ function Portfolio() {
       setImgSrc05(images.branding.img5);
       setImgSrc06(images.branding.img6);
       setModalImgContainer(PortImages.branding);
+      // set infos to modal
+      
     }
 
     if (portWorkStatus === "foto") {
@@ -142,6 +167,8 @@ function Portfolio() {
       setImgSrc05(images.foto.img5);
       setImgSrc06(images.foto.img6);
       setModalImgContainer(PortImages.foto);
+      // set infos to modal
+      
     }
 
     if (portWorkStatus === "edicao") {
@@ -153,6 +180,8 @@ function Portfolio() {
       setImgSrc05(images.edicao.img5);
       setImgSrc06(images.edicao.img6);
       setModalImgContainer(PortImages.edicao);
+      // set infos to modal
+      
     }
   }, [portWorkStatus]);
 
@@ -179,6 +208,9 @@ function Portfolio() {
         setPostImg={setPostImg}
         portWorkInfo={portWorkInfo}
         portWorkStatus={portWorkStatus}
+        postInfo={postInfo}
+  
+        
       />
       {window.innerWidth <= 961 ? (
         <div
@@ -1095,6 +1127,7 @@ function Portfolio() {
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container01);
+                  setPostInfo(modalInfoContainer.data01)
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
                     companyName: "C3Tech",
@@ -1124,6 +1157,7 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   setPostImg(modalImgContainer.container02);
+                  setPostInfo(modalInfoContainer.data02)
                   setPortWorkInfo({
                     kindOfProject: "ReBranding",
                     companyName: "GIBSON TECH E DESASTRES",

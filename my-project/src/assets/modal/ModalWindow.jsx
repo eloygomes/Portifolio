@@ -54,8 +54,10 @@ function ModalWindow({
   setModalStatus,
   postImg,
   setPostImg,
-  portWorkInfo,
+  // portWorkInfo,
   portWorkStatus,
+  postInfo,
+  
 }) {
   function closeModal() {
     setModalStatus(false);
@@ -72,7 +74,8 @@ function ModalWindow({
   const dispatch = useDispatch();
 
   console.log(jobDesc);
-  console.log(jobDesc.uiux.data01.tools);
+  // console.log(jobDesc.uiux.data01.tools);
+  console.log(jobDesc.uiux.data01);
 
   return (
     <div>
@@ -125,18 +128,18 @@ function ModalWindow({
                 <div className="sm:h-[25%] h-full flex sm:flex-col flex-row justify-between">
                   <div className="sm:h-[30%] h-full  pl-5 ">
                     <div className="uppercase text-sm">
-                      {portWorkInfo.kindOfProject}
+                      {postInfo.kindOfProject}
                     </div>
                     <div className="uppercase text-4xl">
-                      {portWorkInfo.companyName}
+                      {postInfo.companyName}
                     </div>
                     <p className="text-sm py-5">
-                      {jobDesc.uiux.data01.jobTitle}
+                      {postInfo.jobTitle}
                     </p>
                     <div className="uppercase text-xs">Techs</div>
                     <div className="uppercase text-sm ">
                       <ul className="flex flex-row">
-                        {jobDesc.uiux.data01.tools.map((tech, index) => (
+                        {postInfo.tools.map((tech, index) => (
                           <li key={index}>{tech}</li>
                         ))}
                       </ul>
@@ -196,20 +199,20 @@ function ModalWindow({
                 {/* ROW 3 */}
                 <div className="h-[25%] flex flex-row justify-between">
                   <div className="w-[30%] pl-5 ">
-                    <div className="uppercase text-sm">
-                      {jobDesc.uiux.data01.jobTitle}
+                  <div className="uppercase text-sm">
+                      {postInfo.jobTitle}
                     </div>
                     <div className="uppercase text-4xl">
-                      {jobDesc.uiux.data01.companyName}
+                      {postInfo.companyName}
                     </div>
                     <p className="text-sm py-5">
-                      {jobDesc.uiux.data01.jobDescription}
+                      {postInfo.jobDescription}
                     </p>
                     <div className="uppercase text-xs">Techs</div>
                     <div className="uppercase text-sm ">
-                      <ul className="flex flex-row justify-start ">
-                        {jobDesc.uiux.data01.tools.map((tech, index) => (
-                          <li className="mr-5" key={index}>{tech}</li>
+                      <ul className="flex flex-row">
+                        {postInfo.tools.map((tech, index) => (
+                          <li key={index}>{tech}</li>
                         ))}
                       </ul>
                     </div>
