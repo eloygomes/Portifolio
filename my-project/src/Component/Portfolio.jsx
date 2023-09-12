@@ -121,7 +121,9 @@ function Portfolio() {
       setImgSrc04(images.uiux.img4);
       setImgSrc05(images.uiux.img5);
       setImgSrc06(images.uiux.img6);
+      // set images to inside of modal
       setModalImgContainer(PortImages.uiux);
+      // set infos to modal
       setModalInfoContainer(jobDesc.uiux);
     }
 
@@ -133,6 +135,7 @@ function Portfolio() {
       setImgSrc04(images.impressos.img4);
       setImgSrc05(images.impressos.img5);
       setImgSrc06(images.impressos.img6);
+      // set images to inside of modal
       setModalImgContainer(PortImages.impressos);
       // set infos to modal
       setModalInfoContainer(jobDesc.impressos);
@@ -146,6 +149,7 @@ function Portfolio() {
       setImgSrc04(images.branding.img4);
       setImgSrc05(images.branding.img5);
       setImgSrc06(images.branding.img6);
+      // set images to inside of modal
       setModalImgContainer(PortImages.branding);
       // set infos to modal
       setModalInfoContainer(jobDesc.branding);
@@ -159,6 +163,7 @@ function Portfolio() {
       setImgSrc04(images.foto.img4);
       setImgSrc05(images.foto.img5);
       setImgSrc06(images.foto.img6);
+      // set images to inside of modal
       setModalImgContainer(PortImages.foto);
       // set infos to modal
       setModalInfoContainer(jobDesc.foto);
@@ -172,6 +177,7 @@ function Portfolio() {
       setImgSrc04(images.edicao.img4);
       setImgSrc05(images.edicao.img5);
       setImgSrc06(images.edicao.img6);
+      // set images to inside of modal
       setModalImgContainer(PortImages.edicao);
       // set infos to modal
       setModalInfoContainer(jobDesc.edicao);

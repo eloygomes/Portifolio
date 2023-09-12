@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 import ImageCarousel from "./Carousel/Carousel";
-import { jobDesc } from "../../Component/PortS/jobDesc";
+
 
 const customStyles = {
   content: {
