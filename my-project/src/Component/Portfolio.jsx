@@ -1030,6 +1030,18 @@ function Portfolio() {
             </div>
 
             {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
+            {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
+            {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
+            {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
+            {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
+            {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
+            {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
+            {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
+            {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
+            {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
+            {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
+            {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
+            {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
 
             <div className="grid gap-6 sm:grid-cols-6 grid-cols-3 sm:grid-rows-1 grid-rows-2 text-center cursor-pointer p-10 mb-10 w-full">
               <motion.div
@@ -1040,7 +1052,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.35 }}
-                className="bg-black sm:h-[400px] h-[200px]"
+                className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1065,7 +1077,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="bg-black sm:h-[400px] h-[200px]"
+                className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1089,7 +1101,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.45 }}
-                className="bg-black sm:h-[400px] h-[200px]"
+                className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1113,7 +1125,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="bg-black sm:h-[400px] h-[200px]"
+                className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1136,7 +1148,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.55 }}
-                className="bg-black sm:h-[400px] h-[200px]"
+                className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1162,7 +1174,7 @@ function Portfolio() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="bg-black sm:h-[400px] hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
+                  className="bg-black sm:h-[400px] hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-3xl"
                   onClick={() => {
                     setModalStatus(true);
                     dispatch(hideNavbar());
@@ -1187,7 +1199,7 @@ function Portfolio() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="bg-black sm:h-[400px] h-[200px]"
+                  className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
                   onClick={() => {
                     setModalStatus(true);
                     dispatch(hideNavbar());
