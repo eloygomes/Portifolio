@@ -1140,6 +1140,7 @@ function Portfolio() {
                   alt=""
                 />
               </motion.div>
+
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 75 },
@@ -1174,7 +1175,7 @@ function Portfolio() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="bg-black sm:h-[400px] hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-3xl"
+                  className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
                   onClick={() => {
                     setModalStatus(true);
                     dispatch(hideNavbar());
