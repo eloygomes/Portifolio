@@ -65,3 +65,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+
+.carousel.carousel-slider .control-arrow:hover {
+
+    background: rgba(0,0,0,0.0);
+
+}
