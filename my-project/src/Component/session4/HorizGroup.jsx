@@ -3,7 +3,7 @@ import EachSession from "./eachSession";
 
 import { carrerDataInfo } from "../PortS/carrerData";
 
-function KrabSession({
+function HorizGroup({
   // eslint-disable-next-line react/prop-types
   setModalStatus,
   // eslint-disable-next-line react/prop-types
@@ -17,6 +17,7 @@ function KrabSession({
             jobPosition={`${carrerDataInfo.job01.jobPosition}`}
             jobName={`${carrerDataInfo.job01.jobName}`}
             jobSegment={`${carrerDataInfo.job01.jobSegment}`}
+            jobAdress={`${carrerDataInfo.job01.jobAddress}`}
             jobDuration={`${carrerDataInfo.job01.jobDuration}`}
             jobDesc={`${carrerDataInfo.job01.jobDesc}`}
             jobTools={`${carrerDataInfo.job01.jobTools}`}
@@ -28,6 +29,7 @@ function KrabSession({
             jobPosition={`${carrerDataInfo.job02.jobPosition}`}
             jobName={`${carrerDataInfo.job02.jobName}`}
             jobSegment={`${carrerDataInfo.job02.jobSegment}`}
+            jobAdress={`${carrerDataInfo.job02.jobAdress}`}
             jobDuration={`${carrerDataInfo.job02.jobDuration}`}
             jobDesc={`${carrerDataInfo.job02.jobDesc}`}
             jobTools={`${carrerDataInfo.job02.jobTools}`}
@@ -39,6 +41,7 @@ function KrabSession({
             jobPosition={`${carrerDataInfo.job03.jobPosition}`}
             jobName={`${carrerDataInfo.job03.jobName}`}
             jobSegment={`${carrerDataInfo.job03.jobSegment}`}
+            jobAdress={`${carrerDataInfo.job03.jobAdress}`}
             jobDuration={`${carrerDataInfo.job03.jobDuration}`}
             jobDesc={`${carrerDataInfo.job03.jobDesc}`}
             jobTools={`${carrerDataInfo.job03.jobTools}`}
@@ -47,29 +50,38 @@ function KrabSession({
             setcareerModalInfo={setcareerModalInfo}
           />
           <EachSession
-            jobPosition={`SUPERVISOR DE E-COMMERCE`}
-            jobName={`Coletek`}
-            jobSegment={`Loja virtual / Marketplace`}
-            jobDuration={`jan/2018 a dez/2018`}
-            jobDesc={`Gestão da plataforma online PANDA BLACK(e-commerce voltado a produtos de informática), Atuando a frente no planejamento(pesquisa de mercado, controle de preço e estoque) e administração(gestão de equipe, pós venda, SAC) e marketing(campanhas de lançamento de produtos para clientes(B2C)).`}
+            jobPosition={`${carrerDataInfo.job04.jobPosition}`}
+            jobName={`${carrerDataInfo.job04.jobName}`}
+            jobSegment={`${carrerDataInfo.job04.jobSegment}`}
+            jobAdress={`${carrerDataInfo.job04.jobAdress}`}
+            jobDuration={`${carrerDataInfo.job04.jobDuration}`}
+            jobDesc={`${carrerDataInfo.job04.jobDesc}`}
+            jobTools={`${carrerDataInfo.job04.jobTools}`}
+            jobImg={`${carrerDataInfo.job04.jobImg}`}
             setModalStatus={setModalStatus}
             setcareerModalInfo={setcareerModalInfo}
           />
           <EachSession
-            jobPosition={`FULL STACK DEVELOPER`}
-            jobName={`Grupo Skill`}
-            jobSegment={`Contabilidade / Software house`}
-            jobDuration={`out/2019 a set/2021`}
-            jobDesc={`Como DESIGNER UI/UX eu atuei no design de interfaces de produtos websites, hotsites, e-mails marketing, banner e peças digitais, propondo melhorias de usabilidade na experiência do usuário e visuais no design da interface. Fui responsável pela elaboração de wireframes de baixa e alta fidelidade, elaboração e manutenção de design system e desenvolvimento de protótipos navegáveis. E como DESENVOLVEDOR atuei no desenvolvimento de sites/plataformas fazendo implementação de novas features, correções de bugs e manutenção de código dando vida a interfaces dos projetos utilizando principalmente HTML5, CSS3, Bootstrap, JavaScript e Wordpress.`}
+            jobPosition={`${carrerDataInfo.job05.jobPosition}`}
+            jobName={`${carrerDataInfo.job05.jobName}`}
+            jobSegment={`${carrerDataInfo.job05.jobSegment}`}
+            jobAdress={`${carrerDataInfo.job05.jobAdress}`}
+            jobDuration={`${carrerDataInfo.job05.jobDuration}`}
+            jobDesc={`${carrerDataInfo.job05.jobDesc}`}
+            jobTools={`${carrerDataInfo.job05.jobTools}`}
+            jobImg={`${carrerDataInfo.job05.jobImg}`}
             setModalStatus={setModalStatus}
             setcareerModalInfo={setcareerModalInfo}
           />
           <EachSession
-            jobPosition={`FULL STACK DEVELOPER`}
-            jobName={`FREELANCE`}
-            jobSegment={`DESIGNER GRÁFICO`}
-            jobDuration={`out/2021 a atualmente`}
-            jobDesc={`Folhetos, outdoors, backlights, anúncios, cartazes, documentos, catálogos, material de PDV, merchandising, diagramação de conteúdo, fotografia de produtos e eventos`}
+            jobPosition={`${carrerDataInfo.job06.jobPosition}`}
+            jobName={`${carrerDataInfo.job06.jobName}`}
+            jobSegment={`${carrerDataInfo.job06.jobSegment}`}
+            jobAdress={`${carrerDataInfo.job06.jobAdress}`}
+            jobDuration={`${carrerDataInfo.job06.jobDuration}`}
+            jobDesc={`${carrerDataInfo.job06.jobDesc}`}
+            jobTools={`${carrerDataInfo.job06.jobTools}`}
+            jobImg={`${carrerDataInfo.job06.jobImg}`}
             setModalStatus={setModalStatus}
             setcareerModalInfo={setcareerModalInfo}
           />
@@ -79,4 +91,4 @@ function KrabSession({
   );
 }
 
-export default KrabSession;
+export default HorizGroup;

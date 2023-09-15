@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
+
 function EachSession({
   // eslint-disable-next-line react/prop-types
   jobPosition,
@@ -16,16 +17,24 @@ function EachSession({
   setcareerModalInfo,
   // eslint-disable-next-line react/prop-types
   jobDesc,
+  // eslint-disable-next-line react/prop-types
+  jobTools,
+  // eslint-disable-next-line react/prop-types
+  jobImg,
+  // eslint-disable-next-line react/prop-types
+  jobAdress,
 }) {
   const mainControls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref);
 
   useLayoutEffect(() => {
-    if (isInView) {      
+    if (isInView) {
       mainControls.start("visible");
     }
   }, [isInView]);
+
+  
 
   return (
     <div ref={ref}>
@@ -44,7 +53,11 @@ function EachSession({
             jobPosition: jobPosition,
             jobName: jobName,
             jobSegment: jobSegment,
+            jobAdress: jobAdress,
+            jobDuration: jobDuration,
             jobDescription: jobDesc,
+            jobTools: jobTools,
+            jobImg: jobImg,
           });
         }}
       >

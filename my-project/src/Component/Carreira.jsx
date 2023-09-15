@@ -2,7 +2,7 @@ import { useState, useLayoutEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
 
-import KrabSession from "./session4/krabSession";
+import HorizGroup from "./session4/HorizGroup";
 
 import ModalCareer from "../assets/modal/ModalCareer";
 
@@ -116,7 +116,7 @@ function Carreira() {
 
             {/* //////////////////////////////////////////////////////////////////////// :: CARREIRAS :: //////////////////////////////////////////////////////////////////////// */}
 
-            <KrabSession
+            <HorizGroup
               modalStatus={modalStatus}
               setModalStatus={setModalStatus}
               setcareerModalInfo={setcareerModalInfo}
@@ -225,7 +225,7 @@ function Carreira() {
               </motion.h1>
             </div>
 
-            <KrabSession
+            <HorizGroup
               modalStatus={modalStatus}
               setModalStatus={setModalStatus}
               setcareerModalInfo={setcareerModalInfo}
