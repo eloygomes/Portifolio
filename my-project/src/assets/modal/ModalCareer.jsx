@@ -94,7 +94,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                           alt=""
                         />
                       </div>
-                      <div className="uppercase text-xs pt-2 mr-5">
+                      <div className="uppercase font-bold text-xs pt-2 mr-5">
                         Nome da Empresa
                       </div>
                       <div className="uppercase text-base font-semibold pb-2 mr-5">
@@ -198,7 +198,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                           alt=""
                         />
                       </div>
-                      <div className="uppercase text-sm pt-2 mr-5">
+                      <div className="uppercase font-bold text-sm pt-2 mr-5">
                         Nome da Empresa
                       </div>
                       <div className="uppercase text-2xl pb-2 mr-5">

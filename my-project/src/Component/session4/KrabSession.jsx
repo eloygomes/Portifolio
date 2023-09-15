@@ -1,37 +1,48 @@
 import EachSession from "./eachSession";
+// import carrerData from "../PortS/carrerData";
+
+import { carrerDataInfo } from "../PortS/carrerData";
 
 function KrabSession({
   // eslint-disable-next-line react/prop-types
-  setModalStatus, setcareerModalInfo,
+  setModalStatus,
+  // eslint-disable-next-line react/prop-types
+  setcareerModalInfo,
 }) {
   return (
     <div className="mt-80 sm:mt-0 md:mt-64 lg:mt-0">
       <div className="wrapper flex flex-row  ">
         <ol className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6   gap-3 p-5 grid-flow-row-dense ">
           <EachSession
-            jobPosition={`DESIGNER GRÁFICO`}
-            jobName={`Empresa UM agencia & editora`}
-            jobSegment={`Agencia de publicidade e editora`}
-            jobDuration={`mai/2013 a out/2014`}
-            jobDesc={`Folhetos, outdoors, backlights, anúncios, cartazes, documentos, catálogos, material de PDV, merchandising, diagramação de conteúdo, fotografia de produtos e eventos.`}
+            jobPosition={`${carrerDataInfo.job01.jobPosition}`}
+            jobName={`${carrerDataInfo.job01.jobName}`}
+            jobSegment={`${carrerDataInfo.job01.jobSegment}`}
+            jobDuration={`${carrerDataInfo.job01.jobDuration}`}
+            jobDesc={`${carrerDataInfo.job01.jobDesc}`}
+            jobTools={`${carrerDataInfo.job01.jobTools}`}
+            jobImg={`${carrerDataInfo.job01.jobImg}`}
             setModalStatus={setModalStatus}
             setcareerModalInfo={setcareerModalInfo}
           />
           <EachSession
-            jobPosition={`WEB DESIGNER`}
-            jobName={`Comander Marketing `}
-            jobSegment={`Agencia de publicidade e editora`}
-            jobDuration={`dez/2013 a nov/2014`}
-            jobDesc={`Criação e desenvolvimento de branding, desenvolvimento de projeto gráfico para revista, fotografia para anúncios, tratamento de imagens, conteúdo para mídias sociais, elaboração de briefings junto a clientes e elaboração de planos de ação para gestão e lançamentos de marcas de diversos segmentos.`}
+            jobPosition={`${carrerDataInfo.job02.jobPosition}`}
+            jobName={`${carrerDataInfo.job02.jobName}`}
+            jobSegment={`${carrerDataInfo.job02.jobSegment}`}
+            jobDuration={`${carrerDataInfo.job02.jobDuration}`}
+            jobDesc={`${carrerDataInfo.job02.jobDesc}`}
+            jobTools={`${carrerDataInfo.job02.jobTools}`}
+            jobImg={`${carrerDataInfo.job02.jobImg}`}
             setModalStatus={setModalStatus}
             setcareerModalInfo={setcareerModalInfo}
           />
           <EachSession
-            jobPosition={`DIRETOR DE ARTE`}
-            jobName={`Coletek`}
-            jobSegment={`Fabricante e distribuidora de materiais de informática`}
-            jobDuration={`jan/2015 a dez/2018`}
-            jobDesc={`Atuando no desenvolvimento de briefings, planejamento e execução de ações de branding e co-coordenação de equipe, junto ao time de gerentes de projetos na implementação de estratégias de conteúdo, ações digitais, gestão de ações em redes sociais, coordenação de trabalho junto ao time e emissão de relatórios de acompanhamento, criação e gestão de material on e offline(atualização e manutenção de sites, landing pages, banners, posts para mídias sociais, emails marketing, newsletters e outros, além de folhetos, outdoors, backlights, anúncios, cartazes, documentos, catálogos, material de PDV, merchandising, diagramação de conteúdo, fotografia de produtos e eventos, etc.)`}
+            jobPosition={`${carrerDataInfo.job03.jobPosition}`}
+            jobName={`${carrerDataInfo.job03.jobName}`}
+            jobSegment={`${carrerDataInfo.job03.jobSegment}`}
+            jobDuration={`${carrerDataInfo.job03.jobDuration}`}
+            jobDesc={`${carrerDataInfo.job03.jobDesc}`}
+            jobTools={`${carrerDataInfo.job03.jobTools}`}
+            jobImg={`${carrerDataInfo.job03.jobImg}`}
             setModalStatus={setModalStatus}
             setcareerModalInfo={setcareerModalInfo}
           />

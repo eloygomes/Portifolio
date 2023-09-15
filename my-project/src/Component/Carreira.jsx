@@ -171,7 +171,7 @@ function Carreira() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.8 }}
-                className="h-full opacity-[0.1] hover:opacity-[0.5] cursor-pointer mx-5  "
+                className="flex-1 h-full opacity-[0.1] hover:opacity-[0.5] cursor-pointer mx-5  "
               >
                 2013
               </motion.h1>
@@ -183,7 +183,7 @@ function Carreira() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.85 }}
-                className="h-full opacity-[0.2] hover:opacity-[0.6] cursor-pointer mx-5   "
+                className="flex-1 h-full opacity-[0.2] hover:opacity-[0.6] cursor-pointer mx-5   "
               >
                 2014
               </motion.h1>
@@ -195,7 +195,7 @@ function Carreira() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.9 }}
-                className="h-full opacity-[0.3] hover:opacity-[0.7] cursor-pointer mx-5   "
+                className="flex-1 h-full opacity-[0.3] hover:opacity-[0.7] cursor-pointer mx-5   "
               >
                 2018
               </motion.h1>
@@ -207,7 +207,7 @@ function Carreira() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.95 }}
-                className="h-full opacity-[0.4] hover:opacity-[0.8] cursor-pointer mx-5   "
+                className="flex-1 h-full opacity-[0.4] hover:opacity-[0.8] cursor-pointer mx-5   "
               >
                 2021
               </motion.h1>
@@ -219,7 +219,7 @@ function Carreira() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 1.0 }}
-                className="h-full opacity-[0.5] hover:opacity-[0.9] cursor-pointer mx-5   "
+                className="flex-1 h-full opacity-[0.5] hover:opacity-[0.9] cursor-pointer mx-5   "
               >
                 Hoje
               </motion.h1>
