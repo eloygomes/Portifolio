@@ -2,8 +2,8 @@
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { useEffect } from "react";
-import { useState } from "react";
+// import { useEffect } from "react";
+// import { useState } from "react";
 
 const customStyles = {
   content: {
@@ -49,7 +49,7 @@ function particlesOn() {
 
 // eslint-disable-next-line no-unused-vars
 function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
-  const [carrerTools, setCarrerTools] = useState([",s,s,s"]);
+  // const [carrerTools, setCarrerTools] = useState([",s,s,s"]);
 
   function closeModal() {
     setModalStatus(false);
@@ -61,11 +61,11 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
   const dispatch = useDispatch();
 
   console.log(careerModalInfo);
-  // console.log(careerModalInfo.jobTools);
+  console.log(careerModalInfo.jobTools);
 
-  useEffect(() => {
-    setCarrerTools(careerModalInfo.jobTools);
-  }, [careerModalInfo.jobTools]);
+  // useEffect(() => {
+  //   setCarrerTools(careerModalInfo.jobTools);
+  // }, [careerModalInfo.jobTools]);
 
   return (
     <div>
@@ -263,31 +263,31 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                         </div>
                         
                         <div className="flex flex-row pt-1">
-                          <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
+                          {/* <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
                             {carrerTools}
-                          </button>
-                          <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
-                            {/* {carrerTools.split(",")[1]} */}
+                          </button> */}
+                          {/* <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
+                            {carrerTools.split(",")[1]}
                           </button>
                           <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50  hover:font-semibold">
-                            {/* {carrerTools.split(",")[2]} */}
+                            {carrerTools.split(",")[2]}
                           </button>
                           <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
-                            {/* {carrerTools.split(",")[3]} */}
+                            {carrerTools.split(",")[3]}
                           </button>
                           <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
-                            {/* {carrerTools.split(",")[4]} */}
+                            {carrerTools.split(",")[4]}
                           </button>
                           <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
-                            {/* {carrerTools.split(",")[5]} */}
-                          </button>
+                            {carrerTools.split(",")[5]}
+                          </button> */}
 
-                          {/* {careerModalInfo? careerModalInfo.jobTools.map((tool, index) => (
+                          {careerModalInfo.jobTools ? careerModalInfo.jobTools.map((tool, index) => (
                             <button key={index} className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
                               {tool}
                             </button>
 
-                          )) : null} */}
+                          )) : null}
                         </div>
                       </div>
                     </div>

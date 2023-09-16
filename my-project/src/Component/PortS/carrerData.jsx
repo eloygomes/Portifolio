@@ -27,7 +27,6 @@ export const carrerDataInfo = {
       "Photoshop",
       "Illustrator",
       "InDesign",
-      "CorelDraw",
       "Lightroom",
     ],
     jobImg:

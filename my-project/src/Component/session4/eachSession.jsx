@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-
+import { useEffect, useState } from "react";
 
 function EachSession({
   // eslint-disable-next-line react/prop-types
@@ -28,13 +28,22 @@ function EachSession({
   const ref = useRef(null);
   const isInView = useInView(ref);
 
+  const [eachTag, setEachTag] = useState([]);
+
   useLayoutEffect(() => {
     if (isInView) {
       mainControls.start("visible");
     }
   }, [isInView]);
 
-  
+  // console.log(jobTools)
+
+  useEffect(() => {
+    // eslint-disable-next-line react/prop-types
+    const jobToolsArray = jobTools.split(",");
+    console.log(jobToolsArray);
+    setEachTag(jobToolsArray);
+  }, [jobTools]);
 
   return (
     <div ref={ref}>
@@ -56,7 +65,7 @@ function EachSession({
             jobAdress: jobAdress,
             jobDuration: jobDuration,
             jobDescription: jobDesc,
-            jobTools: jobTools,
+            jobTools: eachTag,
             jobImg: jobImg,
           });
         }}
