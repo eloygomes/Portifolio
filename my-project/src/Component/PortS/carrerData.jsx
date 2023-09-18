@@ -3,7 +3,7 @@ export const carrerDataInfo = {
     jobPosition: "DESIGNER GRÁFICO",
     jobName: "Empresa UM agencia & editora",
     jobSegment: "Agencia de publicidade e editora",
-    jobAddress: "R. Raul Pompéia, 972 - Pompeia, São Paulo - SP, 05025-010",
+    jobAddress: "R. Raul Pompéia, 972 - Pompeia, São Paulo - SP",
     jobDuration: "mai/2013 a out/2014",
     jobDesc: `Folhetos, outdoors, backlights, anúncios, cartazes, documentos, catálogos, material de PDV, merchandising, diagramação de conteúdo, fotografia de produtos e eventos.`,
     jobTools: [

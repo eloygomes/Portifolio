@@ -145,25 +145,18 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                       <div className="uppercase text-sm pt-2 mt-10 mr-5">
                         Ferramentas e tecnologias
                       </div>
-                      <div className="block pt-1 ">
-                        <button className="my-1 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold text-xs">
-                          React
-                        </button>
-                        <button className="my-1 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold text-xs">
-                          Javascript
-                        </button>
-                        <button className="my-1 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50  hover:font-semibold text-xs">
-                          Tailwind
-                        </button>
-                        <button className="my-1 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold text-xs">
-                          PHP
-                        </button>
-                        <button className="my-1 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold text-xs">
-                          SQL
-                        </button>
-                        <button className="my-1 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold text-xs">
-                          Firebase
-                        </button>
+
+                      <div className="flex flex-row pt-1">
+                        {careerModalInfo.jobTools
+                          ? careerModalInfo.jobTools.map((tool, index) => (
+                              <button
+                                key={index}
+                                className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold"
+                              >
+                                {tool}
+                              </button>
+                            ))
+                          : null}
                       </div>
                     </div>
                   </div>
@@ -185,7 +178,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
               <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-[80vh] m-20 mt-32 z-20">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
-                  <div className=" text-4xl">Carreira</div>
+                  <div className=" text-3xl">Carreira</div>
                   <div
                     className="cursor-pointer text-2xl"
                     onClick={() => {
@@ -199,8 +192,8 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                   </div>
                 </div>
                 {/* ROW 2 */}
-                <div className="h-full flex flex-col p-5 ">
-                  <div className="uppercase text-2xl  py-2">
+                <div className="h-full flex flex-col px-5 ">
+                  <div className="uppercase text-2xl  ">
                     <img
                       className="object-cover w-full h-[200px] rounded-md mb-5"
                       src={`${careerModalInfo.jobImg}`}
@@ -261,33 +254,18 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                         <div className="uppercase text-sm pt-2 mt-10 mr-5">
                           Ferramentas e tecnologias
                         </div>
-                        
+
                         <div className="flex flex-row pt-1">
-                          {/* <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
-                            {carrerTools}
-                          </button> */}
-                          {/* <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
-                            {carrerTools.split(",")[1]}
-                          </button>
-                          <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50  hover:font-semibold">
-                            {carrerTools.split(",")[2]}
-                          </button>
-                          <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
-                            {carrerTools.split(",")[3]}
-                          </button>
-                          <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
-                            {carrerTools.split(",")[4]}
-                          </button>
-                          <button className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
-                            {carrerTools.split(",")[5]}
-                          </button> */}
-
-                          {careerModalInfo.jobTools ? careerModalInfo.jobTools.map((tool, index) => (
-                            <button key={index} className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold">
-                              {tool}
-                            </button>
-
-                          )) : null}
+                          {careerModalInfo.jobTools
+                            ? careerModalInfo.jobTools.map((tool, index) => (
+                                <button
+                                  key={index}
+                                  className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold"
+                                >
+                                  {tool}
+                                </button>
+                              ))
+                            : null}
                         </div>
                       </div>
                     </div>
