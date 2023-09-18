@@ -72,3 +72,15 @@ button:focus-visible {
     background: rgba(0,0,0,0.0);
 
 }
+
+#formationTimeline01 .vertical-align01{
+  background-color: rgb(255 255 255 / 0.2);
+  backdrop-filter: blur(24px);
+  
+}#formationTimeline01 .vertical-timeline-element-content-arrow{
+ opacity: 0.2;
+}
+
+.vertical-timeline-element-content{
+  box-shadow: none;
+}

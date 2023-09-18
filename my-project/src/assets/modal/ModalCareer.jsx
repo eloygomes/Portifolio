@@ -60,8 +60,8 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
 
   const dispatch = useDispatch();
 
-  console.log(careerModalInfo);
-  console.log(careerModalInfo.jobTools);
+  // console.log(careerModalInfo);
+  // console.log(careerModalInfo.jobTools);
 
   // useEffect(() => {
   //   setCarrerTools(careerModalInfo.jobTools);

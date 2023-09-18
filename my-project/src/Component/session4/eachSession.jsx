@@ -41,7 +41,7 @@ function EachSession({
   useEffect(() => {
     // eslint-disable-next-line react/prop-types
     const jobToolsArray = jobTools.split(",");
-    console.log(jobToolsArray);
+    // console.log(jobToolsArray);
     setEachTag(jobToolsArray);
   }, [jobTools]);
 

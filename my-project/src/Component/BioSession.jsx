@@ -1,10 +1,16 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { BsArrowsAngleContract, BsArrowsAngleExpand } from "react-icons/bs";
+import { useSelector, useDispatch } from "react-redux";
 import Lottie from "lottie-react";
 import animationData from "../assets/63487-programming-computer.json";
 import BioSessionCard from "./BioS/BioSessionCard";
-import { useSelector, useDispatch } from "react-redux";
+
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
 function BioSession() {
   const [FormationCollapseStatus, setFormationCollapseStatus] = useState(false);
@@ -146,6 +152,7 @@ function BioSession() {
 
             <div className="container mx-auto">
               <div className="flex flex-col h-full mb-52 md:p-5">
+                {/* First ROW */}
                 <div className="flex sm:flex-row md:flex-row justify-between mx-5 mt-20">
                   <div className="flex flex-col justify-between">
                     <div className="sm:w-[50%] w-full ">
@@ -158,6 +165,7 @@ function BioSession() {
                       </p>
                     </div>
                   </div>
+
                   <div className="flex-row hidden sm:hidden md:flex lg:flex items-center justify-center">
                     <button
                       className={` p-5 ml-5 backdrop-blur-xl drop-shadow-lg  ${
@@ -339,7 +347,177 @@ function BioSession() {
                 ) : (
                   // Desktop
                   <>
-                    <div className=" w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-0 lg:m-5 rounded-xl ">
+                    <VerticalTimeline lineColor="#e91e63">
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Dez/2022"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          React Testing
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          CODE ACADEMY
+                        </h4>
+                        <p>
+                          Introdução a testes unitários usando Jest, Cypress,
+                          Enzyme, Mocha, Jasmine e React Testing Library.
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work"
+                        contentStyle={{
+                          backgroundColor: " rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#2a2344",
+                        }}
+                        contentArrowStyle={{
+                          borderRight: "7px solid  rgb(33, 150, 243)",
+                        }}
+                        date="2011 - present"
+                        dateClassName="text-yellow-800"
+                        iconStyle={{
+                          backgroundColor: " rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        // icon={<WorkIcon />}
+                        icon={null}
+                        textClassName="text-red-500" // muda a cor do texto
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          React Testing
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          CODE ACADEMY
+                        </h4>
+
+                        <p>
+                          Introdução a testes unitários usando Jest, Cypress,
+                          Enzyme, Mocha, Jasmine e React Testing Library.
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work"
+                        date="2008 - 2010"
+                        iconStyle={{
+                          background: "rgb(33, 150, 243)",
+                          color: "#fff",
+                        }}
+                        // icon={<WorkIcon />}
+                        icon={null}
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          Web Designer
+                        </h3>
+                        <h4 className="vertical-timeline-element-subtitle">
+                          Los Angeles, CA
+                        </h4>
+                        <p>User Experience, Visual Design</p>
+                      </VerticalTimelineElement>
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work"
+                        date="2006 - 2008"
+                        iconStyle={{
+                          background: "rgb(33, 150, 243)",
+                          color: "#fff",
+                        }}
+                        // icon={<WorkIcon />}
+                        icon={null}
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          Web Designer
+                        </h3>
+                        <h4 className="vertical-timeline-element-subtitle">
+                          San Francisco, CA
+                        </h4>
+                        <p>User Experience, Visual Design</p>
+                      </VerticalTimelineElement>
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--education"
+                        date="April 2013"
+                        iconStyle={{
+                          background: "rgb(233, 30, 99)",
+                          color: "#fff",
+                        }}
+                        // icon={<SchoolIcon />}
+                        icon={null}
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          Content Marketing for Web, Mobile and Social Media
+                        </h3>
+                        <h4 className="vertical-timeline-element-subtitle">
+                          Online Course
+                        </h4>
+                        <p>Strategy, Social Media</p>
+                      </VerticalTimelineElement>
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--education"
+                        date="November 2012"
+                        iconStyle={{
+                          background: "rgb(233, 30, 99)",
+                          color: "#fff",
+                        }}
+                        // icon={<SchoolIcon />}
+                        icon={null}
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          Agile Development Scrum Master
+                        </h3>
+                        <h4 className="vertical-timeline-element-subtitle">
+                          Certification
+                        </h4>
+                        <p>
+                          Creative Direction, User Experience, Visual Design
+                        </p>
+                      </VerticalTimelineElement>
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--education"
+                        date="2002 - 2006"
+                        iconStyle={{
+                          background: "rgb(233, 30, 99)",
+                          color: "#fff",
+                        }}
+                        // icon={<SchoolIcon />}
+                        icon={null}
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          Bachelor of Science in Interactive Digital Media
+                          Visual Imaging
+                        </h3>
+                        <h4 className="vertical-timeline-element-subtitle">
+                          Bachelor Degree
+                        </h4>
+                        <p>Creative Direction, Visual Design</p>
+                      </VerticalTimelineElement>
+                      <VerticalTimelineElement
+                        iconStyle={{
+                          background: "rgb(16, 204, 82)",
+                          color: "#fff",
+                        }}
+                        // icon={<StarIcon />}
+                        icon={null}
+                      />
+                    </VerticalTimeline>
+
+                    {/* <div className=" w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-0 lg:m-5 rounded-xl ">
                       <BioSessionCard
                         PositionName="React Testing"
                         CompanyName="CODEACADEMY"
@@ -482,7 +660,7 @@ function BioSession() {
                         Description="Curso ministrado por Saulo Mileti, onde discutimos o design de uma forma ampla, desde o conceito de projetos, passando por suas funcões e impacto na sociedade e a sua influência quanto a criação de padrões estéticos."
                         FormationCollapseStatus={FormationCollapseStatus}
                       />
-                    </div>
+                    </div> */}
                   </>
                 )}
               </div>
