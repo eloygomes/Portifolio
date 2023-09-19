@@ -90,9 +90,9 @@ function ModalWindow({
               <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-full md:h-full m-10 z-20">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
-                  <div className=" text-xl">Portfólio</div>
+                  <div className="text-6xl">Portfólio</div>
                   <div
-                    className="cursor-pointer text-base z-30"
+                    className="cursor-pointer text-2xl z-50"
                     onClick={() => {
                       closeModal();
                       dispatch(showNavbar());
@@ -116,6 +116,7 @@ function ModalWindow({
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
+                        className="m-5 mr-16"
                       ></iframe>
                     </div>
                   ) : (
@@ -123,23 +124,23 @@ function ModalWindow({
                   )}
                 </div>
                 {/* ROW 3 */}
-                <div className="sm:h-[25%] h-full flex sm:flex-col flex-row justify-between">
-                  <div className="sm:h-[30%] h-full  pl-5 ">
-                    <div className="uppercase text-sm">
-                      {postInfo.kindOfProject}
+                <div className="h-[25%] flex flex-row justify-between">
+                  <div className="w-[30%] pl-5 ">
+                  <div className="uppercase text-sm">
+                      {postInfo.jobTitle}
                     </div>
                     <div className="uppercase text-4xl">
                       {postInfo.companyName}
                     </div>
                     <p className="text-sm py-5">
-                      {postInfo.jobTitle}
+                      {postInfo.jobDescription}
                     </p>
                     <div className="uppercase text-xs">Techs</div>
-                    <div className="uppercase text-sm ">
+                    <div className=" text-sm ">
                       <ul className="flex flex-row">
-                        {postInfo.tools.map((tech, index) => (
-                          <li key={index}>{tech}</li>
-                        ))}
+                        {postInfo? postInfo.tools.map((tech, index) => (
+                          <li className="mr-5" key={index}>{tech}</li>
+                        )) : null}
                       </ul>
                     </div>
                   </div>
