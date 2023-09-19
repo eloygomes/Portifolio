@@ -167,7 +167,7 @@ function BioSession() {
             <div className="container mx-auto">
               <div className="flex flex-col h-full mb-52 md:p-5">
                 {/* First ROW */}
-                <div className="flex sm:flex-row md:flex-row justify-between mx-5 mt-20">
+                <div className="flex sm:flex-row md:flex-row justify-between mx-5 mt-20 mb-36">
                   <div className="flex flex-col justify-between">
                     <div className="sm:w-[50%] w-full ">
                       <h1 className="bg-[#2A2344] w-fit  p-2">Formação</h1>
@@ -362,22 +362,19 @@ function BioSession() {
                   // Desktop
                   <>
                     <VerticalTimeline lineColor="#e91e63">
+
                       <VerticalTimelineElement
-                      className="vertical-timeline-element--work cursor-pointer  "
+                        className="vertical-timeline-element--work cursor-pointer top-[-90px] "
                         iconStyle={{
                           background: "#2a2344",
                           color: "#fff",
                         }}
-                        // icon={<StarIcon />}
                         icon={<BsRocketFill />}
                       />
 
                       <VerticalTimelineElement
-                        className="vertical-timeline-element--work  "
+                        className="vertical-timeline-element--work cursor-pointer "
                         contentStyle={{
-                          // backgroundColor: "rgba(255, 255, 255)",
-                          // backdropFilter: "blur(80px)",
-                          // opacity: "0.8",
                           color: "white",
                         }}
                         iconStyle={{
@@ -394,10 +391,10 @@ function BioSession() {
                           React Testing
                         </h3>
 
-                        <h4 className="vertical-timeline-element-subtitle">
+                        <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
                           CODEACADEMY
                         </h4>
-                        <p>
+                        <p className="text-sm">
                           Introdução a testes unitários usando Jest, Cypress,
                           Enzyme, Mocha, Jasmine e React Testing Library.
                         </p>
@@ -879,7 +876,7 @@ function BioSession() {
                       </VerticalTimelineElement>
 
                       <VerticalTimelineElement
-                        className="vertical-timeline-element--work cursor-pointer  "
+                        className="vertical-timeline-element--work cursor-pointer bottom-[-80px] "
                         iconStyle={{
                           background: "#2a2344",
                           color: "#fff",

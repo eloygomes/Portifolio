@@ -292,7 +292,7 @@ function ServicesSession() {
           >
             <div className="w-screen h-screen bg-black z-1 absolute opacity-80"></div>
             <div className="container mx-auto h-screen flex flex-col justify-center">
-              <div className="h-[80vh] mt-[10vh] m-10 p-5 backdrop-blur-xl bg-white/10 rounded-xl">
+              <div className="h-[80vh] mt-[10vh] m-10 p-5 backdrop-blur-xl bg-white/10 rounded-xl overflow-hidden">
                 <motion.h1
                   variants={{
                     hidden: { opacity: 0, y: 75 },
