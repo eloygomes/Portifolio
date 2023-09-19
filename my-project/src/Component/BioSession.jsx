@@ -5,6 +5,20 @@ import { useSelector, useDispatch } from "react-redux";
 import Lottie from "lottie-react";
 import animationData from "../assets/63487-programming-computer.json";
 import BioSessionCard from "./BioS/BioSessionCard";
+import { BiLogoReact } from "react-icons/bi";
+import { FaUsers } from "react-icons/fa";
+import { GiBookshelf } from "react-icons/gi";
+import { RiJavascriptFill } from "react-icons/ri";
+import { RiBootstrapLine } from "react-icons/ri";
+import { IoLogoSass } from "react-icons/io";
+import { SiGooglemarketingplatform } from "react-icons/si";
+import { DiJqueryLogo } from "react-icons/di";
+import { BiLogoCss3 } from "react-icons/bi";
+import { AiFillHtml5 } from "react-icons/ai";
+import { MdDesignServices } from "react-icons/md";
+import { GiHiveMind } from "react-icons/gi";
+import { BsRocketFill } from "react-icons/bs";
+import { GiFinishLine } from "react-icons/gi";
 
 import {
   VerticalTimeline,
@@ -349,13 +363,15 @@ function BioSession() {
                   <>
                     <VerticalTimeline lineColor="#e91e63">
                       <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer  "
                         iconStyle={{
-                          background: "rgb(16, 204, 82)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         // icon={<StarIcon />}
-                        icon={null}
+                        icon={<BsRocketFill />}
                       />
+
                       <VerticalTimelineElement
                         className="vertical-timeline-element--work  "
                         contentStyle={{
@@ -365,13 +381,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Dez/2022"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<BiLogoReact />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -396,13 +412,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Out/2022"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<BiLogoReact />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -427,13 +443,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Ago/2022"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<FaUsers />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -458,13 +474,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Fev/2022"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<GiBookshelf />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -486,13 +502,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
-                        date="Dez/2021"
+                        date="Dez/2020"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<BiLogoReact />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -517,13 +533,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Dez/2019"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<RiJavascriptFill />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -551,13 +567,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Ago/2019"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<RiBootstrapLine />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -584,13 +600,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Set/2018"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<IoLogoSass />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -615,13 +631,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Set/2018"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<SiGooglemarketingplatform />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -647,13 +663,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Nov/2017"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<DiJqueryLogo />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -679,13 +695,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Set/2017"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<BiLogoCss3 />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -710,13 +726,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Ago/2017"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<AiFillHtml5 />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -740,13 +756,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Dez/2016"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<MdDesignServices />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -770,13 +786,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Nov/2016"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<GiHiveMind />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -804,13 +820,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Ago/2016"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<GiHiveMind />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -837,13 +853,13 @@ function BioSession() {
                           color: "white",
                         }}
                         iconStyle={{
-                          backgroundColor: "rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         date="Mar/2016"
                         dateClassName="text-white"
                         textClassName="vertical-align01" // muda a cor do texto
+                        icon={<GiHiveMind />}
                         id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
@@ -863,12 +879,13 @@ function BioSession() {
                       </VerticalTimelineElement>
 
                       <VerticalTimelineElement
+                        className="vertical-timeline-element--work cursor-pointer  "
                         iconStyle={{
-                          background: "rgb(204, 16, 16)",
+                          background: "#2a2344",
                           color: "#fff",
                         }}
                         // icon={<StarIcon />}
-                        icon={null}
+                        icon={<GiFinishLine />}
                       />
                     </VerticalTimeline>
                   </>
