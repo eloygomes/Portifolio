@@ -294,7 +294,7 @@ function BioSession() {
                       <BioSessionCard
                         PositionName="HTML 5"
                         CompanyName="UDEMY"
-                        Date="AGO/2016"
+                        Date="AGO/2017"
                         Description="Elaboração e desenvolvimento de layouts semanticos."
                       />
 
@@ -349,6 +349,14 @@ function BioSession() {
                   <>
                     <VerticalTimeline lineColor="#e91e63">
                       <VerticalTimelineElement
+                        iconStyle={{
+                          background: "rgb(16, 204, 82)",
+                          color: "#fff",
+                        }}
+                        // icon={<StarIcon />}
+                        icon={null}
+                      />
+                      <VerticalTimelineElement
                         className="vertical-timeline-element--work  "
                         contentStyle={{
                           // backgroundColor: "rgba(255, 255, 255)",
@@ -371,7 +379,7 @@ function BioSession() {
                         </h3>
 
                         <h4 className="vertical-timeline-element-subtitle">
-                          CODE ACADEMY
+                          CODEACADEMY
                         </h4>
                         <p>
                           Introdução a testes unitários usando Jest, Cypress,
@@ -380,287 +388,489 @@ function BioSession() {
                       </VerticalTimelineElement>
 
                       <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
+                        className="vertical-timeline-element--work  "
                         contentStyle={{
-                          backgroundColor: " rgba(255, 255, 255)",
-                          backdropFilter: "blur(20px)",
-                          color: "#2a2344",
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
                         }}
-                        contentArrowStyle={{
-                          borderRight: "7px solid  rgb(33, 150, 243)",
-                        }}
-                        date="2011 - present"
-                        dateClassName="text-yellow-800"
                         iconStyle={{
-                          backgroundColor: " rgba(255, 255, 255)",
+                          backgroundColor: "rgba(255, 255, 255)",
                           backdropFilter: "blur(20px)",
                           color: "#fff",
                         }}
-                        // icon={<WorkIcon />}
-                        icon={null}
-                        textClassName="text-red-500" // muda a cor do texto
+                        date="Out/2022"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
-                          React Testing
+                          React Router
                         </h3>
 
                         <h4 className="vertical-timeline-element-subtitle">
-                          CODE ACADEMY
+                          CODEACADEMY
                         </h4>
-
                         <p>
-                          Introdução a testes unitários usando Jest, Cypress,
-                          Enzyme, Mocha, Jasmine e React Testing Library.
+                          Criação de rotas em react. Rotear usuarios para
+                          diferentes URLs, usando rotas dinamicas.
                         </p>
                       </VerticalTimelineElement>
 
                       <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        date="2008 - 2010"
+                        className="vertical-timeline-element--work  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
                         iconStyle={{
-                          background: "rgb(33, 150, 243)",
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
                           color: "#fff",
                         }}
-                        // icon={<WorkIcon />}
-                        icon={null}
+                        date="Ago/2022"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
-                          Web Designer
+                          Introduction to UI/UX
                         </h3>
+
                         <h4 className="vertical-timeline-element-subtitle">
-                          Los Angeles, CA
-                        </h4>
-                        <p>User Experience, Visual Design</p>
-                      </VerticalTimelineElement>
-                      <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        date="2006 - 2008"
-                        iconStyle={{
-                          background: "rgb(33, 150, 243)",
-                          color: "#fff",
-                        }}
-                        // icon={<WorkIcon />}
-                        icon={null}
-                      >
-                        <h3 className="vertical-timeline-element-title">
-                          Web Designer
-                        </h3>
-                        <h4 className="vertical-timeline-element-subtitle">
-                          San Francisco, CA
-                        </h4>
-                        <p>User Experience, Visual Design</p>
-                      </VerticalTimelineElement>
-                      <VerticalTimelineElement
-                        className="vertical-timeline-element--education"
-                        date="April 2013"
-                        iconStyle={{
-                          background: "rgb(233, 30, 99)",
-                          color: "#fff",
-                        }}
-                        // icon={<SchoolIcon />}
-                        icon={null}
-                      >
-                        <h3 className="vertical-timeline-element-title">
-                          Content Marketing for Web, Mobile and Social Media
-                        </h3>
-                        <h4 className="vertical-timeline-element-subtitle">
-                          Online Course
-                        </h4>
-                        <p>Strategy, Social Media</p>
-                      </VerticalTimelineElement>
-                      <VerticalTimelineElement
-                        className="vertical-timeline-element--education"
-                        date="November 2012"
-                        iconStyle={{
-                          background: "rgb(233, 30, 99)",
-                          color: "#fff",
-                        }}
-                        // icon={<SchoolIcon />}
-                        icon={null}
-                      >
-                        <h3 className="vertical-timeline-element-title">
-                          Agile Development Scrum Master
-                        </h3>
-                        <h4 className="vertical-timeline-element-subtitle">
-                          Certification
+                          CODEACADEMY
                         </h4>
                         <p>
-                          Creative Direction, User Experience, Visual Design
+                          Introdução aos conceitos para desenvolvimento de
+                          interfaces com foco no usuário.
                         </p>
                       </VerticalTimelineElement>
+
                       <VerticalTimelineElement
-                        className="vertical-timeline-element--education"
-                        date="2002 - 2006"
+                        className="vertical-timeline-element--work  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
                         iconStyle={{
-                          background: "rgb(233, 30, 99)",
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
                           color: "#fff",
                         }}
-                        // icon={<SchoolIcon />}
-                        icon={null}
+                        date="Fev/2022"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
                       >
                         <h3 className="vertical-timeline-element-title">
-                          Bachelor of Science in Interactive Digital Media
-                          Visual Imaging
+                          Metodologias ágeis
                         </h3>
+
                         <h4 className="vertical-timeline-element-subtitle">
-                          Bachelor Degree
+                          CODEACADEMY
                         </h4>
-                        <p>Creative Direction, Visual Design</p>
+                        <p>Introdução a SCRUM e KANBAN.</p>
                       </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Dez/2021"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          React JS
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          UDEMY
+                        </h4>
+                        <p>
+                          Prop.Types, CSS-in-JS (Styled Components), Vite,
+                          Tailwind CSS, Redux.
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Dez/2019"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          Javascript
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          UDEMY
+                        </h4>
+                        <p>
+                          Curso focado em criar aplicações web dinâmicas e
+                          interativas, direcionado para aprender os fundamentos
+                          de JavaScript, como variáveis, tipos de dados,
+                          operadores, controle de fluxo, funções, objetos,
+                          classes, eventos, AJAX e DOM.
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Ago/2019"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          Bootstrap
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          UDEMY
+                        </h4>
+                        <p>
+                          Curso voltado a usar o Bootstrap para criar aplicações
+                          web responsivas. Abordando os componentes, grids,
+                          formulários, tabelas, modals, tooltips, popovers,
+                          carousels, alerts e dropdowns.
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Set/2018"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          SASS
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          UDEMY
+                        </h4>
+                        <p>
+                          Desenvolvimento ágil de CSS com Variables,
+                          Transitions, Dropdowns, Overlays.
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work cursor-pointer  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Set/2018"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          Estratégias de marketing e e-commerce
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          SENAC
+                        </h4>
+                        <p>
+                          Analise a criação de estratégias e ações de marketing
+                          com foco em conversão de usuários em plataformas
+                          digitais e e-commerce.
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work cursor-pointer  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Nov/2017"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          JQUERY 3
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          UDEMY
+                        </h4>
+                        <p>
+                          Analise a criação de estratégias e ações de marketing
+                          com foco em conversão de usuários em plataformas
+                          digitais e e-commerce.
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work cursor-pointer  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Set/2017"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          CSS 3
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          UDEMY
+                        </h4>
+                        <p>
+                          Formatação de Layouts com media queries, flexbox and
+                          grid.
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work cursor-pointer  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Ago/2017"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          HTML 5
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          UDEMY
+                        </h4>
+                        <p>
+                          Elaboração e desenvolvimento de layouts semanticos.
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work cursor-pointer  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Dez/2016"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          Design gráfico com enfãse em comunicação digital
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          UNIVERSIDADE PAULISTA - UNIP
+                        </h4>
+                        <p>
+                          Designer Gráfico com enfâse em comunicação digital.
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work cursor-pointer  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Nov/2016"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          Direção de arte, criatividade aplicada e design na
+                          prática
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          COLOSSEO
+                        </h4>
+                        <p>
+                          Curso ministrado por Saulo Mileti, onde debatemos a
+                          função do diretor de arte, seu dever de transcrever
+                          criatividade de muitas midias diferentes em algo
+                          prático..
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work cursor-pointer  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Ago/2016"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          Estética, lógica, harmonia e a contrução do belo
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          COLOSSEO
+                        </h4>
+                        <p>
+                          Curso ministrado por Saulo Mileti, onde debatemos a
+                          função do diretor de arte, seu dever de transcrever
+                          criatividade de muitas midias diferentes em algo
+                          prático..
+                        </p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work cursor-pointer  "
+                        contentStyle={{
+                          // backgroundColor: "rgba(255, 255, 255)",
+                          // backdropFilter: "blur(80px)",
+                          // opacity: "0.8",
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          backgroundColor: "rgba(255, 255, 255)",
+                          backdropFilter: "blur(20px)",
+                          color: "#fff",
+                        }}
+                        date="Mar/2016"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          Design, Origem, função e principio estético
+                        </h3>
+
+                        <h4 className="vertical-timeline-element-subtitle">
+                          COLOSSEO
+                        </h4>
+                        <p>
+                          Curso ministrado por Saulo Mileti, onde discutimos o
+                          design de uma forma ampla, desde o conceito de
+                          projetos, passando por suas funcões e impacto na
+                          sociedade e a sua influência quanto a criação de
+                          padrões estéticos.
+                        </p>
+                      </VerticalTimelineElement>
+
                       <VerticalTimelineElement
                         iconStyle={{
-                          background: "rgb(16, 204, 82)",
+                          background: "rgb(204, 16, 16)",
                           color: "#fff",
                         }}
                         // icon={<StarIcon />}
                         icon={null}
                       />
                     </VerticalTimeline>
-
-                    {/* <div className=" w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-0 lg:m-5 rounded-xl ">
-                      <BioSessionCard
-                        PositionName="React Testing"
-                        CompanyName="CODEACADEMY"
-                        Date="DEZ/2022"
-                        Description="Introdução a testes unitários usando Jest, Cypress, Enzyme, Mocha, Jasmine e React Testing Library."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-
-                      <BioSessionCard
-                        PositionName="React Router"
-                        CompanyName="CODEACADEMY"
-                        Date="OUT/2022"
-                        Description="Criação de rotas em react. Rotear usuarios para diferentes URL's,usando rotas dinamicas"
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-
-                      <BioSessionCard
-                        PositionName="Introduction to UI/UX"
-                        CompanyName="CODEACADEMY"
-                        Date="AGO/2022"
-                        Description="Introdução aos conceitos para desenvolvimento de interfaces."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-
-                      <BioSessionCard
-                        PositionName="Metodologias ágeis"
-                        CompanyName="CODEACADEMY"
-                        Date="FEV/2022"
-                        Description="Introdução a SCRUM e KANBAN."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-                    </div>
-
-                    <div className="w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-0 lg:m-5 md:my-5  rounded-xl ">
-                      <BioSessionCard
-                        PositionName="React JS"
-                        CompanyName="UDEMY"
-                        Date="DEZ/2021"
-                        Description="Prop.Types, CSS-in-JS (Styled Components), Vite, Tailwind
-                    CSS, Redux."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-
-                      <BioSessionCard
-                        PositionName="Javascript"
-                        CompanyName="UDEMY"
-                        Date="DEZ/2019"
-                        Description="Criação de rotas em react."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-
-                      <BioSessionCard
-                        PositionName="BOOTSTRAP"
-                        CompanyName="UDEMY"
-                        Date="AGO/2018"
-                        Description="Introdução aos conceitos para desenvolvimento de
-                    interfaces."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-
-                      <BioSessionCard
-                        PositionName="SASS"
-                        CompanyName="UDEMY"
-                        Date="SET/2018"
-                        Description="Desenvolvimento ágil de CSS com Variables, Transitions,
-                    Dropdowns, Overlays."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-                    </div>
-                    <div className="w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-0 lg:m-5 md:my-5 rounded-xl ">
-                      <BioSessionCard
-                        PositionName="Est. de mkt e e-commerce"
-                        CompanyName="SENAC"
-                        Date="SET/2018"
-                        Description="Analise a criação de estratégias e ações de marketing com
-                    foco em conversão de usuários em plataformas digitais e
-                    e-commerce."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-
-                      <BioSessionCard
-                        PositionName="JQUERY 3"
-                        CompanyName="UDEMY"
-                        Date="NOV/2017"
-                        Description="Analise a criação de estratégias e ações de marketing com
-                    foco em conversão de usuários em plataformas digitais e
-                    e-commerce."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-
-                      <BioSessionCard
-                        PositionName="CSS 3"
-                        CompanyName="UDEMY"
-                        Date="SET/2017"
-                        Description="Formatação de Layouts com media queries, flexbox and grid."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-
-                      <BioSessionCard
-                        PositionName="HTML 5"
-                        CompanyName="UDEMY"
-                        Date="AGO/2016"
-                        Description="Elaboração e desenvolvimento de layouts semanticos."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-                    </div>
-                    <div className="w-full flex flex-row justify-around px-2 py-5  backdrop-blur-xl bg-white/10 m-0 lg:m-5 md:my-5 rounded-xl ">
-                      <BioSessionCard
-                        PositionName="Design gráfico com enfãse em comunicação digital"
-                        CompanyName="UNIP"
-                        Date="DEZ/2016"
-                        Description="Designer Gráfico com enfâse em comunicação digital."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-
-                      <BioSessionCard
-                        PositionName="Direção de arte, criatividade aplicada e design na prática"
-                        CompanyName="COLOSSEO"
-                        Date="NOV/2016"
-                        Description="Curso ministrado por Saulo Mileti, onde debatemos a função
-                    do diretor de arte, seu dever de transcrever criatividade
-                    de muitas midias diferentes em algo prático.."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-
-                      <BioSessionCard
-                        PositionName="Design além do obvio: Estética, lógica, harmonia e a contrução do belo"
-                        CompanyName="COLOSSEO"
-                        Date="AGO/2016"
-                        Description="Curso ministrado por Saulo Mileti, onde debatemos a função
-                    do diretor de arte, seu dever de transcrever criatividade
-                    de muitas midias diferentes em algo prático.."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-
-                      <BioSessionCard
-                        PositionName="Base e fundamento: Design, Origem, função e principio estético"
-                        CompanyName="COLOSSEO"
-                        Date="MAR/2016"
-                        Description="Curso ministrado por Saulo Mileti, onde discutimos o design de uma forma ampla, desde o conceito de projetos, passando por suas funcões e impacto na sociedade e a sua influência quanto a criação de padrões estéticos."
-                        FormationCollapseStatus={FormationCollapseStatus}
-                      />
-                    </div> */}
                   </>
                 )}
               </div>
