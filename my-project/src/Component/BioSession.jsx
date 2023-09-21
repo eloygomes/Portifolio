@@ -4,7 +4,7 @@ import { BsArrowsAngleContract, BsArrowsAngleExpand } from "react-icons/bs";
 import { useSelector, useDispatch } from "react-redux";
 import Lottie from "lottie-react";
 import animationData from "../assets/63487-programming-computer.json";
-import BioSessionCard from "./BioS/BioSessionCard";
+
 import { BiLogoReact } from "react-icons/bi";
 import { FaUsers } from "react-icons/fa";
 import { GiBookshelf } from "react-icons/gi";
@@ -29,7 +29,7 @@ import "react-vertical-timeline-component/style.min.css";
 function BioSession() {
   const [FormationCollapseStatus, setFormationCollapseStatus] = useState(false);
 
-  const [mobileCollapse, setMobileCollapse] = useState(false);
+  // const [mobileCollapse, setMobileCollapse] = useState(false);
 
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -211,14 +211,40 @@ function BioSession() {
 
                 <div className="p-5">
                   <VerticalTimeline lineColor="#e91e63">
-                    <VerticalTimelineElement
-                      className="vertical-timeline-element--work cursor-pointer top-[-90px] "
+                    {window.innerWidth <= 961 ? (
+                      // mobile
+                      <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer top-[-50px]"
+                      contentStyle={{
+                        color: "white",
+                      }}
                       iconStyle={{
                         background: "#2a2344",
                         color: "#fff",
                       }}
+                      // date="Dez/2022"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
                       icon={<BsRocketFill />}
-                    />
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title h-1">
+                        e subindo...
+                      </h3>
+
+                      
+                    </VerticalTimelineElement>
+                    ) : (
+                      // desktop
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work cursor-pointer top-[-90px] "
+                        iconStyle={{
+                          background: "#2a2344",
+                          color: "#fff",
+                        }}
+                        icon={<BsRocketFill />}
+                      />
+                    )}
 
                     <VerticalTimelineElement
                       className="vertical-timeline-element--work cursor-pointer "
@@ -714,7 +740,31 @@ function BioSession() {
                       </p>
                     </VerticalTimelineElement>
 
-                    <VerticalTimelineElement
+                    {window.innerWidth <= 961 ? (
+                      // mobile
+                      <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer bottom-[-50px]"
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      // date="Dez/2022"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<GiFinishLine />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title h-1">
+                        Inicio
+                      </h3>
+
+                      
+                    </VerticalTimelineElement>
+                    ):(
+                      <VerticalTimelineElement
                       className="vertical-timeline-element--work cursor-pointer bottom-[-80px] "
                       iconStyle={{
                         background: "#2a2344",
@@ -722,7 +772,9 @@ function BioSession() {
                       }}
                       // icon={<StarIcon />}
                       icon={<GiFinishLine />}
-                    />
+                      />
+                    )}
+                 
                   </VerticalTimeline>
                 </div>
               </div>
