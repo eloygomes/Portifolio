@@ -1,4 +1,4 @@
-import pic01 from "../assets/img01.01.png";
+
 import { useLayoutEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import ParticlesBackground from "./particles/ParticlesBackground";
@@ -80,7 +80,7 @@ function Home() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.35 }}
-                src={pic01}
+                src='https://www.koncretejungle.com.br/eloygomes/assets/img01.01-a494c9a4.png'
                 alt="f"
                 className="sm:max-w-lg max-w-sm w-full mx-auto "
               />
