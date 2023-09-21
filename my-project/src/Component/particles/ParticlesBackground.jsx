@@ -2,11 +2,11 @@ import Particles from "react-particles";
 import particlesConfig from "./config/particles-config";
 import { useCallback } from "react";
 import { loadFull } from "tsparticles";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 function ParticlesBackground() {
-  const controlParticles = useSelector((state) => state.controlParticles);
-  console.log(controlParticles);
+  // const controlParticles = useSelector((state) => state.controlParticles);
+  // console.log(controlParticles);
 
   const particlesInit = useCallback(async (engine) => {
     // console.log(engine);
@@ -27,9 +27,10 @@ function ParticlesBackground() {
       init={particlesInit}
       loaded={particlesLoaded}
       options={particlesConfig}
-      className={`absolute -z-10 ${
-        controlParticles === "on" ? "block" : "hidden"
-      }`}
+      // className={`absolute -z-10 ${
+      //   controlParticles === "on" ? "block" : "hidden"
+      // }`}
+      className={`absolute -z-10 ${"block"}`}
     />
   );
 }

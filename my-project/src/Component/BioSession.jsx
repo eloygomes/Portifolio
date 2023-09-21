@@ -1,6 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import { useLayoutEffect, useRef, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { BsArrowsAngleContract, BsArrowsAngleExpand } from "react-icons/bs";
+// import { BsArrowsAngleContract, BsArrowsAngleExpand } from "react-icons/bs";
 import { useSelector, useDispatch } from "react-redux";
 import Lottie from "lottie-react";
 import animationData from "../assets/63487-programming-computer.json";
@@ -27,7 +28,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 function BioSession() {
-  const [FormationCollapseStatus, setFormationCollapseStatus] = useState(false);
+  // const [FormationCollapseStatus, setFormationCollapseStatus] = useState(false);
 
   // const [mobileCollapse, setMobileCollapse] = useState(false);
 
@@ -59,7 +60,7 @@ function BioSession() {
 
   return (
     <>
-      <div className=" w-screen flex flex-col  " id="bio">
+      <div className=" w-screen flex flex-col" id="bio">
         <div className="container mx-auto flex flex-col justify-center">
           <div className="flex flex-col">
             <div
@@ -179,34 +180,6 @@ function BioSession() {
                       </p>
                     </div>
                   </div>
-
-                  <div className="flex-row hidden sm:hidden md:flex lg:flex items-center justify-center">
-                    <button
-                      className={` p-5 ml-5 backdrop-blur-xl drop-shadow-lg  ${
-                        FormationCollapseStatus
-                          ? "bg-white/10 hover:bg-white/50"
-                          : "bg-white/50 hover:bg-white/80"
-                      } `}
-                      onClick={() => {
-                        console.log("false");
-                        setFormationCollapseStatus(false);
-                      }}
-                    >
-                      <BsArrowsAngleContract />
-                    </button>
-                    <button
-                      className={`p-5 ml-5 backdrop-blur-xl drop-shadow-lg ${
-                        FormationCollapseStatus
-                          ? "bg-white/50 hover:bg-white/80"
-                          : "bg-white/10 hover:bg-white/50"
-                      } `}
-                      onClick={() => {
-                        setFormationCollapseStatus(true);
-                      }}
-                    >
-                      <BsArrowsAngleExpand />
-                    </button>
-                  </div>
                 </div>
 
                 <div className="p-5">
@@ -214,26 +187,24 @@ function BioSession() {
                     {window.innerWidth <= 961 ? (
                       // mobile
                       <VerticalTimelineElement
-                      className="vertical-timeline-element--work cursor-pointer top-[-50px]"
-                      contentStyle={{
-                        color: "white",
-                      }}
-                      iconStyle={{
-                        background: "#2a2344",
-                        color: "#fff",
-                      }}
-                      // date="Dez/2022"
-                      dateClassName="text-white"
-                      textClassName="vertical-align01" // muda a cor do texto
-                      icon={<BsRocketFill />}
-                      id="formationTimeline01"
-                    >
-                      <h3 className="vertical-timeline-element-title h-1">
-                        e subindo...
-                      </h3>
-
-                      
-                    </VerticalTimelineElement>
+                        className="vertical-timeline-element--work cursor-pointer top-[-50px]"
+                        contentStyle={{
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          background: "#2a2344",
+                          color: "#fff",
+                        }}
+                        // date="Dez/2022"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        icon={<BsRocketFill />}
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title h-1">
+                          e subindo...
+                        </h3>
+                      </VerticalTimelineElement>
                     ) : (
                       // desktop
                       <VerticalTimelineElement
@@ -743,38 +714,35 @@ function BioSession() {
                     {window.innerWidth <= 961 ? (
                       // mobile
                       <VerticalTimelineElement
-                      className="vertical-timeline-element--work cursor-pointer bottom-[-50px]"
-                      contentStyle={{
-                        color: "white",
-                      }}
-                      iconStyle={{
-                        background: "#2a2344",
-                        color: "#fff",
-                      }}
-                      // date="Dez/2022"
-                      dateClassName="text-white"
-                      textClassName="vertical-align01" // muda a cor do texto
-                      icon={<GiFinishLine />}
-                      id="formationTimeline01"
-                    >
-                      <h3 className="vertical-timeline-element-title h-1">
-                        Inicio
-                      </h3>
-
-                      
-                    </VerticalTimelineElement>
-                    ):(
+                        className="vertical-timeline-element--work cursor-pointer bottom-[-50px]"
+                        contentStyle={{
+                          color: "white",
+                        }}
+                        iconStyle={{
+                          background: "#2a2344",
+                          color: "#fff",
+                        }}
+                        // date="Dez/2022"
+                        dateClassName="text-white"
+                        textClassName="vertical-align01" // muda a cor do texto
+                        icon={<GiFinishLine />}
+                        id="formationTimeline01"
+                      >
+                        <h3 className="vertical-timeline-element-title h-1">
+                          Inicio
+                        </h3>
+                      </VerticalTimelineElement>
+                    ) : (
                       <VerticalTimelineElement
-                      className="vertical-timeline-element--work cursor-pointer bottom-[-80px] "
-                      iconStyle={{
-                        background: "#2a2344",
-                        color: "#fff",
-                      }}
-                      // icon={<StarIcon />}
-                      icon={<GiFinishLine />}
+                        className="vertical-timeline-element--work cursor-pointer bottom-[-80px] "
+                        iconStyle={{
+                          background: "#2a2344",
+                          color: "#fff",
+                        }}
+                        // icon={<StarIcon />}
+                        icon={<GiFinishLine />}
                       />
                     )}
-                 
                   </VerticalTimeline>
                 </div>
               </div>
