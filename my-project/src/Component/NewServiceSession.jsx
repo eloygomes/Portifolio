@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 function NewServiceSession() {
   return (
     <div
@@ -15,7 +17,15 @@ function NewServiceSession() {
             </div>
             <div>
               <div className="grid md:grid-cols-3 sm:grid-cols-1 grid-rows-2 gap-x-10 gap-y-10 md:p-5">
-                <div className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative">
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.2 }}
+                  className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+                >
                   <div className=" rounded-xl flex flex-col z-50">
                     <img
                       src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_04-1a29e693.jpg"
@@ -33,7 +43,8 @@ function NewServiceSession() {
                         Id cum quidem minus ratione reiciendis odio esse
                         voluptatum tempora quos voluptates placeat, quis quae
                       </p>
-                    ) : ( // D
+                    ) : (
+                      // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Id cum quidem minus ratione reiciendis odio esse
@@ -41,8 +52,17 @@ function NewServiceSession() {
                       </p>
                     )}
                   </div>
-                </div>
-                <div className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative">
+                </motion.div>
+
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.2 }}
+                  className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+                >
                   <div className=" rounded-xl flex flex-col z-50">
                     <img
                       src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_06-85a77b29.jpg"
@@ -60,7 +80,8 @@ function NewServiceSession() {
                         Id cum quidem minus ratione reiciendis odio esse
                         voluptatum tempora quos voluptates placeat, quis quae
                       </p>
-                    ) : ( // D
+                    ) : (
+                      // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Id cum quidem minus ratione reiciendis odio esse
@@ -68,8 +89,16 @@ function NewServiceSession() {
                       </p>
                     )}
                   </div>
-                </div>
-                <div className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative">
+                </motion.div>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.2 }}
+                  className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+                >
                   <div className=" rounded-xl flex flex-col z-50">
                     <img
                       src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_05-45d24d3b.jpg"
@@ -87,7 +116,8 @@ function NewServiceSession() {
                         Id cum quidem minus ratione reiciendis odio esse
                         voluptatum tempora quos voluptates placeat, quis quae
                       </p>
-                    ) : ( // D
+                    ) : (
+                      // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Id cum quidem minus ratione reiciendis odio esse
@@ -95,8 +125,16 @@ function NewServiceSession() {
                       </p>
                     )}
                   </div>
-                </div>
-                <div className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative">
+                </motion.div>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.2 }}
+                  className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+                >
                   <div className=" rounded-xl flex flex-col z-50">
                     <img
                       src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_01-130e691d.jpg"
@@ -114,7 +152,8 @@ function NewServiceSession() {
                         Id cum quidem minus ratione reiciendis odio esse
                         voluptatum tempora quos voluptates placeat, quis quae
                       </p>
-                    ) : ( // D
+                    ) : (
+                      // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Id cum quidem minus ratione reiciendis odio esse
@@ -122,8 +161,16 @@ function NewServiceSession() {
                       </p>
                     )}
                   </div>
-                </div>
-                <div className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative">
+                </motion.div>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.2 }}
+                  className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+                >
                   <div className=" rounded-xl flex flex-col z-50">
                     <img
                       src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_02-51365147.jpg"
@@ -141,7 +188,8 @@ function NewServiceSession() {
                         Id cum quidem minus ratione reiciendis odio esse
                         voluptatum tempora quos voluptates placeat, quis quae
                       </p>
-                    ) : ( // D
+                    ) : (
+                      // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Id cum quidem minus ratione reiciendis odio esse
@@ -149,8 +197,16 @@ function NewServiceSession() {
                       </p>
                     )}
                   </div>
-                </div>
-                <div className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative">
+                </motion.div>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.2 }}
+                  className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+                >
                   <div className=" rounded-xl flex flex-col z-50">
                     <img
                       src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_03-afb38374.jpg"
@@ -168,7 +224,8 @@ function NewServiceSession() {
                         Id cum quidem minus ratione reiciendis odio esse
                         voluptatum tempora quos voluptates placeat, quis quae
                       </p>
-                    ) : ( // D
+                    ) : (
+                      // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Id cum quidem minus ratione reiciendis odio esse
@@ -176,7 +233,7 @@ function NewServiceSession() {
                       </p>
                     )}
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

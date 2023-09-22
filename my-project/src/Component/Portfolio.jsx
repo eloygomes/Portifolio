@@ -11,7 +11,7 @@ import { PortImages } from "./PortS/PortImages";
 
 import { jobDesc } from "./PortS/jobDesc";
 
-import port01 from "../assets/port/Profissional/01/behance_c3tech.png";
+// import port01 from "../assets/port/Profissional/01/behance_c3tech.png";
 
 //Redux
 function freezeScroll() {
@@ -38,7 +38,8 @@ function Portfolio() {
   const [modalStatus, setModalStatus] = useState(false);
 
   // Handle images inside the modal
-  const [postImg, setPostImg] = useState(port01);
+  // const [postImg, setPostImg] = useState(port01);
+  const [postImg, setPostImg] = useState('');
 
   // Handle infos inside the modal
   const [postInfo, setPostInfo] = useState("");
