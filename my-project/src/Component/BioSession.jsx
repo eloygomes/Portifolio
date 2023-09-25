@@ -26,6 +26,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import ArrowComponent from "./BioS/ArrowComponent";
 
 function BioSession() {
   // const [FormationCollapseStatus, setFormationCollapseStatus] = useState(false);
@@ -63,6 +64,7 @@ function BioSession() {
       <div className=" w-screen flex flex-col" id="bio">
         <div className="container mx-auto flex flex-col justify-center">
           <div className="flex flex-col">
+            {/* BOX */}
             <div
               ref={ref}
               className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-10 m-5 sm:my-40 my-00 rounded-xl "
@@ -81,7 +83,7 @@ function BioSession() {
                     // className=" bg-[#2A2344] w-fit"
                     className=" w-fit"
                   >
-                    Olá!, Sou um...{" "}
+                    {/* Olá!, Sou um...{" "} */}
                   </motion.h4>
 
                   <motion.h1
@@ -105,7 +107,7 @@ function BioSession() {
                     initial="hidden"
                     animate={mainControls}
                     transition={{ duration: 0.5, delay: 0.5 }}
-                    className="bg-[#D6223B] sm:text-xl text-lg w-fit mb-5 "
+                    className="bg-[#D6223B] sm:text-xl text-lg w-fit mb-5 px-1"
                   >
                     15 anos de experiência.
                   </motion.h3>
@@ -118,11 +120,11 @@ function BioSession() {
                     initial="hidden"
                     animate={mainControls}
                     transition={{ duration: 0.5, delay: 0.55 }}
-                    className="py-3 text-sm max-w-lg mt-5  w-fit"
+                    className="py-3 text-sm  mt-5  w-fit"
                   >
-                    Iniciei da minha jornada como designer UI/UX, criando
-                    interfaces de produtos e propondo melhorias de usabilidade
-                    na experiência do usuário.
+                    Desenvolvedor full stack com mais de 15 anos de experiência,
+                    formado em design gráfico, com sólida experiência como
+                    diretor de arte atuando junto a grandes marcas de tecnologia.
                   </motion.h5>
                   <motion.h5
                     variants={{
@@ -132,10 +134,13 @@ function BioSession() {
                     initial="hidden"
                     animate={mainControls}
                     transition={{ duration: 0.5, delay: 0.6 }}
-                    className="py-3 text-sm max-w-lg  w-fit"
+                    className="py-3 text-sm  w-fit"
                   >
-                    Tenho sólida vivencia em criação de wireframes de baixa/alta
-                    fidelidade e em desenvolvimento de protótipos navegáveis.
+                    Nos últimos três anos, tenho focado no desenvolvimento
+                    front-end, trabalhando com uma variedade de tecnologias,
+                    incluindo Wordpress, JavaScript, React e Node.js. Tenho
+                    experiência em desenvolvimento de interfaces(UX/UI) e design
+                    responsivo.
                   </motion.h5>
                   <motion.h5
                     variants={{
@@ -145,11 +150,13 @@ function BioSession() {
                     initial="hidden"
                     animate={mainControls}
                     transition={{ duration: 0.5, delay: 0.65 }}
-                    className="py-3 text-sm max-w-lg  w-fit"
+                    className="py-3 text-sm w-fit"
                   >
-                    Hoje atuo como Full Stack Developer, utilizo principalmente
-                    HTML5, CSS3, React Js e Wordpress para dar vida a interfaces
-                    web dos projetos.
+                    Acredito que a tecnologia tem o poder de transformar a vida
+                    das pessoas e que o design pode ser uma ferramenta poderosa
+                    para isso. Por isso, busco sempre unir minhas habilidades
+                    técnicas e criativas para criar produtos digitais que sejam
+                    funcionais, bonitos e agradáveis de usar.
                   </motion.h5>
                 </div>
                 <div className="sm:w-[50%] md:w-[50%] lg:w-full lg:max-w-fit w-full sm:relative md:absolute lg:relative  md:right-[-20px] md:top-[60px] lg:top-[0px] flex-col justify-center max-w-xs ">
@@ -163,20 +170,20 @@ function BioSession() {
                   />
                 </div>
               </div>
+              
             </div>
-
+            {/* TIMELINE */}
             <div className="container mx-auto">
               <div className="flex flex-col h-full mb-52 md:p-5">
                 {/* First ROW */}
-                <div className="flex sm:flex-row md:flex-row justify-between mx-5 mt-20 mb-36">
-                  <div className="flex flex-col justify-between">
-                    <div className="sm:w-[50%] w-full ">
-                      <h1 className="bg-[#2A2344] w-fit  p-2">Formação</h1>
+                <div className="flex flex-row  justify-between mx-5 mt-20 mb-36">
+                  <div className="flex flex-col justify-between w-full">
+                    <div className="sm:w-[50%] lg:w-full text-center ">
+                      <h1 className="bg-[#2A2344] mx-auto w-full  p-2">Formação</h1>
                     </div>
                     <div className="sm:w-[50%] md:w-full w-full">
-                      <p className="bg-[#2A2344] w-fit  py-5 p-2">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Tempore nesciunt illum dignissimos?
+                      <p className="bg-[#2A2344] w-full mx-auto text-center  py-5 p-2">
+                      Aqui você encontra um mapa da minha jornada educacional, que me levou aonde estou hoje.
                       </p>
                     </div>
                   </div>

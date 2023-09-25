@@ -128,7 +128,7 @@ function NavBar() {
         >
           <div className="lg:flex hidden flex-row justify-between container mx-auto ">
             <div className="font-black text-2xl hover:scale-105">
-              <a className="font-extrabold " href="#">
+              <a className="font-extrabold  hover:text-[#d6223b]" href="#">
                 EVG
               </a>
             </div>
