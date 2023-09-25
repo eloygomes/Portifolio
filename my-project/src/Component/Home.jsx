@@ -65,7 +65,7 @@ function Home() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.25 }}
-                  className="bg-[#D6223B] w-fit pl-1 text-4xl font-light text-left sm:mx-none mx-auto z-1"
+                  className="bg-[#D6223B] w-fit py-1 px-2  text-4xl font-light text-left sm:mx-none mx-auto z-1"
                 >
                   Full Stack Developer
                 </motion.h4>
