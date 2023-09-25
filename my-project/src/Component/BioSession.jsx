@@ -26,7 +26,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import ArrowComponent from "./BioS/ArrowComponent";
+
 
 function BioSession() {
   // const [FormationCollapseStatus, setFormationCollapseStatus] = useState(false);
@@ -173,6 +173,17 @@ function BioSession() {
               
             </div>
             {/* TIMELINE */}
+            {/* TIMELINE */}
+            {/* TIMELINE */}
+            {/* TIMELINE */}
+            {/* TIMELINE */}
+            {/* TIMELINE */}
+            {/* TIMELINE */}
+            {/* TIMELINE */}
+            {/* TIMELINE */}
+            {/* TIMELINE */}
+            {/* TIMELINE */}
+            {/* TIMELINE */}
             <div className="container mx-auto">
               <div className="flex flex-col h-full mb-52 md:p-5">
                 {/* First ROW */}
@@ -239,7 +250,7 @@ function BioSession() {
                       icon={<BiLogoReact />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         React Testing
                       </h3>
 
@@ -270,7 +281,7 @@ function BioSession() {
                       icon={<BiLogoReact />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         React Router
                       </h3>
 
@@ -301,7 +312,7 @@ function BioSession() {
                       icon={<FaUsers />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         Introduction to UI/UX
                       </h3>
 
@@ -332,7 +343,7 @@ function BioSession() {
                       icon={<GiBookshelf />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         Metodologias ágeis
                       </h3>
 
@@ -360,7 +371,7 @@ function BioSession() {
                       icon={<BiLogoReact />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         React JS
                       </h3>
 
@@ -391,7 +402,7 @@ function BioSession() {
                       icon={<RiJavascriptFill />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         Javascript
                       </h3>
 
@@ -425,7 +436,7 @@ function BioSession() {
                       icon={<RiBootstrapLine />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         Bootstrap
                       </h3>
 
@@ -458,7 +469,7 @@ function BioSession() {
                       icon={<IoLogoSass />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">SASS</h3>
+                      <h3 className="vertical-timeline-element-title text-2xl">SASS</h3>
 
                       <h4 className="vertical-timeline-element-subtitle">
                         UDEMY
@@ -487,7 +498,7 @@ function BioSession() {
                       icon={<SiGooglemarketingplatform />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         Estratégias de marketing e e-commerce
                       </h3>
 
@@ -519,7 +530,7 @@ function BioSession() {
                       icon={<DiJqueryLogo />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         JQUERY 3
                       </h3>
 
@@ -551,7 +562,7 @@ function BioSession() {
                       icon={<BiLogoCss3 />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">CSS 3</h3>
+                      <h3 className="vertical-timeline-element-title text-2xl">CSS 3</h3>
 
                       <h4 className="vertical-timeline-element-subtitle">
                         UDEMY
@@ -580,7 +591,7 @@ function BioSession() {
                       icon={<AiFillHtml5 />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         HTML 5
                       </h3>
 
@@ -608,11 +619,11 @@ function BioSession() {
                       icon={<MdDesignServices />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         Design gráfico com enfãse em comunicação digital
                       </h3>
 
-                      <h4 className="vertical-timeline-element-subtitle">
+                      <h4 className="vertical-timeline-element-subtitle ">
                         UNIVERSIDADE PAULISTA - UNIP
                       </h4>
                       <p>Designer Gráfico com enfâse em comunicação digital.</p>
@@ -636,7 +647,7 @@ function BioSession() {
                       icon={<GiHiveMind />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         Direção de arte, criatividade aplicada e design na
                         prática
                       </h3>
@@ -670,7 +681,7 @@ function BioSession() {
                       icon={<GiHiveMind />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         Estética, lógica, harmonia e a contrução do belo
                       </h3>
 
@@ -703,7 +714,7 @@ function BioSession() {
                       icon={<GiHiveMind />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title">
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         Design, Origem, função e principio estético
                       </h3>
 
