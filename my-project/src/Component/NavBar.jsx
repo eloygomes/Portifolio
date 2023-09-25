@@ -137,11 +137,11 @@ function NavBar() {
                 onClick={() => {
                   setDesktopMenuActive("bio");
                 }}
-                className="hover:text-[#d6223b]"
+                className=" py-1 hover:scale-105"
               >
                 <a
                   href="#bio"
-                  className={`px-2 font-semibold ${
+                  className={`px-2 font-semibold hover:text-[#d6223b] ${
                     // desktopMenuActive === "bio" ||
                     menuDisplayOpt === "bio" ? "text-[#d6223b]" : "text-white"
                   } `}
@@ -153,11 +153,11 @@ function NavBar() {
                 onClick={() => {
                   setDesktopMenuActive("port");
                 }}
-                className="hover:text-[#d6223b]"
+                className=" py-1 hover:scale-105"
               >
                 <a
                   href="#port"
-                  className={`px-2 font-semibold ${
+                  className={`px-2 font-semibold hover:text-[#d6223b] ${
                     // desktopMenuActive === "port" ||
                     menuDisplayOpt === "port" ? "text-[#d6223b]" : "text-white"
                   } `}
@@ -169,11 +169,11 @@ function NavBar() {
                 onClick={() => {
                   setDesktopMenuActive("carreira");
                 }}
-                className="hover:text-[#d6223b]"
+                className=" py-1 hover:scale-105"
               >
                 <a
                   href="#carreira"
-                  className={`px-2 font-semibold ${
+                  className={`px-2 font-semibold hover:text-[#d6223b] ${
                     // desktopMenuActive === "carreira" ||
                     menuDisplayOpt === "carreira"
                       ? "text-[#d6223b]"
@@ -187,11 +187,11 @@ function NavBar() {
                 onClick={() => {
                   setDesktopMenuActive("services");
                 }}
-                className="hover:text-[#d6223b]"
+                className=" py-1 hover:scale-105"
               >
                 <a
                   href="#services"
-                  className={`px-2 font-semibold ${
+                  className={`px-2 font-semibold hover:text-[#d6223b] ${
                     // desktopMenuActive === "services" ||
                     menuDisplayOpt === "services"
                       ? "text-[#d6223b]"
@@ -205,11 +205,11 @@ function NavBar() {
                 onClick={() => {
                   setDesktopMenuActive("contato");
                 }}
-                className="hover:text-[#d6223b]"
+                className=" py-1 hover:scale-105"
               >
                 <a
                   href="#contato"
-                  className={`px-2 font-semibold ${
+                  className={`px-2 font-semibold hover:text-[#d6223b]  ${
                     // desktopMenuActive === "contato" ||
                     menuDisplayOpt === "contato"
                       ? "text-[#d6223b]"
@@ -219,8 +219,8 @@ function NavBar() {
                   CONTATO
                 </a>
               </div>
-              <div className="pl-5">
-                <p className="bg-[#D6223B] text-xs p-1.5 whitespace-nowrap rounded">
+              <div className="pl-5 hover:scale-105">
+                <p className="bg-[#D6223B] text-xs p-2 whitespace-nowrap rounded">
                   DOWNLOAD CV
                 </p>
               </div>

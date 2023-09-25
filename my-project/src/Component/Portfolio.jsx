@@ -11,8 +11,6 @@ import { PortImages } from "./PortS/PortImages";
 
 import { jobDesc } from "./PortS/jobDesc";
 
-// import port01 from "../assets/port/Profissional/01/behance_c3tech.png";
-
 //Redux
 function freezeScroll() {
   return { type: "hold" };
