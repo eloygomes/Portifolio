@@ -5,7 +5,6 @@ import { AiFillCloseCircle } from "react-icons/ai";
 
 import ImageCarousel from "./Carousel/Carousel";
 
-
 const customStyles = {
   content: {
     top: "50%",
@@ -57,7 +56,6 @@ function ModalWindow({
   // portWorkInfo,
   portWorkStatus,
   postInfo,
-  
 }) {
   function closeModal() {
     setModalStatus(false);
@@ -72,8 +70,6 @@ function ModalWindow({
   }
 
   const dispatch = useDispatch();
-
-
 
   return (
     <div>
@@ -126,21 +122,21 @@ function ModalWindow({
                 {/* ROW 3 */}
                 <div className="h-[25%] flex flex-row justify-between">
                   <div className="w-[30%] pl-5 ">
-                  <div className="uppercase text-sm">
-                      {postInfo.jobTitle}
-                    </div>
+                    <div className="uppercase text-sm">{postInfo.jobTitle}</div>
                     <div className="uppercase text-4xl">
                       {postInfo.companyName}
                     </div>
-                    <p className="text-sm py-5">
-                      {postInfo.jobDescription}
-                    </p>
+                    <p className="text-sm py-5">{postInfo.jobDescription}</p>
                     <div className="uppercase text-xs">Techs</div>
                     <div className=" text-sm ">
                       <ul className="flex flex-row">
-                        {postInfo? postInfo.tools.map((tech, index) => (
-                          <li className="mr-5" key={index}>{tech}</li>
-                        )) : null}
+                        {postInfo
+                          ? postInfo.tools.map((tech, index) => (
+                              <li className="mr-5" key={index}>
+                                {tech}
+                              </li>
+                            ))
+                          : null}
                       </ul>
                     </div>
                   </div>
@@ -160,7 +156,7 @@ function ModalWindow({
               <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-[90vh] m-10 z-20 overflow-hidden">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
-                  <div className="text-6xl ">Portfólio</div>
+                  <div className="text-4xl ">Portfólio</div>
                   <div
                     className="cursor-pointer text-2xl z-50"
                     onClick={() => {
@@ -171,7 +167,7 @@ function ModalWindow({
                     }}
                   >
                     {/* FECHAR */}
-                    <AiFillCloseCircle size={40} />
+                    <AiFillCloseCircle size={30} />
                   </div>
                 </div>
 
@@ -198,21 +194,24 @@ function ModalWindow({
                 {/* ROW 3 */}
                 <div className="h-[25%] flex flex-row justify-between">
                   <div className="w-[30%] pl-5 ">
-                  <div className="uppercase text-sm">
-                      {postInfo.jobTitle}
-                    </div>
+                    <div className="uppercase text-sm">{postInfo.jobTitle}</div>
                     <div className="uppercase text-4xl">
                       {postInfo.companyName}
                     </div>
-                    <p className="text-sm py-5">
-                      {postInfo.jobDescription}
-                    </p>
+                    <p className="text-sm py-5">{postInfo.jobDescription}</p>
                     <div className="uppercase text-xs">Techs</div>
                     <div className=" text-sm ">
                       <ul className="flex flex-row">
-                        {postInfo? postInfo.tools.map((tech, index) => (
-                          <li className="mr-5" key={index}>{tech}</li>
-                        )) : null}
+                        {postInfo
+                          ? postInfo.tools.map((tech, index) => (
+                              <li
+                                className="text-xs p-1 px-2 rounded-lg my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold cursor-pointer"
+                                key={index}
+                              >
+                                {tech}
+                              </li>
+                            ))
+                          : null}
                       </ul>
                     </div>
                   </div>

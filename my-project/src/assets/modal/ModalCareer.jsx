@@ -91,7 +91,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                       dispatch(particlesOn());
                     }}
                   >
-                    <AiFillCloseCircle />
+                    <AiFillCloseCircle size={40}  />
                   </div>
                 </div>
                 {/* ROW 2 */}
@@ -188,7 +188,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                       dispatch(particlesOn());
                     }}
                   >
-                    <AiFillCloseCircle />
+                    <AiFillCloseCircle size={30}  />
                   </div>
                 </div>
                 {/* ROW 2 */}
