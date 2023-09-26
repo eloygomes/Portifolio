@@ -49,7 +49,7 @@ const ImageCarousel = ({ images }) => {
                 showIndicators={true}
                 showThumbs={false}
                 selectedItem={selectedImageIndex}
-                className=" rounded-xl"
+                className="carrao rounded-xl"
               >
                 {
                   // eslint-disable-next-line react/prop-types

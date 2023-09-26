@@ -85,3 +85,21 @@ button:focus-visible {
   box-shadow: none;
 }
 
+
+
+.carrao .control-next, .carrao .control-prev{
+  height: 80vh;
+  background-color: red;
+}
+
+.carousel .control-next.control-arrow:before{
+  border-left: 8px solid gold;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.carousel .control-prev.control-arrow:before{
+  border-right: 8px solid gold;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}

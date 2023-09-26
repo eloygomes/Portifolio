@@ -267,6 +267,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                               ))
                             : null}
                         </div>
+                        
                       </div>
                     </div>
                   </div>

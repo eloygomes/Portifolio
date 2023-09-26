@@ -172,7 +172,7 @@ function ModalWindow({
                 </div>
 
                 {/* ROW 2 */}
-                <div className=" flex flex-col ">
+                <div className=" flex flex-col cursor-pointer ">
                   {portWorkStatus === "edicao" ? (
                     <div className="flex flex-row-reverse">
                       <iframe
@@ -192,7 +192,7 @@ function ModalWindow({
                 </div>
 
                 {/* ROW 3 */}
-                <div className="h-[25%] flex flex-row justify-between">
+                <div className=" flex flex-row justify-between">
                   <div className="w-[30%] pl-5 ">
                     <div className="uppercase text-sm">{postInfo.jobTitle}</div>
                     <div className="uppercase text-4xl">
@@ -205,7 +205,7 @@ function ModalWindow({
                         {postInfo
                           ? postInfo.tools.map((tech, index) => (
                               <li
-                                className="text-xs p-1 px-2 rounded-lg my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold cursor-pointer"
+                                className="text-xs p-1  px-2 rounded-lg my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold cursor-pointer"
                                 key={index}
                               >
                                 {tech}
