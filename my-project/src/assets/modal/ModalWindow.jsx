@@ -160,7 +160,7 @@ function ModalWindow({
               <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-[90vh] m-10 z-20 overflow-hidden">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
-                  <div className="text-6xl">Portfólio</div>
+                  <div className="text-6xl ">Portfólio</div>
                   <div
                     className="cursor-pointer text-2xl z-50"
                     onClick={() => {
@@ -171,7 +171,7 @@ function ModalWindow({
                     }}
                   >
                     {/* FECHAR */}
-                    <AiFillCloseCircle />
+                    <AiFillCloseCircle size={40} />
                   </div>
                 </div>
 
