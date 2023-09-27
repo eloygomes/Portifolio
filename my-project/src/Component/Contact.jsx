@@ -25,6 +25,8 @@ function Contact() {
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
 
   // console.log(menuDisplayOpt);
+  
+  
 
   return (
     <>
