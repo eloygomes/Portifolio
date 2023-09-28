@@ -40,7 +40,7 @@ const ImageCarousel = ({ images }) => {
             className="w-[70%]  p-16 lg:pt-2 lg:p-5 flex flex-col justify-center absolute right-0 "
             id="FULL IMAGE HERE"
           >
-            <div className="container mx-auto h-auto mt-96 max-h-[89vh]">
+            <div className="container mx-auto h-auto mt-64 max-h-[89vh]">
               <Carousel
                 showArrows={true}
                 showStatus={false}
