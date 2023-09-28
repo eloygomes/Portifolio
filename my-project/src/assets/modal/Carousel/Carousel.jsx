@@ -2,28 +2,12 @@ import { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-// eslint-disable-next-line react/prop-types
 const ImageCarousel = ({ images }) => {
   const [selectedImageIndex] = useState(0);
-  // eslint-disable-next-line no-unused-vars
-  const [biggerOrNot, setBiggerOrNot] = useState(false);
+  const [firstImageIndex, setFirstImageIndex] = useState(0);
 
-  // const handleImageClick = (index) => {
-  //   setSelectedImageIndex(index);
-  // };
-
-  // console.log("images", images);
-
-  const validarAlturaImagem = (imagem) => {
-    const img = new Image();
-    img.src = imagem;
-    // console.log(img.src);
-
-    if (img.height > 2000) {
-      return false;
-    } else {
-      return true;
-    }
+  const handleBeforeChange = (oldIndex, newIndex) => {
+    setFirstImageIndex(newIndex);
   };
 
   return (
@@ -33,18 +17,15 @@ const ImageCarousel = ({ images }) => {
         //////////////////////////////////////////// Mobile ////////////////////////////////////////////
         //////////////////////////////////////////// Mobile ////////////////////////////////////////////
         <div className="flex flex-col items-center justify-around">
-          {
-            // eslint-disable-next-line react/prop-types
-            images.map((image, index) => (
-              <div key={index} className="p-3">
-                <img
-                  className="rounded-lg object-cover   items-center"
-                  src={image}
-                  alt={`Image ${index + 1}`}
-                />
-              </div>
-            ))
-          }
+          {images.map((image, index) => (
+            <div key={index} className="p-3">
+              <img
+                className="rounded-lg object-cover items-center"
+                src={image}
+                alt={`Image ${index + 1}`}
+              />
+            </div>
+          ))}
         </div>
       ) : (
         //////////////////////////////////////////// Desktop ////////////////////////////////////////////
@@ -66,32 +47,22 @@ const ImageCarousel = ({ images }) => {
                 showThumbs={false}
                 selectedItem={selectedImageIndex}
                 className="carrao rounded-xl"
+                beforeChange={handleBeforeChange}
               >
-                {images.map(
-                  (image, index) => (
-                    // console.log(image),
-                    // validarAlturaImagem(image),
-                    console.log(validarAlturaImagem(image)),
-                    (
-                      <div
-                        key={index}
-                        // className="h-screen overflow-scroll flex items-start justify-center"
-                        // className=" overflow-scroll flex items-start justify-center"
-                        className={`${
-                          validarAlturaImagem(image)
-                            ? "overflow-hidden"
-                            : "overflow-scroll"
-                        } h-screen flex items-start justify-center`}
-                      >
-                        <img
-                          className="rounded-lg object-cover p-10 pb-96 items-center"
-                          src={image}
-                          alt={`Image ${index + 1}`}
-                        />
-                      </div>
-                    )
-                  )
-                )}
+                {images.map((image, index) => (
+                  <div
+                    key={index}
+                    className={`${
+                      index === firstImageIndex ? "h-screen" : "h-auto"
+                    } overflow-scroll flex items-start justify-center`}
+                  >
+                    <img
+                      className="rounded-lg object-cover p-10 pb-96 items-center"
+                      src={image}
+                      alt={`Image ${index + 1}`}
+                    />
+                  </div>
+                ))}
               </Carousel>
             </div>
           </div>
