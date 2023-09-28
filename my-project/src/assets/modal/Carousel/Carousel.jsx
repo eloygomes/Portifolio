@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+// eslint-disable-next-line react/prop-types
 const ImageCarousel = ({ images }) => {
   const [selectedImageIndex] = useState(0);
   const [firstImageIndex, setFirstImageIndex] = useState(0);

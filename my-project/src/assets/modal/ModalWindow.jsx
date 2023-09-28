@@ -158,7 +158,7 @@ function ModalWindow({
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
                   <div className="flex flex-col">
                     <div className="text-4xl ">Portfólio</div>
-                    <div className="text-base ">UI/UX</div>
+                    <div className="text-base uppercase ">{portWorkStatus}</div>
                   </div>
                   <div
                     className="cursor-pointer text-2xl z-50"
