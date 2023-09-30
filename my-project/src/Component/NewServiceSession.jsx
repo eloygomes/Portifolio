@@ -10,9 +10,9 @@ function NewServiceSession() {
         <div className="min-h-[85vh] mb-[10vh] mt-[15vh] mx-5 p-5 backdrop-blur-xl bg-white bg-opacity-10 rounded-xl">
           <div className="container mx-auto flex flex-col justify-center text-center p-5">
             <div className="flex flex-col">
-              <h1>Services</h1>
+              <h1>Serviços</h1>
               <p className="md:mx-20 sm:mx-0 p-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Segue abaixo alguns dos serviços oferecidos.
               </p>
             </div>
             <div>
@@ -39,16 +39,14 @@ function NewServiceSession() {
                     </h1>
                     {window.innerWidth <= 961 ? ( // Mobile
                       <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Id cum quidem minus ratione reiciendis odio esse
-                        voluptatum tempora quos voluptates placeat, quis quae
+                        Analise perfil de usuários, criação de wireframes,
+                        prototipagem, design system, testes de usabilidade
                       </p>
                     ) : (
                       // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Id cum quidem minus ratione reiciendis odio esse
-                        voluptatum tempora quos voluptates placeat, quis quae
+                        Analise perfil de usuários, Criação de wireframes,
+                        Prototipagem, Design system, Testes de usabilidade
                       </p>
                     )}
                   </div>
@@ -76,16 +74,16 @@ function NewServiceSession() {
                     </h1>
                     {window.innerWidth <= 961 ? ( // Mobile
                       <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Id cum quidem minus ratione reiciendis odio esse
-                        voluptatum tempora quos voluptates placeat, quis quae
+                        Análise de dados e definição da voz da marca, Elaboração
+                        de estratégia de comunicação, design de produto, de
+                        serviço e interação.
                       </p>
                     ) : (
                       // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Id cum quidem minus ratione reiciendis odio esse
-                        voluptatum tempora quos voluptates placeat, quis quae
+                        Análise de dados e definição da voz da marca, Elaboração
+                        de estratégia de comunicação, design de produto, de
+                        serviço e interação.
                       </p>
                     )}
                   </div>
