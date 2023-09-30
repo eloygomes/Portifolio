@@ -110,16 +110,16 @@ function NewServiceSession() {
                     </h1>
                     {window.innerWidth <= 961 ? ( // Mobile
                       <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Id cum quidem minus ratione reiciendis odio esse
-                        voluptatum tempora quos voluptates placeat, quis quae
+                        Analise de marca, definição de objetivos, criação de
+                        conceito, desenvolvimento de protótipos e acompanhamento
+                        do processo de produção
                       </p>
                     ) : (
                       // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Id cum quidem minus ratione reiciendis odio esse
-                        voluptatum tempora quos voluptates placeat, quis quae
+                        Analise de marca, definição de objetivos, criação de
+                        conceito, desenvolvimento de protótipos e acompanhamento
+                        do processo de produção
                       </p>
                     )}
                   </div>
