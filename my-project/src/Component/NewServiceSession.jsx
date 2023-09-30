@@ -45,8 +45,8 @@ function NewServiceSession() {
                     ) : (
                       // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Analise perfil de usuários, Criação de wireframes,
-                        Prototipagem, Design system, Testes de usabilidade
+                        Analise perfil de usuários, criação de wireframes,
+                        prototipagem, design system, testes de usabilidade
                       </p>
                     )}
                   </div>
@@ -74,14 +74,14 @@ function NewServiceSession() {
                     </h1>
                     {window.innerWidth <= 961 ? ( // Mobile
                       <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Análise de dados e definição da voz da marca, Elaboração
+                        Análise de dados e definição da voz da marca, elaboração
                         de estratégia de comunicação, design de produto, de
                         serviço e interação.
                       </p>
                     ) : (
                       // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Análise de dados e definição da voz da marca, Elaboração
+                        Análise de dados e definição da voz da marca, elaboração
                         de estratégia de comunicação, design de produto, de
                         serviço e interação.
                       </p>
@@ -146,14 +146,14 @@ function NewServiceSession() {
                     </h1>
                     {window.innerWidth <= 961 ? ( // Mobile
                       <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Edição e impressão de ensaios artísticos, casamentos,
-                        gestantes, moda, produto e comercial.
+                        Captação, edição e impressão de ensaios artísticos,
+                        casamentos, gestantes, moda, produto e comercial.
                       </p>
                     ) : (
                       // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Edição e impressão de ensaios artísticos, casamentos,
-                        gestantes, moda, produto e comercial.
+                        Captação, edição e impressão de ensaios artísticos,
+                        casamentos, gestantes, moda, produto e comercial.
                       </p>
                     )}
                   </div>
@@ -180,14 +180,14 @@ function NewServiceSession() {
                     </h1>
                     {window.innerWidth <= 961 ? ( // Mobile
                       <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Planejamento, pesquisa, briefing, conceito,
-                        apresentação, produção e edição de videos.
+                        Planejamento, pesquisa, briefing, conceito, roteiro,
+                        produção e edição de videos.
                       </p>
                     ) : (
                       // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Planejamento, pesquisa, briefing, conceito,
-                        apresentação, produção e edição de videos.
+                        Planejamento, pesquisa, briefing, conceito, roteiro,
+                        produção e edição de videos.
                       </p>
                     )}
                   </div>
@@ -214,16 +214,16 @@ function NewServiceSession() {
                     </h1>
                     {window.innerWidth <= 961 ? ( // Mobile
                       <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Id cum quidem minus ratione reiciendis odio esse
-                        voluptatum tempora quos voluptates placeat, quis quae
+                        Planejamento, pesquisa, briefing, conceito, roteiro,
+                        produção, gravação, apresentação e publicação de
+                        podcasts.
                       </p>
                     ) : (
                       // D
                       <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Id cum quidem minus ratione reiciendis odio esse
-                        voluptatum tempora quos voluptates placeat, quis quae
+                        Planejamento, pesquisa, briefing, conceito, roteiro,
+                        produção, gravação, apresentação e publicação de
+                        podcasts.
                       </p>
                     )}
                   </div>
