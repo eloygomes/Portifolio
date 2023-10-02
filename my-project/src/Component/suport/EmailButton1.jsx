@@ -1,9 +1,10 @@
-import React, { useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 
+// eslint-disable-next-line react/prop-types
 const EmailButtonCustom = ({ children }) => {
-  const [email, setEmail] = useState("eloy.gomes@icloud.com");
-  const [subject, setSubject] = useState("Dúvidas sobre UI/UX  - Orçamento");
-  const [body, setBody] = useState(
+  const [email] = useState("eloy.gomes@icloud.com");
+  const [subject] = useState("Dúvidas sobre UI/UX  - Orçamento");
+  const [body] = useState(
     "Olá,\n\nGostaria de mais informações sobre Desenvolvimento UI/UX.\n\n[Escreva aqui a sua mensagem]\n\nAtt,\n[Insira aqui o seu nome]"
   );
 

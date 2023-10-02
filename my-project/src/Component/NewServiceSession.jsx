@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
-import EmailButtonCustom from "./suport";
+import EmailButtonCustom from "./suport/EmailButton1";
+import EmailButtonBranding from "./suport/EmailButton2";
+import EmailButtonImpresso from "./suport/EmailButton3";
+import EmailButtonFoto from "./suport/EmailButton4";
+import EmailButtonEdicao from "./suport/EmailButton5";
+import EmailButtonPodcast from "./suport/EmailButton6";
 
 function NewServiceSession() {
   return (
@@ -54,183 +59,192 @@ function NewServiceSession() {
                     </div>
                   </motion.div>
                 </EmailButtonCustom>
-
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ duration: 0.2 }}
-                  className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
-                >
-                  <div className=" rounded-xl flex flex-col z-50">
-                    <img
-                      src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_06-85a77b29.jpg"
-                      alt=""
-                      className="object-cover rounded-xl"
-                    />
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                    <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
-                      BRANDING
-                    </h1>
-                    {window.innerWidth <= 961 ? ( // Mobile
-                      <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Análise de dados e definição da voz da marca, elaboração
-                        de estratégia de comunicação, design de produto, de
-                        serviço e interação.
-                      </p>
-                    ) : (
-                      // D
-                      <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Análise de dados e definição da voz da marca, elaboração
-                        de estratégia de comunicação, design de produto, de
-                        serviço e interação.
-                      </p>
-                    )}
-                  </div>
-                </motion.div>
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ duration: 0.2 }}
-                  className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
-                >
-                  <div className=" rounded-xl flex flex-col z-50">
-                    <img
-                      src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_05-45d24d3b.jpg"
-                      alt=""
-                      className="object-cover rounded-xl"
-                    />
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                    <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
-                      IMPRESSOS
-                    </h1>
-                    {window.innerWidth <= 961 ? ( // Mobile
-                      <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Analise de marca, definição de objetivos, criação de
-                        conceito, desenvolvimento de protótipos e acompanhamento
-                        do processo de produção
-                      </p>
-                    ) : (
-                      // D
-                      <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Analise de marca, definição de objetivos, criação de
-                        conceito, desenvolvimento de protótipos e acompanhamento
-                        do processo de produção
-                      </p>
-                    )}
-                  </div>
-                </motion.div>
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ duration: 0.2 }}
-                  className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
-                >
-                  <div className=" rounded-xl flex flex-col z-50">
-                    <img
-                      src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_01-130e691d.jpg"
-                      alt=""
-                      className="object-cover rounded-xl"
-                    />
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                    <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
-                      FOTOGRAFIA
-                    </h1>
-                    {window.innerWidth <= 961 ? ( // Mobile
-                      <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Captação, edição e impressão de ensaios artísticos,
-                        casamentos, gestantes, moda, produto e comercial.
-                      </p>
-                    ) : (
-                      // D
-                      <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Captação, edição e impressão de ensaios artísticos,
-                        casamentos, gestantes, moda, produto e comercial.
-                      </p>
-                    )}
-                  </div>
-                </motion.div>
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ duration: 0.2 }}
-                  className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
-                >
-                  <div className=" rounded-xl flex flex-col z-50">
-                    <img
-                      src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_02-51365147.jpg"
-                      alt=""
-                      className="object-cover rounded-xl"
-                    />
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                    <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
-                      EDIÇÃO
-                    </h1>
-                    {window.innerWidth <= 961 ? ( // Mobile
-                      <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Planejamento, pesquisa, briefing, conceito, roteiro,
-                        produção e edição de videos.
-                      </p>
-                    ) : (
-                      // D
-                      <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Planejamento, pesquisa, briefing, conceito, roteiro,
-                        produção e edição de videos.
-                      </p>
-                    )}
-                  </div>
-                </motion.div>
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ duration: 0.2 }}
-                  className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
-                >
-                  <div className=" rounded-xl flex flex-col z-50">
-                    <img
-                      src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_03-afb38374.jpg"
-                      alt=""
-                      className="object-cover rounded-xl"
-                    />
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                    <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
-                      PODCAST
-                    </h1>
-                    {window.innerWidth <= 961 ? ( // Mobile
-                      <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Planejamento, pesquisa, briefing, conceito, roteiro,
-                        produção, gravação, apresentação e publicação de
-                        podcasts.
-                      </p>
-                    ) : (
-                      // D
-                      <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Planejamento, pesquisa, briefing, conceito, roteiro,
-                        produção, gravação, apresentação e publicação de
-                        podcasts.
-                      </p>
-                    )}
-                  </div>
-                </motion.div>
+                <EmailButtonBranding>
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0 }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+                  >
+                    <div className=" rounded-xl flex flex-col z-50">
+                      <img
+                        src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_06-85a77b29.jpg"
+                        alt=""
+                        className="object-cover rounded-xl"
+                      />
+                      <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
+                      <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
+                      <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
+                        BRANDING
+                      </h1>
+                      {window.innerWidth <= 961 ? ( // Mobile
+                        <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                          Análise de dados e definição da voz da marca,
+                          elaboração de estratégia de comunicação, design de
+                          produto, de serviço e interação.
+                        </p>
+                      ) : (
+                        // D
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                          Análise de dados e definição da voz da marca,
+                          elaboração de estratégia de comunicação, design de
+                          produto, de serviço e interação.
+                        </p>
+                      )}
+                    </div>
+                  </motion.div>
+                </EmailButtonBranding>
+                <EmailButtonImpresso>
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0 }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+                  >
+                    <div className=" rounded-xl flex flex-col z-50">
+                      <img
+                        src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_05-45d24d3b.jpg"
+                        alt=""
+                        className="object-cover rounded-xl"
+                      />
+                      <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
+                      <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
+                      <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
+                        IMPRESSOS
+                      </h1>
+                      {window.innerWidth <= 961 ? ( // Mobile
+                        <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                          Analise de marca, definição de objetivos, criação de
+                          conceito, desenvolvimento de protótipos e
+                          acompanhamento do processo de produção
+                        </p>
+                      ) : (
+                        // D
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                          Analise de marca, definição de objetivos, criação de
+                          conceito, desenvolvimento de protótipos e
+                          acompanhamento do processo de produção
+                        </p>
+                      )}
+                    </div>
+                  </motion.div>
+                </EmailButtonImpresso>
+                <EmailButtonFoto>
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0 }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+                  >
+                    <div className=" rounded-xl flex flex-col z-50">
+                      <img
+                        src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_01-130e691d.jpg"
+                        alt=""
+                        className="object-cover rounded-xl"
+                      />
+                      <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
+                      <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
+                      <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
+                        FOTOGRAFIA
+                      </h1>
+                      {window.innerWidth <= 961 ? ( // Mobile
+                        <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                          Captação, edição e impressão de ensaios artísticos,
+                          casamentos, gestantes, moda, produto e comercial.
+                        </p>
+                      ) : (
+                        // D
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                          Captação, edição e impressão de ensaios artísticos,
+                          casamentos, gestantes, moda, produto e comercial.
+                        </p>
+                      )}
+                    </div>
+                  </motion.div>
+                </EmailButtonFoto>
+                <EmailButtonEdicao>
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0 }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+                  >
+                    <div className=" rounded-xl flex flex-col z-50">
+                      <img
+                        src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_02-51365147.jpg"
+                        alt=""
+                        className="object-cover rounded-xl"
+                      />
+                      <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
+                      <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
+                      <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
+                        EDIÇÃO
+                      </h1>
+                      {window.innerWidth <= 961 ? ( // Mobile
+                        <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                          Planejamento, pesquisa, briefing, conceito, roteiro,
+                          produção e edição de videos.
+                        </p>
+                      ) : (
+                        // D
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                          Planejamento, pesquisa, briefing, conceito, roteiro,
+                          produção e edição de videos.
+                        </p>
+                      )}
+                    </div>
+                  </motion.div>
+                </EmailButtonEdicao>
+                <EmailButtonPodcast>
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0 }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+                  >
+                    <div className=" rounded-xl flex flex-col z-50">
+                      <img
+                        src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_03-afb38374.jpg"
+                        alt=""
+                        className="object-cover rounded-xl"
+                      />
+                      <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
+                      <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
+                      <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
+                        PODCAST
+                      </h1>
+                      {window.innerWidth <= 961 ? ( // Mobile
+                        <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                          Planejamento, pesquisa, briefing, conceito, roteiro,
+                          produção, gravação, apresentação e publicação de
+                          podcasts.
+                        </p>
+                      ) : (
+                        // D
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                          Planejamento, pesquisa, briefing, conceito, roteiro,
+                          produção, gravação, apresentação e publicação de
+                          podcasts.
+                        </p>
+                      )}
+                    </div>
+                  </motion.div>
+                </EmailButtonPodcast>
               </div>
             </div>
           </div>
