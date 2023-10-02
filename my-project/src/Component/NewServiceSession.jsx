@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import EmailButtonCustom from "./suport";
 
 function NewServiceSession() {
   return (
@@ -17,40 +18,42 @@ function NewServiceSession() {
             </div>
             <div>
               <div className="grid md:grid-cols-3 sm:grid-cols-1 grid-rows-2 gap-x-10 gap-y-10 md:p-5">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ duration: 0.2 }}
-                  className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
-                >
-                  <div className=" rounded-xl flex flex-col z-50">
-                    <img
-                      src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_04-1a29e693.jpg"
-                      alt=""
-                      className="object-cover rounded-xl"
-                    />
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                    <h1 className="absolute inset-0 flex items-center justify-start text-2xl text-white top-10 p-5">
-                      UI/UX
-                    </h1>
-                    {window.innerWidth <= 961 ? ( // Mobile
-                      <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Analise perfil de usuários, criação de wireframes,
-                        prototipagem, design system, testes de usabilidade
-                      </p>
-                    ) : (
-                      // D
-                      <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
-                        Analise perfil de usuários, criação de wireframes,
-                        prototipagem, design system, testes de usabilidade
-                      </p>
-                    )}
-                  </div>
-                </motion.div>
+                <EmailButtonCustom>
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0 }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+                  >
+                    <div className=" rounded-xl flex flex-col z-50">
+                      <img
+                        src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_04-1a29e693.jpg"
+                        alt=""
+                        className="object-cover rounded-xl"
+                      />
+                      <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
+                      <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
+                      <h1 className="absolute inset-0 flex items-center justify-start text-2xl text-white top-10 p-5">
+                        UI/UX
+                      </h1>
+                      {window.innerWidth <= 961 ? ( // Mobile
+                        <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                          Analise perfil de usuários, criação de wireframes,
+                          prototipagem, design system, testes de usabilidade
+                        </p>
+                      ) : (
+                        // D
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                          Analise perfil de usuários, criação de wireframes,
+                          prototipagem, design system, testes de usabilidade
+                        </p>
+                      )}
+                    </div>
+                  </motion.div>
+                </EmailButtonCustom>
 
                 <motion.div
                   initial={{ scale: 0 }}
