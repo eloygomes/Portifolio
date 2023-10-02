@@ -60,13 +60,6 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
 
   const dispatch = useDispatch();
 
-  // console.log(careerModalInfo);
-  // console.log(careerModalInfo.jobTools);
-
-  // useEffect(() => {
-  //   setCarrerTools(careerModalInfo.jobTools);
-  // }, [careerModalInfo.jobTools]);
-
   return (
     <div>
       {window.innerWidth <= 961 ? (
@@ -91,7 +84,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                       dispatch(particlesOn());
                     }}
                   >
-                    <AiFillCloseCircle size={40}  />
+                    <AiFillCloseCircle size={40} />
                   </div>
                 </div>
                 {/* ROW 2 */}
@@ -188,7 +181,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                       dispatch(particlesOn());
                     }}
                   >
-                    <AiFillCloseCircle size={30}  />
+                    <AiFillCloseCircle size={30} />
                   </div>
                 </div>
                 {/* ROW 2 */}
@@ -231,7 +224,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                         <div className="uppercase font-bold text-sm pt-2 mr-5 mt-5">
                           Localização
                         </div>
-                        <div className=" text-sm  ">
+                        <div className=" text-[0.75rem]  ">
                           {careerModalInfo.jobAdress}
                         </div>
                       </div>
@@ -267,7 +260,6 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                               ))
                             : null}
                         </div>
-                        
                       </div>
                     </div>
                   </div>
