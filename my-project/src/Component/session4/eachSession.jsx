@@ -23,6 +23,8 @@ function EachSession({
   jobImg,
   // eslint-disable-next-line react/prop-types
   jobAdress,
+  // eslint-disable-next-line react/prop-types
+  delayForEach,
 }) {
   const mainControls = useAnimation();
   const ref = useRef(null);
@@ -54,8 +56,8 @@ function EachSession({
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.3, delay: 0.5 }}
-        className="relative sm:mb-0  h-full bottom-0 mx-2  py-8 px-5 rounded-xl backdrop-blur-xl bg-white/10 cursor-pointer  hover:bg-[#19142A] hover:rounded-xl drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 "
+        transition={{ duration: 0.3, delay: delayForEach }}
+        className="relative sm:mb-0  h-full bottom-0 mx-2  py-8 px-5 rounded-xl backdrop-blur-xl bg-white/10 cursor-pointer hover:scale-150 duration-300 hover:bg-[#19142A] hover:rounded-xl drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1  "
         onClick={() => {
           setModalStatus(true);
           setcareerModalInfo({
@@ -88,7 +90,7 @@ function EachSession({
           </div>
           <div className="hidden sm:flex w-full bg-gray-200 h-0.5 "></div>
         </div>
-        <div className="mt-3 sm:pr-8 flex flex-col">
+        <div className="mt-3 sm:pr-8 flex flex-col min-h-[150px]">
           <motion.h3
             variants={{
               hidden: { opacity: 0, y: 75 },
@@ -96,8 +98,8 @@ function EachSession({
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.7 }}
-            className="text-lg font-semibold text-white h-20"
+            transition={{ duration: 0.3, delay: 0.7 }}
+            className="text-lg font-semibold text-white h-16"
           >
             {jobPosition}
           </motion.h3>
@@ -108,7 +110,7 @@ function EachSession({
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.7 }}
+            transition={{ duration: 0.3, delay: 0.9 }}
             className="block mb-2 text-sm font-normal  text-gray-100 "
           >
             {jobName}
@@ -120,8 +122,8 @@ function EachSession({
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.7 }}
-            className="block mb-2 text-xs font-normal text-gray-100"
+            transition={{ duration: 0.3, delay: 1.1 }}
+            className="block mb-5 text-xs font-normal text-gray-100"
           >
             {jobSegment}
           </motion.h3>
@@ -132,8 +134,8 @@ function EachSession({
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.7 }}
-            className="text-xs font-normal text-gray-100 dark:text-gray-400 mt-1 max-w-lg whitespace-nowrap"
+            transition={{ duration: 0.3, delay: 1.3 }}
+            className="text-xs font-normal text-gray-100 dark:text-gray-400 mt-1 max-w-lg whitespace-nowrap absolute bottom-8"
           >
             {jobDuration}
           </motion.p>

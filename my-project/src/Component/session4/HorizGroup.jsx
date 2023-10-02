@@ -24,6 +24,7 @@ function HorizGroup({
             jobImg={`${carrerDataInfo.job01.jobImg}`}
             setModalStatus={setModalStatus}
             setcareerModalInfo={setcareerModalInfo}
+            delayForEach={0.5}
           />
           <EachSession
             jobPosition={`${carrerDataInfo.job02.jobPosition}`}
@@ -36,6 +37,7 @@ function HorizGroup({
             jobImg={`${carrerDataInfo.job02.jobImg}`}
             setModalStatus={setModalStatus}
             setcareerModalInfo={setcareerModalInfo}
+            delayForEach={0.7}
           />
           <EachSession
             jobPosition={`${carrerDataInfo.job03.jobPosition}`}
@@ -48,6 +50,7 @@ function HorizGroup({
             jobImg={`${carrerDataInfo.job03.jobImg}`}
             setModalStatus={setModalStatus}
             setcareerModalInfo={setcareerModalInfo}
+            delayForEach={0.9}
           />
           <EachSession
             jobPosition={`${carrerDataInfo.job04.jobPosition}`}
@@ -60,6 +63,7 @@ function HorizGroup({
             jobImg={`${carrerDataInfo.job04.jobImg}`}
             setModalStatus={setModalStatus}
             setcareerModalInfo={setcareerModalInfo}
+            delayForEach={1.1}
           />
           <EachSession
             jobPosition={`${carrerDataInfo.job05.jobPosition}`}
@@ -72,6 +76,7 @@ function HorizGroup({
             jobImg={`${carrerDataInfo.job05.jobImg}`}
             setModalStatus={setModalStatus}
             setcareerModalInfo={setcareerModalInfo}
+            delayForEach={1.3}
           />
           <EachSession
             jobPosition={`${carrerDataInfo.job06.jobPosition}`}
@@ -84,6 +89,7 @@ function HorizGroup({
             jobImg={`${carrerDataInfo.job06.jobImg}`}
             setModalStatus={setModalStatus}
             setcareerModalInfo={setcareerModalInfo}
+            delayForEach={1.5}
           />
         </ol>
       </div>
