@@ -4,6 +4,8 @@ import { useState } from "react";
 // import { AiFillCloseCircle } from "react-icons/ai";
 
 import { AiOutlineMenu } from "react-icons/ai";
+import NavBarMobile from "./suport/NavBarMobile";
+import NavBarMobileItems from "./suport/NavBarMobileItems";
 
 function NavBar() {
   //Redux
@@ -39,80 +41,13 @@ function NavBar() {
             }}
           />
           <div
-            className={`w-screen h-screen   backdrop-blur-xl bg-[#19142A]/95 absolute top-0 left-0 
+            className={`w-screen h-screen   backdrop-blur-xl bg-[#282044] absolute top-0 left-0 
             ${
               mobileShowMenu ? "flex flex-col justify-between" : "hidden"
             } z-10`}
           >
-            <div className="h-[90%] w-screen flex flex-col  text-center p-5">
-              <div
-                className="h-1/6 flex items-center justify-center text-xl rounded-xl backdrop-blur-xl bg-[#19142A]/10  hover:scale-105   my-2"
-                onClick={() => setMobileShowMenu(!mobileShowMenu)}
-              >
-                <a href="#" className="px-2 text-4xl font-black">
-                  EVG
-                </a>
-              </div>
-
-              <div className="h-[80%] flex flex-col justify-between">
-                <div
-                  className="h-1/6 flex items-center justify-center text-xl rounded-xl backdrop-blur-xl  hover:scale-105   my-2"
-                  onClick={() => setMobileShowMenu(!mobileShowMenu)}
-                >
-                  <a href="#bio" className="px-2">
-                    BIO
-                  </a>
-                </div>
-                <div
-                  className="h-1/6 flex items-center justify-center text-xl rounded-xl backdrop-blur-xl bg-[#19142A]/10 hover:bg-white/10 hover:scale-105   my-2"
-                  onClick={() => setMobileShowMenu(!mobileShowMenu)}
-                >
-                  <a href="#port" className="px-2">
-                    PORTFÓLIO
-                  </a>
-                </div>
-                <div
-                  className="h-1/6 flex items-center justify-center text-xl rounded-xl backdrop-blur-xl bg-[#19142A]/10 hover:bg-white/10 hover:scale-105   my-2"
-                  onClick={() => setMobileShowMenu(!mobileShowMenu)}
-                >
-                  <a href="#carreira" className="px-2">
-                    CARREIRA
-                  </a>
-                </div>
-                <div
-                  className="h-1/6 flex items-center justify-center text-xl rounded-xl backdrop-blur-xl bg-[#19142A]/10 hover:bg-white/10 hover:scale-105   my-2"
-                  onClick={() => setMobileShowMenu(!mobileShowMenu)}
-                >
-                  <a href="#services" className="px-2">
-                    SERVIÇOS
-                  </a>
-                </div>
-
-                <div
-                  className="h-1/6 flex items-center justify-center text-xl rounded-xl backdrop-blur-xl bg-[#19142A]/10 hover:bg-white/10 hover:scale-105   my-2"
-                  onClick={() => setMobileShowMenu(!mobileShowMenu)}
-                >
-                  <a href="#contato" className="px-2">
-                    CONTATO
-                  </a>
-                </div>
-
-                <div className="w-full flex items-center justify-center bg-[#D6223B] text-xs whitespace-nowrap rounded-lg my-10 p-5 cursor-pointer ">
-                  DOWNLOAD CV
-                </div>
-              </div>
-            </div>
-
-            <div className=" h-[10%] w-screen  text-center p-5">
-              <div className="font-black text-2xl hover:scale-105">
-                <a
-                  className="font-extrabold text-center "
-                  onClick={() => setMobileShowMenu(!mobileShowMenu)}
-                >
-                  FECHAR
-                </a>
-              </div>
-            </div>
+            <NavBarMobile setMobileShowMenu={setMobileShowMenu} />
+            <NavBarMobileItems setMobileShowMenu={setMobileShowMenu} />
           </div>
         </div>
       ) : (
