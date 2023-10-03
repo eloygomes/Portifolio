@@ -25,8 +25,6 @@ function Contact() {
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
 
   // console.log(menuDisplayOpt);
-  
-  
 
   return (
     <>
@@ -148,12 +146,12 @@ function Contact() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="py-5 text-sm max-w-lg"
+                  className="py-5 text-sm max-w-[50vw]"
                 >
-                  Nossos produtos e serviços são a escolha certa para quem busca
-                  qualidade e satisfação. Junte-se aos nossos clientes
-                  satisfeitos e descubra como podemos ajudá-lo a atingir seus
-                  objetivos. Clique abaixo e comece agora mesmo!”
+                  Seja qual for o escopo do seu projeto, seja a criação de um
+                  site atraente, o desenvolvimento de uma plataforma de comércio
+                  eletrônico ou a construção de uma aplicação web escalável,
+                  estou aqui para ajudar.
                 </motion.h5>
               </div>
             </div>
