@@ -27,7 +27,6 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-
 function BioSession() {
   // const [FormationCollapseStatus, setFormationCollapseStatus] = useState(false);
 
@@ -63,114 +62,117 @@ function BioSession() {
     <>
       <div className=" w-screen flex flex-col" id="bio">
         <div className="container mx-auto flex flex-col justify-center">
-          <div className="flex flex-col">
+          <div className="flex flex-col ">
             {/* BOX */}
-            <div
-              ref={ref}
-              className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-10 m-5 sm:my-40 my-00 rounded-xl "
-            >
-              <div className="flex flex-col-reverse sm:flex-row md:flex-col-reverse lg:flex-row">
-                <div className="sm:w-[50%] md:w-full lg:w-full w-full h-full flex flex-col mx-auto justify-center md:p-5 lg:p-5">
-                  <div className="w-fit"></div>
-                  <motion.h4
-                    variants={{
-                      hidden: { opacity: 0, y: 75 },
-                      visible: { opacity: 1, y: 0 },
-                    }}
-                    initial="hidden"
-                    animate={mainControls}
-                    transition={{ duration: 0.5, delay: 0.4 }}
-                    // className=" bg-[#2A2344] w-fit"
-                    className=" w-fit"
-                  >
-                    {/* Olá!, Sou um...{" "} */}
-                  </motion.h4>
+            <div className="flex flex-col items-center justify-center h-screen">
+              <div
+                ref={ref}
+                className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-10 m-5 sm:my-40 lg:mt-40 2xl:mt-40 my-00 rounded-xl "
+              >
+                <div className="flex flex-col-reverse sm:flex-row md:flex-col-reverse lg:flex-row">
+                  <div className="sm:w-[50%] md:w-full lg:w-full w-full h-full flex flex-col mx-auto justify-center md:p-5 lg:p-5">
+                    <div className="w-fit"></div>
+                    <motion.h4
+                      variants={{
+                        hidden: { opacity: 0, y: 75 },
+                        visible: { opacity: 1, y: 0 },
+                      }}
+                      initial="hidden"
+                      animate={mainControls}
+                      transition={{ duration: 0.5, delay: 0.4 }}
+                      // className=" bg-[#2A2344] w-fit"
+                      className=" w-fit"
+                    >
+                      {/* Olá!, Sou um...{" "} */}
+                    </motion.h4>
 
-                  <motion.h1
-                    variants={{
-                      hidden: { opacity: 0, y: 75 },
-                      visible: { opacity: 1, y: 0 },
-                    }}
-                    initial="hidden"
-                    animate={mainControls}
-                    transition={{ duration: 0.5, delay: 0.45 }}
-                    className=" w-fit -ml-1 py-5 sm:text-8xl md:text-6xl text-5xl lg:text-8xl font-medium hover:text-[#D6223B]"
-                  >
-                    Desenvolvedor <br /> Full Stack
-                  </motion.h1>
+                    <motion.h1
+                      variants={{
+                        hidden: { opacity: 0, y: 75 },
+                        visible: { opacity: 1, y: 0 },
+                      }}
+                      initial="hidden"
+                      animate={mainControls}
+                      transition={{ duration: 0.5, delay: 0.45 }}
+                      className=" w-fit -ml-1 py-5 sm:text-8xl md:text-6xl text-5xl lg:text-8xl font-medium hover:text-[#D6223B]"
+                    >
+                      Desenvolvedor <br /> Full Stack
+                    </motion.h1>
 
-                  <motion.h3
-                    variants={{
-                      hidden: { opacity: 0, y: 75 },
-                      visible: { opacity: 1, y: 0 },
-                    }}
-                    initial="hidden"
-                    animate={mainControls}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    className="bg-[#D6223B] sm:text-xl text-lg w-fit mb-5 px-1"
-                  >
-                    15 anos de experiência.
-                  </motion.h3>
+                    <motion.h3
+                      variants={{
+                        hidden: { opacity: 0, y: 75 },
+                        visible: { opacity: 1, y: 0 },
+                      }}
+                      initial="hidden"
+                      animate={mainControls}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      className="bg-[#D6223B] sm:text-xl text-lg w-fit mb-5 px-1"
+                    >
+                      15 anos de experiência.
+                    </motion.h3>
 
-                  <motion.h5
-                    variants={{
-                      hidden: { opacity: 0, y: 75 },
-                      visible: { opacity: 1, y: 0 },
-                    }}
-                    initial="hidden"
-                    animate={mainControls}
-                    transition={{ duration: 0.5, delay: 0.55 }}
-                    className="py-3 text-sm  mt-5  w-fit"
-                  >
-                    Desenvolvedor full stack com mais de 15 anos de experiência,
-                    formado em design gráfico, com sólida experiência como
-                    diretor de arte atuando junto a grandes marcas de tecnologia.
-                  </motion.h5>
-                  <motion.h5
-                    variants={{
-                      hidden: { opacity: 0, y: 75 },
-                      visible: { opacity: 1, y: 0 },
-                    }}
-                    initial="hidden"
-                    animate={mainControls}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    className="py-3 text-sm  w-fit"
-                  >
-                    Nos últimos três anos, tenho focado no desenvolvimento
-                    front-end, trabalhando com uma variedade de tecnologias,
-                    incluindo Wordpress, JavaScript, React e Node.js. Tenho
-                    experiência em desenvolvimento de interfaces(UX/UI) e design
-                    responsivo.
-                  </motion.h5>
-                  <motion.h5
-                    variants={{
-                      hidden: { opacity: 0, y: 75 },
-                      visible: { opacity: 1, y: 0 },
-                    }}
-                    initial="hidden"
-                    animate={mainControls}
-                    transition={{ duration: 0.5, delay: 0.65 }}
-                    className="py-3 text-sm w-fit"
-                  >
-                    Acredito que a tecnologia tem o poder de transformar a vida
-                    das pessoas e que o design pode ser uma ferramenta poderosa
-                    para isso. Por isso, busco sempre unir minhas habilidades
-                    técnicas e criativas para criar produtos digitais que sejam
-                    funcionais, bonitos e agradáveis de usar.
-                  </motion.h5>
-                </div>
-                <div className="sm:w-[50%] md:w-[50%] lg:w-full lg:max-w-fit w-full sm:relative md:absolute lg:relative  md:right-[-20px] md:top-[60px] lg:top-[0px] flex-col justify-center max-w-xs ">
-                  <Lottie
-                    className="w-[100%] h-[100%] flex"
-                    onComplete={() => {
-                      someAnimation.current?.goToAndPlay(45, true);
-                    }}
-                    lottieRef={someAnimation}
-                    animationData={animationData}
-                  />
+                    <motion.h5
+                      variants={{
+                        hidden: { opacity: 0, y: 75 },
+                        visible: { opacity: 1, y: 0 },
+                      }}
+                      initial="hidden"
+                      animate={mainControls}
+                      transition={{ duration: 0.5, delay: 0.55 }}
+                      className="py-3 text-sm  mt-5  w-fit"
+                    >
+                      Desenvolvedor full stack com mais de 15 anos de
+                      experiência, formado em design gráfico, com sólida
+                      experiência como diretor de arte atuando junto a grandes
+                      marcas de tecnologia.
+                    </motion.h5>
+                    <motion.h5
+                      variants={{
+                        hidden: { opacity: 0, y: 75 },
+                        visible: { opacity: 1, y: 0 },
+                      }}
+                      initial="hidden"
+                      animate={mainControls}
+                      transition={{ duration: 0.5, delay: 0.6 }}
+                      className="py-3 text-sm  w-fit"
+                    >
+                      Nos últimos três anos, tenho focado no desenvolvimento
+                      front-end, trabalhando com uma variedade de tecnologias,
+                      incluindo Wordpress, JavaScript, React e Node.js. Tenho
+                      experiência em desenvolvimento de interfaces(UX/UI) e
+                      design responsivo.
+                    </motion.h5>
+                    <motion.h5
+                      variants={{
+                        hidden: { opacity: 0, y: 75 },
+                        visible: { opacity: 1, y: 0 },
+                      }}
+                      initial="hidden"
+                      animate={mainControls}
+                      transition={{ duration: 0.5, delay: 0.65 }}
+                      className="py-3 text-sm w-fit"
+                    >
+                      Acredito que a tecnologia tem o poder de transformar a
+                      vida das pessoas e que o design pode ser uma ferramenta
+                      poderosa para isso. Por isso, busco sempre unir minhas
+                      habilidades técnicas e criativas para criar produtos
+                      digitais que sejam funcionais, bonitos e agradáveis de
+                      usar.
+                    </motion.h5>
+                  </div>
+                  <div className="sm:w-[50%] md:w-[50%] lg:w-full lg:max-w-fit w-full sm:relative md:absolute lg:relative  md:right-[-20px] md:top-[60px] lg:top-[0px] flex-col justify-center max-w-xs ">
+                    <Lottie
+                      className="w-[100%] h-[100%] flex"
+                      onComplete={() => {
+                        someAnimation.current?.goToAndPlay(45, true);
+                      }}
+                      lottieRef={someAnimation}
+                      animationData={animationData}
+                    />
+                  </div>
                 </div>
               </div>
-              
             </div>
             {/* TIMELINE */}
             {/* TIMELINE */}
@@ -190,11 +192,14 @@ function BioSession() {
                 <div className="flex flex-row  justify-between mx-5 mt-20 mb-36">
                   <div className="flex flex-col justify-between w-full">
                     <div className="sm:w-[50%] lg:w-full text-center ">
-                      <h1 className="bg-[#2A2344] mx-auto w-full  p-2">Formação</h1>
+                      <h1 className="bg-[#2A2344] mx-auto w-full  p-2">
+                        Formação
+                      </h1>
                     </div>
                     <div className="sm:w-[50%] md:w-full w-full">
                       <p className="bg-[#2A2344] w-full mx-auto text-center  py-5 p-2">
-                      Aqui você encontra um mapa da minha jornada educacional, que me levou aonde estou hoje.
+                        Aqui você encontra um mapa da minha jornada educacional,
+                        que me levou aonde estou hoje.
                       </p>
                     </div>
                   </div>
@@ -469,7 +474,9 @@ function BioSession() {
                       icon={<IoLogoSass />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title text-2xl">SASS</h3>
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        SASS
+                      </h3>
 
                       <h4 className="vertical-timeline-element-subtitle">
                         UDEMY
@@ -562,7 +569,9 @@ function BioSession() {
                       icon={<BiLogoCss3 />}
                       id="formationTimeline01"
                     >
-                      <h3 className="vertical-timeline-element-title text-2xl">CSS 3</h3>
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        CSS 3
+                      </h3>
 
                       <h4 className="vertical-timeline-element-subtitle">
                         UDEMY
