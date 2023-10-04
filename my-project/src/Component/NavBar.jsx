@@ -67,7 +67,7 @@ function NavBar() {
                 EVG
               </a>
             </div>
-            <div className="w-[40%] flex flex-row justify-around cursor-pointer">
+            <div className=" flex flex-row justify-around cursor-pointer">
               <div
                 onClick={() => {
                   setDesktopMenuActive("bio");
