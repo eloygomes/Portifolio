@@ -1,4 +1,3 @@
-
 import { useLayoutEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import ParticlesBackground from "./particles/ParticlesBackground";
@@ -43,7 +42,7 @@ function Home() {
             className="flex sm:flex-row md:flex-col-reverse flex-col-reverse"
             ref={ref}
           >
-            <div className="sm:w-[50%] md:w-full w-full sm:mt-[61px] mt-0">
+            <div className="sm:w-[50%] md:w-full w-full sm:mt-[61px] lg:mt-[41px] 2xl:mt-[61px]  mt-0">
               <div className="h-full flex flex-col justify-center container  ">
                 <motion.h1
                   variants={{
@@ -53,7 +52,7 @@ function Home() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.05 }}
-                  className="sm:text-8xl text-5xl  font-medium  bg-[#2A2344] w-fit sm:mx-none mx-auto z-2"
+                  className="sm:text-8xl lg:text-6xl 2xl:text-8xl  font-medium  bg-[#2A2344] w-fit sm:mx-none mx-auto z-2"
                 >
                   Eloy Gomes
                 </motion.h1>
@@ -65,7 +64,7 @@ function Home() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.25 }}
-                  className="bg-[#D6223B] w-fit py-1 px-2  text-4xl font-light text-left sm:mx-none mx-auto z-1"
+                  className="bg-[#D6223B] w-fit py-1 px-2 lg:text-lg   2xl:text-4xl font-light text-left sm:mx-none mx-auto z-1"
                 >
                   Full Stack Developer
                 </motion.h4>
@@ -80,9 +79,9 @@ function Home() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.35 }}
-                src='https://www.koncretejungle.com.br/eloygomes/assets/img01.01-a494c9a4.png'
+                src="https://www.koncretejungle.com.br/eloygomes/assets/img01.01-a494c9a4.png"
                 alt="f"
-                className="sm:max-w-lg max-w-sm w-full mx-auto "
+                className="sm:max-w-lg md:max-w-sm 2xl:max-w-md max-w-sm w-full mx-auto "
               />
             </div>
           </div>
