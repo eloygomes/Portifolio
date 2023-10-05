@@ -718,9 +718,9 @@ function Portfolio() {
 
           <div
             ref={ref}
-            className="container mx-auto mt-16 flex flex-col items-center justify-center h-screen"
+            className="container mx-auto  mt-16 flex flex-col items-center justify-center h-screen"
           >
-            <div className="w-full flex flex-row p-5">
+            <div className="w-full flex flex-row p-5 lg:px-20 lg:pb-00 lg:pt-20 2xl:p-5">
               <div className="sm:w-[50%] w-full flex flex-col">
                 <motion.h1
                   variants={{
@@ -730,7 +730,7 @@ function Portfolio() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.05 }}
-                  className=""
+                  className="text-5xl lg:text-3xl 2xl:text-5xl"
                 >
                   Portifólio
                 </motion.h1>
@@ -743,7 +743,7 @@ function Portfolio() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.25 }}
-                  className="max-w-md py-5 text-sm"
+                  className="max-w-md py-5 text-sm lg:text-xs 2xl:text-sm"
                 >
                   Aqui você encontrará uma coleção diversificada de projetos em
                   que trabalhei ao longo dos anos. Meu portfólio abrange uma
@@ -916,7 +916,7 @@ function Portfolio() {
                       portWorkStatus === "uiux"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } whitespace-nowrap`}
+                    } whitespace-nowrap lg:text-sm 2xl:text-lg `}
                   >
                     UI / UX
                   </motion.button>
@@ -946,7 +946,7 @@ function Portfolio() {
                       portWorkStatus === "impressos"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } sm:ml-10 whitespace-nowrap`}
+                    } sm:ml-10 lg:ml-5 2xl:ml-10 whitespace-nowrap lg:text-sm 2xl:text-lg`}
                   >
                     IMPRESSOS
                   </motion.button>
@@ -972,7 +972,7 @@ function Portfolio() {
                       portWorkStatus === "branding"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } sm:ml-10 uppercase whitespace-nowrap`}
+                    } sm:ml-10 lg:ml-5 2xl:ml-10 whitespace-nowrap lg:text-sm 2xl:text-lg uppercase`}
                   >
                     Branding
                   </motion.button>
@@ -997,7 +997,7 @@ function Portfolio() {
                       portWorkStatus === "foto"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } sm:ml-10 uppercase whitespace-nowrap`}
+                    } sm:ml-10 lg:ml-5 2xl:ml-10 whitespace-nowrap lg:text-sm 2xl:text-lg uppercase`}
                   >
                     Fotografia
                   </motion.button>
@@ -1023,7 +1023,7 @@ function Portfolio() {
                       portWorkStatus === "edicao"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } sm:ml-10 uppercase whitespace-nowrap`}
+                    } sm:ml-10 lg:ml-5 2xl:ml-10 whitespace-nowrap lg:text-sm 2xl:text-lg uppercase`}
                   >
                     Edição
                   </motion.button>
@@ -1045,7 +1045,7 @@ function Portfolio() {
             {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
             {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
 
-            <div className="grid gap-6 sm:grid-cols-6 grid-cols-3 sm:grid-rows-1 grid-rows-2 text-center cursor-pointer p-10 mb-10 w-full">
+            <div className="grid gap-6 sm:grid-cols-6 grid-cols-3 sm:grid-rows-1 grid-rows-2 text-center cursor-pointer p-10 lg:px-20 2xl:p-5 mb-10 w-full">
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 75 },
@@ -1054,7 +1054,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.35 }}
-                className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1079,7 +1079,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1103,7 +1103,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.45 }}
-                className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1127,7 +1127,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1151,7 +1151,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.55 }}
-                className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1177,7 +1177,7 @@ function Portfolio() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
+                  className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
                   onClick={() => {
                     setModalStatus(true);
                     dispatch(hideNavbar());
@@ -1202,7 +1202,7 @@ function Portfolio() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="bg-black sm:h-[400px] h-[200px] rounded-3xl"
+                  className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
                   onClick={() => {
                     setModalStatus(true);
                     dispatch(hideNavbar());

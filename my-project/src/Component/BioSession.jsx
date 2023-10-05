@@ -67,24 +67,11 @@ function BioSession() {
             <div className="flex flex-col items-center justify-center h-screen">
               <div
                 ref={ref}
-                className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-10 m-5 sm:my-40 lg:mt-56 2xl:mt-40 my-00 rounded-xl "
+                className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-5 sm:m-5 lg:m-32 2xl:m-5 lg:mx-16 sm:my-40 lg:mt-40 2xl:mt-40 my-00 rounded-xl "
               >
                 <div className="flex flex-col-reverse sm:flex-row md:flex-col-reverse lg:flex-row">
                   <div className="sm:w-[50%] md:w-full lg:w-full w-full h-full flex flex-col mx-auto justify-center md:p-5 lg:p-5">
                     <div className="w-fit"></div>
-                    <motion.h4
-                      variants={{
-                        hidden: { opacity: 0, y: 75 },
-                        visible: { opacity: 1, y: 0 },
-                      }}
-                      initial="hidden"
-                      animate={mainControls}
-                      transition={{ duration: 0.5, delay: 0.4 }}
-                      // className=" bg-[#2A2344] w-fit"
-                      className=" w-fit"
-                    >
-                      {/* Olá!, Sou um...{" "} */}
-                    </motion.h4>
 
                     <motion.h1
                       variants={{
@@ -94,7 +81,7 @@ function BioSession() {
                       initial="hidden"
                       animate={mainControls}
                       transition={{ duration: 0.5, delay: 0.45 }}
-                      className=" w-fit -ml-1 py-5 sm:text-8xl md:text-6xl text-5xl lg:text-8xl font-medium hover:text-[#D6223B]"
+                      className=" w-fit -ml-1 pb-5 sm:text-8xl md:text-6xl text-5xl lg:text-7xl font-medium hover:text-[#D6223B]"
                     >
                       Desenvolvedor <br /> Full Stack
                     </motion.h1>
@@ -120,7 +107,7 @@ function BioSession() {
                       initial="hidden"
                       animate={mainControls}
                       transition={{ duration: 0.5, delay: 0.55 }}
-                      className="py-3 text-sm  mt-5  w-fit"
+                      className="sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm  mt-5  w-fit"
                     >
                       Desenvolvedor full stack com mais de 15 anos de
                       experiência, formado em design gráfico, com sólida
@@ -135,7 +122,7 @@ function BioSession() {
                       initial="hidden"
                       animate={mainControls}
                       transition={{ duration: 0.5, delay: 0.6 }}
-                      className="py-3 text-sm  w-fit"
+                      className="sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm  w-fit"
                     >
                       Nos últimos três anos, tenho focado no desenvolvimento
                       front-end, trabalhando com uma variedade de tecnologias,
@@ -151,7 +138,7 @@ function BioSession() {
                       initial="hidden"
                       animate={mainControls}
                       transition={{ duration: 0.5, delay: 0.65 }}
-                      className="py-3 text-sm w-fit"
+                      className="sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm w-fit"
                     >
                       Acredito que a tecnologia tem o poder de transformar a
                       vida das pessoas e que o design pode ser uma ferramenta
