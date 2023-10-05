@@ -67,7 +67,7 @@ function BioSession() {
             <div className="flex flex-col items-center justify-center h-screen">
               <div
                 ref={ref}
-                className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-10 m-5 sm:my-40 lg:mt-40 2xl:mt-40 my-00 rounded-xl "
+                className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-10 m-5 sm:my-40 lg:mt-56 2xl:mt-40 my-00 rounded-xl "
               >
                 <div className="flex flex-col-reverse sm:flex-row md:flex-col-reverse lg:flex-row">
                   <div className="sm:w-[50%] md:w-full lg:w-full w-full h-full flex flex-col mx-auto justify-center md:p-5 lg:p-5">
