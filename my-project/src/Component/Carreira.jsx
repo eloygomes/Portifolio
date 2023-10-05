@@ -133,7 +133,7 @@ function Carreira() {
           className="bg-[#2A2344] w-screen h-full  items-center flex flex-row "
           id="carreira"
         >
-          <div className="container mx-auto grid sm:h-screen h-full sm:mb-0 mb-20">
+          <div className="container mx-auto grid sm:h-screen  sm:mb-0 mb-20">
             <motion.h1
               ref={ref}
               variants={{
@@ -143,7 +143,7 @@ function Carreira() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="text-6xl py-10 absolute mt-[100px] mx-5"
+              className="text-5xl lg:text-3xl 2xl:text-5xl py-10 lg:px-20 2xl:px-0 absolute mt-[100px] mx-5"
             >
               Carreira
             </motion.h1>
@@ -155,14 +155,14 @@ function Carreira() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.75 }}
-              className="mt-[250px] absolute mx-5"
+              className="lg:mt-[210px] 2xl:mt-[250px] absolute mx-5 lg:px-20 2xl:px-0"
             >
               Na seção abaixo, apresento um panorama da minha experiência
               profissional até o presente momento.”
             </motion.p>
 
             {/* //////////////////////////////////////////////////////////////////////// :: CARREIRAS :: //////////////////////////////////////////////////////////////////////// */}
-            <div className="h-full flex flex-row justify-between text-4xl font-extralight mt-96 overflow-x-scroll ">
+            <div className="h-fit flex flex-row justify-between lg:mx-20 2xl:mx-1 lg:text-2xl 2xl:text-4xl font-extralight lg:mt-64 2xl:mt-96 overflow-x-scroll ">
               <motion.h1
                 variants={{
                   hidden: { opacity: 0, y: 75 },

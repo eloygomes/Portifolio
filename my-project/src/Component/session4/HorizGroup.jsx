@@ -12,7 +12,7 @@ function HorizGroup({
   return (
     <div className="mt-80 sm:mt-0 md:mt-64 lg:mt-0">
       <div className="wrapper flex flex-row  ">
-        <ol className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6   gap-3 p-5 grid-flow-row-dense ">
+        <ol className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-3 lg:p-20 2xl:p-5 grid-flow-row-dense lg:mt-5 2xl:mt-5">
           <EachSession
             jobPosition={`${carrerDataInfo.job01.jobPosition}`}
             jobName={`${carrerDataInfo.job01.jobName}`}
