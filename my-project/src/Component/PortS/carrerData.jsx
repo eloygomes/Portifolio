@@ -1,7 +1,7 @@
 export const carrerDataInfo = {
   job01: {
     jobPosition: "DESIGNER GRÁFICO",
-    jobName: "Empresa UM agencia & editora",
+    jobName: "UM agencia & editora",
     jobSegment: "Agencia de publicidade e editora",
     jobAddress: "R. Raul Pompéia, 972 - Pompeia, São Paulo - SP",
     jobDuration: "mai/2013 a out/2014",
@@ -23,10 +23,7 @@ export const carrerDataInfo = {
     jobAdress: "R. Dois de Janeiro, 394 - Vila Salete, São Paulo - SP",
     jobDuration: "dez/2013 a nov/2014",
     jobDesc: `Criação e desenvolvimento de branding, desenvolvimento de projeto gráfico para revista, fotografia para anúncios, tratamento de imagens, conteúdo para mídias sociais, elaboração de briefings junto a clientes e elaboração de planos de ação para gestão e lançamentos de marcas de diversos segmentos.`,
-    jobTools: [
-      "Lightroom",
-      "Javascript",
-    ],
+    jobTools: ["Lightroom", "Javascript"],
     jobImg:
       "https://www.koncretejungle.com.br/eloygomes/assets/port/CarrerCovers/COMMANDER.png",
   },
@@ -50,16 +47,13 @@ export const carrerDataInfo = {
   },
 
   job04: {
-    jobPosition: "SUPERVISOR DE E-COMMERCE",
+    jobPosition: "SUP. DE E-COMMERCE",
     jobName: "Coletek",
     jobSegment: "Loja virtual / Marketplace",
     jobAdress: "Rua Curupacê, 192 - Mooca, São Paulo - SP",
     jobDuration: "jan/2018 a dez/2018",
     jobDesc: `Gestão da plataforma online PANDA BLACK(e-commerce voltado a produtos de informática), Atuando a frente no planejamento(pesquisa de mercado, controle de preço e estoque) e administração(gestão de equipe, pós venda, SAC) e marketing(campanhas de lançamento de produtos para clientes(B2C)).`,
-    jobTools: [
-      "Excel",
-      "Siege",
-    ],
+    jobTools: ["Excel", "Siege"],
     jobImg:
       "https://www.koncretejungle.com.br/eloygomes/assets/port/CarrerCovers/COLETEK.png",
   },
@@ -68,14 +62,11 @@ export const carrerDataInfo = {
     jobPosition: "FULL STACK DEVELOPER",
     jobName: "Grupo Skill",
     jobSegment: "Contabilidade / Software house",
-    jobAdress: "Rua Machado Bitencourt, 205 - 10º Andar - Vila Clementino, São Paulo - SP",
+    jobAdress:
+      "Rua Machado Bitencourt, 205 - 10º Andar - Vila Clementino, São Paulo - SP",
     jobDuration: "out/2019 a set/2021",
     jobDesc: `Como DESIGNER UI/UX eu atuei no design de interfaces de produtos websites, hotsites, e-mails marketing, banner e peças digitais, propondo melhorias de usabilidade na experiência do usuário e visuais no design da interface. Fui responsável pela elaboração de wireframes de baixa e alta fidelidade, elaboração e manutenção de design system e desenvolvimento de protótipos navegáveis. E como DESENVOLVEDOR atuei no desenvolvimento de sites/plataformas fazendo implementação de novas features, correções de bugs e manutenção de código dando vida a interfaces dos projetos utilizando principalmente HTML5, CSS3, Bootstrap, JavaScript e Wordpress.`,
-    jobTools: [
-      "React Js",
-      "Node Js",
-      "Javascript",
-    ],
+    jobTools: ["React Js", "Node Js", "Javascript"],
     jobImg:
       "https://www.koncretejungle.com.br/eloygomes/assets/port/CarrerCovers/GRUPO-SKILL.png",
   },
