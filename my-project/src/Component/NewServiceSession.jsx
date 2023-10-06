@@ -13,7 +13,7 @@ function NewServiceSession() {
       id="services"
     >
       <div className="container mx-auto flex flex-col justify-center items-center h-screen">
-        <div className=" mb-[10vh] mt-[10vh] lg:mx-20 2xl:mx-5 p-5 backdrop-blur-xl bg-white bg-opacity-10 rounded-xl">
+        <div className=" mb-[10vh] mt-[12vh] lg:mx-20 2xl:mx-5 p-5 backdrop-blur-xl bg-white bg-opacity-10 rounded-xl">
           <div className="container mx-auto flex flex-col justify-center text-center p-5">
             <div className="flex flex-col">
               <h1>Serviços</h1>
@@ -51,7 +51,7 @@ function NewServiceSession() {
                         </p>
                       ) : (
                         // D
-                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Analise perfil de usuários, criação de wireframes,
                           prototipagem, design system, testes de usabilidade
                         </p>
@@ -88,7 +88,7 @@ function NewServiceSession() {
                         </p>
                       ) : (
                         // D
-                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Análise de dados e definição da voz da marca,
                           elaboração de estratégia de comunicação, design de
                           produto, de serviço e interação.
@@ -126,7 +126,7 @@ function NewServiceSession() {
                         </p>
                       ) : (
                         // D
-                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Analise de marca, definição de objetivos, criação de
                           conceito, desenvolvimento de protótipos e
                           acompanhamento do processo de produção
@@ -163,7 +163,7 @@ function NewServiceSession() {
                         </p>
                       ) : (
                         // D
-                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Captação, edição e impressão de ensaios artísticos,
                           casamentos, gestantes, moda, produto e comercial.
                         </p>
@@ -199,7 +199,7 @@ function NewServiceSession() {
                         </p>
                       ) : (
                         // D
-                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Planejamento, pesquisa, briefing, conceito, roteiro,
                           produção e edição de videos.
                         </p>
@@ -236,7 +236,7 @@ function NewServiceSession() {
                         </p>
                       ) : (
                         // D
-                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Planejamento, pesquisa, briefing, conceito, roteiro,
                           produção, gravação, apresentação e publicação de
                           podcasts.
