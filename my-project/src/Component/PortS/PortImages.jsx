@@ -12,6 +12,7 @@ export const PortImages = {
     ],
     // SKILL CONSULTING UI UX
     container02: [
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/Grupo%20Skill/Presentation.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_00.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_01.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_02.png",
@@ -23,6 +24,7 @@ export const PortImages = {
     ],
     // EVG UI UX
     container03: [
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/EVG/Presentation.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_00.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_01.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_02.png",
@@ -36,6 +38,7 @@ export const PortImages = {
     ],
     // OVERCAST UI UX
     container04: [
+      "https://www.koncretejungle.com.br//eloygomes/assets/port/ui%20ux/overcast/Presentation.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_00.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_01.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_02.png",
@@ -45,6 +48,7 @@ export const PortImages = {
     ],
     // WELLNESS HUB UI UX
     container05: [
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/Presentation.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_00.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_01.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_02.png",
@@ -54,6 +58,7 @@ export const PortImages = {
     ],
     // SEEKING 4 ELEMENTS UI UX
     container06: [
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/Presentation.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_01.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_02.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_03.png",
