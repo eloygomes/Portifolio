@@ -9,11 +9,11 @@ import EmailButtonPodcast from "./suport/EmailButton6";
 function NewServiceSession() {
   return (
     <div
-      className="w-screen flex flex-col bg-[#19142A] bg-opacity-95"
+      className="w-screen h-screen flex flex-col bg-[#19142A] bg-opacity-95"
       id="services"
     >
-      <div className="container mx-auto flex flex-col justify-center">
-        <div className="min-h-[85vh] mb-[10vh] mt-[15vh] mx-5 p-5 backdrop-blur-xl bg-white bg-opacity-10 rounded-xl">
+      <div className="container mx-auto flex flex-col justify-center items-center h-screen">
+        <div className=" mb-[10vh] mt-[10vh] lg:mx-20 2xl:mx-5 p-5 backdrop-blur-xl bg-white bg-opacity-10 rounded-xl">
           <div className="container mx-auto flex flex-col justify-center text-center p-5">
             <div className="flex flex-col">
               <h1>Serviços</h1>
