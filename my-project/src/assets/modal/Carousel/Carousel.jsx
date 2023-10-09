@@ -44,7 +44,7 @@ const ImageCarousel = ({ images }) => {
               <Carousel
                 showArrows={true}
                 showStatus={false}
-                showIndicators={true}
+                showIndicators={false}
                 showThumbs={false}
                 selectedItem={selectedImageIndex}
                 className="carrao rounded-xl"

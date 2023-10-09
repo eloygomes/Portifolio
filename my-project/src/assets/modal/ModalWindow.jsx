@@ -208,7 +208,7 @@ function ModalWindow({
                         {postInfo
                           ? postInfo.tools.map((tech, index) => (
                               <li
-                                className="text-xs p-1  px-2 rounded-lg my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold cursor-pointer"
+                                className="text-xs p-1  px-2 rounded-md my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold cursor-pointer whitespace-nowrap"
                                 key={index}
                               >
                                 {tech}
