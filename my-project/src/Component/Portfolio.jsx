@@ -559,12 +559,12 @@ function Portfolio() {
                 transition={{ duration: 0.5, delay: 0.35 }}
                 className="bg-black sm:h-[400px] h-[200px]"
                 onClick={() => {
-                  console.log("CLICOUUUUU");
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container01);
+                  setPostInfo(modalInfoContainer.data01);
                 }}
               >
                 <img
@@ -589,7 +589,9 @@ function Portfolio() {
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
+                  dispatch(particlesOff());
                   setPostImg(modalImgContainer.container02);
+                  setPostInfo(modalInfoContainer.data02);
                 }}
               >
                 <img
@@ -613,7 +615,9 @@ function Portfolio() {
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
+                  dispatch(particlesOff());
                   setPostImg(modalImgContainer.container03);
+                  setPostInfo(modalInfoContainer.data03);
                 }}
               >
                 <img
@@ -632,11 +636,12 @@ function Portfolio() {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="bg-black sm:h-[400px] h-[200px]"
                 onClick={() => {
-                  console.log("CLICOUUUUU N2");
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
+                  dispatch(particlesOff());
                   setPostImg(modalImgContainer.container04);
+                  setPostInfo(modalInfoContainer.data04);
                 }}
               >
                 <img
@@ -655,12 +660,12 @@ function Portfolio() {
                 transition={{ duration: 0.5, delay: 0.55 }}
                 className="bg-black sm:h-[400px] h-[200px]"
                 onClick={() => {
-                  console.log("CLICOUUUUU");
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container05);
+                  setPostInfo(modalInfoContainer.data05);
                 }}
               >
                 <img
@@ -680,12 +685,12 @@ function Portfolio() {
                 transition={{ duration: 0.5, delay: 0.35 }}
                 className="bg-black sm:h-[400px] h-[200px]"
                 onClick={() => {
-                  console.log("CLICOUUUUU");
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   dispatch(freezeScroll());
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container06);
+                  setPostInfo(modalInfoContainer.data06);
                 }}
               >
                 <img

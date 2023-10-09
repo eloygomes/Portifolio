@@ -58,7 +58,7 @@ const ImageCarousel = ({ images }) => {
                     } overflow-scroll flex items-start justify-center`}
                   >
                     <img
-                      className="rounded-lg object-cover p-10 pb-96 items-center"
+                      className="rounded-lg object-cover p-16 pb-96 items-center"
                       src={image}
                       alt={`Image ${index + 1}`}
                     />
