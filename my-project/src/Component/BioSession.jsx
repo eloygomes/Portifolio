@@ -67,10 +67,10 @@ function BioSession() {
             <div className="flex flex-col items-center justify-center h-screen">
               <div
                 ref={ref}
-                className="backdrop-blur-xl bg-white/10 p-5 sm:p-10 md:p-5 lg:p-5 sm:m-5 lg:m-32 2xl:m-5 lg:mx-16 sm:my-40 lg:mt-40 2xl:mt-40 my-00 rounded-xl "
+                className="backdrop-blur-xl bg-white/10 p-5 m-5 sm:p-10 md:p-5 lg:p-5 xl:p-5 2xl:p-5 sm:m-5 lg:m-32 2xl:m-10 lg:mx-16 sm:my-40 lg:mt-40 2xl:mt-40 my-00 rounded-xl "
               >
-                <div className="flex flex-col-reverse sm:flex-row md:flex-col-reverse lg:flex-row">
-                  <div className="sm:w-[50%] md:w-full lg:w-full w-full h-full flex flex-col mx-auto justify-center md:p-5 lg:p-5">
+                <div className="flex flex-col-reverse sm:flex-flex-col-reverse md:flex-col-reverse lg:flex-col-reverse xl:flex-row 2xl:flex-row">
+                  <div className="w-full h-full flex flex-col mx-auto justify-center md:p-5 lg:p-5">
                     <div className="w-fit"></div>
 
                     <motion.h1
@@ -81,7 +81,7 @@ function BioSession() {
                       initial="hidden"
                       animate={mainControls}
                       transition={{ duration: 0.5, delay: 0.45 }}
-                      className=" w-fit -ml-1 pb-5 sm:text-8xl md:text-6xl text-5xl lg:text-7xl font-medium hover:text-[#D6223B]"
+                      className=" w-fit -ml-1 pb-5 sm:text-4xl md:text-6xl text-5xl lg:text-7xl font-medium hover:text-[#D6223B]"
                     >
                       Desenvolvedor <br /> Full Stack
                     </motion.h1>
@@ -148,7 +148,7 @@ function BioSession() {
                       usar.
                     </motion.h5>
                   </div>
-                  <div className="sm:w-[50%] md:w-[50%] lg:w-full lg:max-w-fit w-full sm:relative md:absolute lg:relative  md:right-[-20px] md:top-[60px] lg:top-[0px] flex-col justify-center max-w-xs ">
+                  <div className="sm:w-[50%] md:w-[40%] lg:w-[40%] xl:w-full lg:max-w-fit w-full absolute sm:absolute md:absolute lg:absolute xl:relative 2xl:relative sm:right-[-20px] md:right-[-20px] sm:top-[00px] md:top-[40px] lg:top-[10px] flex-col justify-center hidden sm:block md:block lg:block xl:block 2xl:block ">
                     <Lottie
                       className="w-[100%] h-[100%] flex"
                       onComplete={() => {
@@ -178,12 +178,12 @@ function BioSession() {
                 {/* First ROW */}
                 <div className="flex flex-row  justify-between mx-5 mt-20 mb-36">
                   <div className="flex flex-col justify-between w-full">
-                    <div className="sm:w-[50%] lg:w-full text-center ">
+                    <div className="w-full text-center ">
                       <h1 className="bg-[#2A2344] mx-auto w-full  p-2">
                         Formação
                       </h1>
                     </div>
-                    <div className="sm:w-[50%] md:w-full w-full">
+                    <div className="w-full">
                       <p className="bg-[#2A2344] w-full mx-auto text-center  py-5 p-2">
                         Aqui você encontra um mapa da minha jornada educacional,
                         que me levou aonde estou hoje.

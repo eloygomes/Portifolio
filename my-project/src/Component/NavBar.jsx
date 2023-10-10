@@ -61,7 +61,7 @@ function NavBar() {
             navbarZindex === "show" ? "z-10" : "-z-10"
           }`}
         >
-          <div className="lg:flex hidden flex-row justify-between container mx-auto ">
+          <div className="lg:flex hidden flex-row justify-between container lg:pl-8 lg:pr-8 xl:mx-auto 2xl:mx-auto ">
             <div className="font-black text-2xl hover:scale-105">
               <a className="font-extrabold  hover:text-[#d6223b]" href="#">
                 EVG

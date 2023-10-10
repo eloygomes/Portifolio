@@ -548,7 +548,7 @@ function Portfolio() {
             {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
             {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
 
-            <div className="grid gap-6 sm:grid-cols-6 grid-cols-3 sm:grid-rows-1 grid-rows-2 text-center cursor-pointer p-5 sm:p-5 md:p-10 mb-10">
+            <div className="grid gap-6 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 2xl:grid-cols-6 grid-cols-3 sm:grid-rows-1 grid-rows-2 text-center cursor-pointer p-5 sm:p-5 md:p-10 mb-10">
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 75 },

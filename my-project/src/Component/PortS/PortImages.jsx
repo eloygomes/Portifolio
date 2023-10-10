@@ -150,13 +150,13 @@ export const PortImages = {
     ],
     // c3tech
     container04: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20presentation%20%5D%20C3Tech%2001%20.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2001.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20presentation%20%5D%20C3Tech%2002.png",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2001.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2002.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2003.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2004.png",
       "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2005.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2006.png",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/branding/c3Tech/%5B%20mockup%20%5D%20C3Tech%2006.png",
     ],
     // GRUPO SKILL
     container05: [
