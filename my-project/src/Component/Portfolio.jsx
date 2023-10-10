@@ -426,7 +426,7 @@ function Portfolio() {
                       portWorkStatus === "uiux"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } whitespace-nowrap`}
+                    } whitespace-nowrap text-2xl`}
                   >
                     UI / UX
                   </motion.button>
@@ -897,7 +897,7 @@ function Portfolio() {
                   </motion.button>
                 </div>
               ) : (
-                <div className="sm:w-[50%] w-full flex sm:flex-row flex-col justify-end ">
+                <div className="sm:w-[50%] w-full flex sm:flex-row flex-col justify-between ">
                   <motion.button
                     variants={{
                       hidden: { opacity: 0, y: 75 },
@@ -921,7 +921,7 @@ function Portfolio() {
                       portWorkStatus === "uiux"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } whitespace-nowrap lg:text-sm 2xl:text-lg `}
+                    } whitespace-nowrap lg:text-[.7rem] xl:text-sm 2xl:text-lg `}
                   >
                     UI / UX
                   </motion.button>
@@ -951,7 +951,7 @@ function Portfolio() {
                       portWorkStatus === "impressos"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } sm:ml-10 lg:ml-5 2xl:ml-10 whitespace-nowrap lg:text-sm 2xl:text-lg`}
+                    } sm:ml-10 lg:ml-2 2xl:ml-10 whitespace-nowrap lg:text-[.7rem] xl:text-sm 2xl:text-lg`}
                   >
                     IMPRESSOS
                   </motion.button>
@@ -977,7 +977,7 @@ function Portfolio() {
                       portWorkStatus === "branding"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } sm:ml-10 lg:ml-5 2xl:ml-10 whitespace-nowrap lg:text-sm 2xl:text-lg uppercase`}
+                    } sm:ml-10 lg:ml-2 2xl:ml-10 whitespace-nowrap lg:text-[.7rem] xl:text-sm 2xl:text-lg uppercase`}
                   >
                     Branding
                   </motion.button>
@@ -1002,7 +1002,7 @@ function Portfolio() {
                       portWorkStatus === "foto"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } sm:ml-10 lg:ml-5 2xl:ml-10 whitespace-nowrap lg:text-sm 2xl:text-lg uppercase`}
+                    } sm:ml-10 lg:ml-2 2xl:ml-10 whitespace-nowrap lg:text-[.7rem] xl:text-sm 2xl:text-lg uppercase`}
                   >
                     Fotografia
                   </motion.button>
@@ -1028,7 +1028,7 @@ function Portfolio() {
                       portWorkStatus === "edicao"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } sm:ml-10 lg:ml-5 2xl:ml-10 whitespace-nowrap lg:text-sm 2xl:text-lg uppercase`}
+                    } sm:ml-10 lg:ml-2 lx:ml-5 2xl:ml-10 whitespace-nowrap lg:text-[.7rem] xl:text-sm 2xl:text-lg uppercase`}
                   >
                     Edição
                   </motion.button>

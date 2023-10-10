@@ -13,7 +13,7 @@ function NewServiceSession() {
       id="services"
     >
       <div className="container mx-auto flex flex-col justify-center items-center h-screen">
-        <div className=" mb-[10vh] mt-[12vh] lg:mx-20 2xl:mx-5 p-5 backdrop-blur-xl bg-white bg-opacity-10 rounded-xl">
+        <div className=" mb-[10vh] mt-[12vh] mx-5 sm:mx-10 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-5 p-5 backdrop-blur-xl bg-white bg-opacity-10 rounded-xl">
           <div className="container mx-auto flex flex-col justify-center text-center p-5">
             <div className="flex flex-col">
               <h1>Serviços</h1>
@@ -22,7 +22,7 @@ function NewServiceSession() {
               </p>
             </div>
             <div>
-              <div className="grid md:grid-cols-3 sm:grid-cols-1 grid-rows-2 gap-x-10 gap-y-10 md:p-5">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 grid-rows-2 gap-x-10 gap-y-10 md:p-5">
                 <EmailButtonCustom>
                   <motion.div
                     initial={{ scale: 0 }}
@@ -44,7 +44,7 @@ function NewServiceSession() {
                       <h1 className="absolute inset-0 flex items-center justify-start text-2xl text-white top-10 p-5">
                         UI/UX
                       </h1>
-                      {window.innerWidth <= 961 ? ( // Mobile
+                      {window.innerWidth <= 1025 ? ( // Mobile
                         <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                           Analise perfil de usuários, criação de wireframes,
                           prototipagem, design system, testes de usabilidade
@@ -80,7 +80,7 @@ function NewServiceSession() {
                       <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
                         BRANDING
                       </h1>
-                      {window.innerWidth <= 961 ? ( // Mobile
+                      {window.innerWidth <= 1025 ? ( // Mobile
                         <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                           Análise de dados e definição da voz da marca,
                           elaboração de estratégia de comunicação, design de
@@ -118,7 +118,7 @@ function NewServiceSession() {
                       <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
                         IMPRESSOS
                       </h1>
-                      {window.innerWidth <= 961 ? ( // Mobile
+                      {window.innerWidth <= 1025 ? ( // Mobile
                         <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                           Analise de marca, definição de objetivos, criação de
                           conceito, desenvolvimento de protótipos e
@@ -156,7 +156,7 @@ function NewServiceSession() {
                       <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
                         FOTOGRAFIA
                       </h1>
-                      {window.innerWidth <= 961 ? ( // Mobile
+                      {window.innerWidth <= 1025 ? ( // Mobile
                         <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                           Captação, edição e impressão de ensaios artísticos,
                           casamentos, gestantes, moda, produto e comercial.
@@ -192,7 +192,7 @@ function NewServiceSession() {
                       <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
                         EDIÇÃO
                       </h1>
-                      {window.innerWidth <= 961 ? ( // Mobile
+                      {window.innerWidth <= 1025 ? ( // Mobile
                         <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                           Planejamento, pesquisa, briefing, conceito, roteiro,
                           produção e edição de videos.
@@ -228,7 +228,7 @@ function NewServiceSession() {
                       <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
                         PODCAST
                       </h1>
-                      {window.innerWidth <= 961 ? ( // Mobile
+                      {window.innerWidth <= 1025 ? ( // Mobile
                         <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                           Planejamento, pesquisa, briefing, conceito, roteiro,
                           produção, gravação, apresentação e publicação de

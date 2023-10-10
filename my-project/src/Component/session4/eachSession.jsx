@@ -57,7 +57,7 @@ function EachSession({
         initial="hidden"
         animate={mainControls}
         transition={{ duration: 0.3, delay: delayForEach }}
-        className="relative sm:mb-0  h-full bottom-0 mx-2 sm:py-8 lg:py-8 2xl:py-8 sm:px-5 lg:px-3 2xl:px-5 rounded-xl backdrop-blur-xl bg-white/10 cursor-pointer hover:scale-150 duration-300 hover:bg-[#19142A] hover:rounded-xl drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1  "
+        className="relative sm:mb-0  h-full bottom-0 mx-2 p-3 sm:py-8 lg:py-8 2xl:py-8 sm:px-5 lg:px-3 2xl:px-5 rounded-xl backdrop-blur-xl bg-white/10 cursor-pointer hover:scale-150 duration-300 hover:bg-[#19142A] hover:rounded-xl drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1  "
         onClick={() => {
           setModalStatus(true);
           setcareerModalInfo({

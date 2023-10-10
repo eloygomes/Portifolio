@@ -86,7 +86,7 @@ function Carreira() {
           className="bg-[#2A2344] w-screen h-full  items-center flex flex-row "
           id="carreira"
         >
-          <div className="container mx-auto grid sm:h-screen h-full sm:mb-0 mb-20">
+          <div className="container mx-auto grid h-screen sm:mb-0 mb-20 p-5">
             <motion.h1
               ref={ref}
               variants={{
@@ -96,7 +96,7 @@ function Carreira() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="text-6xl py-10 absolute mt-10 mx-10"
+              className="text-6xl  absolute  "
             >
               Carreira
             </motion.h1>
@@ -108,7 +108,7 @@ function Carreira() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.75 }}
-              className="mt-44 absolute mx-10"
+              className="mt-44 absolute pr-5"
             >
               Na seção abaixo, apresento um panorama da minha experiência
               profissional até o presente momento.”
