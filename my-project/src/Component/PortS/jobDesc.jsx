@@ -222,7 +222,14 @@ export const jobDesc = {
       companyName: "Emporio Tartufi",
       jobDescription:
         "Captação e edição de video para a marca Emporio Tartufi.",
-      tools: ["Adobe Premiere", "Adobe Lightroom"],
+      tools: [
+        "Iluminação",
+        "Roteiro",
+        "Direção",
+        "Captação Nikon e Canon",
+        "Adobe Premiere",
+        "Adobe Lightroom",
+      ],
       data: "2021",
     },
     data02: {

@@ -112,7 +112,7 @@ function ModalWindow({
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
-                        className="m-5 mr-16"
+                        className="m-5 "
                       ></iframe>
                     </div>
                   ) : (
