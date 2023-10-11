@@ -135,7 +135,7 @@ function EachSession({
             initial="hidden"
             animate={mainControls}
             transition={{ duration: 0.3, delay: 1.3 }}
-            className="text-xs font-normal text-gray-100 dark:text-gray-400 mt-1 max-w-lg whitespace-nowrap absolute bottom-8"
+            className="text-xs font-normal text-gray-100 dark:text-gray-400 mt-1 max-w-lg whitespace-nowrap absolute bottom-3 sm:bottom-8 md:bottom-8 lg:bottom-8 xl:bottom-8 2xl:bottom-8"
           >
             {jobDuration}
           </motion.p>
