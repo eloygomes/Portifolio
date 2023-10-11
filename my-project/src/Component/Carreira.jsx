@@ -81,9 +81,9 @@ function Carreira() {
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
          */}
-      {window.innerWidth <= 961 ? (
+      {window.innerWidth <= 1025 ? (
         <div
-          className="bg-[#2A2344] w-screen h-full  items-center flex flex-row "
+          className="bg-[#2A2344] w-screen h-full sm:h-screen md:h-screen lg:h-screen xl:h-full 2xl:h-full  items-center flex flex-row "
           id="carreira"
         >
           <div className="container mx-auto grid h-full sm:mb-0 mb-20 p-5">
@@ -96,7 +96,7 @@ function Carreira() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="text-6xl  absolute  "
+              className="text-6xl mt-10 pl-2 sm:pl-3 md:pl-3 lg:pl-2 xl:pl-2 2xl:pl-2 absolute "
             >
               Carreira
             </motion.h1>
@@ -108,7 +108,7 @@ function Carreira() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.75 }}
-              className="mt-44 absolute pr-5"
+              className="mt-40 absolute w-[90vw] pl-3 sm:px-5 md:px-16 lg:pl-5 xl:pl-5 2xl:pl-5  "
             >
               Na seção abaixo, apresento um panorama da minha experiência
               profissional até o presente momento.”
@@ -163,66 +163,68 @@ function Carreira() {
 
             {/* //////////////////////////////////////////////////////////////////////// :: CARREIRAS :: //////////////////////////////////////////////////////////////////////// */}
             <div className="h-fit flex flex-row justify-between lg:mx-20 2xl:mx-1 lg:text-2xl 2xl:text-4xl font-extralight lg:mt-64 2xl:mt-96 overflow-x-scroll ">
-              <motion.h1
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 0.1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="flex-1 h-full opacity-[0.1] hover:opacity-[0.5] cursor-pointer mx-5 hover:text-[#D6223B] "
-              >
-                2013
-              </motion.h1>
-              <motion.h1
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 0.2, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.85 }}
-                className="flex-1 h-full opacity-[0.2] hover:opacity-[0.6] cursor-pointer mx-5 hover:text-[#D6223B]  "
-              >
-                2014
-              </motion.h1>
-              <motion.h1
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 0.3, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.9 }}
-                className="flex-1 h-full opacity-[0.3] hover:opacity-[0.7] cursor-pointer mx-5 hover:text-[#D6223B]  "
-              >
-                2018
-              </motion.h1>
-              <motion.h1
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 0.4, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.95 }}
-                className="flex-1 h-full opacity-[0.4] hover:opacity-[0.8] cursor-pointer mx-5 hover:text-[#D6223B]  "
-              >
-                2021
-              </motion.h1>
-              <motion.h1
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 0.5, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 1.0 }}
-                className="flex-1 h-full opacity-[0.5] hover:opacity-[0.9] cursor-pointer mx-5 hover:text-[#D6223B] "
-              >
-                Hoje
-              </motion.h1>
+              <div className="flex flex-row justify-between items-center h-full">
+                <motion.h1
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 0.1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                  className="flex-1 h-full opacity-[0.1] hover:opacity-[0.5] cursor-pointer mx-5 hover:text-[#D6223B] "
+                >
+                  2013
+                </motion.h1>
+                <motion.h1
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 0.2, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.85 }}
+                  className="flex-1 h-full opacity-[0.2] hover:opacity-[0.6] cursor-pointer mx-5 hover:text-[#D6223B]  "
+                >
+                  2014
+                </motion.h1>
+                <motion.h1
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 0.3, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.9 }}
+                  className="flex-1 h-full opacity-[0.3] hover:opacity-[0.7] cursor-pointer mx-5 hover:text-[#D6223B]  "
+                >
+                  2018
+                </motion.h1>
+                <motion.h1
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 0.4, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.95 }}
+                  className="flex-1 h-full opacity-[0.4] hover:opacity-[0.8] cursor-pointer mx-5 hover:text-[#D6223B]  "
+                >
+                  2021
+                </motion.h1>
+                <motion.h1
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 0.5, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 1.0 }}
+                  className="flex-1 h-full opacity-[0.5] hover:opacity-[0.9] cursor-pointer mx-5 hover:text-[#D6223B] "
+                >
+                  Hoje
+                </motion.h1>
+              </div>
             </div>
 
             <HorizGroup
