@@ -144,6 +144,20 @@ function ModalWindow({
                     </div>
                   </div>
                 </div>
+                <div className="w-full text-center">
+                  <div
+                    className="cursor-pointer text-[.3rem] p-2 m-5 border-2 border-white rounded-md text-white z-50"
+                    onClick={() => {
+                      closeModal();
+                      dispatch(showNavbar());
+                      dispatch(leaveScroll());
+                      dispatch(particlesOn());
+                    }}
+                  >
+                    {/* FECHAR */}
+                    <h1>FECHAR</h1>
+                  </div>
+                </div>
               </div>
             </div>
           </Modal>

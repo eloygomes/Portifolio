@@ -107,7 +107,7 @@ function BioSession() {
                       initial="hidden"
                       animate={mainControls}
                       transition={{ duration: 0.5, delay: 0.55 }}
-                      className="sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm  mt-5  w-fit"
+                      className="py-3 sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm  mt-5  w-fit"
                     >
                       Desenvolvedor full stack com mais de 15 anos de
                       experiência, formado em design gráfico, com sólida
@@ -122,7 +122,7 @@ function BioSession() {
                       initial="hidden"
                       animate={mainControls}
                       transition={{ duration: 0.5, delay: 0.6 }}
-                      className="sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm  w-fit"
+                      className="py-3 sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm  w-fit"
                     >
                       Nos últimos três anos, tenho focado no desenvolvimento
                       front-end, trabalhando com uma variedade de tecnologias,
@@ -138,7 +138,7 @@ function BioSession() {
                       initial="hidden"
                       animate={mainControls}
                       transition={{ duration: 0.5, delay: 0.65 }}
-                      className="sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm w-fit"
+                      className="py-3 sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm w-fit"
                     >
                       Acredito que a tecnologia tem o poder de transformar a
                       vida das pessoas e que o design pode ser uma ferramenta
