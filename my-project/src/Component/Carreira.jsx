@@ -86,7 +86,7 @@ function Carreira() {
           className="bg-[#2A2344] w-screen h-full  items-center flex flex-row "
           id="carreira"
         >
-          <div className="container mx-auto grid h-screen sm:mb-0 mb-20 p-5">
+          <div className="container mx-auto grid h-screen sm:mb-0 mb-20 p-5 sm:mt-10 mt-16">
             <motion.h1
               ref={ref}
               variants={{
@@ -143,7 +143,7 @@ function Carreira() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="text-5xl lg:text-3xl 2xl:text-5xl py-10 lg:px-20 2xl:px-0 absolute mt-[100px] mx-5"
+              className="text-5xl lg:text-3xl 2xl:text-5xl py-10 lg:px-20 2xl:px-0 absolute mt-[100px] mx-5 "
             >
               Carreira
             </motion.h1>

@@ -336,6 +336,7 @@ function Portfolio() {
                   >
                     Branding
                   </motion.button>
+
                   <motion.button
                     variants={{
                       hidden: { opacity: 0, y: 75 },
@@ -378,12 +379,12 @@ function Portfolio() {
                     }}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    onClick={() => setPortWorkStatus("edição")}
-                    className={`mx-2 mt-5 py-1 h-[50px] ${
+                    onClick={() => setPortWorkStatus("edicao")}
+                    className={`mt-5 py-1 h-[50px] ${
                       portWorkStatus === "edicao"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    }  uppercase whitespace-nowrap`}
+                    } mx-2 uppercase whitespace-nowrap`}
                   >
                     Edição
                   </motion.button>
