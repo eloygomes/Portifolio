@@ -35,7 +35,7 @@ function NavBar() {
           }`}
         >
           <AiOutlineMenu
-            className="text-4xl text-white m-5 cursor-pointer absolute top-0 right-0 z-10  backdrop-blur-xl bg-white/10 rounded-full p-2 "
+            className="text-[2.5rem] sm:text-[2.5rem] md:text-[3rem]  text-white m-5 cursor-pointer absolute top-0 right-0 z-10  backdrop-blur-xl bg-white/10 rounded-full p-2 "
             onClick={() => {
               setMobileShowMenu(!mobileShowMenu);
             }}
