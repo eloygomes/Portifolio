@@ -42,9 +42,7 @@ function NavBar() {
           />
           <div
             className={`w-screen h-screen   backdrop-blur-xl bg-[#282044] absolute top-0 left-0 
-            ${
-              mobileShowMenu ? "flex flex-col justify-between" : "hidden"
-            } z-10`}
+            ${mobileShowMenu ? "flex flex-col justify-start" : "hidden"} z-10`}
           >
             <NavBarMobile setMobileShowMenu={setMobileShowMenu} />
             <NavBarMobileItems setMobileShowMenu={setMobileShowMenu} />
