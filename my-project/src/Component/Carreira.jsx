@@ -186,8 +186,8 @@ function Carreira() {
             {/* //////////////////////////////////////////////////////////////////////// :: CARREIRAS :: //////////////////////////////////////////////////////////////////////// */}
             <div className="h-fit flex flex-row justify-between lg:mx-20 2xl:mx-1 lg:text-2xl 2xl:text-4xl font-extralight lg:mt-64 2xl:mt-96 overflow-x-scroll ">
               <div className="container mx-auto">
-                <div className="flex items-center justify-center h-72">
-                  <div className="flex flex-row justify-between items-center 2xl:items-start h-full xl:text-[1.7rem] 2xl:text-4xl">
+                <div className="flex items-center justify-center h-60">
+                  <div className="flex flex-row justify-between items-baseline lg:items-baseline xl:items-baseline 2xl:items-baseline h-full xl:text-[1.7rem] 2xl:text-4xl">
                     <motion.h1
                       variants={{
                         hidden: { opacity: 0, y: 75 },
