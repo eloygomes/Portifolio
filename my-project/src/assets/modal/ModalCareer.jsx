@@ -185,7 +185,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
             className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3"
           >
             <div className="w-full min-w-[1024px] max-w-[1800px] flex rounded-xl">
-              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] lg:w-[90vw] xl:w-[90vw]  h-[80vh] lg:h-full m-20 lg:mt-52 2xl:mt-40 z-20 ">
+              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] lg:w-[90vw] xl:w-[90vw]  h-[80vh] lg:h-full m-20 lg:mt-52 2xl:mt-28 z-20 ">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between lg:my-2 2xl:my-5 lg:mx-5 ">
                   <div className=" text-3xl">Carreira</div>
