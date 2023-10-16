@@ -43,15 +43,6 @@ function Carreira() {
     setScrollEnabled(!scrollEnabled);
   };
 
-  // USER EFFECTS //
-  useLayoutEffect(() => {
-    if (isInView) {
-      // dispatch(particlesOn());
-      mainControls.start("visible");
-      dispatch(currentSession());
-    }
-  }, [isInView]);
-
   useLayoutEffect(() => {
     if (modalStatus) {
       dispatch(particlesOff());
@@ -63,6 +54,35 @@ function Carreira() {
 
   // eslint-disable-next-line no-unused-vars
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
+
+  // USER EFFECTS //
+  useLayoutEffect(() => {
+    if (isInView) {
+      // dispatch(particlesOn());
+      mainControls.start("visible");
+      dispatch(currentSession());
+      console.log("Carreira");
+    }
+  }, [isInView]);
+
+  useLayoutEffect(() => {
+    if (isInView) {
+      // dispatch(particlesOn());
+      mainControls.start("visible");
+      dispatch(currentSession());
+      console.log("Carreira");
+    }
+  }, [menuDisplayOpt]);
+
+  // // USER EFFECTS //
+  // useLayoutEffect(() => {
+  //   if (isInView) {
+  //     // dispatch(particlesOn());
+  //     mainControls.start("visible");
+  //     dispatch(currentSession());
+  //     console.log("Carreira");
+  //   }
+  // }, [isInView]);
 
   // console.log(menuDisplayOpt);
   // console.log(modalStatus)
@@ -85,10 +105,11 @@ function Carreira() {
         <div
           className="bg-[#2A2344] w-screen h-full sm:h-screen md:h-full lg:h-screen xl:h-full 2xl:h-full  items-center flex flex-row "
           id="carreira"
+          ref={ref}
         >
           <div className="container mx-auto grid h-full lg:mt-32 sm:mb-0 mb-20 p-5">
             <motion.h1
-              ref={ref}
+              // ref={ref}
               variants={{
                 hidden: { opacity: 0, y: 75 },
                 visible: { opacity: 1, y: 0 },
@@ -132,6 +153,7 @@ function Carreira() {
         <div
           className="bg-[#2A2344] w-screen h-full  items-center flex flex-row "
           id="carreira"
+          // ref={ref}
         >
           <div className="container mx-auto grid sm:h-screen  sm:mb-0 mb-20">
             <motion.h1

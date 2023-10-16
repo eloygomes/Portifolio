@@ -10,7 +10,6 @@ import images from "./PortS/PortCovers";
 import { PortImages } from "./PortS/PortImages";
 
 import { jobDesc } from "./PortS/jobDesc";
-import { useEffect } from "react";
 
 //Redux
 function freezeScroll() {
@@ -67,6 +66,9 @@ function Portfolio() {
   const scrollBodyModalOn = useSelector((state) => state.scrollBodyModalOn);
   // const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
 
+  // eslint-disable-next-line no-unused-vars
+  const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
+
   const dispatch = useDispatch();
 
   const ref = useRef(null);
@@ -94,12 +96,18 @@ function Portfolio() {
       mainControls.start("visible");
       // console.log(isInView);
       dispatch(currentSession());
+      console.log("PORTFOLIO");
     }
   }, [isInView]);
 
-  useEffect(() => {
-    console.log(portWorkStatus);
-  }, [portWorkStatus]);
+  useLayoutEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+      // console.log(isInView);
+      dispatch(currentSession());
+      console.log("PORTFOLIO");
+    }
+  }, [menuDisplayOpt]);
 
   //Handle page scroll
   useLayoutEffect(() => {
@@ -216,12 +224,15 @@ function Portfolio() {
         ////////////////////////////////////////////////////////////////////////////////////  MOBILE  ////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////  MOBILE  ////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////  MOBILE  ////////////////////////////////////////////////////////////////////////////////////
-        <div className="bg-[#19142A] w-screen h-full flex flex-col " id="port">
+        <div
+          className="bg-[#19142A] w-screen h-full flex flex-col "
+          id="port"
+          ref={ref}
+        >
           <div className="container mx-auto sm:mt-10 mt-16">
             <div className="flex flex-col sm:flex-col md:flex-col lg:flex-col p-5 sm:p-5 md:p-8">
               <div className="sm:w-[50%] md:w-full w-full flex flex-col">
                 <motion.h1
-                  ref={ref}
                   variants={{
                     hidden: { opacity: 0, y: 75 },
                     visible: { opacity: 1, y: 0 },
@@ -254,7 +265,10 @@ function Portfolio() {
               {/* /////////////////////////////////////////////////////////////////////////BUTTONS///////////////////////////////////////////////////////////////////////// */}
 
               {window.innerWidth <= 961 ? (
-                <div className="w-full flex flex-row  justify-between overflow-y-hidden py-5">
+                <div
+                  className="w-full flex flex-row  justify-between overflow-y-hidden py-5"
+                  ref={ref}
+                >
                   <motion.button
                     variants={{
                       hidden: { opacity: 0, y: 75 },
@@ -392,7 +406,10 @@ function Portfolio() {
                   </motion.button>
                 </div>
               ) : (
-                <div className="w-full h-screen flex sm:flex-row flex-col items-center justify-center">
+                <div
+                  className="w-full h-screen flex sm:flex-row flex-col items-center justify-center"
+                  ref={ref}
+                >
                   {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
                   {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
                   {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
@@ -406,7 +423,7 @@ function Portfolio() {
                   {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
                   {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
                   <motion.button
-                    ref={ref}
+                    // ref={ref}
                     variants={{
                       hidden: { opacity: 0, y: 75 },
                       visible: { opacity: 1, y: 0 },
@@ -710,6 +727,7 @@ function Portfolio() {
         <div
           className="bg-[#19142A] w-screen h-full sm:h-screen flex flex-col "
           id="port"
+          ref={ref}
         >
           {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
           {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
@@ -724,10 +742,7 @@ function Portfolio() {
           {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
           {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
 
-          <div
-            ref={ref}
-            className="container mx-auto  mt-16 flex flex-col items-center justify-center h-screen"
-          >
+          <div className="container mx-auto  mt-16 flex flex-col items-center justify-center h-screen">
             <div className="w-full flex flex-row p-5 lg:px-20 lg:pb-00 lg:pt-20 2xl:p-5">
               <div className="sm:w-[50%] w-full flex flex-col">
                 <motion.h1

@@ -1,4 +1,7 @@
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useSelector, useDispatch } from "react-redux";
+import { useLayoutEffect, useRef } from "react";
+
 import EmailButtonCustom from "./suport/EmailButton1";
 import EmailButtonBranding from "./suport/EmailButton2";
 import EmailButtonImpresso from "./suport/EmailButton3";
@@ -7,10 +10,42 @@ import EmailButtonEdicao from "./suport/EmailButton5";
 import EmailButtonPodcast from "./suport/EmailButton6";
 
 function NewServiceSession() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const mainControls = useAnimation();
+  const dispatch = useDispatch();
+
+  function currentSession() {
+    return { type: "services" };
+  }
+
+  // eslint-disable-next-line no-unused-vars
+  const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
+
+  // USER EFFECTS //
+  useLayoutEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+      // console.log(isInView);
+      dispatch(currentSession());
+      console.log("services");
+    }
+  }, [isInView]);
+
+  useLayoutEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+      // console.log(isInView);
+      dispatch(currentSession());
+      console.log("services");
+    }
+  }, [menuDisplayOpt]);
+
   return (
     <div
       className="w-screen sm:h-screen md:h-full lg:h-screen xl:h-screen 2xl:h-full h-fit flex flex-col bg-[#19142A] bg-opacity-95"
       id="services"
+      ref={ref}
     >
       <div className="container mx-auto flex flex-col sm:justify-center md:justify-center lg:justify-center xl:justify-center 2xl:justify-center  justify-start sm:items-center md:items-center lg:items-center xl:items-center 2xl:items-center items-center sm:h-screen md:h-screen lg:h-screen xl:h-screen 2xl:h-screen h-fit mt-24 sm:mt-00 md:mt-00 lg:mt-00 xl:mt-00 2xl:mt-00 ">
         <div className=" mb-[10vh] sm:mt-[12vh] md:mt-[12vh] lg:mt-[12vh] xl:mt-0 2xl:mt-0 mx-5 sm:mx-10 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-5 p-5 backdrop-blur-xl bg-white bg-opacity-10 rounded-xl">

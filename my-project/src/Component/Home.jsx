@@ -11,21 +11,30 @@ function Home() {
 
   const dispatch = useDispatch();
 
-  useLayoutEffect(() => {
-    if (isInView) {
-      // console.log(isInView);
-      dispatch(currentSession());
-      mainControls.start("visible");
-    }
-  }, [isInView]);
-
   function currentSession() {
     return { type: "home" };
   }
 
   // eslint-disable-next-line no-unused-vars
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
-  // console.log(menuDisplayOpt);
+
+  useLayoutEffect(() => {
+    if (isInView) {
+      // console.log(isInView);
+      dispatch(currentSession());
+      mainControls.start("visible");
+      console.log("home");
+    }
+  }, [isInView]);
+
+  useLayoutEffect(() => {
+    if (isInView) {
+      // console.log(isInView);
+      dispatch(currentSession());
+      mainControls.start("visible");
+      console.log("home");
+    }
+  }, [menuDisplayOpt]);
 
   return (
     <>

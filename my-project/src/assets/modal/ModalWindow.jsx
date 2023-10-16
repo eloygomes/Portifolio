@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 import ImageCarousel from "./Carousel/Carousel";
-import { useEffect } from "react";
 
 const customStyles = {
   content: {
@@ -72,9 +71,9 @@ function ModalWindow({
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    console.log(portWorkStatus);
-  }, [portWorkStatus]);
+  // useEffect(() => {
+  //   console.log(portWorkStatus);
+  // }, [portWorkStatus]);
 
   return (
     <div>

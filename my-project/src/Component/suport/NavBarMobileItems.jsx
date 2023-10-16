@@ -46,7 +46,15 @@ function NavBarMobileItems({ setMobileShowMenu }) {
         </div>
 
         <div className="w-1/2 mx-auto flex items-center justify-center bg-[#D6223B] text-xs whitespace-nowrap rounded-lg my-10 p-5 cursor-pointer ">
-          DOWNLOAD CV
+          <p className="bg-[#D6223B] text-xs p-2 whitespace-nowrap rounded">
+            <a
+              href="https://mir-s3-cdn-cf.behance.net/project_modules/1400/68993621654949.651d82cd0e796.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              DOWNLOAD CV
+            </a>
+          </p>
         </div>
       </div>
     </>

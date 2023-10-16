@@ -39,13 +39,26 @@ function BioSession() {
 
   const mainControls = useAnimation();
 
+  // eslint-disable-next-line no-unused-vars
+  const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
+
   useLayoutEffect(() => {
     if (isInView) {
       mainControls.start("visible");
       // console.log(isInView);
       dispatch(currentSession());
+      console.log("bio");
     }
   }, [isInView]);
+
+  useLayoutEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+      // console.log(isInView);
+      dispatch(currentSession());
+      console.log("bio");
+    }
+  }, [menuDisplayOpt]);
 
   const someAnimation = useRef(null);
 
@@ -53,22 +66,16 @@ function BioSession() {
     return { type: "bio" };
   }
 
-  // eslint-disable-next-line no-unused-vars
-  const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
-
   // console.log(menuDisplayOpt);
 
   return (
-    <>
-      <div className=" w-screen flex flex-col" id="bio">
+    <div>
+      <div className=" w-screen flex flex-col mt-10" id="bio" ref={ref}>
         <div className="container mx-auto flex flex-col justify-center">
           <div className="flex flex-col ">
             {/* BOX */}
             <div className="flex flex-col items-center justify-center h-screen">
-              <div
-                ref={ref}
-                className="backdrop-blur-xl bg-white/10 p-5 m-5 sm:p-10 md:p-5 lg:p-5 xl:p-5 2xl:p-5 sm:m-5 lg:m-32 2xl:m-10 lg:mx-16 sm:my-40 lg:mt-40 2xl:mt-40 my-00 rounded-xl "
-              >
+              <div className="backdrop-blur-xl bg-white/10 p-5 m-5 sm:p-10 md:p-5 lg:p-5 xl:p-5 2xl:p-5 sm:m-5 lg:m-32 2xl:m-10 lg:mx-16 sm:my-40 lg:mt-40 2xl:mt-40 my-00 rounded-xl ">
                 <div className="flex flex-col-reverse sm:flex-flex-col-reverse md:flex-col-reverse lg:flex-col-reverse xl:flex-row 2xl:flex-row">
                   <div className="w-full h-full flex flex-col mx-auto justify-center md:p-5 lg:p-5">
                     <div className="w-fit"></div>
@@ -764,7 +771,7 @@ function BioSession() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

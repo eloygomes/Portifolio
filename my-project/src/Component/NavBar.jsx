@@ -17,7 +17,7 @@ function NavBar() {
   const [mobileShowMenu, setMobileShowMenu] = useState(false);
 
   // eslint-disable-next-line no-unused-vars
-  const [desktopMenuActive, setDesktopMenuActive] = useState("");
+  const [desktopMenuActive, setDesktopMenuActive] = useState("home");
 
   // console.log(mobileShowMenu);
   // console.log("window.innerWidth < 961?" + window.innerWidth < 961);
@@ -154,7 +154,13 @@ function NavBar() {
               </div>
               <div className="pl-5 hover:scale-105">
                 <p className="bg-[#D6223B] text-xs p-2 whitespace-nowrap rounded">
-                  DOWNLOAD CV
+                  <a
+                    href="https://mir-s3-cdn-cf.behance.net/project_modules/1400/68993621654949.651d82cd0e796.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    DOWNLOAD CV
+                  </a>
                 </p>
               </div>
             </div>

@@ -9,14 +9,6 @@ function Contact() {
   const mainControls = useAnimation();
   const dispatch = useDispatch();
 
-  useLayoutEffect(() => {
-    if (isInView) {
-      // console.log(isInView);
-      dispatch(currentSession());
-      mainControls.start("visible");
-    }
-  }, [isInView]);
-
   function currentSession() {
     return { type: "contato" };
   }
@@ -24,7 +16,23 @@ function Contact() {
   // eslint-disable-next-line no-unused-vars
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
 
-  // console.log(menuDisplayOpt);
+  useLayoutEffect(() => {
+    if (isInView) {
+      // console.log(isInView);
+      dispatch(currentSession());
+      mainControls.start("visible");
+      console.log("contato");
+    }
+  }, [isInView]);
+
+  useLayoutEffect(() => {
+    if (isInView) {
+      // console.log(isInView);
+      dispatch(currentSession());
+      mainControls.start("visible");
+      console.log("contato");
+    }
+  }, [menuDisplayOpt]);
 
   return (
     <>
@@ -32,12 +40,13 @@ function Contact() {
         <div
           className="bg-[#2A2344] w-screen h-screen flex flex-col p-5"
           id="contato"
+          ref={ref}
         >
           <div className="flex flex-col justify-center h-full">
             <div className="flex  items-center justify-center">
               <div className="w-full h-full container mx-auto">
                 <motion.h1
-                  ref={ref}
+                  // ref={ref}
                   variants={{
                     hidden: { opacity: 0, y: 75 },
                     visible: { opacity: 1, y: 0 },
