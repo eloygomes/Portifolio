@@ -47,14 +47,14 @@ function NewServiceSession() {
                       {window.innerWidth <= 1025 ? ( // Mobile
                         // <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                         <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-3 px-5 text-[0.64rem] lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
-                          Analise perfil de usuários, criação de wireframes,
-                          prototipagem, design system, testes de usabilidade
+                          Criação de wireframes, prototipagem, design system,
+                          testes de usabilidade
                         </p>
                       ) : (
                         // D
                         <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
-                          Analise perfil de usuários, criação de wireframes,
-                          prototipagem, design system, testes de usabilidade
+                          Criação de wireframes, prototipagem, design system,
+                          testes de usabilidade
                         </p>
                       )}
                     </div>
@@ -84,16 +84,14 @@ function NewServiceSession() {
                       {window.innerWidth <= 1025 ? ( // Mobile
                         // <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                         <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-3 px-5 text-[0.64rem] lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
-                          Análise de dados e definição da voz da marca,
-                          elaboração de estratégia de comunicação, design de
-                          produto, de serviço e interação.
+                          Análise de dados, elaboração de estratégia de
+                          comunicação, design de produto e interação.
                         </p>
                       ) : (
                         // D
                         <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
-                          Análise de dados e definição da voz da marca,
-                          elaboração de estratégia de comunicação, design de
-                          produto, de serviço e interação.
+                          Análise de dados, elaboração de estratégia de
+                          comunicação, design de produto e interação.
                         </p>
                       )}
                     </div>
@@ -123,16 +121,14 @@ function NewServiceSession() {
                       {window.innerWidth <= 1025 ? ( // Mobile
                         // <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                         <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-3 px-5 text-[0.64rem] lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
-                          Analise de marca, definição de objetivos, criação de
-                          conceito, desenvolvimento de protótipos e
-                          acompanhamento do processo de produção
+                          Analise de marca, criação de conceito, desenvolvimento
+                          de protótipos
                         </p>
                       ) : (
                         // D
                         <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
-                          Analise de marca, definição de objetivos, criação de
-                          conceito, desenvolvimento de protótipos e
-                          acompanhamento do processo de produção
+                          Analise de marca, criação de conceito, desenvolvimento
+                          de protótipos
                         </p>
                       )}
                     </div>
@@ -163,13 +159,13 @@ function NewServiceSession() {
                         // <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
                         <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-3 px-5 text-[0.64rem] lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Captação, edição e impressão de ensaios artísticos,
-                          casamentos, gestantes, moda, produto e comercial.
+                          casamentos produto e comercial.
                         </p>
                       ) : (
                         // D
                         <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-5 px-5 lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Captação, edição e impressão de ensaios artísticos,
-                          casamentos, gestantes, moda, produto e comercial.
+                          casamentos produto e comercial.
                         </p>
                       )}
                     </div>
