@@ -70,8 +70,8 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
             style={customStyles}
             className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-1"
           >
-            <div className="">
-              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-full m-10 mt- z-20">
+            <div className="flex ">
+              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-full m-10 mt-00 sm:mt-10 md:mt-40  z-20">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-1  ">
                   <div className=" text-xl">Carreira</div>
@@ -93,32 +93,34 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                     <div className="flex flex-col mt-5 ">
                       <div className="uppercase text-2xl  py-2">
                         <img
-                          className="object-cover w-full lg:h-[150px] 2xl:h-[200px] rounded-xl mb-5"
-                          src="https://alfredojunior.files.wordpress.com/2017/06/coletek-cidade-varginha.jpg"
+                          className="object-cover w-full h-[100px] sm:h-[150px] md:h-[150px] lg:h-[150px] xl:lg:h-[150px] 2xl:h-[200px] rounded-md mb-5"
+                          src={`${careerModalInfo.jobImg}`}
                           alt=""
                         />
                       </div>
                       <div className="uppercase font-bold text-xs pt-2 mr-5">
                         Nome da Empresa
                       </div>
-                      <div className="uppercase text-base font-semibold pb-2 mr-5">
+                      <div className="text-xl pb-2 mr-5">
                         {careerModalInfo.jobName}
                       </div>
-                      <div className="uppercase text-xs pt-2 mr-5">
+                      <div className="uppercase font-bold text-xs pt-2 mr-5 mt-5">
                         Segmento
                       </div>
-                      <div className="uppercase text-base font-semibold py-1">
+                      <div className=" text-[0.75rem] font-semibold py-1">
                         {careerModalInfo.jobSegment}
                       </div>
-                      <div className="uppercase text-xs pt-2 mr-5">Duração</div>
-                      <div className="uppercase text-sm font-semibold py-1">
-                        JAN/2015 - DEZ/2018
+                      <div className="uppercase font-bold text-xs pt-2 mr-5 mt-5">
+                        Duração
                       </div>
-                      <div className="uppercase text-xs pt-2 mt-2">
+                      <div className=" text-[0.75rem] font-semibold py-1">
+                        {careerModalInfo.jobDuration}
+                      </div>
+                      <div className="uppercase font-bold text-xs pt-2 mr-5 mt-5">
                         Localização
                       </div>
-                      <div className="text-base  ">
-                        Endereço da empresa, 123123
+                      <div className=" text-[0.75rem]  ">
+                        {careerModalInfo.jobAdress}
                       </div>
                     </div>
                   </div>
@@ -139,17 +141,31 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                         Ferramentas e tecnologias
                       </div>
 
-                      <div className="flex flex-row pt-1">
+                      <div className="flex flex-row pt-1 flex-wrap">
                         {careerModalInfo.jobTools
                           ? careerModalInfo.jobTools.map((tool, index) => (
                               <button
                                 key={index}
-                                className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold"
+                                className="text-xs my-1 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold "
                               >
                                 {tool}
                               </button>
                             ))
                           : null}
+                      </div>
+                      <div className="w-full text-center mt-5">
+                        <div
+                          className="cursor-pointer text-[.3rem] p-2 m-5 border-2 border-white rounded-md text-white z-50"
+                          onClick={() => {
+                            closeModal();
+                            dispatch(showNavbar());
+                            dispatch(leaveScroll());
+                            dispatch(particlesOn());
+                          }}
+                        >
+                          {/* FECHAR */}
+                          <h1>FECHAR</h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -160,6 +176,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
         </div>
       ) : (
         <div>
+          {/* DESKTOP */}
           <Modal
             isOpen={modalStatus}
             onRequestClose={closeModal}
@@ -167,8 +184,8 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
             contentLabel="Example Modal"
             className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3"
           >
-            <div className="w-full min-w-[1200px] rounded-xl">
-              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-[80vh] m-20 lg:mt-20 2xl:mt-32 z-20">
+            <div className="w-full min-w-[1024px] max-w-[1800px] flex rounded-xl">
+              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] lg:w-[90vw] xl:w-[90vw]  h-[80vh] lg:h-full m-20 lg:mt-52 2xl:mt-40 z-20">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between lg:my-2 2xl:my-5 lg:mx-5 ">
                   <div className=" text-3xl">Carreira</div>
@@ -241,12 +258,12 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                           Ferramentas e tecnologias
                         </div>
 
-                        <div className="flex flex-row pt-1">
+                        <div className="flex flex-row pt-1 flex-wrap">
                           {careerModalInfo.jobTools
                             ? careerModalInfo.jobTools.map((tool, index) => (
                                 <button
                                   key={index}
-                                  className="text-xs my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold"
+                                  className="text-xs my-1 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold"
                                 >
                                   {tool}
                                 </button>

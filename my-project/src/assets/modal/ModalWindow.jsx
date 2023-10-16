@@ -123,7 +123,7 @@ function ModalWindow({
                 <div className=" flex flex-row justify-between">
                   <div className="w-full pl-5 ">
                     <div className="uppercase text-sm">{postInfo.jobTitle}</div>
-                    <div className="uppercase text-5xl font-bold">
+                    <div className="uppercase text-4xl font-bold">
                       {postInfo.companyName}
                     </div>
                     <p className="text-sm py-5">{postInfo.jobDescription}</p>
@@ -170,7 +170,7 @@ function ModalWindow({
             className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3"
           >
             <div className="w-full 2xl:min-w-[1200px] rounded-xl">
-              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] 2xl:w-[50vw] h-[90vh] m-10 z-20 overflow-hidden">
+              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] 2xl:w-[90vw] h-[90vh] m-10 z-20 overflow-hidden">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
                   <div className="flex flex-col">
@@ -221,11 +221,11 @@ function ModalWindow({
                     <p className="text-sm py-5">{postInfo.jobDescription}</p>
                     <div className="uppercase text-xs">Techs</div>
                     <div className=" text-sm ">
-                      <ul className="flex flex-row">
+                      <ul className="flex flex-row flex-wrap ">
                         {postInfo
                           ? postInfo.tools.map((tech, index) => (
                               <li
-                                className="text-xs p-1  px-2 rounded-md my-5 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold cursor-pointer sm:whitespace-nowrap"
+                                className="text-xs p-1  px-2 rounded-md my-1 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold cursor-pointer sm:whitespace-nowrap"
                                 key={index}
                               >
                                 {tech}

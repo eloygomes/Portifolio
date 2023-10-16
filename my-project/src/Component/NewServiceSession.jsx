@@ -9,11 +9,11 @@ import EmailButtonPodcast from "./suport/EmailButton6";
 function NewServiceSession() {
   return (
     <div
-      className="w-screen sm:h-screen md:h-screen lg:h-screen xl:h-screen 2xl:h-screen h-fit flex flex-col bg-[#19142A] bg-opacity-95"
+      className="w-screen sm:h-screen md:h-full lg:h-screen xl:h-screen 2xl:h-full h-fit flex flex-col bg-[#19142A] bg-opacity-95"
       id="services"
     >
       <div className="container mx-auto flex flex-col sm:justify-center md:justify-center lg:justify-center xl:justify-center 2xl:justify-center  justify-start sm:items-center md:items-center lg:items-center xl:items-center 2xl:items-center items-center sm:h-screen md:h-screen lg:h-screen xl:h-screen 2xl:h-screen h-fit mt-24 sm:mt-00 md:mt-00 lg:mt-00 xl:mt-00 2xl:mt-00 ">
-        <div className=" mb-[10vh] sm:mt-[12vh] md:mt-[12vh] lg:mt-[12vh] xl:mt-0 2xl:mt-[12vh] mx-5 sm:mx-10 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-5 p-5 backdrop-blur-xl bg-white bg-opacity-10 rounded-xl">
+        <div className=" mb-[10vh] sm:mt-[12vh] md:mt-[12vh] lg:mt-[12vh] xl:mt-0 2xl:mt-0 mx-5 sm:mx-10 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-5 p-5 backdrop-blur-xl bg-white bg-opacity-10 rounded-xl">
           <div className="container mx-auto flex flex-col justify-center text-center p-5">
             <div className="flex flex-col">
               <h1>Serviços</h1>
@@ -41,11 +41,12 @@ function NewServiceSession() {
                       />
                       <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
                       <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                      <h1 className="absolute inset-0 flex items-center justify-start text-2xl text-white top-10 p-5">
+                      <h1 className="absolute inset-0 flex items-center justify-start text-2xl text-white top-5 sm:top-[-4rem] md:top-5 lg:top-2 xl:top-5 2xl:top-5 p-5">
                         UI/UX
                       </h1>
                       {window.innerWidth <= 1025 ? ( // Mobile
-                        <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        // <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-3 px-5 text-[0.64rem] lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Analise perfil de usuários, criação de wireframes,
                           prototipagem, design system, testes de usabilidade
                         </p>
@@ -77,11 +78,12 @@ function NewServiceSession() {
                       />
                       <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
                       <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                      <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
+                      <h1 className="absolute inset-0 flex items-center justify-start text-2xl text-white top-5 sm:top-[-4rem] md:top-5 lg:top-2 xl:top-5 2xl:top-5 p-5">
                         BRANDING
                       </h1>
                       {window.innerWidth <= 1025 ? ( // Mobile
-                        <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        // <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-3 px-5 text-[0.64rem] lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Análise de dados e definição da voz da marca,
                           elaboração de estratégia de comunicação, design de
                           produto, de serviço e interação.
@@ -115,11 +117,12 @@ function NewServiceSession() {
                       />
                       <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
                       <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                      <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
+                      <h1 className="absolute inset-0 flex items-center justify-start text-2xl text-white top-5 sm:top-[-4rem] md:top-5 lg:top-2 xl:top-5 2xl:top-5 p-5">
                         IMPRESSOS
                       </h1>
                       {window.innerWidth <= 1025 ? ( // Mobile
-                        <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        // <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-3 px-5 text-[0.64rem] lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Analise de marca, definição de objetivos, criação de
                           conceito, desenvolvimento de protótipos e
                           acompanhamento do processo de produção
@@ -153,11 +156,12 @@ function NewServiceSession() {
                       />
                       <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
                       <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                      <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
+                      <h1 className="absolute inset-0 flex items-center justify-start text-2xl text-white top-5 sm:top-[-4rem] md:top-5 lg:top-2 xl:top-5 2xl:top-5 p-5">
                         FOTOGRAFIA
                       </h1>
                       {window.innerWidth <= 1025 ? ( // Mobile
-                        <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        // <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-3 px-5 text-[0.64rem] lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Captação, edição e impressão de ensaios artísticos,
                           casamentos, gestantes, moda, produto e comercial.
                         </p>
@@ -189,11 +193,12 @@ function NewServiceSession() {
                       />
                       <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
                       <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                      <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
+                      <h1 className="absolute inset-0 flex items-center justify-start text-2xl text-white top-5 sm:top-[-4rem] md:top-5 lg:top-2 xl:top-5 2xl:top-5 p-5">
                         EDIÇÃO
                       </h1>
                       {window.innerWidth <= 1025 ? ( // Mobile
-                        <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        // <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-3 px-5 text-[0.64rem] lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Planejamento, pesquisa, briefing, conceito, roteiro,
                           produção e edição de videos.
                         </p>
@@ -225,11 +230,12 @@ function NewServiceSession() {
                       />
                       <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
                       <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-                      <h1 className="absolute inset-0 flex items-center justify-start  text-2xl text-white top-10 p-5">
+                      <h1 className="absolute inset-0 flex items-center justify-start text-2xl text-white top-5 sm:top-[-4rem] md:top-5 lg:top-2 xl:top-5 2xl:top-5 p-5">
                         PODCAST
                       </h1>
                       {window.innerWidth <= 1025 ? ( // Mobile
-                        <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        // <p className="absolute inset-0 hidden items-end justify-center text-start text-white bottom-5 px-5 text-sm">
+                        <p className="absolute inset-0 flex items-end justify-center text-start text-white bottom-3 px-5 text-[0.64rem] lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem]">
                           Planejamento, pesquisa, briefing, conceito, roteiro,
                           produção, gravação, apresentação e publicação de
                           podcasts.

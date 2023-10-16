@@ -172,7 +172,7 @@ export const jobDesc = {
   foto: {
     data01: {
       jobTitle: "Fotografia de eventos",
-      companyName: "Peça de teatro - Monologo de uma mulher(SESC)",
+      companyName: "Monologo de uma mulher(SESC)",
       jobDescription:
         "Fotografias cobrindo a peça de teatro Monologo de uma mulher, no SESC Pinheiros.",
       tools: ["Adobe Photoshop", "Adobe Lightroom"],
@@ -194,7 +194,7 @@ export const jobDesc = {
     },
     data04: {
       jobTitle: "Fotográfias para catálogo de produtos",
-      companyName: "MIROA",
+      companyName: "Catálogo de coleção MIROA",
       jobDescription:
         "Sessões de fotografia com modelo para criação de catalogo de produtos.",
       tools: ["Adobe Photoshop", "Adobe Lightroom"],
