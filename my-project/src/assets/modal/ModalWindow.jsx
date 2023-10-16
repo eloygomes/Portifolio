@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 import ImageCarousel from "./Carousel/Carousel";
+import { useEffect } from "react";
 
 const customStyles = {
   content: {
@@ -71,6 +72,10 @@ function ModalWindow({
 
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    console.log(portWorkStatus);
+  }, [portWorkStatus]);
+
   return (
     <div>
       <div>
@@ -102,7 +107,7 @@ function ModalWindow({
                 </div>
                 {/* ROW 2 */}
                 <div className=" flex flex-col ">
-                  {portWorkStatus === "edicao" ? (
+                  {/* {portWorkStatus === "edicao" ? (
                     <div className="flex flex-row-reverse">
                       <iframe
                         width="768"
@@ -117,6 +122,24 @@ function ModalWindow({
                     </div>
                   ) : (
                     <ImageCarousel images={postImg} />
+                  )} */}
+                  {portWorkStatus === "edicao" ? (
+                    <div className="flex flex-row-reverse">
+                      <iframe
+                        width="768"
+                        height="432"
+                        src={`${postImg}`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        className="m-5 "
+                      ></iframe>
+                    </div>
+                  ) : portWorkStatus === "foto" ? (
+                    <ImageCarousel images={postImg} scrollFirstImage={false} />
+                  ) : (
+                    <ImageCarousel images={postImg} scrollFirstImage={true} />
                   )}
                 </div>
                 {/* ROW 3 */}
@@ -193,7 +216,7 @@ function ModalWindow({
 
                 {/* ROW 2 */}
                 <div className=" flex flex-col cursor-pointer ">
-                  {portWorkStatus === "edicao" ? (
+                  {/* {portWorkStatus === "edicao" ? (
                     <div className="flex flex-row-reverse">
                       <iframe
                         width="768"
@@ -208,6 +231,27 @@ function ModalWindow({
                     </div>
                   ) : (
                     <ImageCarousel images={postImg} />
+                  )} */}
+                  {portWorkStatus === "edicao" ? (
+                    <div className="flex flex-row-reverse">
+                      <iframe
+                        width="768"
+                        height="432"
+                        src={`${postImg}`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        className="m-5 "
+                      ></iframe>
+                    </div>
+                  ) : portWorkStatus === "foto" ? (
+                    <ImageCarousel images={postImg} subSession={"foto"} />
+                  ) : (
+                    <ImageCarousel
+                      images={postImg}
+                      subSession={portWorkStatus}
+                    />
                   )}
                 </div>
 

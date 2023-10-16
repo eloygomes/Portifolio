@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  
+
   background-color: #242424;
 
   font-synthesis: none;
@@ -28,7 +28,6 @@ a:hover {
   color: #D6223B;
 } */
 
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -36,17 +35,16 @@ h1 {
 
 button {
   border-radius: 8px;
-  
+
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  
 }
 button:hover {
-  border-color: #D6223B;
+  border-color: #d6223b;
 }
 /* button:focus,
 button:focus-visible {
@@ -66,40 +64,42 @@ button:focus-visible {
   }
 } */
 
-
 .carousel.carousel-slider .control-arrow:hover {
-
-    background: rgba(0,0,0,0.0);
-
+  background: rgba(0, 0, 0, 0);
 }
 
-#formationTimeline01 .vertical-align01{
+#formationTimeline01 .vertical-align01 {
   background-color: rgb(255 255 255 / 0.2);
   backdrop-filter: blur(24px);
-  
-}#formationTimeline01 .vertical-timeline-element-content-arrow{
- opacity: 0.2;
+}
+#formationTimeline01 .vertical-timeline-element-content-arrow {
+  opacity: 0.2;
 }
 
-.vertical-timeline-element-content{
+.vertical-timeline-element-content {
   box-shadow: none;
 }
 
-
-
-.carrao .control-next, .carrao .control-prev{
+.carrao .control-next,
+.carrao .control-prev {
   height: 80vh;
   background-color: red;
 }
 
-.carousel .control-next.control-arrow:before{
+.carousel .control-next.control-arrow:before {
   border-left: 8px solid gold;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
 }
 
-.carousel .control-prev.control-arrow:before{
+.carousel .control-prev.control-arrow:before {
   border-right: 8px solid gold;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
+}
+
+.carousel .slide img {
+  width: auto;
+  padding: 4rem;
+  border-radius: 5rem;
 }

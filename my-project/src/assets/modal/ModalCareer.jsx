@@ -71,7 +71,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
             className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-1"
           >
             <div className="flex ">
-              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-full m-10 mt-00 sm:mt-10 md:mt-40  z-20">
+              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-full m-10 mt-00 sm:mt-10 md:mt-10  z-20 ">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-1  ">
                   <div className=" text-xl">Carreira</div>
@@ -101,22 +101,22 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                       <div className="uppercase font-bold text-xs pt-2 mr-5">
                         Nome da Empresa
                       </div>
-                      <div className="text-xl pb-2 mr-5">
+                      <div className="text-2xl pb-2 mr-5">
                         {careerModalInfo.jobName}
                       </div>
-                      <div className="uppercase font-bold text-xs pt-2 mr-5 mt-5">
+                      <div className="uppercase font-bold text-xs pt-2 mr-5 mt-2">
                         Segmento
                       </div>
                       <div className=" text-[0.75rem] font-semibold py-1">
                         {careerModalInfo.jobSegment}
                       </div>
-                      <div className="uppercase font-bold text-xs pt-2 mr-5 mt-5">
+                      <div className="uppercase font-bold text-xs pt-2 mr-5 mt-2">
                         Duração
                       </div>
                       <div className=" text-[0.75rem] font-semibold py-1">
                         {careerModalInfo.jobDuration}
                       </div>
-                      <div className="uppercase font-bold text-xs pt-2 mr-5 mt-5">
+                      <div className="uppercase font-bold text-xs pt-2 mr-5 mt-2">
                         Localização
                       </div>
                       <div className=" text-[0.75rem]  ">
@@ -128,7 +128,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                   <div className="w-full">
                     <div className=" flex flex-col mt-10">
                       <div className="uppercase text-sm pt-2 mr-5">Cargo</div>
-                      <div className="uppercase text-2xl py-2">
+                      <div className="uppercase text-2xl font-bold py-2">
                         {careerModalInfo.jobPosition}
                       </div>
                       <div className="uppercase text-sm pt-2 mr-5">
@@ -185,7 +185,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
             className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3"
           >
             <div className="w-full min-w-[1024px] max-w-[1800px] flex rounded-xl">
-              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] lg:w-[90vw] xl:w-[90vw]  h-[80vh] lg:h-full m-20 lg:mt-52 2xl:mt-40 z-20">
+              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] lg:w-[90vw] xl:w-[90vw]  h-[80vh] lg:h-full m-20 lg:mt-52 2xl:mt-40 z-20 ">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between lg:my-2 2xl:my-5 lg:mx-5 ">
                   <div className=" text-3xl">Carreira</div>

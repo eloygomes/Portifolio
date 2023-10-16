@@ -10,6 +10,7 @@ import images from "./PortS/PortCovers";
 import { PortImages } from "./PortS/PortImages";
 
 import { jobDesc } from "./PortS/jobDesc";
+import { useEffect } from "react";
 
 //Redux
 function freezeScroll() {
@@ -95,6 +96,10 @@ function Portfolio() {
       dispatch(currentSession());
     }
   }, [isInView]);
+
+  useEffect(() => {
+    console.log(portWorkStatus);
+  }, [portWorkStatus]);
 
   //Handle page scroll
   useLayoutEffect(() => {

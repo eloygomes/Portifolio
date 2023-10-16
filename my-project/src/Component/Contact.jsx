@@ -57,7 +57,7 @@ function Contact() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.25 }}
-                  className="py-1 text-5xl font-medium hover:text-[#D6223B] cursor-pointer"
+                  className="py-1 text-5xl md:text-8xl font-medium hover:text-[#D6223B] cursor-pointer"
                 >
                   eloy.gomes
                   <br />

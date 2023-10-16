@@ -3,13 +3,15 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 // eslint-disable-next-line react/prop-types
-const ImageCarousel = ({ images }) => {
+const ImageCarousel = ({ images, subSession }) => {
   const [selectedImageIndex] = useState(0);
   const [firstImageIndex, setFirstImageIndex] = useState(0);
 
   const handleBeforeChange = (oldIndex, newIndex) => {
     setFirstImageIndex(newIndex);
   };
+
+  console.log("subSession", subSession);
 
   return (
     <>
@@ -50,20 +52,56 @@ const ImageCarousel = ({ images }) => {
                 className="carrao rounded-xl"
                 beforeChange={handleBeforeChange}
               >
-                {images.map((image, index) => (
+                {/* {images.map((image, index) => (
                   <div
                     key={index}
                     className={`${
                       index === firstImageIndex ? "h-screen" : "h-auto"
-                    } overflow-scroll flex items-start justify-center`}
+                    } overflow-scroll flex items-start justify-center max-h-[40rem]`}
                   >
                     <img
-                      className="rounded-lg object-cover p-16 pb-96 items-center"
+                      // className="rounded-lg object-cover p-16 pb-96 items-center"
+                      className={`${
+                        index === firstImageIndex ? "p-16 pb-96" : "p-0 pb-0"
+                      } rounded-lg object-cover items-center`}
                       src={image}
                       alt={`Image ${index + 1}`}
                     />
                   </div>
-                ))}
+                ))} */}
+                {subSession === "foto"
+                  ? images.map((image, index) => (
+                      <div
+                        key={index}
+                        className={` h-[40rem] overflow-scroll flex items-start justify-center `}
+                      >
+                        <img
+                          // className="rounded-lg object-cover p-16 pb-96 items-center"
+                          className={`p-0 rounded-lg object-cover items-center w-auto h-full`}
+                          src={image}
+                          alt={`Image ${index + 1}`}
+                        />
+                      </div>
+                    ))
+                  : images.map((image, index) => (
+                      <div
+                        key={index}
+                        className={`${
+                          index === firstImageIndex ? "h-screen" : "h-auto"
+                        } overflow-scroll flex items-start justify-center max-h-[40rem]`}
+                      >
+                        <img
+                          // className="rounded-lg object-cover p-16 pb-96 items-center"
+                          className={`${
+                            index === firstImageIndex
+                              ? "p-16 pb-96"
+                              : "p-0 pb-0"
+                          } rounded-lg object-cover items-center`}
+                          src={image}
+                          alt={`Image ${index + 1}`}
+                        />
+                      </div>
+                    ))}
               </Carousel>
             </div>
           </div>
