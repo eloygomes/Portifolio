@@ -43,7 +43,7 @@ function Portfolio() {
   const [postInfo, setPostInfo] = useState("");
 
   // Handle page scroll
-  const [scrollEnabled, setScrollEnabled] = useState(false);
+  // const [scrollEnabled, setScrollEnabled] = useState(false);
 
   // Handle image changes when portfolio buttons are clicked
   const [portWorkStatus, setPortWorkStatus] = useState("uiux");
@@ -77,14 +77,14 @@ function Portfolio() {
 
   // FUNCTIONS //
   //Handle page scroll
-  const handleToggleScroll = () => {
-    if (scrollEnabled) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    setScrollEnabled(!scrollEnabled);
-  };
+  // const handleToggleScroll = () => {
+  //   if (scrollEnabled) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  //   setScrollEnabled(!scrollEnabled);
+  // };
 
   const handleImages = () => {
     console.log(portWorkStatus);
@@ -109,14 +109,20 @@ function Portfolio() {
     }
   }, [menuDisplayOpt]);
 
+  ////////////// GET THE POMBO
+
   //Handle page scroll
   useLayoutEffect(() => {
-    handleToggleScroll();
+    if (isInView) {
+      // handleToggleScroll();
+    }
   }, [scrollBodyModalOn]);
 
   //This useEffect is to handle the particles when the modal is open
   useLayoutEffect(() => {
-    handleToggleScroll();
+    if (isInView) {
+      // handleToggleScroll();
+    }
   }, [modalStatus]);
 
   useLayoutEffect(() => {

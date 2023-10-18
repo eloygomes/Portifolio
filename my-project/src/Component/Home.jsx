@@ -23,7 +23,7 @@ function Home() {
       // console.log(isInView);
       dispatch(currentSession());
       mainControls.start("visible");
-      console.log("home");
+      // console.log("home");
     }
   }, [isInView]);
 
@@ -32,7 +32,7 @@ function Home() {
       // console.log(isInView);
       dispatch(currentSession());
       mainControls.start("visible");
-      console.log("home");
+      // console.log("home");
     }
   }, [menuDisplayOpt]);
 
@@ -45,7 +45,7 @@ function Home() {
       ) : (
         []
       )}
-      <div className="w-screen h-screen flex flex-col overflow-x-hidden ">
+      <div className="w-screen h-screen flex flex-col overflow-x-hidden overflow-y-hidden ">
         <div className="container mx-auto h-screen flex flex-col justify-center">
           <div
             className="flex sm:flex-col-reverse md:flex-col-reverse flex-col-reverse"
@@ -61,7 +61,7 @@ function Home() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.05 }}
-                  className="sm:text-8xl lg:text-6xl 2xl:text-8xl  font-medium  bg-[#2A2344] w-fit sm:mx-none mx-auto z-2"
+                  className="sm:text-8xl lg:text-6xl 2xl:text-6xl  font-medium  bg-[#2A2344] w-fit sm:mx-none mx-auto z-2"
                 >
                   Eloy Gomes
                 </motion.h1>
@@ -73,7 +73,7 @@ function Home() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.25 }}
-                  className="bg-[#D6223B] w-fit py-1 px-2 lg:text-lg   2xl:text-4xl font-light text-left sm:mx-none mx-auto z-1"
+                  className="bg-[#D6223B] w-fit py-1 px-2 lg:text-lg   2xl:text-2xl font-light text-left sm:mx-none mx-auto z-1"
                 >
                   Full Stack Developer
                 </motion.h4>
@@ -90,7 +90,7 @@ function Home() {
                 transition={{ duration: 0.5, delay: 0.35 }}
                 src="https://www.koncretejungle.com.br/eloygomes/assets/img01.01-a494c9a4.png"
                 alt="f"
-                className="sm:max-w-lg md:max-w-sm 2xl:max-w-md max-w-sm w-full mx-auto "
+                className="sm:max-w-lg md:max-w-sm xl:max-w-[20rem] 2xl:max-w-[20rem] max-w-sm w-full mx-auto "
               />
             </div>
           </div>

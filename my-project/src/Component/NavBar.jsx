@@ -60,12 +60,12 @@ function NavBar() {
           }`}
         >
           <div className="lg:flex hidden flex-row justify-between container lg:pl-8 lg:pr-8 xl:mx-auto 2xl:mx-auto ">
-            <div className="font-black text-2xl hover:scale-105">
+            <div className="font-black text-2xl hover:scale-105  2xl:mx-5">
               <a className="font-extrabold  hover:text-[#d6223b]" href="#">
                 EVG
               </a>
             </div>
-            <div className=" flex flex-row justify-around cursor-pointer">
+            <div className=" flex flex-row justify-around cursor-pointer 2xl:mx-5">
               <div
                 onClick={() => {
                   setDesktopMenuActive("bio");

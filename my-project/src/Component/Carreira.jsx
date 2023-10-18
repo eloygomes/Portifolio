@@ -10,7 +10,7 @@ function Carreira() {
   // Control modal state
   const [modalStatus, setModalStatus] = useState(false);
   // Handle page scroll
-  const [scrollEnabled, setScrollEnabled] = useState(false);
+  // const [scrollEnabled, setScrollEnabled] = useState(false);
   const [careerModalInfo, setcareerModalInfo] = useState({});
 
   const ref = useRef(null);
@@ -34,14 +34,14 @@ function Carreira() {
 
   // FUNCTIONS //
   //Handle page scroll
-  const handleToggleScroll = () => {
-    if (scrollEnabled) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    setScrollEnabled(!scrollEnabled);
-  };
+  // const handleToggleScroll = () => {
+  //   if (scrollEnabled) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  //   setScrollEnabled(!scrollEnabled);
+  // };
 
   useLayoutEffect(() => {
     if (modalStatus) {
@@ -49,7 +49,9 @@ function Carreira() {
     } else {
       dispatch(particlesOn());
     }
-    handleToggleScroll();
+    if (isInView) {
+      // handleToggleScroll();
+    }
   }, [modalStatus]);
 
   // eslint-disable-next-line no-unused-vars
