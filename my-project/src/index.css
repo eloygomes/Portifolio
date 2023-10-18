@@ -19,13 +19,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* a {
-  font-weight: 500;
-  color: white;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #D6223B;
+/* body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100vw;
 } */
 
 h1 {
@@ -46,23 +43,6 @@ button {
 button:hover {
   border-color: #d6223b;
 }
-/* button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
 
 .carousel.carousel-slider .control-arrow:hover {
   background: rgba(0, 0, 0, 0);

@@ -45,14 +45,14 @@ function Home() {
       ) : (
         []
       )}
-      <div className=" w-screen h-screen flex flex-col">
+      <div className="w-screen h-screen flex flex-col overflow-x-hidden ">
         <div className="container mx-auto h-screen flex flex-col justify-center">
           <div
             className="flex sm:flex-col-reverse md:flex-col-reverse flex-col-reverse"
             ref={ref}
           >
             <div className="sm:w-full md:w-full w-full sm:mt-[61px] lg:mt-[41px] 2xl:mt-[61px]  mt-0">
-              <div className="h-full flex flex-col justify-center container  ">
+              <div className="h-full flex flex-col justify-center container   ">
                 <motion.h1
                   variants={{
                     hidden: { opacity: 0, y: 75 },
