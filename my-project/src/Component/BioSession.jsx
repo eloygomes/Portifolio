@@ -75,7 +75,7 @@ function BioSession() {
           <div className="flex flex-col ">
             {/* BOX */}
             <div className="flex flex-col items-center justify-center h-screen">
-              <div className="backdrop-blur-xl bg-white/10 p-5 m-5 sm:p-10 md:p-5 lg:p-5 xl:p-5 2xl:p-5 sm:m-5 lg:m-32 2xl:m-10 lg:mx-16 sm:my-40 lg:mt-40 2xl:mt-40 my-00 rounded-xl ">
+              <div className="backdrop-blur-xl bg-white/10 p-5 m-5 sm:p-10 md:p-5 lg:p-5 xl:p-5 2xl:p-5 sm:m-5 lg:m-32 2xl:m-32 lg:mx-16 sm:my-40 lg:mt-40 2xl:mt-40 my-00 rounded-xl ">
                 <div className="flex flex-col-reverse sm:flex-flex-col-reverse md:flex-col-reverse lg:flex-col-reverse xl:flex-row 2xl:flex-row">
                   <div className="w-full h-full flex flex-col mx-auto justify-center md:p-5 lg:p-5">
                     <div className="w-fit"></div>

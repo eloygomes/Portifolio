@@ -10,9 +10,9 @@ function HorizGroup({
   setcareerModalInfo,
 }) {
   return (
-    <div className="mt-64 sm:mt-80 md:mt-64 lg:mt-64 xl:-mt-40 2xl:-mt-40">
+    <div className="mt-64 sm:mt-80 md:mt-64 lg:mt-64 xl:-mt-40 2xl:-mt-40 2xl:h-full 2xl:px-32">
       <div className="wrapper flex flex-row  ">
-        <ol className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 2xl:lg:grid-cols-6 2xl:p-5 grid-flow-row-dense lg:mt-5 2xl:mt-5 gap-3 sm:gap-3 md:gap-6 lg:gap-10 xl:gap-3 2xl:gap-3 p-2 sm:p-2 md:p-12 lg:p-20 xl:p-12 rtl ">
+        <ol className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 2xl:lg:grid-cols-6 2xl:p-5 grid-flow-row-dense lg:mt-5 2xl:mt-40 gap-3 sm:gap-3 md:gap-6 lg:gap-10 xl:gap-3 2xl:gap-3 p-2 sm:p-2 md:p-12 lg:p-20 xl:p-12 rtl ">
           <EachSession
             jobPosition={`${carrerDataInfo.job01.jobPosition}`}
             jobName={`${carrerDataInfo.job01.jobName}`}

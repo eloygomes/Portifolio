@@ -231,7 +231,7 @@ function Portfolio() {
         ////////////////////////////////////////////////////////////////////////////////////  MOBILE  ////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////  MOBILE  ////////////////////////////////////////////////////////////////////////////////////
         <div
-          className="bg-[#19142A] w-screen h-full flex flex-col "
+          className="bg-[#19142A] w-screen h-full flex flex-col 2xl:mb-5 "
           id="port"
           ref={ref}
         >
@@ -749,7 +749,7 @@ function Portfolio() {
           {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
 
           <div className="container mx-auto  mt-16 flex flex-col items-center justify-center h-screen">
-            <div className="w-full flex flex-row p-5 lg:px-20 lg:pb-00 lg:pt-20 2xl:p-5">
+            <div className="w-full flex flex-row p-5 lg:px-20 lg:pb-00 lg:pt-20 2xl:px-32">
               <div className="sm:w-[50%] w-full flex flex-col">
                 <motion.h1
                   variants={{
@@ -941,11 +941,11 @@ function Portfolio() {
                     onClick={() => {
                       setPortWorkStatus("uiux");
                     }}
-                    className={`w-full mt-5 py-1 h-[50px] ${
+                    className={`mt-5 py-1 h-[50px] ${
                       portWorkStatus === "uiux"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } whitespace-nowrap lg:text-[.7rem] xl:text-sm 2xl:text-lg `}
+                    } whitespace-nowrap lg:text-[.7rem] xl:text-sm 2xl:text-sm `}
                   >
                     UI / UX
                   </motion.button>
@@ -975,7 +975,7 @@ function Portfolio() {
                       portWorkStatus === "impressos"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } sm:ml-10 lg:ml-2 2xl:ml-5 whitespace-nowrap lg:text-[.7rem] xl:text-sm 2xl:text-lg`}
+                    } sm:ml-10 lg:ml-2 2xl:ml-5 whitespace-nowrap lg:text-[.7rem] xl:text-sm  2xl:text-sm`}
                   >
                     IMPRESSOS
                   </motion.button>
@@ -1001,7 +1001,7 @@ function Portfolio() {
                       portWorkStatus === "branding"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } sm:ml-10 lg:ml-2 2xl:ml-5 whitespace-nowrap lg:text-[.7rem] xl:text-sm 2xl:text-lg uppercase`}
+                    } sm:ml-10 lg:ml-2 2xl:ml-5 whitespace-nowrap lg:text-[.7rem] xl:text-sm  2xl:text-sm uppercase`}
                   >
                     Branding
                   </motion.button>
@@ -1026,7 +1026,7 @@ function Portfolio() {
                       portWorkStatus === "foto"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } sm:ml-10 lg:ml-2 2xl:ml-5 whitespace-nowrap lg:text-[.7rem] xl:text-sm 2xl:text-lg uppercase`}
+                    } sm:ml-10 lg:ml-2 2xl:ml-5 whitespace-nowrap lg:text-[.7rem] xl:text-sm  2xl:text-sm uppercase`}
                   >
                     Fotografia
                   </motion.button>
@@ -1052,7 +1052,7 @@ function Portfolio() {
                       portWorkStatus === "edicao"
                         ? "bg-[#D6223B] text-white"
                         : "bg-[#19142A] border border-gray-500 text-gray-500"
-                    } sm:ml-10 lg:ml-2 lx:ml-5 2xl:ml-5 whitespace-nowrap lg:text-[.7rem] xl:text-sm 2xl:text-lg uppercase`}
+                    } sm:ml-10 lg:ml-2 lx:ml-5 2xl:ml-5 whitespace-nowrap lg:text-[.7rem] xl:text-sm  2xl:text-sm uppercase`}
                   >
                     Edição
                   </motion.button>
@@ -1074,7 +1074,7 @@ function Portfolio() {
             {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
             {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
 
-            <div className="grid gap-6 sm:grid-cols-6 grid-cols-3 sm:grid-rows-1 grid-rows-2 text-center cursor-pointer p-10 lg:px-20 2xl:p-5 mb-10 w-full">
+            <div className="grid gap-6 sm:grid-cols-6 grid-cols-3 sm:grid-rows-1 grid-rows-2 text-center cursor-pointer p-10 lg:px-20 2xl:px-32 mb-10 w-full ">
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 75 },
@@ -1083,7 +1083,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.35 }}
-                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1108,7 +1108,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1132,7 +1132,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.45 }}
-                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1156,7 +1156,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1180,7 +1180,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.55 }}
-                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1206,7 +1206,7 @@ function Portfolio() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
+                  className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
                   onClick={() => {
                     setModalStatus(true);
                     dispatch(hideNavbar());
@@ -1231,7 +1231,7 @@ function Portfolio() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="bg-black sm:h-[400px] lg:h-80 2xl:h-[400px] h-[200px] rounded-3xl"
+                  className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
                   onClick={() => {
                     setModalStatus(true);
                     dispatch(hideNavbar());

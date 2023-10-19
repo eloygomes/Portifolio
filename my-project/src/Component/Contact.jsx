@@ -119,8 +119,8 @@ function Contact() {
           className="bg-[#2A2344] w-screen h-screen flex flex-col"
           id="contato"
         >
-          <div className="container mx-auto mt-28">
-            <div className="flex flex-row">
+          <div className="container mx-auto mt-24">
+            <div className="flex flex-row mx-32">
               <div className="w-full h-full container mx-auto">
                 <motion.h1
                   ref={ref}

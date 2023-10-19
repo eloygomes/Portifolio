@@ -10,25 +10,24 @@ import Contact from "./Component/Contact";
 import Home from "./Component/Home";
 
 import Portfolio from "./Component/Portfolio";
-import Carreira from "./Component/Carreira";
+// import Carreira from "./Component/Carreira";
 
 import NewServiceSession from "./Component/NewServiceSession";
-
-
+import NewCarreira from "./Component/NewCarreira";
 
 Modal.setAppElement("#root");
 
 function App() {
-  
   return (
     <>
       <NavBar />
       <Home />
       <BioSession />
       <Portfolio />
-      <Carreira />
+      {/* <Carreira /> */}
+      <NewCarreira />
       {/* <ServicesSession /> */}
-      <NewServiceSession/>
+      <NewServiceSession />
       <Contact />
     </>
   );
