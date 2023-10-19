@@ -28,7 +28,7 @@ function NewServiceSession() {
       mainControls.start("visible");
       // console.log(isInView);
       dispatch(currentSession());
-      console.log("services");
+      // console.log("services");
     }
   }, [isInView]);
 
@@ -37,7 +37,7 @@ function NewServiceSession() {
       mainControls.start("visible");
       // console.log(isInView);
       dispatch(currentSession());
-      console.log("services");
+      // console.log("services");
     }
   }, [menuDisplayOpt]);
 

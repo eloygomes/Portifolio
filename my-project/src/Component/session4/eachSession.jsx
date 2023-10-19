@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 
 function EachSession({
   // eslint-disable-next-line react/prop-types
@@ -29,6 +30,7 @@ function EachSession({
   const mainControls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref);
+  const dispatch = useDispatch();
 
   const [eachTag, setEachTag] = useState([]);
 
@@ -47,6 +49,13 @@ function EachSession({
     setEachTag(jobToolsArray);
   }, [jobTools]);
 
+  // Control Scroll
+  const makingMagicHappen = () => {
+    document.body.style.overflowY = "hidden";
+    document.body.style.overflowX = "hidden";
+    dispatch({ type: "hold" });
+  };
+
   return (
     <div ref={ref}>
       <motion.div
@@ -60,6 +69,8 @@ function EachSession({
         className="relative sm:mb-0  h-full bottom-0 mx-2 p-3 sm:py-8 lg:py-8 2xl:py-8 sm:px-5 lg:px-3 2xl:px-5 rounded-xl backdrop-blur-xl bg-white/10 cursor-pointer hover:scale-150 duration-300 hover:bg-[#19142A] hover:rounded-xl drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1  "
         onClick={() => {
           setModalStatus(true);
+
+          makingMagicHappen();
           setcareerModalInfo({
             jobPosition: jobPosition,
             jobName: jobName,

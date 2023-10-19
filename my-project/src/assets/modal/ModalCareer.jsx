@@ -2,8 +2,6 @@
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
 import { AiFillCloseCircle } from "react-icons/ai";
-// import { useEffect } from "react";
-// import { useState } from "react";
 
 const customStyles = {
   content: {
@@ -36,9 +34,6 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 // Redux
-function leaveScroll() {
-  return { type: "leave" };
-}
 
 function showNavbar() {
   return { type: "show" };
@@ -50,16 +45,22 @@ function particlesOn() {
 
 // eslint-disable-next-line no-unused-vars
 function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
-  // const [carrerTools, setCarrerTools] = useState([",s,s,s"]);
-
   function closeModal() {
     setModalStatus(false);
-    dispatch(leaveScroll());
+    makingMagicHappen();
     dispatch(particlesOn());
     dispatch(showNavbar());
   }
 
   const dispatch = useDispatch();
+
+  // Control Scroll
+  const makingMagicHappen = () => {
+    document.body.style.overflowY = "scroll";
+    document.body.style.overflowX = "hidden";
+    // dispatch(scrollGo());
+    dispatch({ type: "leave" });
+  };
 
   return (
     <div>
@@ -81,8 +82,9 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                     onClick={() => {
                       closeModal();
                       dispatch(showNavbar());
-                      dispatch(leaveScroll());
-                      dispatch(particlesOn());
+                      // dispatch(leaveScroll());
+                      // dispatch(particlesOn());
+                      setModalStatus(false);
                     }}
                   >
                     <AiFillCloseCircle size={40} />
@@ -160,7 +162,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                           onClick={() => {
                             closeModal();
                             dispatch(showNavbar());
-                            dispatch(leaveScroll());
+                            // dispatch(leaveScroll());
                             dispatch(particlesOn());
                           }}
                         >
@@ -195,7 +197,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                     onClick={() => {
                       closeModal();
                       dispatch(showNavbar());
-                      dispatch(leaveScroll());
+                      // dispatch(leaveScroll());
                       dispatch(particlesOn());
                     }}
                   >

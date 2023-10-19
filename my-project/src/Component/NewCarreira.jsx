@@ -63,7 +63,7 @@ function NewCarreira() {
       // dispatch(particlesOn());
       mainControls.start("visible");
       dispatch(currentSession());
-      console.log("Carreira");
+      // console.log("Carreira");
     }
   }, [isInView]);
 
@@ -72,7 +72,7 @@ function NewCarreira() {
       // dispatch(particlesOn());
       mainControls.start("visible");
       dispatch(currentSession());
-      console.log("Carreira");
+      // console.log("Carreira");
     }
   }, [menuDisplayOpt]);
 

@@ -47,7 +47,7 @@ function BioSession() {
       mainControls.start("visible");
       // console.log(isInView);
       dispatch(currentSession());
-      console.log("bio");
+      // console.log("bio");
     }
   }, [isInView]);
 

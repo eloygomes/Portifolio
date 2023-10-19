@@ -96,7 +96,7 @@ function Portfolio() {
       mainControls.start("visible");
       // console.log(isInView);
       dispatch(currentSession());
-      console.log("PORTFOLIO");
+      // console.log("PORTFOLIO");
     }
   }, [isInView]);
 
@@ -105,7 +105,7 @@ function Portfolio() {
       mainControls.start("visible");
       // console.log(isInView);
       dispatch(currentSession());
-      console.log("PORTFOLIO");
+      // console.log("PORTFOLIO");
     }
   }, [menuDisplayOpt]);
 
