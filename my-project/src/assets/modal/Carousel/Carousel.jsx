@@ -20,15 +20,18 @@ const ImageCarousel = ({ images, subSession }) => {
         //////////////////////////////////////////// Mobile ////////////////////////////////////////////
         //////////////////////////////////////////// Mobile ////////////////////////////////////////////
         <div className="flex flex-col items-center justify-around">
-          {images.map((image, index) => (
-            <div key={index} className="p-3">
-              <img
-                className="rounded-lg object-cover items-center"
-                src={image}
-                alt={`Image ${index + 1}`}
-              />
-            </div>
-          ))}
+          {
+            // eslint-disable-next-line react/prop-types
+            images.map((image, index) => (
+              <div key={index} className="p-3">
+                <img
+                  className="rounded-lg object-cover items-center"
+                  src={image}
+                  alt={`Image ${index + 1}`}
+                />
+              </div>
+            ))
+          }
         </div>
       ) : (
         //////////////////////////////////////////// Desktop ////////////////////////////////////////////
@@ -39,10 +42,10 @@ const ImageCarousel = ({ images, subSession }) => {
           id="imageCarouselHere"
         >
           <div
-            className="w-[70%]  p-16 lg:pt-2 lg:p-5 flex flex-col justify-center absolute right-0 "
+            className="w-[70%]  p-16 lg:pt-2 lg:p-5 xl:p-5 2xl:p-5 flex flex-col justify-center absolute right-0 "
             id="FULL IMAGE HERE"
           >
-            <div className="container mx-auto h-auto mt-64 max-h-[89vh]">
+            <div className="container mx-auto h-auto mt-64 xl:mt-64 2xl:mt-56 max-h-[89vh]">
               <Carousel
                 showArrows={true}
                 showStatus={false}
@@ -52,43 +55,28 @@ const ImageCarousel = ({ images, subSession }) => {
                 className="carrao rounded-xl"
                 beforeChange={handleBeforeChange}
               >
-                {/* {images.map((image, index) => (
-                  <div
-                    key={index}
-                    className={`${
-                      index === firstImageIndex ? "h-screen" : "h-auto"
-                    } overflow-scroll flex items-start justify-center max-h-[40rem]`}
-                  >
-                    <img
-                      // className="rounded-lg object-cover p-16 pb-96 items-center"
-                      className={`${
-                        index === firstImageIndex ? "p-16 pb-96" : "p-0 pb-0"
-                      } rounded-lg object-cover items-center`}
-                      src={image}
-                      alt={`Image ${index + 1}`}
-                    />
-                  </div>
-                ))} */}
                 {subSession === "foto"
-                  ? images.map((image, index) => (
+                  ? // eslint-disable-next-line react/prop-types
+                    images.map((image, index) => (
                       <div
                         key={index}
-                        className={` h-[40rem] overflow-scroll flex items-start justify-center `}
+                        className={` h-[40rem] overflow-hidden flex items-start justify-center `}
                       >
                         <img
                           // className="rounded-lg object-cover p-16 pb-96 items-center"
-                          className={`p-0 rounded-lg object-cover items-center w-auto h-full`}
+                          className={`p-0 rounded-lg object-cover items-center w-auto h-full img-itself`}
                           src={image}
                           alt={`Image ${index + 1}`}
                         />
                       </div>
                     ))
-                  : images.map((image, index) => (
+                  : // eslint-disable-next-line react/prop-types
+                    images.map((image, index) => (
                       <div
                         key={index}
                         className={`${
                           index === firstImageIndex ? "h-screen" : "h-auto"
-                        } overflow-scroll flex items-start justify-center max-h-[40rem]`}
+                        } overflow-scroll overflow-x-hidden flex items-start justify-center max-h-[40rem]`}
                       >
                         <img
                           // className="rounded-lg object-cover p-16 pb-96 items-center"

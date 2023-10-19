@@ -15,8 +15,9 @@ const customStyles = {
     transition: "all 3s ease-in-out 1s",
     borderRadius: "12px",
     padding: "3px",
-    height: "100vh",
-    overflow: "scroll",
+    height: "100%",
+    // overflow: "scroll",
+    overflow: "hidden",
     // marginTop: "50px",
     zIndex: "20",
     border: "none",
@@ -93,7 +94,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                     <div className="flex flex-col mt-5 ">
                       <div className="uppercase text-2xl  py-2">
                         <img
-                          className="object-cover w-full h-[100px] sm:h-[150px] md:h-[150px] lg:h-[150px] xl:lg:h-[150px] 2xl:h-[200px] rounded-md mb-5"
+                          className="object-cover w-full h-[100px] sm:h-[150px] md:h-[150px] lg:h-[150px] xl::h-[150px] 2xl:h-[200px] rounded-md mb-5"
                           src={`${careerModalInfo.jobImg}`}
                           alt=""
                         />
@@ -185,7 +186,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
             className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3"
           >
             <div className="w-full min-w-[1024px] max-w-[1800px] flex rounded-xl">
-              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] lg:w-[90vw] xl:w-[90vw]  h-[80vh] lg:h-full m-20 lg:mt-52 2xl:mt-28 z-20 ">
+              <div className="flex flex-col justify-between rounded-xl p-2   backdrop-blur-xl bg-white/10 w-[90vw] lg:w-[90vw] xl:w-[90vw] 2xl:max-w-[1300px] h-[80vh] lg:h-full m-20 lg:mt-52 2xl:mt-20 z-20 2xl:mx-30  ">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between lg:my-2 2xl:my-5 lg:mx-5 ">
                   <div className=" text-3xl">Carreira</div>
@@ -205,7 +206,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                 <div className="h-full flex flex-col px-5 ">
                   <div className="uppercase text-2xl  ">
                     <img
-                      className="object-cover w-full lg:h-[150px] 2xl:h-[200px] rounded-md mb-5"
+                      className="object-cover w-full lg:h-[150px] 2xl:h-[100px] rounded-md mb-5 "
                       src={`${careerModalInfo.jobImg}`}
                       alt=""
                     />

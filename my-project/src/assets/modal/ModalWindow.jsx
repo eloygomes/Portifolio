@@ -85,7 +85,7 @@ function ModalWindow({
             onRequestClose={closeModal}
             style={customStyles}
             contentLabel="Port Modal"
-            className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3 overflow-hidden"
+            className="absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3 overflow-hidden"
           >
             <div className="w-full min-w-auto rounded-xl">
               <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-full md:h-full m-10 z-20">
