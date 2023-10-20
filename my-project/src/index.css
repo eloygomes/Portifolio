@@ -45,6 +45,38 @@ button:hover {
   border-color: #d6223b;
 }
 
+/* 1 TRY */
+button.control-arrow.control-next {
+  overflow-y: scroll;
+}
+
+button.control-arrow.control-next::-webkit-scrollbar {
+  display: none !important;
+}
+
+button.control-arrow.control-next {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* 2 TRY */
+.imgstyle {
+  overflow-y: scroll;
+}
+
+.imgstyle::-webkit-scrollbar {
+  display: none !important;
+}
+
+.imgstyle {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.carousel.carousel-slider .control-arrow {
+  display: block;
+}
+
 .carousel.carousel-slider .control-arrow:hover {
   background: rgba(0, 0, 0, 0);
 }
