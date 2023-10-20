@@ -60,7 +60,7 @@ function ModalWindow({
 }) {
   function closeModal() {
     setModalStatus(false);
-    dispatch(leaveScroll());
+    makingMagicHappen();
     dispatch(particlesOn());
     dispatch(showNavbar());
   }
@@ -72,9 +72,13 @@ function ModalWindow({
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   console.log(portWorkStatus);
-  // }, [portWorkStatus]);
+  // Control Scroll
+  const makingMagicHappen = () => {
+    document.body.style.overflowY = "scroll";
+    document.body.style.overflowX = "hidden";
+    // dispatch(scrollGo());
+    dispatch({ type: "leave" });
+  };
 
   return (
     <div>

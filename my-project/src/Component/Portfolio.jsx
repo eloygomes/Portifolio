@@ -12,9 +12,6 @@ import { PortImages } from "./PortS/PortImages";
 import { jobDesc } from "./PortS/jobDesc";
 
 //Redux
-function freezeScroll() {
-  return { type: "hold" };
-}
 
 function hideNavbar() {
   return { type: "hide" };
@@ -199,17 +196,12 @@ function Portfolio() {
 
   // CONSOLE ZONE //
 
-  // console.log(portWorkStatus);
-  // console.log(imgSrc01);
-
-  // console.log(modalImgContainer)
-  // console.log(modalImgContainer.container01);
-
-  // console.log(menuDisplayOpt);
-
-  // console.log(modalStatus);
-
-  // console.log(scrollBodyModalOn)
+  // Control Scroll
+  const makingMagicHappen = () => {
+    document.body.style.overflowY = "hidden";
+    document.body.style.overflowX = "hidden";
+    dispatch({ type: "hold" });
+  };
 
   return (
     <>
@@ -587,8 +579,8 @@ function Portfolio() {
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
-                  dispatch(freezeScroll());
-                  dispatch(particlesOff());
+                  makingMagicHappen();
+                  // dispatch(particlesOff());
                   setPostImg(modalImgContainer.container01);
                   setPostInfo(modalInfoContainer.data01);
                 }}
@@ -614,7 +606,7 @@ function Portfolio() {
                   console.log("CLICOUUUUU N2");
                   setModalStatus(true);
                   dispatch(hideNavbar());
-                  dispatch(freezeScroll());
+                  //
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container02);
                   setPostInfo(modalInfoContainer.data02);
@@ -640,7 +632,7 @@ function Portfolio() {
                   console.log("CLICOUUUUU N2");
                   setModalStatus(true);
                   dispatch(hideNavbar());
-                  dispatch(freezeScroll());
+                  //
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container03);
                   setPostInfo(modalInfoContainer.data03);
@@ -664,7 +656,7 @@ function Portfolio() {
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
-                  dispatch(freezeScroll());
+
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container04);
                   setPostInfo(modalInfoContainer.data04);
@@ -688,7 +680,7 @@ function Portfolio() {
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
-                  dispatch(freezeScroll());
+
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container05);
                   setPostInfo(modalInfoContainer.data05);
@@ -713,7 +705,7 @@ function Portfolio() {
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
-                  dispatch(freezeScroll());
+
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container06);
                   setPostInfo(modalInfoContainer.data06);
@@ -1087,7 +1079,7 @@ function Portfolio() {
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
-                  dispatch(freezeScroll());
+                  makingMagicHappen();
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container01);
                   setPostInfo(modalInfoContainer.data01);
@@ -1112,7 +1104,7 @@ function Portfolio() {
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
-                  dispatch(freezeScroll());
+                  makingMagicHappen();
                   setPostImg(modalImgContainer.container02);
                   setPostInfo(modalInfoContainer.data02);
                 }}
@@ -1136,7 +1128,7 @@ function Portfolio() {
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
-                  dispatch(freezeScroll());
+                  makingMagicHappen();
                   setPostImg(modalImgContainer.container03);
                   setPostInfo(modalInfoContainer.data03);
                 }}
@@ -1160,7 +1152,7 @@ function Portfolio() {
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
-                  dispatch(freezeScroll());
+                  makingMagicHappen();
                   setPostImg(modalImgContainer.container04);
                   setPostInfo(modalInfoContainer.data04);
                 }}
@@ -1184,7 +1176,7 @@ function Portfolio() {
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
-                  dispatch(freezeScroll());
+                  makingMagicHappen();
                   dispatch(particlesOff());
                   setPostImg(modalImgContainer.container05);
                   setPostInfo(modalInfoContainer.data05);
@@ -1210,7 +1202,7 @@ function Portfolio() {
                   onClick={() => {
                     setModalStatus(true);
                     dispatch(hideNavbar());
-                    dispatch(freezeScroll());
+                    makingMagicHappen();
                     dispatch(particlesOff());
                     setPostImg(modalImgContainer.container06);
                     setPostInfo(modalInfoContainer.data06);
@@ -1235,7 +1227,7 @@ function Portfolio() {
                   onClick={() => {
                     setModalStatus(true);
                     dispatch(hideNavbar());
-                    dispatch(freezeScroll());
+                    makingMagicHappen();
                     dispatch(particlesOff());
                     setPostImg(modalImgContainer.container06);
                     setPostInfo(modalInfoContainer.data06);
