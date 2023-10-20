@@ -11,7 +11,7 @@ const ImageCarousel = ({ images, subSession }) => {
     setFirstImageIndex(newIndex);
   };
 
-  console.log("subSession", subSession);
+  // console.log("subSession", subSession);
 
   return (
     <>

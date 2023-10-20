@@ -101,7 +101,7 @@ function Carreira() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="text-6xl mt-10 pl-2 sm:pl-3 md:pl-16 lg:pl-20 xl:pl-2 2xl:pl-2 absolute "
+              className="text-4xl mt-10 pl-2 sm:pl-3 md:pl-16 lg:pl-20 xl:pl-2 2xl:pl-2 absolute "
             >
               Carreira
             </motion.h1>

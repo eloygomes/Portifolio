@@ -5,6 +5,34 @@ import { AiFillCloseCircle } from "react-icons/ai";
 
 import ImageCarousel from "./Carousel/Carousel";
 
+const customStylesMobile = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    transform: "translate(-50%, -50%)",
+    transition: "all 3s ease-in-out 1s",
+    borderRadius: "12px",
+    padding: "3px",
+    height: "100vh",
+    // overflow: "scroll",
+    // marginTop: "50px",
+    zIndex: "20",
+    border: "none",
+    outline: "none",
+    overflowY: "scroll",
+  },
+  overlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "rgba(25, 20, 42, 0.75)",
+  },
+};
+
 const customStyles = {
   content: {
     top: "50%",
@@ -87,15 +115,15 @@ function ModalWindow({
           <Modal
             isOpen={modalStatus}
             onRequestClose={closeModal}
-            style={customStyles}
+            style={customStylesMobile}
             contentLabel="Port Modal"
             className="absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3 overflow-hidden"
           >
             <div className="w-full min-w-auto rounded-xl">
-              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-full md:h-full m-10 z-20">
+              <div className="flex flex-col justify-between rounded-xl backdrop-blur-xl bg-white/10 w-[90vw] h-full md:h-full m-10 z-20 p-0">
                 {/* ROW 1 */}
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
-                  <div className="text-4xl">Portfólio</div>
+                  <div className="text-2xl">Portfólio</div>
                   <div
                     className="cursor-pointer text-2xl z-50"
                     onClick={() => {
@@ -111,22 +139,6 @@ function ModalWindow({
                 </div>
                 {/* ROW 2 */}
                 <div className=" flex flex-col ">
-                  {/* {portWorkStatus === "edicao" ? (
-                    <div className="flex flex-row-reverse">
-                      <iframe
-                        width="768"
-                        height="432"
-                        src={`${postImg}`}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                        className="m-5 "
-                      ></iframe>
-                    </div>
-                  ) : (
-                    <ImageCarousel images={postImg} />
-                  )} */}
                   {portWorkStatus === "edicao" ? (
                     <div className="flex flex-row-reverse">
                       <iframe
@@ -148,7 +160,7 @@ function ModalWindow({
                 </div>
                 {/* ROW 3 */}
                 <div className=" flex flex-row justify-between">
-                  <div className="w-full pl-5 ">
+                  <div className="w-full pl-5 my-10">
                     <div className="uppercase text-sm">{postInfo.jobTitle}</div>
                     <div className="uppercase text-4xl font-bold">
                       {postInfo.companyName}

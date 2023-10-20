@@ -119,7 +119,7 @@ function NewCarreira() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="text-6xl mt-10 pl-2 sm:pl-3 md:pl-16 lg:pl-20 xl:pl-2 2xl:pl-2 absolute "
+              className="text-5xl mt-10 pl-2 sm:pl-3 md:pl-16 lg:pl-20 xl:pl-2 2xl:pl-2 absolute "
             >
               Carreira
             </motion.h1>
@@ -131,7 +131,7 @@ function NewCarreira() {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.5, delay: 0.75 }}
-              className="mt-40 absolute w-[90vw] pl-3 sm:px-5 md:px-16 lg:pl-20 xl:pl-5 2xl:pl-5  "
+              className="mt-32 absolute w-[90vw] pl-3 sm:px-5 md:px-16 lg:pl-20 xl:pl-5 2xl:pl-5  "
             >
               Na seção abaixo, apresento um panorama da minha experiência
               profissional até o presente momento.”

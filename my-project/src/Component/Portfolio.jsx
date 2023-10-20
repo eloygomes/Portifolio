@@ -238,7 +238,7 @@ function Portfolio() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.05 }}
-                  className=""
+                  className="text-4xl"
                 >
                   Portifólio
                 </motion.h1>

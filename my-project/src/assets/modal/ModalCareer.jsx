@@ -3,6 +3,34 @@ import Modal from "react-modal";
 import { useDispatch } from "react-redux";
 import { AiFillCloseCircle } from "react-icons/ai";
 
+const customStylesMobile = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    transform: "translate(-50%, -50%)",
+    transition: "all 3s ease-in-out 1s",
+    borderRadius: "12px",
+    padding: "3px",
+    height: "100%",
+    overflow: "scroll",
+    // overflow: "hidden",
+    // marginTop: "50px",
+    zIndex: "20",
+    border: "none",
+    outline: "none",
+  },
+  overlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "rgba(25, 20, 42, 0.75)",
+  },
+};
+
 const customStyles = {
   content: {
     top: "50%",
@@ -69,7 +97,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
           <Modal
             isOpen={modalStatus}
             onRequestClose={closeModal}
-            style={customStyles}
+            style={customStylesMobile}
             className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-1"
           >
             <div className="flex ">
