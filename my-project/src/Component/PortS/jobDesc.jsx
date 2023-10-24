@@ -71,7 +71,7 @@ export const jobDesc = {
     },
     data06: {
       jobTitle: "Criação de site de portfólio",
-      companyName: "Welton Carvalho",
+      companyName: "Seeking 4 elements",
       jobDescription:
         "Desenvolvimento de site para o fotografo com o objetivo de criar um portfólio online.",
       tools: ["Figma", "Adobe Photoshop", "vscode"],
