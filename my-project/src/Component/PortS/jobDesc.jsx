@@ -87,10 +87,10 @@ export const jobDesc = {
       data: "2021",
     },
     data02: {
-      jobTitle: "Criação de material de papelaria",
-      companyName: "Mansor Advogados",
+      jobTitle: "Criação de catálogo de produtos",
+      companyName: "Miroa",
       jobDescription:
-        "Criação e desenvolvimento de papelaria para o escritório Mansor Advogados.",
+        "Criação e desenvolvimento de catálogo da coleção de biquines para a marca Miroa.",
       tools: ["Adobe Photoshop", "Adobe Illustrator"],
       data: "2021",
     },

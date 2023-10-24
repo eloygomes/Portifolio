@@ -78,12 +78,13 @@ export const PortImages = {
     ],
     // MANSOR SITE
     container02: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_05.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_06.png",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/Presentation%20miroa%20impresso.png",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_01.png",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_02.png",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_03.png",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_04.png",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_05.png",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/mansor/mansor_mockup_06.png",
     ],
     // CATALOGO APONTA FACIL
     container03: [
