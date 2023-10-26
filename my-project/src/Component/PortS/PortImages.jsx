@@ -98,12 +98,12 @@ export const PortImages = {
     ],
     // CATALOGO COLETEK
     container04: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/01.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/02.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/03.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/04.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/05.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/06.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/coletek/Presentation%20Print%20Coletek.png",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/02.jpg",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/03.jpg",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/04.jpg",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/05.jpg",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/06.jpg",
     ],
     // Rede D'or
     container05: [
