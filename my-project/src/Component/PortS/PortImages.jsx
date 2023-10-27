@@ -107,10 +107,10 @@ export const PortImages = {
     ],
     // Rede D'or
     container05: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/03.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/01.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/02.jpg",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/04.jpg",
+      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/Presentation%20Print%20rede%20dor.png",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/01.jpg",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/02.jpg",
+      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/04.jpg",
     ],
     // Grupo Skill
     container06: [
