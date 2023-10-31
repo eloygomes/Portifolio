@@ -10,7 +10,7 @@ const images = {
   impressos: {
     img1: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/02%20-%20impressos/impressos06.png",
     img2: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/02%20-%20impressos/impressos05.png",
-    img3: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/02%20-%20impressos/impressos04.png",
+    img3: "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/buddha/Presentation%20Buddha.png",
     img4: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/02%20-%20impressos/impressos03.png",
     img5: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/02%20-%20impressos/impressos02.png",
     img6: "https://www.koncretejungle.com.br/eloygomes/assets/port/portCovers/02%20-%20impressos/impressos01.png",

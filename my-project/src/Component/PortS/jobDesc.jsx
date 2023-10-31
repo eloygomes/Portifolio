@@ -96,9 +96,9 @@ export const jobDesc = {
     },
     data03: {
       jobTitle: "Criação de material de papelaria",
-      companyName: "Aponta Facil",
-      jobDescription: "Desenvolvimento de panfletos para a marca aponta facil.",
-      tools: ["Adobe Photoshop", "Adobe Illustrator"],
+      companyName: "Buddha Spa",
+      jobDescription: "Desenvolvimento de material impresso.",
+      tools: ["Adobe Photoshop", "Adobe Illustrator, Adobe InDesign"],
       data: "2021",
     },
     data04: {
