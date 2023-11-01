@@ -43,7 +43,7 @@ function NewServiceSession() {
 
   return (
     <div
-      className="w-screen sm:h-screen md:h-full lg:h-screen xl:h-screen 2xl:h-full h-fit flex flex-col bg-[#19142A] bg-opacity-95"
+      className="w-screen sm:h-screen md:h-full lg:h-screen xl:h-full 2xl:h-full h-fit flex flex-col bg-[#19142A] bg-opacity-95 xl:min-h-screen"
       id="services"
       ref={ref}
     >

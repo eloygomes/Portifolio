@@ -189,7 +189,7 @@ function NewCarreira() {
 
             {/* //////////////////////////////////////////////////////////////////////// :: CARREIRAS :: //////////////////////////////////////////////////////////////////////// */}
             {window.innerHeight >= 900 ? (
-              <div className="h-fit flex flex-row justify-between lg:mx-20 2xl:mx-1 lg:text-2xl 2xl:text-4xl font-extralight lg:mt-64 2xl:mt-60 2xl:overflow-hidden overflow-x-scroll ">
+              <div className="h-fit flex flex-row justify-between lg:mx-20 2xl:mx-1 lg:text-2xl 2xl:text-4xl font-extralight lg:mt-64 2xl:mt-60 2xl:overflow-hidden  ">
                 <div className="container mx-auto">
                   <div className="flex items-center justify-center h-full overflow-x-hidden overflow-y-hidden">
                     <div className="flex flex-row justify-between items-baseline lg:items-baseline xl:items-baseline 2xl:items-baseline 2xl:max-w-[64vw] h-full 2xl:w-full xl:text-[1.7rem] 2xl:text-2xl">
@@ -258,7 +258,7 @@ function NewCarreira() {
                 </div>
               </div>
             ) : (
-              <div className="h-fit flex flex-row justify-between lg:mx-20 2xl:mx-1 lg:text-2xl 2xl:text-4xl font-extralight lg:mt-64 2xl:mt-60 2xl:overflow-hidden overflow-x-scroll ">
+              <div className="h-fit flex flex-row justify-between lg:mx-20 2xl:mx-1 lg:text-2xl 2xl:text-4xl font-extralight lg:mt-64 2xl:mt-60 2xl:overflow-hidden ">
                 <div className="container mx-auto">
                   <div className="flex items-center justify-center h-full overflow-x-hidden overflow-y-hidden">
                     <div className="flex flex-row justify-between items-baseline lg:items-baseline xl:items-baseline 2xl:items-baseline 2xl:max-w-[64vw] h-full 2xl:w-full xl:text-[1.7rem] 2xl:text-2xl"></div>

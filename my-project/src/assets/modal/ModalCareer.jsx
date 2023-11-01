@@ -216,9 +216,9 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
             className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3"
           >
             <div className="w-full min-w-[1024px] max-w-[1800px] flex rounded-xl">
-              <div className="flex flex-col justify-between rounded-xl p-2   backdrop-blur-xl bg-white/10 w-[90vw] lg:w-[90vw] xl:w-[90vw] 2xl:max-w-[1300px] h-[80vh] lg:h-full m-20 lg:mt-52 2xl:mt-20 z-20 2xl:mx-30  ">
+              <div className="flex flex-col justify-between rounded-xl p-2   backdrop-blur-xl bg-white/10 w-[90vw] lg:w-[90vw] xl:w-[90vw] 2xl:max-w-[1300px] h-[80vh] xl:h-[80vh] lg:h-full m-20 lg:mt-20 2xl:mt-20 z-20 2xl:mx-30 overflow-y-scroll ">
                 {/* ROW 1 */}
-                <div className="h-[10%] flex flex-row justify-between lg:my-2 2xl:my-5 lg:mx-5 ">
+                <div className="h-[10%] flex flex-row justify-between lg:my-2 2xl:my-5 lg:mx-5">
                   <div className=" text-3xl">Carreira</div>
                   <div
                     className="cursor-pointer text-2xl"
@@ -236,7 +236,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
                 <div className="h-full flex flex-col px-5 ">
                   <div className="uppercase text-2xl  ">
                     <img
-                      className="object-cover w-full lg:h-[150px] 2xl:h-[100px] rounded-md mb-5 "
+                      className="object-cover w-full lg:h-[150px] xl:h-[80px] 2xl:h-[100px] rounded-md mb-5 "
                       src={`${careerModalInfo.jobImg}`}
                       alt=""
                     />

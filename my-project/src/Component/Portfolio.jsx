@@ -405,7 +405,7 @@ function Portfolio() {
                 </div>
               ) : (
                 <div
-                  className="w-full h-screen flex sm:flex-row flex-col items-center justify-center"
+                  className="w-full h-full min-h-screen flex sm:flex-row flex-col items-center justify-center"
                   ref={ref}
                 >
                   {/* ///////////////////////////////////////////////////////////////////////// DESKTOP ///////////////////////////////////////////////////////////////////////// */}
@@ -1075,7 +1075,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.35 }}
-                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1100,7 +1100,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1124,7 +1124,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.45 }}
-                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1148,7 +1148,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1172,7 +1172,7 @@ function Portfolio() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.55 }}
-                className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
+                className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
                 onClick={() => {
                   setModalStatus(true);
                   dispatch(hideNavbar());
@@ -1198,7 +1198,7 @@ function Portfolio() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
+                  className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
                   onClick={() => {
                     setModalStatus(true);
                     dispatch(hideNavbar());
@@ -1223,7 +1223,7 @@ function Portfolio() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="bg-black sm:h-[400px] lg:h-80 2xl:h-[300px] h-[200px] rounded-3xl"
+                  className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
                   onClick={() => {
                     setModalStatus(true);
                     dispatch(hideNavbar());
