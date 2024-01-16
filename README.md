@@ -1,18 +1,20 @@
 # Portfólio 2023 2.0
 
-![Portfólio 2023 2.0](https://eloygomes.com.br)
 
-Um portfólio pessoal renovado para destacar suas habilidades, projetos e experiências.
+Um portfólio pessoal renovado para destacar minhas habilidades, projetos e experiências.
+
+
+![Portfólio 2023 2.0](https://eloygomes.com.br)
 
 ## Visão Geral
 
-O Portfólio 2023 2.0 é uma versão atualizada do seu portfólio pessoal, projetado para apresentar suas habilidades, projetos e experiências de forma atraente e profissional. Este projeto é uma ferramenta eficaz para mostrar seu perfil a potenciais empregadores, colegas e interessados.
+O Portfólio 2023 2.0 é uma versão atualizada do meu portfólio pessoal, projetado para apresentar minhas habilidades, projetos e experiências de forma atraente e profissional. 
 
 ## Funcionalidades Principais
 
 - **Design Moderno:** Uma interface moderna e atraente para causar uma ótima primeira impressão.
-- **Seção de Projetos:** Destaque seus projetos mais relevantes com detalhes e links para código-fonte.
-- **Currículo Interativo:** Inclua uma seção interativa para mostrar suas habilidades técnicas e competências.
+- **Seção de Projetos:** Destaque dos projetos mais relevantes com detalhes e links para código-fonte.
+- **Currículo Interativo:** Seção interativa para mostrar suas habilidades técnicas e competências.
 - **Contato e Redes Sociais:** Facilite o contato com você através de formulário e links para suas redes sociais.
 
 ## Pré-requisitos
