@@ -9,6 +9,13 @@ import EmailButtonFoto from "./suport/EmailButton4";
 import EmailButtonEdicao from "./suport/EmailButton5";
 import EmailButtonPodcast from "./suport/EmailButton6";
 
+import carreira_bg_01 from "../assets/carreira_bg_01.jpg";
+import carreira_bg_02 from "../assets/carreira_bg_02.jpg";
+import carreira_bg_03 from "../assets/carreira_bg_03.jpg";
+import carreira_bg_04 from "../assets/carreira_bg_04.jpg";
+import carreira_bg_05 from "../assets/carreira_bg_05.jpg";
+import carreira_bg_06 from "../assets/carreira_bg_06.jpg";
+
 function NewServiceSession() {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -70,7 +77,7 @@ function NewServiceSession() {
                   >
                     <div className=" rounded-xl flex flex-col z-50">
                       <img
-                        src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_04-1a29e693.jpg"
+                        src={carreira_bg_01}
                         alt=""
                         className="object-cover rounded-xl"
                       />
@@ -107,7 +114,7 @@ function NewServiceSession() {
                   >
                     <div className=" rounded-xl flex flex-col z-50">
                       <img
-                        src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_06-85a77b29.jpg"
+                        src={carreira_bg_02}
                         alt=""
                         className="object-cover rounded-xl"
                       />
@@ -144,7 +151,7 @@ function NewServiceSession() {
                   >
                     <div className=" rounded-xl flex flex-col z-50">
                       <img
-                        src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_05-45d24d3b.jpg"
+                        src={carreira_bg_03}
                         alt=""
                         className="object-cover rounded-xl"
                       />
@@ -181,7 +188,7 @@ function NewServiceSession() {
                   >
                     <div className=" rounded-xl flex flex-col z-50">
                       <img
-                        src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_01-130e691d.jpg"
+                        src={carreira_bg_04}
                         alt=""
                         className="object-cover rounded-xl"
                       />
@@ -218,7 +225,7 @@ function NewServiceSession() {
                   >
                     <div className=" rounded-xl flex flex-col z-50">
                       <img
-                        src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_02-51365147.jpg"
+                        src={carreira_bg_05}
                         alt=""
                         className="object-cover rounded-xl"
                       />
@@ -255,7 +262,7 @@ function NewServiceSession() {
                   >
                     <div className=" rounded-xl flex flex-col z-50">
                       <img
-                        src="https://www.koncretejungle.com.br/eloygomes/assets/carreira_bg_03-afb38374.jpg"
+                        src={carreira_bg_06}
                         alt=""
                         className="object-cover rounded-xl"
                       />

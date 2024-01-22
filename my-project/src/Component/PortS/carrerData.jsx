@@ -1,3 +1,9 @@
+import carrer_EMPRESAUM from "../../images/carrer_EMPRESA-UM.png";
+import carrer_COMMANDER from "../../images/carrer_COMMANDER.png";
+import carrer_COLETEK from "../../images/carrer_COLETEK.png";
+import carrer_GRUPOSKILL from "../../images/carrer_GRUPO_SKILL.png";
+import carrer_FREELANCE from "../../images/carrer_FREELANCE.png";
+
 export const carrerDataInfo = {
   job01: {
     jobPosition: "DESIGNER GRÁFICO",
@@ -13,8 +19,7 @@ export const carrerDataInfo = {
       "CorelDraw",
       "Lightroom",
     ],
-    jobImg:
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/CarrerCovers/EMPRESA-UM.png",
+    jobImg: carrer_EMPRESAUM,
   },
   job02: {
     jobPosition: "WEB DESIGNER",
@@ -24,8 +29,7 @@ export const carrerDataInfo = {
     jobDuration: "dez/2013 a nov/2014",
     jobDesc: `Criação e desenvolvimento de branding, desenvolvimento de projeto gráfico para revista, fotografia para anúncios, tratamento de imagens, conteúdo para mídias sociais, elaboração de briefings junto a clientes e elaboração de planos de ação para gestão e lançamentos de marcas de diversos segmentos.`,
     jobTools: ["Lightroom", "Javascript"],
-    jobImg:
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/CarrerCovers/COMMANDER.png",
+    jobImg: carrer_COMMANDER,
   },
 
   job03: {
@@ -42,8 +46,7 @@ export const carrerDataInfo = {
       "CorelDraw",
       "Lightroom",
     ],
-    jobImg:
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/CarrerCovers/COLETEK.png",
+    jobImg: carrer_COLETEK,
   },
 
   job04: {
@@ -54,8 +57,7 @@ export const carrerDataInfo = {
     jobDuration: "jan/2018 a dez/2018",
     jobDesc: `Gestão da plataforma online PANDA BLACK(e-commerce voltado a produtos de informática), Atuando a frente no planejamento(pesquisa de mercado, controle de preço e estoque) e administração(gestão de equipe, pós venda, SAC) e marketing(campanhas de lançamento de produtos para clientes(B2C)).`,
     jobTools: ["Excel", "Siege"],
-    jobImg:
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/CarrerCovers/COLETEK.png",
+    jobImg: carrer_COLETEK,
   },
 
   job05: {
@@ -67,8 +69,7 @@ export const carrerDataInfo = {
     jobDuration: "out/2019 a set/2021",
     jobDesc: `Como DESIGNER UI/UX eu atuei no design de interfaces de produtos websites, hotsites, e-mails marketing, banner e peças digitais, propondo melhorias de usabilidade na experiência do usuário e visuais no design da interface. Fui responsável pela elaboração de wireframes de baixa e alta fidelidade, elaboração e manutenção de design system e desenvolvimento de protótipos navegáveis. E como DESENVOLVEDOR atuei no desenvolvimento de sites/plataformas fazendo implementação de novas features, correções de bugs e manutenção de código dando vida a interfaces dos projetos utilizando principalmente HTML5, CSS3, Bootstrap, JavaScript e Wordpress.`,
     jobTools: ["React Js", "Node Js", "Javascript"],
-    jobImg:
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/CarrerCovers/GRUPO-SKILL.png",
+    jobImg: carrer_GRUPOSKILL,
   },
 
   job06: {
@@ -88,7 +89,6 @@ export const carrerDataInfo = {
       "CorelDraw",
       "Lightroom",
     ],
-    jobImg:
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/CarrerCovers/FREELANCE.png",
+    jobImg: carrer_FREELANCE,
   },
 };
