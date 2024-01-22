@@ -1,103 +1,75 @@
+import C3TECHFULLPRESENTATION from "../../images/C3TECH-FULLPRESENTATION.png";
+import mockup_c3tech_01 from "../../images/mockup_c3tech_01.png";
+import mockup_c3tech_02 from "../../images/mockup_c3tech_02.png";
+import mockup_c3tech_03 from "../../images/mockup_c3tech_03.png";
+import mockup_c3tech_04 from "../../images/mockup_c3tech_04.png";
+import mockup_c3tech_05 from "../../images/mockup_c3tech_05.png";
+import mockup_c3tech_06 from "../../images/mockup_c3tech_06.png";
+
+import PresentationSkill from "../../images/Presentation_skill.png";
+import mockup_skillConsulting_desktop_01 from "../../images/mockup_site_grupoSkill_01.png";
+import mockup_skillConsulting_desktop_02 from "../../images/mockup_site_grupoSkill_02.png";
+import mockup_skillConsulting_desktop_03 from "../../images/mockup_site_grupoSkill_03.png";
+import mockup_skillConsulting_mobile_06 from "../../images/mockup_site_grupoSkill_06.png";
+
+import Presentation from "../../images/Presentation.png";
+
+import PresentationOvercast from "../../images/Presentation_Overcast.png";
+
+import Presentation_WellnessHUB from "../../images/Presentation_Wellness.png";
+
+import Presentation_seeking4elements from "../../images/Presentation_seeking4elements.png";
+
+import Presentation_Tapera from "../../images/Presentation_Tapera.png";
+
+import Presentation_miroa from "../../images/Presentation_miroa.png";
+
+import Presentation_Buddha from "../../images/Presentation_Buddha.png";
+
+import Presentation_Print_Coletek from "../../images/Presentation_Print_Coletek.png";
+
+import Presentation_rede_dor from "../../images/Presentation Print_rede_dor.png";
+
 export const PortImages = {
   uiux: {
     // C3TECH UI UX
     container01: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/C3TECH-FULLPRESENTATION.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_05.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/c3tech/mockup_c3tech_06.png",
+      C3TECHFULLPRESENTATION,
+      mockup_c3tech_01,
+      mockup_c3tech_02,
+      mockup_c3tech_03,
+      mockup_c3tech_04,
+      mockup_c3tech_05,
+      mockup_c3tech_06,
     ],
     // SKILL CONSULTING UI UX
     container02: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/Grupo%20Skill/Presentation.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_desktop_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/skill%20consulting/mockup_skillConsulting_mobile_03.png",
+      PresentationSkill,
+      mockup_skillConsulting_desktop_01,
+      mockup_skillConsulting_desktop_02,
+      mockup_skillConsulting_desktop_03,
+      mockup_skillConsulting_mobile_06,
     ],
     // EVG UI UX
-    container03: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/EVG/Presentation.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_mobile_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/evg/mockup_EVG_desktop_04.png",
-    ],
+    container03: [Presentation],
     // OVERCAST UI UX
-    container04: [
-      "https://www.koncretejungle.com.br//eloygomes/assets/port/ui%20ux/overcast/Presentation.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/overcast/mockup_overcast_mobile_05.png",
-    ],
+    container04: [PresentationOvercast],
     // WELLNESS HUB UI UX
-    container05: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/Presentation.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_00.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/wellness%20hub/mockup_wellnessHUB_05.png",
-    ],
+    container05: [Presentation_WellnessHUB],
     // SEEKING 4 ELEMENTS UI UX
-    container06: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/Presentation.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_02.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_03.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_04.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_05.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_06.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/ui%20ux/seeking4elements/seeking4elements_mockup_07.png",
-    ],
+    container06: [Presentation_seeking4elements],
   },
   impressos: {
     // TAPERA
-    container01: [
-      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_02.png",
-      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_03.png",
-      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/tapera_01.png",
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/tapera/Presentation%20Printed.png",
-    ],
-    // MANSOR SITE
-    container02: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/miroa/Presentation%20miroa%20impresso.png",
-    ],
+    container01: [Presentation_Tapera],
+    // MIROA CAT
+    container02: [Presentation_miroa],
     // CATALOGO APONTA FACIL
-    container03: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/buddha/Presentation%20Buddha.png",
-      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_02.png",
-      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_03.png",
-      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_04.png",
-      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_05.png",
-      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_06.png",
-      // "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/mockup_07.png",
-    ],
+    container03: [Presentation_Buddha],
     // CATALOGO COLETEK
-    container04: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/coletek/Presentation%20Print%20Coletek.png",
-    ],
+    container04: [Presentation_Print_Coletek],
     // Rede D'or
-    container05: [
-      "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/rede%20Dor/Presentation%20Print%20rede%20dor.png",
-    ],
+    container05: [Presentation_rede_dor],
     // Grupo Skill
     container06: [
       "https://www.koncretejungle.com.br/eloygomes/assets/port/impressos/grupo%20skill/Presentation_Grupo_Skill_.png",
