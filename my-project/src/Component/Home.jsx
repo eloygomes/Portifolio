@@ -88,7 +88,7 @@ function Home() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.35 }}
-                src="https://www.koncretejungle.com.br/eloygomes/assets/img01.01-a494c9a4.png"
+                src="../assets/img01.01.png"
                 alt="f"
                 className="sm:max-w-lg md:max-w-sm xl:max-w-[20rem] 2xl:max-w-[20rem] max-w-sm w-full mx-auto "
               />
