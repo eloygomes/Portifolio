@@ -3,6 +3,8 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import ParticlesBackground from "./particles/ParticlesBackground";
 import { useSelector, useDispatch } from "react-redux";
 
+import img01 from "../images/img01.01.png";
+
 function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -88,7 +90,7 @@ function Home() {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay: 0.35 }}
-                src="../assets/img01.01.png"
+                src={img01}
                 alt="f"
                 className="sm:max-w-lg md:max-w-sm xl:max-w-[20rem] 2xl:max-w-[20rem] max-w-sm w-full mx-auto "
               />
