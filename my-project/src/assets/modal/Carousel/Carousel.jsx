@@ -45,7 +45,7 @@ const ImageCarousel = ({ images, subSession }) => {
             className="w-[70%]  p-16 lg:pt-2 lg:p-5 xl:p-5 2xl:p-5 flex flex-col justify-center absolute right-0 "
             id="FULL IMAGE HERE"
           >
-            <div className="container mx-auto h-auto mt-64 xl:mt-64 2xl:mt-56 max-h-[89vh]">
+            <div className="container mx-auto h-auto mt-64 xl:mt-64 2xl:mt-0 max-h-[89vh]">
               <Carousel
                 showArrows={true}
                 showStatus={false}
@@ -76,7 +76,7 @@ const ImageCarousel = ({ images, subSession }) => {
                         key={index}
                         className={`${
                           index === firstImageIndex ? "h-screen" : "h-auto"
-                        } overflow-scroll overflow-x-hidden flex items-start justify-center max-h-[40rem] imgstyle`}
+                        } overflow-scroll overflow-x-hidden flex items-start justify-center  imgstyle`}
                       >
                         <img
                           // className="rounded-lg object-cover p-16 pb-96 items-center"
@@ -84,7 +84,7 @@ const ImageCarousel = ({ images, subSession }) => {
                             index === firstImageIndex
                               ? "p-16 pb-96"
                               : "p-0 pb-0"
-                          } rounded-lg object-cover items-center`}
+                          } rounded-lg object-cover items-center mt-24`}
                           src={image}
                           alt={`Image ${index + 1}`}
                         />
