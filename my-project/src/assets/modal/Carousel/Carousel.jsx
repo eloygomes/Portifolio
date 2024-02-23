@@ -42,7 +42,7 @@ const ImageCarousel = ({ images, subSession }) => {
           id="imageCarouselHere"
         >
           <div
-            className="w-[70%]  p-16 lg:pt-2 lg:p-5 xl:p-5 2xl:p-5 flex flex-col justify-center absolute right-0 "
+            className="w-[70%]  p-16 lg:pt-2 lg:p-5 xl:p-5 2xl:p-5 flex flex-col justify-center absolute right-0 t-0"
             id="FULL IMAGE HERE"
           >
             <div className="container mx-auto h-auto mt-64 xl:mt-64 2xl:mt-0 max-h-[89vh]">
