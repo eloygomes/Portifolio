@@ -60,7 +60,7 @@ const ImageCarousel = ({ images, subSession }) => {
                     images.map((image, index) => (
                       <div
                         key={index}
-                        className={` h-[500px] overflow-hidden flex items-start justify-center `}
+                        className={`  overflow-hidden flex items-start justify-center `}
                       >
                         <img
                           // className="rounded-lg object-cover p-16 pb-96 items-center"
