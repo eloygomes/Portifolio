@@ -63,8 +63,12 @@ const ImageCarousel = ({ images, subSession }) => {
                         className={`  overflow-hidden flex items-start justify-center `}
                       >
                         <img
-                          // className="rounded-lg object-cover p-16 pb-96 items-center"
-                          className={`p-0 rounded-lg object-cover items-center w-auto h-full img-itself`}
+                          // className={`p-0 rounded-lg object-cover items-center w-auto h-full img-itself`}
+                          className={`${
+                            index === firstImageIndex
+                              ? "p-16 pb-96"
+                              : "p-0 pb-0"
+                          } rounded-lg object-cover items-center mt-24`}
                           src={image}
                           alt={`Image ${index + 1}`}
                           loading="lazy"
