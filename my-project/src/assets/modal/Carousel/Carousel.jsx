@@ -67,6 +67,7 @@ const ImageCarousel = ({ images, subSession }) => {
                           className={`p-0 rounded-lg object-cover items-center w-auto h-full img-itself`}
                           src={image}
                           alt={`Image ${index + 1}`}
+                          loading="lazy"
                         />
                       </div>
                     ))
@@ -87,6 +88,7 @@ const ImageCarousel = ({ images, subSession }) => {
                           } rounded-lg object-cover items-center mt-24`}
                           src={image}
                           alt={`Image ${index + 1}`}
+                          loading="lazy"
                         />
                       </div>
                     ))}
