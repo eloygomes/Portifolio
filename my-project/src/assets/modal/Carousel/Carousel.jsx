@@ -109,7 +109,7 @@ const ImageCarousel = ({ images, subSession }) => {
                       </div>
                     ))}
               </Carousel>
-              {imageWidth && <p>A largura da imagem é {imageWidth} pixels.</p>}
+              {/* {imageWidth && <p>A largura da imagem é {imageWidth} pixels.</p>} */}
             </div>
           </div>
         </div>
