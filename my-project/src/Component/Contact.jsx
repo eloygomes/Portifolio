@@ -143,7 +143,7 @@ function Contact() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.25 }}
-                  className="py-1 text-8xl lg:text-4xl font-medium hover:text-[#D6223B] cursor-pointer"
+                  className="py-1 text-8xl lg:text-4xl xl:text-8xl font-medium hover:text-[#D6223B] cursor-pointer"
                 >
                   eloy.gomes@icloud.com
                 </motion.h1>
@@ -155,12 +155,24 @@ function Contact() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="py-5 text-sm max-w-[50vw]"
+                  className="py-2 text-sm max-w-[50vw]"
                 >
-                  Seja qual for o escopo do seu projeto, seja a criação de um
-                  site atraente, o desenvolvimento de uma plataforma de comércio
-                  eletrônico ou a construção de uma aplicação web escalável,
-                  estou aqui para ajudar.
+                  Seja qual for o escopo do seu projeto online, estou pronto
+                  para torná-lo uma realidade.
+                </motion.h5>
+                <motion.h5
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="py-2 text-sm "
+                >
+                  Com uma abordagem centrada em suas necessidades e objetivos,
+                  vamos trabalhar juntos para alcançar resultados tangíveis e
+                  duradouros.
                 </motion.h5>
               </div>
             </div>
