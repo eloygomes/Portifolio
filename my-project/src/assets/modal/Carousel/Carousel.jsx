@@ -1,4 +1,5 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -6,37 +7,44 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const ImageCarousel = ({ images, subSession }) => {
   const [selectedImageIndex] = useState(0);
   const [firstImageIndex, setFirstImageIndex] = useState(0);
+  const [imageWidth, setImageWidth] = useState(null);
+
+  useEffect(() => {
+    const handleImageLoad = (event) => {
+      const imageWidth = event.target.naturalWidth;
+      setImageWidth(imageWidth);
+    };
+
+    const imageElement = document.createElement("img");
+    imageElement.src = images[firstImageIndex];
+    imageElement.addEventListener("load", handleImageLoad);
+
+    return () => {
+      imageElement.removeEventListener("load", handleImageLoad);
+    };
+  }, [firstImageIndex, images]);
 
   const handleBeforeChange = (oldIndex, newIndex) => {
     setFirstImageIndex(newIndex);
   };
 
-  // console.log("subSession", subSession);
-
   return (
     <>
       {window.innerWidth <= 961 ? (
-        //////////////////////////////////////////// Mobile ////////////////////////////////////////////
-        //////////////////////////////////////////// Mobile ////////////////////////////////////////////
-        //////////////////////////////////////////// Mobile ////////////////////////////////////////////
+        // Renderização para dispositivos móveis
         <div className="flex flex-col items-center justify-around">
-          {
-            // eslint-disable-next-line react/prop-types
-            images.map((image, index) => (
-              <div key={index} className="p-3">
-                <img
-                  className="rounded-lg object-cover items-center"
-                  src={image}
-                  alt={`Image ${index + 1}`}
-                />
-              </div>
-            ))
-          }
+          {images.map((image, index) => (
+            <div key={index} className="p-3">
+              <img
+                className="rounded-lg object-cover items-center"
+                src={image}
+                alt={`Image ${index + 1}`}
+              />
+            </div>
+          ))}
         </div>
       ) : (
-        //////////////////////////////////////////// Desktop ////////////////////////////////////////////
-        //////////////////////////////////////////// Desktop ////////////////////////////////////////////
-        //////////////////////////////////////////// Desktop ////////////////////////////////////////////
+        // Renderização para desktop
         <div
           className="flex flex-row items-center justify-around"
           id="imageCarouselHere"
@@ -56,22 +64,27 @@ const ImageCarousel = ({ images, subSession }) => {
                 beforeChange={handleBeforeChange}
               >
                 {subSession === "foto"
-                  ? // eslint-disable-next-line react/prop-types
-                    images.map((image, index) => (
+                  ? images.map((image, index) => (
                       <div
                         key={index}
-                        className={`  overflow-hidden flex items-start justify-center `}
+                        className={`flex items-center justify-center h-screen`}
+                        style={{ overflow: "hidden" }}
                       >
                         <img
-                          // className={`p-0 rounded-lg object-cover items-center w-auto h-full img-itself`}
                           className={`${
                             index === firstImageIndex
                               ? "p-16 pb-96"
                               : "p-0 pb-0"
-                          } rounded-lg object-cover items-center mt-24`}
+                          } rounded-lg object-cover max-h-[89vh]`}
                           src={image}
                           alt={`Image ${index + 1}`}
                           loading="lazy"
+                          style={{
+                            maxHeight: "700px",
+                            maxWidth: "700px%",
+                            width: "auto",
+                            height: "auto",
+                          }}
                         />
                       </div>
                     ))
@@ -84,7 +97,6 @@ const ImageCarousel = ({ images, subSession }) => {
                         } overflow-scroll overflow-x-hidden flex items-start justify-center  imgstyle`}
                       >
                         <img
-                          // className="rounded-lg object-cover p-16 pb-96 items-center"
                           className={`${
                             index === firstImageIndex
                               ? "p-16 pb-96"
@@ -97,6 +109,7 @@ const ImageCarousel = ({ images, subSession }) => {
                       </div>
                     ))}
               </Carousel>
+              {imageWidth && <p>A largura da imagem é {imageWidth} pixels.</p>}
             </div>
           </div>
         </div>

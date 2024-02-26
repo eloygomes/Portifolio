@@ -75,6 +75,7 @@ button.control-arrow.control-next {
 
 .carousel.carousel-slider .control-arrow {
   display: block;
+  height: 100vh;
 }
 
 .carousel.carousel-slider .control-arrow:hover {
