@@ -103,10 +103,10 @@ function EachSession({
         </div>
         <div className="mt-3 sm:pr-8 flex flex-col min-h-[150px]">
           <motion.h3
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            // variants={{
+            //   hidden: { opacity: 0, y: 75 },
+            //   visible: { opacity: 1, y: 0 },
+            // }}
             initial="hidden"
             animate={mainControls}
             transition={{ duration: 0.3, delay: 0.7 }}
@@ -115,10 +115,10 @@ function EachSession({
             {jobPosition}
           </motion.h3>
           <motion.h3
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            // variants={{
+            //   hidden: { opacity: 0, y: 75 },
+            //   visible: { opacity: 1, y: 0 },
+            // }}
             initial="hidden"
             animate={mainControls}
             transition={{ duration: 0.3, delay: 0.9 }}
@@ -127,10 +127,10 @@ function EachSession({
             {jobName}
           </motion.h3>
           <motion.h3
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            // variants={{
+            //   hidden: { opacity: 0, y: 75 },
+            //   visible: { opacity: 1, y: 0 },
+            // }}
             initial="hidden"
             animate={mainControls}
             transition={{ duration: 0.3, delay: 1.1 }}
@@ -139,10 +139,10 @@ function EachSession({
             {jobSegment}
           </motion.h3>
           <motion.p
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            // variants={{
+            //   hidden: { opacity: 0, y: 75 },
+            //   visible: { opacity: 1, y: 0 },
+            // }}
             initial="hidden"
             animate={mainControls}
             transition={{ duration: 0.3, delay: 1.3 }}
