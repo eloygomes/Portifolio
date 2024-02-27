@@ -243,6 +243,306 @@ function BioSession() {
                         background: "#2a2344",
                         color: "#fff",
                       }}
+                      date="Fev/2024"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        REACT NATIVE
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
+                        CodeCademy
+                      </h4>
+                      <p className="text-sm">
+                        Introdução através dos princípios fundamentais do React
+                        Native, incluindo componentes, estado, props e ciclo de
+                        vida. Com uma abordagem prática e hands-on, os alunos
+                        aprenderão a configurar um ambiente de desenvolvimento,
+                        criar interfaces de usuário responsivas e dinâmicas, e
+                        utilizar recursos nativos do dispositivo, como câmera,
+                        geolocalização e armazenamento local. Além disso, foram
+                        exploradas técnicas avançadas, como navegação entre
+                        telas, gerenciamento de estado global e integração com
+                        APIs externas.
+                      </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer "
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="Jan/2024"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        mySQL
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
+                        Curso em vídeo - Gustavo Guanabara
+                      </h4>
+                      <p className="text-sm">
+                        Durante este curso, fomos serão guiados através dos
+                        princípios fundamentais do MySQL, incluindo criação de
+                        bancos de dados, tabelas e consultas SQL.
+                      </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer "
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="Nov/2023"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        mySQL
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
+                        CodeCademy
+                      </h4>
+                      <p className="text-sm">
+                        Curso básico de MySQL oferece uma sólida introdução a um
+                        dos sistemas de gerenciamento de banco de dados
+                        relacionais mais amplamente utilizados no mundo.
+                      </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer "
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="Nov/2023"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        NGINX
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
+                        Fabricio Veronez cursos
+                      </h4>
+                      <p className="text-sm">
+                        Durante este curso, fomos introduzidos aos fundamentos
+                        do Nginx, incluindo configuração básica do servidor,
+                        gerenciamento de virtual hosts, balanceamento de carga,
+                        proxy reverso e segurança.
+                      </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer "
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="Out/2023"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        DOCKER
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
+                        Fabricio Veronez cursos
+                      </h4>
+                      <p className="text-sm">
+                        Durante este curso, fomos introduzidos aos conceitos
+                        fundamentais do Docker, incluindo contêineres, imagens,
+                        volumes e redes. Além disso, foram exploradas técnicas
+                        avançadas, como a composição de múltiplos contêineres
+                        com o Docker Compose e a orquestração de contêineres com
+                        o Docker Swarm.
+                      </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer "
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="Ago/2023"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        MONGO DB
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
+                        CODEACADEMY
+                      </h4>
+                      <p className="text-sm">
+                        O curso básico de MongoDB ofereceu uma introdução as
+                        tecnologias de banco de dados NoSQL explorando os
+                        fundamentos do MongoDB, incluindo conceitos como
+                        documentos, coleções, consultas, índices e agregações.
+                      </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer "
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="Jun/2023"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        TYPESCRIPT
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
+                        CODEACADEMY
+                      </h4>
+                      <p className="text-sm">
+                        Curso de TypeScript projetado para introduzir os alunos
+                        ao poder e à eficiência desta linguagem de programação
+                        superset do JavaScript abordando conceitos fundamentais
+                        do TypeScript,
+                      </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer "
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="Mar/2023"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        NODE JS
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
+                        CODEACADEMY
+                      </h4>
+                      <p className="text-sm">
+                        O curso de Node.js ofereceu uma introdução abrangente ao
+                        ambiente de execução JavaScript no backend, capacitando
+                        a construir aplicações web robustas e escaláveis.
+                      </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer "
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="Jan/2023"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        REDUX
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
+                        CODEACADEMY
+                      </h4>
+                      <p className="text-sm">
+                        Redux é uma biblioteca para armazenamento de estados de
+                        aplicações JavaScript.
+                      </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer "
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="Jan/2023"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        GIT HUB
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
+                        CODEACADEMY
+                      </h4>
+                      <p className="text-sm">
+                        Comandos Git CLI / Git Hub Desktop
+                      </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer "
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
                       date="Dez/2022"
                       dateClassName="text-white"
                       textClassName="vertical-align01" // muda a cor do texto
