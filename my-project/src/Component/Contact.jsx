@@ -131,7 +131,7 @@ function Contact() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.05 }}
-                  className="py-1 text-4xl font-medium mt-52"
+                  className="py-0 text-4xl font-medium mt-52"
                 >
                   Fale Comigo
                 </motion.h1>
@@ -143,7 +143,7 @@ function Contact() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.25 }}
-                  className="py-1 text-8xl lg:text-4xl xl:text-8xl font-medium hover:text-[#D6223B] cursor-pointer"
+                  className=" pb-3 text-8xl lg:text-4xl xl:text-8xl font-medium hover:text-[#D6223B] cursor-pointer"
                 >
                   eloy.gomes@icloud.com
                 </motion.h1>
