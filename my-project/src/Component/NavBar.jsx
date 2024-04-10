@@ -155,7 +155,7 @@ function NavBar() {
               <div className="pl-5 hover:scale-105">
                 <p className="bg-[#D6223B] text-xs p-2 whitespace-nowrap rounded">
                   <a
-                    href="https://mir-s3-cdn-cf.behance.net/project_modules/1400/68993621654949.651d82cd0e796.jpg"
+                    href="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/85db3e21654949.6616e84abe14a.jpg"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

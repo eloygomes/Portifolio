@@ -250,6 +250,59 @@ function BioSession() {
                       id="formationTimeline01"
                     >
                       <h3 className="vertical-timeline-element-title text-2xl">
+                        Python 3.0
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
+                        CodeCademy
+                      </h4>
+                      <p className="text-sm">Atualizações de versoões.</p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer "
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="Fev/2024"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        Modelagem de banco de dados
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
+                        CodeCademy
+                      </h4>
+                      <p className="text-sm">
+                        Práticas para normalização de bancos de dados
+                        relacionais.
+                      </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work cursor-pointer "
+                      contentStyle={{
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="Dez/2023"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
                         REACT NATIVE
                       </h3>
 
@@ -495,15 +548,14 @@ function BioSession() {
                       id="formationTimeline01"
                     >
                       <h3 className="vertical-timeline-element-title text-2xl">
-                        REDUX
+                        GIT HUB
                       </h3>
 
                       <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
                         CODEACADEMY
                       </h4>
                       <p className="text-sm">
-                        Redux é uma biblioteca para armazenamento de estados de
-                        aplicações JavaScript.
+                        Comandos Git CLI / Git Hub Desktop
                       </p>
                     </VerticalTimelineElement>
 
@@ -516,21 +568,22 @@ function BioSession() {
                         background: "#2a2344",
                         color: "#fff",
                       }}
-                      date="Jan/2023"
+                      date="Dez/2022"
                       dateClassName="text-white"
                       textClassName="vertical-align01" // muda a cor do texto
                       icon={<BiLogoReact />}
                       id="formationTimeline01"
                     >
                       <h3 className="vertical-timeline-element-title text-2xl">
-                        GIT HUB
+                        REDUX
                       </h3>
 
                       <h4 className="vertical-timeline-element-subtitle text-sm font-semibold">
                         CODEACADEMY
                       </h4>
                       <p className="text-sm">
-                        Comandos Git CLI / Git Hub Desktop
+                        Redux é uma biblioteca para armazenamento de estados de
+                        aplicações JavaScript.
                       </p>
                     </VerticalTimelineElement>
 
@@ -650,6 +703,68 @@ function BioSession() {
                         CODEACADEMY
                       </h4>
                       <p>Introdução a SCRUM e KANBAN.</p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work  "
+                      contentStyle={{
+                        // backgroundColor: "rgba(255, 255, 255)",
+                        // backdropFilter: "blur(80px)",
+                        // opacity: "0.8",
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="fev/2021"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        mySQL
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle">
+                        UDEMY
+                      </h4>
+                      <p>
+                        Prop.Types, CSS-in-JS (Styled Components), Vite,
+                        Tailwind CSS, Redux.
+                      </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                      className="vertical-timeline-element--work  "
+                      contentStyle={{
+                        // backgroundColor: "rgba(255, 255, 255)",
+                        // backdropFilter: "blur(80px)",
+                        // opacity: "0.8",
+                        color: "white",
+                      }}
+                      iconStyle={{
+                        background: "#2a2344",
+                        color: "#fff",
+                      }}
+                      date="fev/2021"
+                      dateClassName="text-white"
+                      textClassName="vertical-align01" // muda a cor do texto
+                      icon={<BiLogoReact />}
+                      id="formationTimeline01"
+                    >
+                      <h3 className="vertical-timeline-element-title text-2xl">
+                        Python 2.0
+                      </h3>
+
+                      <h4 className="vertical-timeline-element-subtitle">
+                        UDEMY
+                      </h4>
+                      <p>
+                        Prop.Types, CSS-in-JS (Styled Components), Vite,
+                        Tailwind CSS, Redux.
+                      </p>
                     </VerticalTimelineElement>
 
                     <VerticalTimelineElement
