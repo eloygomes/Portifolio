@@ -243,7 +243,7 @@ function BioSession() {
                         background: "#2a2344",
                         color: "#fff",
                       }}
-                      date="Fev/2024"
+                      date="Mar/2024"
                       dateClassName="text-white"
                       textClassName="vertical-align01" // muda a cor do texto
                       icon={<BiLogoReact />}
