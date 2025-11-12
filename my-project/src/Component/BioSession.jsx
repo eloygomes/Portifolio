@@ -26,6 +26,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import FormationRoadmap from "./FormationRoadMap";
 
 function BioSession() {
   // const [FormationCollapseStatus, setFormationCollapseStatus] = useState(false);
@@ -116,10 +117,8 @@ function BioSession() {
                       transition={{ duration: 0.5, delay: 0.55 }}
                       className="py-3 sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm  mt-5  w-fit"
                     >
-                      Desenvolvedor full stack com mais de 15 anos de
-                      experiência, formado em design gráfico, com sólida
-                      experiência como diretor de arte atuando junto a grandes
-                      marcas de tecnologia.
+                      Desenvolvedor Full Stack, graduando em Engenharia de
+                      Software e formado em Design Gráfico.
                     </motion.h5>
                     <motion.h5
                       variants={{
@@ -131,11 +130,9 @@ function BioSession() {
                       transition={{ duration: 0.5, delay: 0.6 }}
                       className="py-3 sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm  w-fit"
                     >
-                      Nos últimos três anos, tenho focado no desenvolvimento
-                      front-end, trabalhando com uma variedade de tecnologias,
-                      incluindo Wordpress, JavaScript, React e Node.js. Tenho
-                      experiência em desenvolvimento de interfaces(UX/UI) e
-                      design responsivo.
+                      Possuo ampla experiência como diretor de arte atuando em
+                      grandes marcas de tecnologia, unindo visão estética e
+                      pensamento técnico.
                     </motion.h5>
                     <motion.h5
                       variants={{
@@ -147,12 +144,11 @@ function BioSession() {
                       transition={{ duration: 0.5, delay: 0.65 }}
                       className="py-3 sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm w-fit"
                     >
-                      Acredito que a tecnologia tem o poder de transformar a
-                      vida das pessoas e que o design pode ser uma ferramenta
-                      poderosa para isso. Por isso, busco sempre unir minhas
-                      habilidades técnicas e criativas para criar produtos
-                      digitais que sejam funcionais, bonitos e agradáveis de
-                      usar.
+                      Desde 2019, atuo na área de desenvolvimento de software,
+                      com foco em soluções web e mobile, utilizando tecnologias
+                      como HTML5, CSS, SASS, WordPress, SQL, MongoDB,
+                      JavaScript, React (JS e Native), TypeScript, Node.js e
+                      Python.
                     </motion.h5>
                   </div>
                   <div className="sm:w-[50%] md:w-[40%] lg:w-[40%] xl:w-full lg:max-w-fit w-full absolute sm:absolute md:absolute lg:absolute xl:relative 2xl:relative sm:right-[-20px] md:right-[-20px] sm:top-[00px] md:top-[40px] lg:top-[10px] flex-col justify-center hidden sm:block md:block lg:block xl:block 2xl:block ">
@@ -183,7 +179,7 @@ function BioSession() {
             <div className="container mx-auto">
               <div className="flex flex-col h-full mb-52 md:p-5">
                 {/* First ROW */}
-                <div className="flex flex-row  justify-between mx-5 mt-20 mb-36">
+                {/* <div className="flex flex-row  justify-between mx-5 mt-20 mb-36">
                   <div className="flex flex-col justify-between w-full">
                     <div className="w-full text-center ">
                       <h1 className="bg-[#2A2344] mx-auto w-full  p-2">
@@ -197,9 +193,13 @@ function BioSession() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="p-5">
+                  <FormationRoadmap />
+                </div>
+
+                {/* <div className="p-5">
                   <VerticalTimeline lineColor="#e91e63">
                     {window.innerWidth <= 961 ? (
                       // mobile
@@ -1180,7 +1180,7 @@ function BioSession() {
                       />
                     )}
                   </VerticalTimeline>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
