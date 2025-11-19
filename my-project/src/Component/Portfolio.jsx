@@ -228,7 +228,7 @@ function Portfolio() {
           ref={ref}
         >
           <div className="container mx-auto sm:mt-10 mt-16">
-            <div className="flex flex-col sm:flex-col md:flex-col lg:flex-col p-5 sm:p-5 md:p-8">
+            <div className="flex flex-col  p-5 sm:p-5 md:p-8">
               <div className="sm:w-[50%] md:w-full w-full flex flex-col">
                 <motion.h1
                   variants={{
