@@ -4,11 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 import ModalWindow from "../assets/modal/ModalWindow";
-
 import images from "./PortS/PortCovers";
-
 import { PortImages } from "./PortS/PortImages";
-
 import { jobDesc } from "./PortS/jobDesc";
 
 //Redux
@@ -42,22 +39,12 @@ function Portfolio() {
   // Handle page scroll
   // const [scrollEnabled, setScrollEnabled] = useState(false);
 
-  // Handle image changes when portfolio buttons are clicked
   const [portWorkStatus, setPortWorkStatus] = useState("uiux");
-
-  // handle structure of images
-  const [modalImgContainer, setModalImgContainer] = useState(PortImages.uiux);
-
-  // handle structure of infos
-  const [modalInfoContainer, setModalInfoContainer] = useState(jobDesc.uiux);
-
-  //SRC of images
-  const [imgSrc01, setImgSrc01] = useState("");
-  const [imgSrc02, setImgSrc02] = useState("");
-  const [imgSrc03, setImgSrc03] = useState("");
-  const [imgSrc04, setImgSrc04] = useState("");
-  const [imgSrc05, setImgSrc05] = useState("");
-  const [imgSrc06, setImgSrc06] = useState("");
+  const [portfolioData, setPortfolioData] = useState({
+    images: images.uiux,
+    modal: PortImages.uiux,
+    info: jobDesc.uiux,
+  });
 
   // REDUX STORAGE //
   const scrollBodyModalOn = useSelector((state) => state.scrollBodyModalOn);
@@ -71,6 +58,11 @@ function Portfolio() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const mainControls = useAnimation();
+  const {
+    images: currentImages,
+    modal: currentModal,
+    info: currentInfo,
+  } = portfolioData;
 
   // FUNCTIONS //
   //Handle page scroll
@@ -82,10 +74,6 @@ function Portfolio() {
   //   }
   //   setScrollEnabled(!scrollEnabled);
   // };
-
-  const handleImages = () => {
-    console.log(portWorkStatus);
-  };
 
   // USER EFFECTS //
   useLayoutEffect(() => {
@@ -123,75 +111,12 @@ function Portfolio() {
   }, [modalStatus]);
 
   useLayoutEffect(() => {
-    if (portWorkStatus === "uiux") {
-      // console.log("uiux");
-      setImgSrc01(images.uiux.img1);
-      setImgSrc02(images.uiux.img2);
-      setImgSrc03(images.uiux.img3);
-      setImgSrc04(images.uiux.img4);
-      setImgSrc05(images.uiux.img5);
-      setImgSrc06(images.uiux.img6);
-      // set images to inside of modal
-      setModalImgContainer(PortImages.uiux);
-      // set infos to modal
-      setModalInfoContainer(jobDesc.uiux);
-    }
-
-    if (portWorkStatus === "impressos") {
-      // console.log("impressos");
-      setImgSrc02(images.impressos.img2);
-      setImgSrc01(images.impressos.img1);
-      setImgSrc03(images.impressos.img3);
-      setImgSrc04(images.impressos.img4);
-      setImgSrc05(images.impressos.img5);
-      setImgSrc06(images.impressos.img6);
-      // set images to inside of modal
-      setModalImgContainer(PortImages.impressos);
-      // set infos to modal
-      setModalInfoContainer(jobDesc.impressos);
-    }
-
-    if (portWorkStatus === "branding") {
-      // console.log("branding");
-      setImgSrc01(images.branding.img1);
-      setImgSrc02(images.branding.img2);
-      setImgSrc03(images.branding.img3);
-      setImgSrc04(images.branding.img4);
-      setImgSrc05(images.branding.img5);
-      setImgSrc06(images.branding.img6);
-      // set images to inside of modal
-      setModalImgContainer(PortImages.branding);
-      // set infos to modal
-      setModalInfoContainer(jobDesc.branding);
-    }
-
-    if (portWorkStatus === "foto") {
-      // console.log("foto");
-      setImgSrc01(images.foto.img1);
-      setImgSrc02(images.foto.img2);
-      setImgSrc03(images.foto.img3);
-      setImgSrc04(images.foto.img4);
-      setImgSrc05(images.foto.img5);
-      setImgSrc06(images.foto.img6);
-      // set images to inside of modal
-      setModalImgContainer(PortImages.foto);
-      // set infos to modal
-      setModalInfoContainer(jobDesc.foto);
-    }
-
-    if (portWorkStatus === "edicao") {
-      // console.log("edicao");
-      setImgSrc01(images.edicao.img1);
-      setImgSrc02(images.edicao.img2);
-      setImgSrc03(images.edicao.img3);
-      setImgSrc04(images.edicao.img4);
-      setImgSrc05(images.edicao.img5);
-      setImgSrc06(images.edicao.img6);
-      // set images to inside of modal
-      setModalImgContainer(PortImages.edicao);
-      // set infos to modal
-      setModalInfoContainer(jobDesc.edicao);
-    }
+    const key = images[portWorkStatus] ? portWorkStatus : "uiux";
+    setPortfolioData({
+      images: images[key],
+      modal: PortImages[key],
+      info: jobDesc[key],
+    });
   }, [portWorkStatus]);
 
   // CONSOLE ZONE //
@@ -285,14 +210,14 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   makingMagicHappen();
                   // dispatch(particlesOff());
-                  setPostImg(modalImgContainer.container01);
-                  setPostInfo(modalInfoContainer.data01);
+                  setPostImg(currentModal.container01);
+                  setPostInfo(portfolioData.info.data01);
                 }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
                   // src={`${images}${portWorkStatus}.img1`}
-                  src={imgSrc01}
+                  src={currentImages.img1}
                   alt=""
                 />
               </motion.div>
@@ -312,13 +237,13 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   //
                   dispatch(particlesOff());
-                  setPostImg(modalImgContainer.container02);
-                  setPostInfo(modalInfoContainer.data02);
+                  setPostImg(currentModal.container02);
+                  setPostInfo(portfolioData.info.data02);
                 }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={imgSrc02}
+                  src={currentImages.img2}
                   alt=""
                 />
               </motion.div>
@@ -338,13 +263,13 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   //
                   dispatch(particlesOff());
-                  setPostImg(modalImgContainer.container03);
-                  setPostInfo(modalInfoContainer.data03);
+                  setPostImg(currentModal.container03);
+                  setPostInfo(portfolioData.info.data03);
                 }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={imgSrc03}
+                  src={currentImages.img3}
                   alt=""
                 />
               </motion.div>
@@ -362,13 +287,13 @@ function Portfolio() {
                   dispatch(hideNavbar());
 
                   dispatch(particlesOff());
-                  setPostImg(modalImgContainer.container04);
-                  setPostInfo(modalInfoContainer.data04);
+                  setPostImg(currentModal.container04);
+                  setPostInfo(portfolioData.info.data04);
                 }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={imgSrc04}
+                  src={currentImages.img4}
                   alt=""
                 />
               </motion.div>
@@ -386,13 +311,13 @@ function Portfolio() {
                   dispatch(hideNavbar());
 
                   dispatch(particlesOff());
-                  setPostImg(modalImgContainer.container05);
-                  setPostInfo(modalInfoContainer.data05);
+                  setPostImg(currentModal.container05);
+                  setPostInfo(portfolioData.info.data05);
                 }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={imgSrc05}
+                  src={currentImages.img5}
                   alt=""
                 />
               </motion.div>
@@ -411,14 +336,14 @@ function Portfolio() {
                   dispatch(hideNavbar());
 
                   dispatch(particlesOff());
-                  setPostImg(modalImgContainer.container06);
-                  setPostInfo(modalInfoContainer.data06);
+                  setPostImg(currentModal.container06);
+                  setPostInfo(portfolioData.info.data06);
                 }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
                   // src={`${images}${portWorkStatus}.img1`}
-                  src={imgSrc06}
+                  src={currentImages.img6}
                   alt=""
                 />
               </motion.div>
@@ -509,13 +434,13 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   makingMagicHappen();
                   dispatch(particlesOff());
-                  setPostImg(modalImgContainer.container01);
-                  setPostInfo(modalInfoContainer.data01);
+                  setPostImg(currentModal.container01);
+                  setPostInfo(portfolioData.info.data01);
                 }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={imgSrc01}
+                  src={currentImages.img1}
                   alt=""
                 />
               </motion.div>
@@ -533,13 +458,13 @@ function Portfolio() {
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   makingMagicHappen();
-                  setPostImg(modalImgContainer.container02);
-                  setPostInfo(modalInfoContainer.data02);
+                  setPostImg(currentModal.container02);
+                  setPostInfo(portfolioData.info.data02);
                 }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={imgSrc02}
+                  src={currentImages.img2}
                   alt=""
                 />
               </motion.div>
@@ -557,13 +482,13 @@ function Portfolio() {
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   makingMagicHappen();
-                  setPostImg(modalImgContainer.container03);
-                  setPostInfo(modalInfoContainer.data03);
+                  setPostImg(currentModal.container03);
+                  setPostInfo(portfolioData.info.data03);
                 }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={imgSrc03}
+                  src={currentImages.img3}
                   alt=""
                 />
               </motion.div>
@@ -581,13 +506,13 @@ function Portfolio() {
                   setModalStatus(true);
                   dispatch(hideNavbar());
                   makingMagicHappen();
-                  setPostImg(modalImgContainer.container04);
-                  setPostInfo(modalInfoContainer.data04);
+                  setPostImg(currentModal.container04);
+                  setPostInfo(portfolioData.info.data04);
                 }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={imgSrc04}
+                  src={currentImages.img4}
                   alt=""
                 />
               </motion.div>
@@ -606,68 +531,41 @@ function Portfolio() {
                   dispatch(hideNavbar());
                   makingMagicHappen();
                   dispatch(particlesOff());
-                  setPostImg(modalImgContainer.container05);
-                  setPostInfo(modalInfoContainer.data05);
+                  setPostImg(currentModal.container05);
+                  setPostInfo(portfolioData.info.data05);
                 }}
               >
                 <img
                   className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={imgSrc05}
+                  src={currentImages.img5}
                   alt=""
                 />
               </motion.div>
 
-              {imgSrc06 === images.impressos.img6 ? (
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 75 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  initial="hidden"
-                  animate={mainControls}
-                  transition={{ duration: 0.5, delay: 0.6 }}
-                  className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
-                  onClick={() => {
-                    setModalStatus(true);
-                    dispatch(hideNavbar());
-                    makingMagicHappen();
-                    dispatch(particlesOff());
-                    setPostImg(modalImgContainer.container06);
-                    setPostInfo(modalInfoContainer.data06);
-                  }}
-                >
-                  <img
-                    className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                    src={imgSrc06}
-                    alt=""
-                  />
-                </motion.div>
-              ) : (
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 75 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  initial="hidden"
-                  animate={mainControls}
-                  transition={{ duration: 0.5, delay: 0.6 }}
-                  className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
-                  onClick={() => {
-                    setModalStatus(true);
-                    dispatch(hideNavbar());
-                    makingMagicHappen();
-                    dispatch(particlesOff());
-                    setPostImg(modalImgContainer.container06);
-                    setPostInfo(modalInfoContainer.data06);
-                  }}
-                >
-                  <img
-                    className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                    src={imgSrc06}
-                    alt=""
-                  />
-                </motion.div>
-              )}
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 75 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate={mainControls}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
+                onClick={() => {
+                  setModalStatus(true);
+                  dispatch(hideNavbar());
+                  makingMagicHappen();
+                  dispatch(particlesOff());
+                  setPostImg(currentModal.container06);
+                  setPostInfo(portfolioData.info.data06);
+                }}
+              >
+                <img
+                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
+                  src={currentImages.img6}
+                  alt=""
+                />
+              </motion.div>
             </div>
           </div>
         </div>

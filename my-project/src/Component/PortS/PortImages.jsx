@@ -79,20 +79,20 @@ export const PortImages = {
     // C3TECH UI UX
     container01: [
       C3TECHFULLPRESENTATION,
-      mockup_c3tech_01,
-      mockup_c3tech_02,
-      mockup_c3tech_03,
-      mockup_c3tech_04,
-      mockup_c3tech_05,
-      mockup_c3tech_06,
+      // mockup_c3tech_01,
+      // mockup_c3tech_02,
+      // mockup_c3tech_03,
+      // mockup_c3tech_04,
+      // mockup_c3tech_05,
+      // mockup_c3tech_06,
     ],
     // SKILL CONSULTING UI UX
     container02: [
       PresentationSkill,
-      mockup_skillConsulting_desktop_01,
-      mockup_skillConsulting_desktop_02,
-      mockup_skillConsulting_desktop_03,
-      mockup_skillConsulting_mobile_06,
+      // mockup_skillConsulting_desktop_01,
+      // mockup_skillConsulting_desktop_02,
+      // mockup_skillConsulting_desktop_03,
+      // mockup_skillConsulting_mobile_06,
     ],
     // EVG UI UX
     container03: [Presentation],
