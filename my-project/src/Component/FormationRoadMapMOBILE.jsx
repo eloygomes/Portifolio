@@ -173,7 +173,7 @@ export default function FormationRoadmapMobileTabs() {
                   type="button"
                   onClick={() => setSelectedStepId(step.id)}
                   className={`
-                    flex-shrink-0 px-4 py-2 rounded-xl border text-xs uppercase tracking-[0.18em]
+                    flex-shrink-0 px-4 py-3 rounded-xl border text-xs uppercase tracking-[0.18em]
                     transition-colors duration-200
                     ${
                       isActive
