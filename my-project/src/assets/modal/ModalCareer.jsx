@@ -105,7 +105,7 @@ function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
 
   const content = (
     <div className="flex w-full h-full items-center justify-center px-4 py-6 sm:px-6">
-      <div className="relative w-[90vw] xs:w-[90vw] sm:w-[90vw] md:w-[90vw] lg:w-[90vw] xl:w-[80vw] min-w-[90vw] xs:min-w-[90vw] sm:min-w-[90vw] md:min-w-[90vw] lg:min-w-[90vw] xl:min-w-[80vw] max-w-[90vw] bg-[#241b3b]/90 border border-white/10 rounded-2xl shadow-2xl shadow-black/50 backdrop-blur-2xl overflow-hidden">
+      <div className="relative w-[90vw] xs:w-[90vw] sm:w-[90vw] md:w-[90vw] lg:w-[90vw] xl:w-[80vw] min-w-[90vw] xs:min-w-[90vw] sm:min-w-[90vw] md:min-w-[90vw] lg:min-w-[90vw] xl:min-w-[80vw] max-w-[90vw]  border border-white/10 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden backdrop-blur-xl bg-white/10">
         {/* botão fechar */}
         <button
           onClick={closeModal}
