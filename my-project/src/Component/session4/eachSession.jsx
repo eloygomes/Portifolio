@@ -1,158 +1,114 @@
-import { useLayoutEffect, useRef } from "react";
+/* eslint-disable react/prop-types */
+import { useEffect, useMemo, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
+
 function EachSession({
-  // eslint-disable-next-line react/prop-types
   jobPosition,
-  // eslint-disable-next-line react/prop-types
   jobName,
-  // eslint-disable-next-line react/prop-types
   jobSegment,
-  // eslint-disable-next-line react/prop-types
   jobDuration,
-  // eslint-disable-next-line react/prop-types
   setModalStatus,
-  // eslint-disable-next-line react/prop-types
   setcareerModalInfo,
-  // eslint-disable-next-line react/prop-types
   jobDesc,
-  // eslint-disable-next-line react/prop-types
   jobTools,
-  // eslint-disable-next-line react/prop-types
   jobImg,
-  // eslint-disable-next-line react/prop-types
   jobAdress,
-  // eslint-disable-next-line react/prop-types
   delayForEach,
 }) {
-  const mainControls = useAnimation();
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { amount: 0.2 });
+  const animationControls = useAnimation();
   const dispatch = useDispatch();
 
-  const [eachTag, setEachTag] = useState([]);
-
-  useLayoutEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
+  const parsedTools = useMemo(() => {
+    if (Array.isArray(jobTools)) return jobTools;
+    if (typeof jobTools === "string") {
+      return jobTools
+        .split(",")
+        .map((tool) => tool.trim())
+        .filter(Boolean);
     }
-  }, [isInView]);
-
-  // console.log(jobTools)
-
-  useEffect(() => {
-    // eslint-disable-next-line react/prop-types
-    const jobToolsArray = jobTools.split(",");
-    // console.log(jobToolsArray);
-    setEachTag(jobToolsArray);
+    return [];
   }, [jobTools]);
 
-  // Control Scroll
-  const makingMagicHappen = () => {
+  useEffect(() => {
+    if (isInView) {
+      animationControls.start("visible");
+    }
+  }, [isInView, animationControls]);
+
+  const openModal = () => {
     document.body.style.overflowY = "hidden";
     document.body.style.overflowX = "hidden";
     dispatch({ type: "hold" });
+    setModalStatus(true);
+    setcareerModalInfo({
+      jobPosition,
+      jobName,
+      jobSegment,
+      jobAdress,
+      jobDuration,
+      jobDescription: jobDesc,
+      jobTools: parsedTools,
+      jobImg,
+    });
   };
 
   return (
-    <div ref={ref}>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.3, delay: delayForEach }}
-        className="relative sm:mb-0  h-full bottom-0 mx-2 p-3 sm:py-8 lg:py-8 2xl:py-8 sm:px-5 lg:px-3 2xl:px-5 rounded-xl backdrop-blur-xl bg-white/10 cursor-pointer hover:scale-150 duration-300 hover:bg-[#19142A] hover:rounded-xl drop-shadow-md transition ease-in-out delay-50 hover:-translate-y-1  "
-        onClick={() => {
-          setModalStatus(true);
-
-          makingMagicHappen();
-          setcareerModalInfo({
-            jobPosition: jobPosition,
-            jobName: jobName,
-            jobSegment: jobSegment,
-            jobAdress: jobAdress,
-            jobDuration: jobDuration,
-            jobDescription: jobDesc,
-            jobTools: eachTag,
-            jobImg: jobImg,
-          });
-        }}
-      >
-        <div className="flex items-center">
-          <div className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
-            <svg
-              aria-hidden="true"
-              className="w-3 h-3 text-blue-800 dark:text-blue-300"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
+    <motion.article
+      ref={ref}
+      variants={cardVariants}
+      initial="hidden"
+      animate={animationControls}
+      transition={{ duration: 0.35, delay: delayForEach }}
+      onClick={openModal}
+      className="group relative flex h-full xs:min-h-96 sm:min-h-96 md:min-h-96 lg:min-h-64 xl:min-h-64 cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-4 py-5 backdrop-blur-xl shadow-xl shadow-black/30 transition hover:-translate-y-2 hover:border-white/20 hover:bg-white/10 justify-between"
+    >
+      <div className="flex flex-col">
+        <div className="flex items-center gap-3">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[10px] tracking-[0.2em] text-[#D6223B] ring-1 ring-white/20">
+            ●
           </div>
-          <div className="hidden sm:flex w-full bg-gray-200 h-0.5 "></div>
+          <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
         </div>
-        <div className="mt-3 sm:pr-8 flex flex-col min-h-[150px]">
-          <motion.h3
-            // variants={{
-            //   hidden: { opacity: 0, y: 75 },
-            //   visible: { opacity: 1, y: 0 },
-            // }}
-            initial="hidden"
-            animate={mainControls}
-            transition={{ duration: 0.3, delay: 0.7 }}
-            className="sm:text-lg lg:text-base 2xl:text-lg font-semibold text-white h-16"
-          >
+
+        <div className="mt-4 space-y-2">
+          <h3 className="text-base sm:text-lg font-semibold text-white leading-snug">
             {jobPosition}
-          </motion.h3>
-          <motion.h3
-            // variants={{
-            //   hidden: { opacity: 0, y: 75 },
-            //   visible: { opacity: 1, y: 0 },
-            // }}
-            initial="hidden"
-            animate={mainControls}
-            transition={{ duration: 0.3, delay: 0.9 }}
-            className="block mb-2 text-sm font-normal  text-gray-100 "
-          >
-            {jobName}
-          </motion.h3>
-          <motion.h3
-            // variants={{
-            //   hidden: { opacity: 0, y: 75 },
-            //   visible: { opacity: 1, y: 0 },
-            // }}
-            initial="hidden"
-            animate={mainControls}
-            transition={{ duration: 0.3, delay: 1.1 }}
-            className="block mb-5 text-xs font-normal text-gray-100"
-          >
-            {jobSegment}
-          </motion.h3>
-          <motion.p
-            // variants={{
-            //   hidden: { opacity: 0, y: 75 },
-            //   visible: { opacity: 1, y: 0 },
-            // }}
-            initial="hidden"
-            animate={mainControls}
-            transition={{ duration: 0.3, delay: 1.3 }}
-            className="text-xs font-normal text-gray-100 dark:text-gray-400 mt-1 max-w-lg whitespace-nowrap absolute bottom-3 sm:bottom-8 md:bottom-8 lg:bottom-8 xl:bottom-8 2xl:bottom-8"
-          >
+          </h3>
+          <p className="text-sm text-white/80">{jobName}</p>
+          <p className="text-xs text-white/60">{jobSegment}</p>
+          <p className="text-[11px] uppercase tracking-[0.2em] text-white/50">
             {jobDuration}
-          </motion.p>
+          </p>
         </div>
-      </motion.div>
-    </div>
+      </div>
+      <div className="flex flex-col">
+        {parsedTools.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-2 text-[8px] uppercase tracking-[0.2em] text-white/50 ">
+            {parsedTools.slice(0, 3).map((tool) => (
+              <span
+                key={tool}
+                className="rounded-full border border-white/10 bg-white/5 px-2 py-1"
+              >
+                {tool}
+              </span>
+            ))}
+            {parsedTools.length > 3 && (
+              <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1">
+                +{parsedTools.length - 3}
+              </span>
+            )}
+          </div>
+        )}
+      </div>
+    </motion.article>
   );
 }
 

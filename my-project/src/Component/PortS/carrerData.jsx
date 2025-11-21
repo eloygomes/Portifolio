@@ -50,7 +50,7 @@ export const carrerDataInfo = {
   },
 
   job04: {
-    jobPosition: "SUP. DE E-COMMERCE",
+    jobPosition: "SUPERVISOR DE E-COMMERCE",
     jobName: "Coletek",
     jobSegment: "Loja virtual / Marketplace",
     jobAdress: "Rua Curupacê, 192 - Mooca, São Paulo - SP",

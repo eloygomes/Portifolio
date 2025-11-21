@@ -1,49 +1,66 @@
 /* eslint-disable react/prop-types */
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useLayoutEffect, useMemo, useRef } from "react";
 
 import EmailButtonCustom from "./suport/EmailButton1";
 import EmailButtonBranding from "./suport/EmailButton2";
 import EmailButtonImpresso from "./suport/EmailButton3";
 import EmailButtonFoto from "./suport/EmailButton4";
 import EmailButtonEdicao from "./suport/EmailButton5";
-import EmailButtonPodcast from "./suport/EmailButton6";
 
 import carreira_bg_01 from "../assets/carreira_bg_01.jpg";
 import carreira_bg_02 from "../assets/carreira_bg_02.jpg";
 import carreira_bg_03 from "../assets/carreira_bg_03.jpg";
 import carreira_bg_04 from "../assets/carreira_bg_04.jpg";
 import carreira_bg_05 from "../assets/carreira_bg_05.jpg";
-import carreira_bg_06 from "../assets/carreira_bg_06.jpg";
 
-function ServiceCard({ Wrapper, image, title, description, isMobile }) {
+function ServiceCard({ Wrapper, image, title, description }) {
   return (
     <Wrapper>
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        exit={{ scale: 0 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+      <motion.article
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        whileHover={{ y: -6 }}
+        whileTap={{ scale: 0.97 }}
         transition={{ duration: 0.2 }}
-        className="col-span-1 row-span-1 cursor-pointer rounded-xl flex flex-col relative"
+        className="group relative flex h-full min-h-[260px] flex-col overflow-hidden rounded-2xl border border-white/5
+                  backdrop-blur-xl bg-white/10 shadow-xl shadow-black/40 backdrop-blur-xl"
       >
-        <div className="rounded-xl flex flex-col z-50">
-          <img src={image} alt={title} className="object-cover rounded-xl" />
-          <div className="w-full h-full bg-gradient-to-b from-transparent to-black absolute opacity-1 rounded-xl"></div>
-          <h1 className="absolute inset-0 flex items-center justify-start text-2xl text-white top-5 sm:top-[-4rem] md:top-5 lg:top-2 xl:top-5 2xl:top-5 p-5">
-            {title}
-          </h1>
-          <p
-            className={`absolute inset-0 flex items-end justify-center text-start text-white px-5 lg:text-[0.64rem] 2xl:text-sm lg:leading-[0.65rem] 2xl:leading-[1.25rem] ${
-              isMobile ? "bottom-3 text-[0.64rem]" : "bottom-5 text-[0.64rem]"
-            }`}
-          >
+        <div className="relative h-44 sm:h-48 md:h-52 lg:h-56 w-full">
+          <img
+            src={image}
+            alt={title}
+            className="h-full w-full object-cover opacity-80 transition group-hover:opacity-100"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80" />
+
+          <div className="absolute left-4 right-4 top-3 flex flex-col gap-1">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-white/50">
+              Solução
+            </span>
+            <h3 className="text-lg md:text-xl font-semibold text-white">
+              {title}
+            </h3>
+          </div>
+        </div>
+
+        <div className="flex-1 px-4 pt-3 pb-4 flex items-center">
+          <p className="text-xs md:text-sm text-white/75 leading-relaxed">
             {description}
           </p>
         </div>
-      </motion.div>
+
+        <div className="flex items-center justify-between px-4 pb-4 text-[10px] uppercase tracking-[0.2em] text-white/50">
+          <span className="transition group-hover:text-[#D6223B]">
+            Falar sobre {title.toLowerCase()}
+          </span>
+          <span className="transition-transform group-hover:translate-x-1">
+            →
+          </span>
+        </div>
+      </motion.article>
     </Wrapper>
   );
 }
@@ -53,7 +70,6 @@ function NewServiceSession() {
   const isInView = useInView(ref);
   const mainControls = useAnimation();
   const dispatch = useDispatch();
-  const [isMobile, setIsMobile] = useState(false);
 
   function currentSession() {
     return { type: "services" };
@@ -69,59 +85,42 @@ function NewServiceSession() {
     }
   }, [isInView, menuDisplayOpt, dispatch, mainControls]);
 
-  useEffect(() => {
-    const checkIsMobile = () =>
-      typeof window !== "undefined" && window.innerWidth <= 1025;
-    setIsMobile(checkIsMobile());
-
-    const handleResize = () => setIsMobile(checkIsMobile());
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const services = useMemo(
     () => [
       {
         Wrapper: EmailButtonCustom,
         image: carreira_bg_01,
-        title: "UI/UX",
+        title: "Front-End",
         description:
-          "Criação de wireframes, prototipagem, design system, testes de usabilidade",
+          "Criação da parte visual e interativa: landing pages, sites completos, e-commerces, dashboards e UIs responsivas com foco em usabilidade e acessibilidade.",
       },
       {
         Wrapper: EmailButtonBranding,
         image: carreira_bg_02,
-        title: "BRANDING",
+        title: "Back-End ",
         description:
-          "Análise de dados, elaboração de estratégia de comunicação, design de produto e interação.",
+          "APIs REST/GraphQL de alta performance, integrações com serviços externos e webhooks, gestão de bancos relacionais e NoSQL para sustentar a aplicação.",
       },
       {
         Wrapper: EmailButtonImpresso,
         image: carreira_bg_03,
-        title: "IMPRESSOS",
+        title: "Mobile",
         description:
-          "Analise de marca, criação de conceito, desenvolvimento de protótipos",
+          "Apps híbridos para Android e iOS usando React Native, compartilhando uma base de código única e entregando experiência nativa.",
       },
       {
         Wrapper: EmailButtonFoto,
         image: carreira_bg_04,
-        title: "FOTOGRAFIA",
+        title: "Desktop",
         description:
-          "Captação, edição e impressão de ensaios artísticos, casamentos produto e comercial.",
+          "Apps desktop multiplataforma (Windows, Linux, macOS) com Electron ou Flutter, incluindo integrações com APIs, bancos remotos e sistemas existentes.",
       },
       {
         Wrapper: EmailButtonEdicao,
         image: carreira_bg_05,
-        title: "EDIÇÃO",
+        title: "Soluções Técnicas",
         description:
-          "Planejamento, pesquisa, briefing, conceito, roteiro, produção e edição de videos.",
-      },
-      {
-        Wrapper: EmailButtonPodcast,
-        image: carreira_bg_06,
-        title: "PODCAST",
-        description:
-          "Planejamento, pesquisa, briefing, conceito, roteiro, produção, gravação, apresentação e publicação de podcasts.",
+          "Arquitetura escalável, microserviços, gerenciamento de estado (Redux/Zustand), CI/CD para deploys contínuos e automações com n8n e orquestradores.",
       },
     ],
     []
@@ -129,20 +128,59 @@ function NewServiceSession() {
 
   return (
     <div
-      className="w-screen sm:h-screen md:h-full lg:h-screen xl:h-full 2xl:h-full h-fit flex flex-col bg-[#19142A] bg-opacity-95 xl:min-h-screen"
       id="services"
       ref={ref}
+      className="w-full min-h-screen bg-[#19142A]/95"
     >
-      <div className="container mx-auto flex flex-col justify-start items-center sm:justify-center sm:items-center h-fit sm:h-screen md:h-screen lg:h-screen xl:h-screen 2xl:h-screen mt-24">
-        <div className="mb-[10vh] sm:mt-[12vh] md:mt-[12vh] lg:mt-[12vh] xl:mt-0 2xl:mt-0 mx-5 sm:mx-10 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-32 p-5 backdrop-blur-xl bg-white bg-opacity-10 rounded-xl">
-          <div className="container mx-auto flex flex-col justify-center text-center p-5 xl:p-0">
-            <div className="flex flex-col">
-              <h1>Serviços</h1>
-              <p className="md:mx-20 sm:mx-0 p-5">
-                Segue abaixo alguns dos serviços oferecidos.
+      <div className="container mx-auto px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 pt-10 xs:pt-24 sm:pt-24 md:pt-24 lg:pt-24 xl:pt-24  pb-16 lg:pb-24">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 40 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="grid gap-10 lg:gap-14 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.4fr)] items-start"
+        >
+          {/* Coluna de texto (esquerda no desktop, topo no mobile) */}
+          <header className="space-y-6 max-w-xl">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 backdrop-blur-xl bg-white/10 px-3 py-1">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#D6223B]" />
+              <span className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                Serviços
+              </span>
+            </div>
+
+            <div className="space-y-3">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white">
+                Como posso ajudar o seu projeto?
+              </h2>
+              <p className="text-sm sm:text-base text-white/70">
+                Atuo na interseção entre{" "}
+                <span className="text-white font-medium">design</span> e{" "}
+                <span className="text-white font-medium">desenvolvimento</span>,
+                garantindo que cada entrega tenha consistência visual,
+                estratégia clara e foco em resultado.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 grid-rows-2 gap-x-10 sm:gap-y-10 md:gap-y-10 lg:gap-y-10 xl:gap-y-10 2xl:gap-y-10 gap-y-5 md:p-5">
+
+            <div className="space-y-2 text-xs sm:text-sm text-white/60">
+              <p>
+                • Ideal para freelancers, pequenas empresas, startups e projetos
+                autorais.
+              </p>
+              <p>
+                • Podemos adaptar qualquer serviço a necessidades específicas do
+                seu negócio.
+              </p>
+            </div>
+          </header>
+
+          {/* Grid de cards */}
+          <div className="w-full">
+            {/* Mobile: grid + bom espaçamento */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6 lg:gap-7 auto-rows-[1fr] items-stretch ">
               {services.map((service) => (
                 <ServiceCard
                   key={service.title}
@@ -150,12 +188,11 @@ function NewServiceSession() {
                   image={service.image}
                   title={service.title}
                   description={service.description}
-                  isMobile={isMobile}
                 />
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

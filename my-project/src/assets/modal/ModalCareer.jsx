@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
+import { useMemo } from "react";
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
-import { AiFillCloseCircle } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 
 const customStylesMobile = {
   content: {
@@ -27,7 +28,8 @@ const customStylesMobile = {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: "rgba(25, 20, 42, 0.75)",
+    backgroundColor: "rgba(25, 20, 42, 0.85)",
+    zIndex: 9999,
   },
 };
 
@@ -55,7 +57,8 @@ const customStyles = {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: "rgba(25, 20, 42, 0.75)",
+    backgroundColor: "rgba(25, 20, 42, 0.85)",
+    zIndex: 9999,
   },
 };
 
@@ -73,245 +76,145 @@ function particlesOn() {
 
 // eslint-disable-next-line no-unused-vars
 function ModalCareer({ modalStatus, setModalStatus, careerModalInfo }) {
-  function closeModal() {
-    setModalStatus(false);
-    makingMagicHappen();
-    dispatch(particlesOn());
-    dispatch(showNavbar());
-  }
-
   const dispatch = useDispatch();
+  const tools = useMemo(() => {
+    if (Array.isArray(careerModalInfo.jobTools))
+      return careerModalInfo.jobTools;
+    if (typeof careerModalInfo.jobTools === "string") {
+      return careerModalInfo.jobTools
+        .split(",")
+        .map((item) => item.trim())
+        .filter(Boolean);
+    }
+    return [];
+  }, [careerModalInfo.jobTools]);
 
-  // Control Scroll
-  const makingMagicHappen = () => {
+  const closeModal = () => {
+    setModalStatus(false);
     document.body.style.overflowY = "scroll";
     document.body.style.overflowX = "hidden";
-    // dispatch(scrollGo());
+    document.body.classList.remove("modal-open");
     dispatch({ type: "leave" });
+    dispatch(particlesOn());
+    dispatch(showNavbar());
   };
+
+  if (modalStatus) {
+    document.body.classList.add("modal-open");
+  }
+
+  const content = (
+    <div className="flex w-full h-full items-center justify-center px-4 py-6 sm:px-6">
+      <div className="relative w-[90vw] xs:w-[90vw] sm:w-[90vw] md:w-[90vw] lg:w-[90vw] xl:w-[80vw] min-w-[90vw] xs:min-w-[90vw] sm:min-w-[90vw] md:min-w-[90vw] lg:min-w-[90vw] xl:min-w-[80vw] max-w-[90vw] bg-[#241b3b]/90 border border-white/10 rounded-2xl shadow-2xl shadow-black/50 backdrop-blur-2xl overflow-hidden">
+        {/* botão fechar */}
+        <button
+          onClick={closeModal}
+          className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white hover:bg-white/20 transition"
+          aria-label="Fechar modal"
+        >
+          <AiOutlineClose size={18} />
+        </button>
+
+        {/* imagem full-width topo */}
+        {careerModalInfo.jobImg && (
+          <div className="w-full h-40 sm:h-64 md:h-72 lg:h-60 overflow-hidden border-b border-white/10">
+            <img
+              src={careerModalInfo.jobImg}
+              alt={careerModalInfo.jobName || "Empresa"}
+              className="h-full w-full object-cover"
+            />
+          </div>
+        )}
+
+        {/* header */}
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 items-start bg-gradient-to-br from-white/10 via-white/0 to-white/5 p-5 sm:p-6 lg:p-8">
+          <div className="flex-1 space-y-2">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-white leading-tight">
+              {careerModalInfo.jobPosition}
+            </h2>
+            <p className="text-sm text-white/70">{careerModalInfo.jobName}</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-white/50">
+              {careerModalInfo.jobDuration}
+            </p>
+          </div>
+        </div>
+
+        {/* body */}
+        <div className="px-5 sm:px-6 lg:px-8 pb-6 lg:pb-8 overflow-y-auto max-h-[70vh] sm:max-h-[75vh] custom-scroll">
+          <div className="grid lg:grid-cols-[1.05fr_1fr] gap-6 lg:gap-8 pt-2">
+            <div className="space-y-4">
+              <div className="rounded-xl border border-white/10 bg-white/5 p-5 shadow-inner shadow-black/20">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-white/50">
+                  Atribuições
+                </p>
+                <p className="text-base sm:text-lg xl:text-base text-white/85 leading-relaxed mt-2">
+                  {careerModalInfo.jobDescription}
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="rounded-xl border border-white/10 bg-white/5 p-4 shadow-inner shadow-black/20">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-white/50">
+                  Ferramentas e Tecnologias
+                </p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {tools.map((tool) => (
+                    <span
+                      key={tool}
+                      className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-white/70"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                  {tools.length === 0 && (
+                    <span className="text-xs text-white/50">
+                      Nenhuma ferramenta listada.
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 flex justify-center">
+            <button
+              onClick={closeModal}
+              className="inline-flex items-center gap-2 rounded-full bg-[#D6223B] px-6 py-2 text-sm font-semibold text-white shadow-lg shadow-black/30 transition hover:brightness-110"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div>
       {window.innerWidth <= 961 ? (
-        <div>
-          <Modal
-            isOpen={modalStatus}
-            onRequestClose={closeModal}
-            style={customStylesMobile}
-            className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-1"
-          >
-            <div className="flex ">
-              <div className="flex flex-col justify-between rounded-xl p-5   backdrop-blur-xl bg-white/10 w-[90vw] h-full m-10 mt-00 sm:mt-10 md:mt-10  z-20 ">
-                {/* ROW 1 */}
-                <div className="h-[10%] flex flex-row justify-between p-1  ">
-                  <div className=" text-xl">Carreira</div>
-                  <div
-                    className="cursor-pointer text-base font-semibold"
-                    onClick={() => {
-                      closeModal();
-                      dispatch(showNavbar());
-                      // dispatch(leaveScroll());
-                      // dispatch(particlesOn());
-                      setModalStatus(false);
-                    }}
-                  >
-                    <AiFillCloseCircle size={40} />
-                  </div>
-                </div>
-                {/* ROW 2 */}
-                <div className="h-full flex flex-col  ">
-                  <div className="">
-                    <div className="flex flex-col mt-5 ">
-                      <div className="uppercase text-2xl  py-2">
-                        <img
-                          className="object-cover w-full h-[100px] sm:h-[150px] md:h-[150px] lg:h-[150px] xl::h-[150px] 2xl:h-[200px] rounded-md mb-5"
-                          src={`${careerModalInfo.jobImg}`}
-                          alt=""
-                        />
-                      </div>
-                      <div className="uppercase font-bold text-xs pt-2 mr-5">
-                        Nome da Empresa
-                      </div>
-                      <div className="text-2xl pb-2 mr-5">
-                        {careerModalInfo.jobName}
-                      </div>
-                      <div className="uppercase font-bold text-xs pt-2 mr-5 mt-2">
-                        Segmento
-                      </div>
-                      <div className=" text-[0.75rem] font-semibold py-1">
-                        {careerModalInfo.jobSegment}
-                      </div>
-                      <div className="uppercase font-bold text-xs pt-2 mr-5 mt-2">
-                        Duração
-                      </div>
-                      <div className=" text-[0.75rem] font-semibold py-1">
-                        {careerModalInfo.jobDuration}
-                      </div>
-                      <div className="uppercase font-bold text-xs pt-2 mr-5 mt-2">
-                        Localização
-                      </div>
-                      <div className=" text-[0.75rem]  ">
-                        {careerModalInfo.jobAdress}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-full">
-                    <div className=" flex flex-col mt-10">
-                      <div className="uppercase text-sm pt-2 mr-5">Cargo</div>
-                      <div className="uppercase text-2xl font-bold py-2">
-                        {careerModalInfo.jobPosition}
-                      </div>
-                      <div className="uppercase text-sm pt-2 mr-5">
-                        Atribuições
-                      </div>
-                      <div className="text-sm py-1">
-                        {careerModalInfo.jobDescription}
-                      </div>
-                      <div className="uppercase text-sm pt-2 mt-10 mr-5">
-                        Ferramentas e tecnologias
-                      </div>
-
-                      <div className="flex flex-row pt-1 flex-wrap">
-                        {careerModalInfo.jobTools
-                          ? careerModalInfo.jobTools.map((tool, index) => (
-                              <button
-                                key={index}
-                                className="text-xs my-1 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold "
-                              >
-                                {tool}
-                              </button>
-                            ))
-                          : null}
-                      </div>
-                      <div className="w-full text-center mt-5">
-                        <div
-                          className="cursor-pointer text-[.3rem] p-2 m-5 border-2 border-white rounded-md text-white z-50"
-                          onClick={() => {
-                            closeModal();
-                            dispatch(showNavbar());
-                            // dispatch(leaveScroll());
-                            dispatch(particlesOn());
-                          }}
-                        >
-                          {/* FECHAR */}
-                          <h1>FECHAR</h1>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Modal>
-        </div>
+        <Modal
+          isOpen={modalStatus}
+          onRequestClose={closeModal}
+          style={customStylesMobile}
+          className="absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000 rounded-lg p-1"
+        >
+          {content}
+        </Modal>
       ) : (
-        <div>
-          {/* DESKTOP */}
-          <Modal
-            isOpen={modalStatus}
-            onRequestClose={closeModal}
-            style={customStyles}
-            contentLabel="Example Modal"
-            className=" absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000  rounded-lg p-3"
-          >
-            <div className="w-full min-w-[1024px] max-w-[1800px] flex rounded-xl">
-              <div className="flex flex-col justify-between rounded-xl p-2   backdrop-blur-xl bg-white/10 w-[90vw] lg:w-[90vw] xl:w-[90vw] 2xl:max-w-[1300px] h-[80vh] xl:h-[80vh] lg:h-full m-20 lg:mt-20 2xl:mt-20 z-20 2xl:mx-30 overflow-y-scroll ">
-                {/* ROW 1 */}
-                <div className="h-[10%] flex flex-row justify-between lg:my-2 2xl:my-5 lg:mx-5">
-                  <div className=" text-3xl">Carreira</div>
-                  <div
-                    className="cursor-pointer text-2xl"
-                    onClick={() => {
-                      closeModal();
-                      dispatch(showNavbar());
-                      // dispatch(leaveScroll());
-                      dispatch(particlesOn());
-                    }}
-                  >
-                    <AiFillCloseCircle size={30} />
-                  </div>
-                </div>
-                {/* ROW 2 */}
-                <div className="h-full flex flex-col px-5 ">
-                  <div className="uppercase text-2xl  ">
-                    <img
-                      className="object-cover w-full lg:h-[150px] xl:h-[80px] 2xl:h-[100px] rounded-md mb-5 "
-                      src={`${careerModalInfo.jobImg}`}
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-full flex flex-row p-5 ">
-                    <div className="w-1/4">
-                      <div className="flex flex-col ">
-                        <div className="uppercase font-bold text-sm pt-2 mr-5">
-                          Nome da Empresa
-                        </div>
-                        <div className="text-2xl pb-2 mr-5">
-                          {careerModalInfo.jobName}
-                        </div>
-                        <div className="uppercase font-bold text-sm pt-2 mr-5 mt-5">
-                          Segmento
-                        </div>
-                        <div className=" text-base font-semibold py-1">
-                          {careerModalInfo.jobSegment}
-                        </div>
-                        <div className="uppercase font-bold text-sm pt-2 mr-5 mt-5">
-                          Duração
-                        </div>
-                        <div className=" text-base font-semibold py-1">
-                          {careerModalInfo.jobDuration}
-                        </div>
-                        <div className="uppercase font-bold text-sm pt-2 mr-5 mt-5">
-                          Localização
-                        </div>
-                        <div className=" text-[0.75rem]  ">
-                          {careerModalInfo.jobAdress}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="w-3/4">
-                      <div className=" flex flex-col  px-10">
-                        <div className="uppercase font-bold text-sm pt-2 mr-5">
-                          Cargo
-                        </div>
-                        <div className="uppercase text-2xl py-2">
-                          {careerModalInfo.jobPosition}
-                        </div>
-                        <div className="uppercase font-bold text-sm pt-2 mr-5 mt-5">
-                          Atribuições
-                        </div>
-                        <div className="text-sm py-1">
-                          {careerModalInfo.jobDescription}
-                        </div>
-                        <div className="uppercase text-sm pt-2 mt-10 mr-5">
-                          Ferramentas e tecnologias
-                        </div>
-
-                        <div className="flex flex-row pt-1 flex-wrap">
-                          {careerModalInfo.jobTools
-                            ? careerModalInfo.jobTools.map((tool, index) => (
-                                <button
-                                  key={index}
-                                  className="text-xs my-1 mr-2 backdrop-blur-xl bg-white/10  hover:bg-white/50 hover:font-semibold"
-                                >
-                                  {tool}
-                                </button>
-                              ))
-                            : null}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Modal>
-        </div>
+        <Modal
+          isOpen={modalStatus}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+          className="absolute top-[50%] left-[50%] right-[auto] bottom-[auto] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000 ease-in-out delay-1000 rounded-lg p-3"
+        >
+          {content}
+        </Modal>
       )}
     </div>
   );
 }
 
 export default ModalCareer;
+``;

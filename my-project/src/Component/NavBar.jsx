@@ -35,8 +35,10 @@ function NavBar() {
           }`}
         >
           <AiOutlineMenu
-            className="text-[2.5rem] sm:text-[2.5rem] md:text-[3rem]  text-white m-5 cursor-pointer absolute top-0 right-0 z-10  backdrop-blur-xl bg-white/10 rounded-full p-2 "
+            className="mobile-menu-toggle text-[2.5rem] sm:text-[2.5rem] md:text-[3rem]  text-white m-5 cursor-pointer absolute top-0 right-0 z-10  backdrop-blur-xl bg-white/10 rounded-full p-2 "
             onClick={() => {
+              // bloqueia clique se modal está aberto (classe aplicada no body)
+              if (document.body.classList.contains("modal-open")) return;
               setMobileShowMenu(!mobileShowMenu);
             }}
           />
