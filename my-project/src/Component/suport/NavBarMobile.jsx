@@ -1,4 +1,4 @@
-// import React from "react";
+import { FiX } from "react-icons/fi";
 
 // eslint-disable-next-line react/prop-types
 const NavBarMobile = ({ setMobileShowMenu }) => {
@@ -16,7 +16,7 @@ const NavBarMobile = ({ setMobileShowMenu }) => {
               className="font-extrabold text-xl text-white "
               onClick={() => setMobileShowMenu(false)}
             >
-              FECHAR
+              <FiX className="w-8 h-8" />
             </a>
           </div>
         </div>
