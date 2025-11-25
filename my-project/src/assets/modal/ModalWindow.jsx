@@ -214,7 +214,7 @@ function ModalWindow({
                 <div className="h-[10%] flex flex-row justify-between p-5  ">
                   <div className="flex flex-col">
                     <div className="text-4xl ">Portfólio</div>
-                    <div className="text-base uppercase ">{portWorkStatus}</div>
+                    {/* <div className="text-base uppercase ">{postInfo.site}</div> */}
                   </div>
                   <div
                     className="cursor-pointer text-2xl z-50"
@@ -278,7 +278,16 @@ function ModalWindow({
                     <div className="uppercase text-5xl font-bold">
                       {postInfo.companyName}
                     </div>
-                    <p className="text-sm py-5">{postInfo.jobDescription}</p>
+                    <p className="text-sm pt-5">{postInfo.jobDescription}</p>
+                    <div className="my-3">
+                      <a
+                        className="backdrop-blur-xl bg-white/10 text-sm uppercase px-5 py-1  rounded-md hover:bg-white/20 hover:font-semibold transition onclick:font-black "
+                        href={postInfo.site}
+                      >
+                        ACESSE
+                      </a>
+                    </div>
+
                     <div className="uppercase text-xs">Techs</div>
                     <div className=" text-sm ">
                       <ul className="flex flex-row flex-wrap ">

@@ -1,0 +1,38 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 80"
+  role="img"
+  aria-labelledby="title"
+>
+  <title id="title">Logo EVG</title>
+
+  <defs>
+    <!-- Sombra atrás do texto -->
+    <filter id="evg-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow
+        dx="4"
+        dy="4"
+        stdDeviation="3"
+        flood-color="#510918"
+        flood-opacity="0.9"
+      />
+    </filter>
+  </defs>
+
+  <!-- Fundo transparente (pode trocar a cor se quiser) -->
+  <rect x="0" y="0" width="200" height="80" fill="transparent" />
+
+  <!-- Texto EVG com sombra -->
+  <text
+    x="50%"
+    y="65%"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="52"
+    font-weight="900"
+    fill="#E3293F"
+    filter="url(#evg-shadow)"
+  >
+    EVG
+  </text>
+</svg>

@@ -32,7 +32,7 @@ const NAV_ITEMS = [
 ];
 
 // eslint-disable-next-line react/prop-types
-export default function NavBarMobileItems({ setMobileShowMenu }) {
+export default function NavBarMobileItems({ setMobileShowMenu, cv }) {
   const handleNavigate = (event, href) => {
     event.preventDefault();
 
@@ -51,7 +51,7 @@ export default function NavBarMobileItems({ setMobileShowMenu }) {
   };
 
   return (
-    <div className="flex h-full flex-col justify-between px-6 py-10">
+    <div className="flex h-full flex-col justify-between px-6 pt-5 pb-10">
       {/* Bloco de navegação */}
       <div>
         <div className="mb-6 text-center">
@@ -60,7 +60,7 @@ export default function NavBarMobileItems({ setMobileShowMenu }) {
           </p>
         </div>
 
-        <nav className="space-y-3">
+        <nav className="space-y-7">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.id}
@@ -83,7 +83,7 @@ export default function NavBarMobileItems({ setMobileShowMenu }) {
       {/* Bloco de call-to-action */}
       <div className="mt-10 border-t border-white/5 pt-6">
         <p className="mb-3 text-center text-[10px] uppercase tracking-[0.25em] text-white/40">
-          Download
+          Curiculo
         </p>
 
         {/* Botão com link mock, usando as cores atuais */}
@@ -94,18 +94,18 @@ export default function NavBarMobileItems({ setMobileShowMenu }) {
               setMobileShowMenu(false);
             }
           }}
-          className="block w-full rounded-2xl bg-[#D6223B] px-4 py-3 text-center text-xs font-semibold uppercase
+          className="block w-full rounded-2xl bg-[#D6223B] px-5 py-4 text-center text-xs font-semibold uppercase
                      tracking-[0.2em] text-white shadow-lg shadow-black/30 transition
                      hover:bg-[#f1354f] active:scale-[0.99]"
         >
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            DOWNLOAD CV
+          <a href={cv} target="_blank" rel="noopener noreferrer">
+            DOWNLOAD
           </a>
         </button>
 
-        <p className="mt-3 text-center text-[11px] text-white/60">
+        {/* <p className="mt-3 text-center text-[11px] text-white/60">
           Pronto para novas oportunidades, freelas e projetos interessantes.
-        </p>
+        </p> */}
       </div>
     </div>
   );

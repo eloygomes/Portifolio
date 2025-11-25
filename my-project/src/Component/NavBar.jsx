@@ -19,6 +19,9 @@ function NavBar() {
   // eslint-disable-next-line no-unused-vars
   const [desktopMenuActive, setDesktopMenuActive] = useState("home");
 
+  const cv =
+    "https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/6c8e6221654949.6617ab0d79f1a.jpg";
+
   // console.log(mobileShowMenu);
   // console.log("window.innerWidth < 961?" + window.innerWidth < 961);
   return (
@@ -47,7 +50,7 @@ function NavBar() {
             ${mobileShowMenu ? "flex flex-col justify-start" : "hidden"} z-10`}
           >
             <NavBarMobile setMobileShowMenu={setMobileShowMenu} />
-            <NavBarMobileItems setMobileShowMenu={setMobileShowMenu} />
+            <NavBarMobileItems setMobileShowMenu={setMobileShowMenu} cv={cv} />
           </div>
         </div>
       ) : (
@@ -155,13 +158,9 @@ function NavBar() {
                 </a>
               </div>
               <div className="pl-5 hover:scale-105">
-                <p className="bg-[#D6223B] text-xs p-2 whitespace-nowrap rounded">
-                  <a
-                    href="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/6c8e6221654949.6617ab0d79f1a.jpg"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    DOWNLOAD CV
+                <p className="bg-[#D6223B] text-xs p-2 whitespace-nowrap rounded-2xl">
+                  <a href={cv} target="_blank" rel="noopener noreferrer">
+                    DOWNLOAD
                   </a>
                 </p>
               </div>

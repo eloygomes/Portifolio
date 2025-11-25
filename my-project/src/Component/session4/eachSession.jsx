@@ -68,7 +68,7 @@ function EachSession({
       animate={animationControls}
       transition={{ duration: 0.35, delay: delayForEach }}
       onClick={openModal}
-      className="group relative flex h-full xs:min-h-96 sm:min-h-96 md:min-h-96 lg:min-h-64 xl:min-h-64 cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-4 py-5 backdrop-blur-xl shadow-xl shadow-black/30 transition hover:-translate-y-2 hover:border-white/20 hover:bg-white/10 justify-between"
+      className="group relative flex h-full xs:min-h-96 sm:min-h-96 md:min-h-96 lg:min-h-92 xl:min-h-92 cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-4 py-5 backdrop-blur-xl shadow-xl shadow-black/30 transition hover:-translate-y-2 hover:border-white/20 hover:bg-white/10 justify-between"
     >
       <div className="flex flex-col">
         <div className="flex items-center gap-3">

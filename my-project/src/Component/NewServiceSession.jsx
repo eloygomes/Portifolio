@@ -14,6 +14,7 @@ import carreira_bg_02 from "../assets/carreira_bg_02.jpg";
 import carreira_bg_03 from "../assets/carreira_bg_03.jpg";
 import carreira_bg_04 from "../assets/carreira_bg_04.jpg";
 import carreira_bg_05 from "../assets/carreira_bg_05.jpg";
+import carreira_bg_06 from "../assets/carreira_bg_06.jpg";
 
 function ServiceCard({ Wrapper, image, title, description }) {
   return (
@@ -53,7 +54,7 @@ function ServiceCard({ Wrapper, image, title, description }) {
         </div>
 
         <div className="flex items-center justify-between px-4 pb-4 text-[10px] uppercase tracking-[0.2em] text-white/50">
-          <span className="transition group-hover:text-[#D6223B]">
+          <span className="transition group-hover:text-[#D6223B] text-[8px]">
             Falar sobre {title.toLowerCase()}
           </span>
           <span className="transition-transform group-hover:translate-x-1">
@@ -122,6 +123,13 @@ function NewServiceSession() {
         description:
           "Arquitetura escalável, microserviços, gerenciamento de estado (Redux/Zustand), CI/CD para deploys contínuos e automações com n8n e orquestradores.",
       },
+      {
+        Wrapper: EmailButtonEdicao,
+        image: carreira_bg_06,
+        title: "Análise de Dados",
+        description:
+          "Coleta, processamento e visualização de dados para insights acionáveis, utilizando ferramentas como Python, Pandas e Tableau.",
+      },
     ],
     []
   );
@@ -132,7 +140,21 @@ function NewServiceSession() {
       ref={ref}
       className="w-full min-h-screen bg-[#19142A]/95"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 pt-10 xs:pt-24 sm:pt-24 md:pt-24 lg:pt-24 xl:pt-24  pb-16 lg:pb-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 pt-10 xs:pt-24 sm:pt-24 md:pt-24 lg:pt-24 xl:pt-24  pb-16 lg:pb-24 flex flex-col ">
+        <header className="space-y-6 ">
+          {/* <div className="inline-flex items-center gap-2 rounded-full border border-white/10 backdrop-blur-xl bg-white/10 px-3 py-1"> */}
+          {/* <span className="h-1.5 w-1.5 rounded-full bg-[#D6223B]" /> */}
+          {/* <span className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+              Serviços
+            </span> */}
+          {/* </div> */}
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">Serviços</h2>
+          <div className="w-9/12 sm:w-1/2 md:w-full lg:w-full xl:w-full">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white ">
+              Como posso ajudar o seu projeto?
+            </h2>
+          </div>
+        </header>
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 40 },
@@ -141,46 +163,14 @@ function NewServiceSession() {
           initial="hidden"
           animate={mainControls}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="grid gap-10 lg:gap-14 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.4fr)] items-start"
+          className="grid gap-10 lg:gap-14 mt-20 items-start "
         >
           {/* Coluna de texto (esquerda no desktop, topo no mobile) */}
-          <header className="space-y-6 max-w-xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 backdrop-blur-xl bg-white/10 px-3 py-1">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#D6223B]" />
-              <span className="text-[10px] uppercase tracking-[0.25em] text-white/60">
-                Serviços
-              </span>
-            </div>
-
-            <div className="space-y-3">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white">
-                Como posso ajudar o seu projeto?
-              </h2>
-              <p className="text-sm sm:text-base text-white/70">
-                Atuo na interseção entre{" "}
-                <span className="text-white font-medium">design</span> e{" "}
-                <span className="text-white font-medium">desenvolvimento</span>,
-                garantindo que cada entrega tenha consistência visual,
-                estratégia clara e foco em resultado.
-              </p>
-            </div>
-
-            <div className="space-y-2 text-xs sm:text-sm text-white/60">
-              <p>
-                • Ideal para freelancers, pequenas empresas, startups e projetos
-                autorais.
-              </p>
-              <p>
-                • Podemos adaptar qualquer serviço a necessidades específicas do
-                seu negócio.
-              </p>
-            </div>
-          </header>
 
           {/* Grid de cards */}
           <div className="w-full">
             {/* Mobile: grid + bom espaçamento */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6 lg:gap-7 auto-rows-[1fr] items-stretch ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-6 gap-5 sm:gap-6 lg:gap-7 auto-rows-[1fr] items-stretch ">
               {services.map((service) => (
                 <ServiceCard
                   key={service.title}

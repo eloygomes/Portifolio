@@ -15,12 +15,10 @@ export default function FormationRoadmap() {
       <div className="max-w-5xl mx-auto">
         {/* Título */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            Formação & Roadmap de Estudos
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">Formação</h2>
           <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">
-            Aqui você encontra um mapa da minha jornada educacional, desde a
-            base em design até o desenvolvimento full stack.
+            Aqui você encontra um roadmap da minha jornada educacional, desde o
+            meu inicio em design até o desenvolvimento full stack.
           </p>
         </div>
 
@@ -133,8 +131,7 @@ export default function FormationRoadmap() {
         </div>
 
         <p className="mt-6 text-[11px] text-gray-400 text-center">
-          * Os cursos estão agrupados por fases da minha carreira, não
-          necessariamente em ordem cronológica exata dentro de cada card.
+          * Os cursos estão agrupados por fases da minha carreira.
         </p>
       </div>
     </section>

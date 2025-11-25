@@ -155,18 +155,9 @@ function Portfolio() {
           <div className="container mx-auto sm:mt-10 mt-16">
             <div className="flex flex-col  p-5 sm:p-5 md:p-8">
               <div className="sm:w-[50%] md:w-full w-full flex flex-col">
-                <motion.h1
-                  variants={{
-                    hidden: { opacity: 0, y: 75 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  initial="hidden"
-                  animate={mainControls}
-                  transition={{ duration: 0.5, delay: 0.05 }}
-                  className="text-4xl"
-                >
+                <h2 className="text-3xl md:text-4xl font-bold mb-3">
                   Portifólio
-                </motion.h1>
+                </h2>
 
                 <motion.p
                   variants={{
@@ -372,7 +363,7 @@ function Portfolio() {
           <div className="container mx-auto  mt-16 flex flex-col items-center justify-center h-screen">
             <div className="w-full flex flex-row p-5 lg:px-20 lg:pb-00 lg:pt-20 2xl:px-32">
               <div className="sm:w-[50%] w-full flex flex-col">
-                <motion.h1
+                {/* <motion.h1
                   variants={{
                     hidden: { opacity: 0, y: 75 },
                     visible: { opacity: 1, y: 0 },
@@ -383,7 +374,11 @@ function Portfolio() {
                   className="text-5xl lg:text-3xl 2xl:text-5xl"
                 >
                   Portifólio
-                </motion.h1>
+                </motion.h1> */}
+
+                <h2 className="text-3xl md:text-4xl font-bold mb-3">
+                  Portifólio
+                </h2>
 
                 <motion.p
                   variants={{

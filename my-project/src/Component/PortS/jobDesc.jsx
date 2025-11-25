@@ -20,6 +20,7 @@ export const jobDesc = {
         "vscode",
       ],
       data: "2021",
+      site: "http://www.c3tech.com.br/",
     },
     data02: {
       jobTitle: "Criação de imagem conceito",
@@ -45,6 +46,7 @@ export const jobDesc = {
         "vscode",
       ],
       data: "2021",
+      site: "https://gruposkill.com.br/",
     },
     data03: {
       jobTitle: "Criação de site",
@@ -53,6 +55,7 @@ export const jobDesc = {
         "Desenvolvimento de site conceito para o disco resist do artista EVG.",
       tools: ["Figma", "vscode", "firebase"],
       data: "2021",
+      site: "https://eloygomes.com",
     },
     data04: {
       jobTitle: "Proposta de redesign do app",
@@ -60,6 +63,7 @@ export const jobDesc = {
       jobDescription: "Proposta de modernização do app.",
       tools: ["Figma", "vscode"],
       data: "2021",
+      site: "https://overcast.fm/",
     },
     data05: {
       jobTitle: "Criação de imagem conceito",
@@ -68,6 +72,7 @@ export const jobDesc = {
         "Desenvolvimento de site para a marca Wellness, com o objetivo de criar uma conexão com os clientes e que representasse os valores da marca e seus produtos.",
       tools: ["Figma", "vscode"],
       data: "2021",
+      site: "https://wellness.com.br/",
     },
     data06: {
       jobTitle: "Criação de site de portfólio",
@@ -76,6 +81,7 @@ export const jobDesc = {
         "Desenvolvimento de site para o fotografo com o objetivo de criar um portfólio online.",
       tools: ["Figma", "Adobe Photoshop", "vscode"],
       data: "2021",
+      site: "https://seeking4elements.com/",
     },
   },
   impressos: {

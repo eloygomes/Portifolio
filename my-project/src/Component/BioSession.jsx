@@ -71,23 +71,10 @@ function BioSession() {
                       initial="hidden"
                       animate={mainControls}
                       transition={{ duration: 0.5, delay: 0.45 }}
-                      className=" w-fit -ml-1 pb-5 text-3xl sm:text-2xl md:text-6xl lg:text-7xl font-medium hover:text-[#D6223B]"
+                      className=" w-fit -ml-1 pb-5 text-5xl sm:text-2xl md:text-6xl lg:text-7xl font-medium hover:text-[#D6223B]"
                     >
                       Desenvolvedor <br /> Full Stack
                     </motion.h1>
-
-                    <motion.h3
-                      variants={{
-                        hidden: { opacity: 0, y: 75 },
-                        visible: { opacity: 1, y: 0 },
-                      }}
-                      initial="hidden"
-                      animate={mainControls}
-                      transition={{ duration: 0.5, delay: 0.5 }}
-                      className="bg-[#D6223B] sm:text-xl text-lg w-fit mb-5 px-1"
-                    >
-                      15 anos de experiência.
-                    </motion.h3>
 
                     <motion.h5
                       variants={{
@@ -99,8 +86,8 @@ function BioSession() {
                       transition={{ duration: 0.5, delay: 0.55 }}
                       className="py-3 sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm  mt-5  w-fit"
                     >
-                      Desenvolvedor Full Stack, graduando em Engenharia de
-                      Software e formado em Design Gráfico.
+                      Graduando em Engenharia de Software e formado em Design
+                      Gráfico.
                     </motion.h5>
                     <motion.h5
                       variants={{
