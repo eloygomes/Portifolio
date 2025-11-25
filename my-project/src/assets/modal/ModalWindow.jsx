@@ -161,12 +161,20 @@ function ModalWindow({
                 {/* ROW 3 */}
                 <div className=" flex flex-row justify-between">
                   <div className="w-full pl-5 my-10">
-                    <div className="uppercase text-sm">{postInfo.jobTitle}</div>
+                    {/* <div className="uppercase text-sm">{postInfo.jobTitle}</div> */}
                     <div className="uppercase text-4xl font-bold">
                       {postInfo.companyName}
                     </div>
                     <p className="text-sm py-5">{postInfo.jobDescription}</p>
-                    <div className="uppercase text-xs">Techs</div>
+                    <div className="mb-3">
+                      <a
+                        className="backdrop-blur-xl bg-white/10 text-sm uppercase px-5 py-1  rounded-md hover:bg-white/20 hover:font-semibold transition onclick:font-black "
+                        href={postInfo.site}
+                      >
+                        ACESSE
+                      </a>
+                    </div>
+                    <div className="uppercase text-xs mt-1">Techs</div>
                     <div className=" text-sm ">
                       <ul className="flex flex-row flex-wrap">
                         {postInfo
@@ -274,7 +282,7 @@ function ModalWindow({
                 {/* ROW 3 */}
                 <div className=" flex flex-row justify-between">
                   <div className="w-[30%] pl-5 ">
-                    <div className="uppercase text-sm">{postInfo.jobTitle}</div>
+                    {/* <div className="uppercase text-sm">{postInfo.jobTitle}</div> */}
                     <div className="uppercase text-5xl font-bold">
                       {postInfo.companyName}
                     </div>

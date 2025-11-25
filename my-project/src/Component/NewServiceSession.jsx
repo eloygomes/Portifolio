@@ -47,8 +47,8 @@ function ServiceCard({ Wrapper, image, title, description }) {
           </div>
         </div>
 
-        <div className="flex-1 px-4 pt-3 pb-4 flex items-center">
-          <p className="text-xs md:text-sm text-white/75 leading-relaxed">
+        <div className="flex-1 px-4 pt-3 pb-4 flex items-start ">
+          <p className="text-xs md:text-sm text-white/75 leading-relaxed ">
             {description}
           </p>
         </div>
@@ -93,35 +93,35 @@ function NewServiceSession() {
         image: carreira_bg_01,
         title: "Front-End",
         description:
-          "Criação da parte visual e interativa: landing pages, sites completos, e-commerces, dashboards e UIs responsivas com foco em usabilidade e acessibilidade.",
+          "Landing pages, sites completos, e-commerces e dashboards com foco em usabilidade, acessibilidade e experiência do usuário em qualquer dispositivo.",
       },
       {
         Wrapper: EmailButtonBranding,
         image: carreira_bg_02,
         title: "Back-End ",
         description:
-          "APIs REST/GraphQL de alta performance, integrações com serviços externos e webhooks, gestão de bancos relacionais e NoSQL para sustentar a aplicação.",
+          "APIs REST eficientes, comunicação em tempo real via WebSockets e manipulação de bancos de dados SQL e NoSQL para dar sustentação completa ao seu sistema.",
       },
       {
         Wrapper: EmailButtonImpresso,
         image: carreira_bg_03,
         title: "Mobile",
         description:
-          "Apps híbridos para Android e iOS usando React Native, compartilhando uma base de código única e entregando experiência nativa.",
+          "Apps híbridos para Android e iOS usando React Native/Expo, compartilhando uma base de código única e entregando experiência nativa.",
       },
       {
         Wrapper: EmailButtonFoto,
         image: carreira_bg_04,
         title: "Desktop",
         description:
-          "Apps desktop multiplataforma (Windows, Linux, macOS) com Electron ou Flutter, incluindo integrações com APIs, bancos remotos e sistemas existentes.",
+          "Apps desktop multiplataforma (Windows, Linux, macOS) com Python e React Native, incluindo integrações com APIs, bancos remotos e sistemas existentes.",
       },
       {
         Wrapper: EmailButtonEdicao,
         image: carreira_bg_05,
         title: "Soluções Técnicas",
         description:
-          "Arquitetura escalável, microserviços, gerenciamento de estado (Redux/Zustand), CI/CD para deploys contínuos e automações com n8n e orquestradores.",
+          "Arquitetura escalável, microserviços, gerenciamento de estado (Redux), CI/CD para deploys contínuos e automações com n8n e orquestradores.",
       },
       {
         Wrapper: EmailButtonEdicao,

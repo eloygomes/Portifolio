@@ -75,7 +75,9 @@ function Home() {
                   initial="hidden"
                   animate={mainControls}
                   transition={{ duration: 0.5, delay: 0.25 }}
-                  className="bg-[#D6223B] w-fit py-1 px-2 lg:text-lg   2xl:text-2xl font-light text-left sm:mx-none mx-auto z-1"
+                  className=" lg:text-xl   2xl:text-xl  sm:mx-none mx-auto z-1 w-fit rounded-xl bg-[#D6223B] px-5 py-1 mt-3 text-center text-xs font-light uppercase
+                     tracking-[0.2em] text-white shadow-lg shadow-black/30 transition
+                     hover:bg-[#f1354f] active:scale-[0.99]"
                 >
                   Full Stack Developer
                 </motion.h4>

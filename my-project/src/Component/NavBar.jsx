@@ -6,6 +6,7 @@ import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import NavBarMobile from "./suport/NavBarMobile";
 import NavBarMobileItems from "./suport/NavBarMobileItems";
+import cvFile from "../assets/cv2025.pdf";
 
 function NavBar() {
   //Redux
@@ -19,8 +20,7 @@ function NavBar() {
   // eslint-disable-next-line no-unused-vars
   const [desktopMenuActive, setDesktopMenuActive] = useState("home");
 
-  const cv =
-    "https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/6c8e6221654949.6617ab0d79f1a.jpg";
+  const cv = cvFile;
 
   // console.log(mobileShowMenu);
   // console.log("window.innerWidth < 961?" + window.innerWidth < 961);
@@ -158,7 +158,7 @@ function NavBar() {
                 </a>
               </div>
               <div className="pl-5 hover:scale-105">
-                <p className="bg-[#D6223B] text-xs p-2 whitespace-nowrap rounded-2xl">
+                <p className="bg-[#D6223B] text-xs p-2 whitespace-nowrap rounded-xl">
                   <a href={cv} target="_blank" rel="noopener noreferrer">
                     DOWNLOAD
                   </a>

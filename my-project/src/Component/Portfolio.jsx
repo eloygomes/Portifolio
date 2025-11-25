@@ -8,6 +8,31 @@ import images from "./PortS/PortCovers";
 import { PortImages } from "./PortS/PortImages";
 import { jobDesc } from "./PortS/jobDesc";
 
+const CARD_CONFIG = [
+  { id: 1, imgKey: "img1", modalKey: "container01", infoKey: "data01" },
+  { id: 2, imgKey: "img2", modalKey: "container02", infoKey: "data02" },
+  { id: 3, imgKey: "img3", modalKey: "container03", infoKey: "data03" },
+  { id: 4, imgKey: "img4", modalKey: "container04", infoKey: "data04" },
+  { id: 5, imgKey: "img5", modalKey: "container05", infoKey: "data05" },
+  { id: 6, imgKey: "img6", modalKey: "container06", infoKey: "data06" },
+];
+
+const VIEWPORT_SETTINGS = {
+  mobile: {
+    delays: [0.35, 0.4, 0.45, 0.5, 0.55, 0.35],
+    lockScroll: [true, false, false, false, false, false],
+    particles: [false, true, true, true, true, true],
+    cardClass: "bg-black sm:h-[400px] h-[200px]",
+  },
+  desktop: {
+    delays: [0.35, 0.4, 0.45, 0.5, 0.55, 0.6],
+    lockScroll: [true, true, true, true, true, true],
+    particles: [true, true, true, true, true, true],
+    cardClass:
+      "bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl",
+  },
+};
+
 //Redux
 
 function hideNavbar() {
@@ -27,6 +52,8 @@ function currentSession() {
 }
 
 function Portfolio() {
+  const isMobileViewport =
+    typeof window !== "undefined" && window.innerWidth <= 961;
   const [modalStatus, setModalStatus] = useState(false);
 
   // Handle images inside the modal
@@ -47,10 +74,6 @@ function Portfolio() {
   });
 
   // REDUX STORAGE //
-  const scrollBodyModalOn = useSelector((state) => state.scrollBodyModalOn);
-  // const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
-
-  // eslint-disable-next-line no-unused-vars
   const menuDisplayOpt = useSelector((state) => state.menuDisplayOpt);
 
   const dispatch = useDispatch();
@@ -58,11 +81,7 @@ function Portfolio() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const mainControls = useAnimation();
-  const {
-    images: currentImages,
-    modal: currentModal,
-    info: currentInfo,
-  } = portfolioData;
+  const { images: currentImages, modal: currentModal } = portfolioData;
 
   // FUNCTIONS //
   //Handle page scroll
@@ -79,36 +98,9 @@ function Portfolio() {
   useLayoutEffect(() => {
     if (isInView) {
       mainControls.start("visible");
-      // console.log(isInView);
       dispatch(currentSession());
-      // console.log("PORTFOLIO");
     }
-  }, [isInView]);
-
-  useLayoutEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-      // console.log(isInView);
-      dispatch(currentSession());
-      // console.log("PORTFOLIO");
-    }
-  }, [menuDisplayOpt]);
-
-  ////////////// GET THE POMBO
-
-  //Handle page scroll
-  useLayoutEffect(() => {
-    if (isInView) {
-      // handleToggleScroll();
-    }
-  }, [scrollBodyModalOn]);
-
-  //This useEffect is to handle the particles when the modal is open
-  useLayoutEffect(() => {
-    if (isInView) {
-      // handleToggleScroll();
-    }
-  }, [modalStatus]);
+  }, [dispatch, isInView, menuDisplayOpt]);
 
   useLayoutEffect(() => {
     const key = images[portWorkStatus] ? portWorkStatus : "uiux";
@@ -128,6 +120,56 @@ function Portfolio() {
     dispatch({ type: "hold" });
   };
 
+  const handleCardClick = (
+    card,
+    shouldParticlesOff = true,
+    shouldLockScroll = true
+  ) => {
+    setModalStatus(true);
+    dispatch(hideNavbar());
+    if (shouldLockScroll) {
+      makingMagicHappen();
+    }
+    if (shouldParticlesOff) {
+      dispatch(particlesOff());
+    }
+    setPostImg(currentModal[card.modalKey]);
+    setPostInfo(portfolioData.info?.[card.infoKey]);
+  };
+
+  const renderCards = (variant) => {
+    const settings = VIEWPORT_SETTINGS[variant];
+
+    return CARD_CONFIG.map((card, index) => {
+      const delay = settings.delays[index] ?? 0.35;
+      const shouldParticlesOff = settings.particles[index] ?? true;
+      const shouldLockScroll = settings.lockScroll[index] ?? true;
+
+      return (
+        <motion.div
+          key={`${variant}-${card.id}`}
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.5, delay }}
+          className={settings.cardClass}
+          onClick={() =>
+            handleCardClick(card, shouldParticlesOff, shouldLockScroll)
+          }
+        >
+          <img
+            className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
+            src={currentImages[card.imgKey]}
+            alt=""
+          />
+        </motion.div>
+      );
+    });
+  };
+
   return (
     <>
       <ModalWindow
@@ -138,7 +180,7 @@ function Portfolio() {
         portWorkStatus={portWorkStatus}
         postInfo={postInfo}
       />
-      {window.innerWidth <= 961 ? (
+      {isMobileViewport ? (
         ////////////////////////////////////////////////////////////////////////////////////  MOBILE  ////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////  MOBILE  ////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////  MOBILE  ////////////////////////////////////////////////////////////////////////////////////
@@ -148,7 +190,7 @@ function Portfolio() {
         ////////////////////////////////////////////////////////////////////////////////////  MOBILE  ////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////  MOBILE  ////////////////////////////////////////////////////////////////////////////////////
         <div
-          className="bg-[#19142A] w-screen h-full flex flex-col 2xl:mb-5 "
+          className="bg-[#19142A] w-screen h-screen flex flex-col 2xl:mb-5 "
           id="port"
           ref={ref}
         >
@@ -158,22 +200,6 @@ function Portfolio() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-3">
                   Portifólio
                 </h2>
-
-                <motion.p
-                  variants={{
-                    hidden: { opacity: 0, y: 75 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  initial="hidden"
-                  animate={mainControls}
-                  transition={{ duration: 0.5, delay: 0.25 }}
-                  className="max-w-md py-5 text-sm"
-                >
-                  Aqui você encontrará uma coleção diversificada de projetos em
-                  que trabalhei ao longo dos anos. Meu portfólio abrange uma
-                  ampla gama de trabalhos, desde branding até desenvolvimento
-                  web.
-                </motion.p>
               </div>
 
               {/* /////////////////////////////////////////////////////////////////////////BUTTONS///////////////////////////////////////////////////////////////////////// */}
@@ -187,157 +213,7 @@ function Portfolio() {
             {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
 
             <div className="grid gap-6 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 2xl:grid-cols-6 grid-cols-3 sm:grid-rows-1 grid-rows-2 text-center cursor-pointer p-5 sm:p-5 md:p-10 mb-10">
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.35 }}
-                className="bg-black sm:h-[400px] h-[200px]"
-                onClick={() => {
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-                  makingMagicHappen();
-                  // dispatch(particlesOff());
-                  setPostImg(currentModal.container01);
-                  setPostInfo(portfolioData.info.data01);
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  // src={`${images}${portWorkStatus}.img1`}
-                  src={currentImages.img1}
-                  alt=""
-                />
-              </motion.div>
-
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="bg-black sm:h-[400px] h-[200px]"
-                onClick={() => {
-                  console.log("CLICOUUUUU N2");
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-                  //
-                  dispatch(particlesOff());
-                  setPostImg(currentModal.container02);
-                  setPostInfo(portfolioData.info.data02);
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={currentImages.img2}
-                  alt=""
-                />
-              </motion.div>
-
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.45 }}
-                className="bg-black sm:h-[400px] h-[200px]"
-                onClick={() => {
-                  console.log("CLICOUUUUU N2");
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-                  //
-                  dispatch(particlesOff());
-                  setPostImg(currentModal.container03);
-                  setPostInfo(portfolioData.info.data03);
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={currentImages.img3}
-                  alt=""
-                />
-              </motion.div>
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="bg-black sm:h-[400px] h-[200px]"
-                onClick={() => {
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-
-                  dispatch(particlesOff());
-                  setPostImg(currentModal.container04);
-                  setPostInfo(portfolioData.info.data04);
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={currentImages.img4}
-                  alt=""
-                />
-              </motion.div>
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.55 }}
-                className="bg-black sm:h-[400px] h-[200px]"
-                onClick={() => {
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-
-                  dispatch(particlesOff());
-                  setPostImg(currentModal.container05);
-                  setPostInfo(portfolioData.info.data05);
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={currentImages.img5}
-                  alt=""
-                />
-              </motion.div>
-
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.35 }}
-                className="bg-black sm:h-[400px] h-[200px]"
-                onClick={() => {
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-
-                  dispatch(particlesOff());
-                  setPostImg(currentModal.container06);
-                  setPostInfo(portfolioData.info.data06);
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  // src={`${images}${portWorkStatus}.img1`}
-                  src={currentImages.img6}
-                  alt=""
-                />
-              </motion.div>
+              {renderCards("mobile")}
             </div>
           </div>
         </div>
@@ -363,38 +239,9 @@ function Portfolio() {
           <div className="container mx-auto  mt-16 flex flex-col items-center justify-center h-screen">
             <div className="w-full flex flex-row p-5 lg:px-20 lg:pb-00 lg:pt-20 2xl:px-32">
               <div className="sm:w-[50%] w-full flex flex-col">
-                {/* <motion.h1
-                  variants={{
-                    hidden: { opacity: 0, y: 75 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  initial="hidden"
-                  animate={mainControls}
-                  transition={{ duration: 0.5, delay: 0.05 }}
-                  className="text-5xl lg:text-3xl 2xl:text-5xl"
-                >
-                  Portifólio
-                </motion.h1> */}
-
                 <h2 className="text-3xl md:text-4xl font-bold mb-3">
                   Portifólio
                 </h2>
-
-                <motion.p
-                  variants={{
-                    hidden: { opacity: 0, y: 75 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  initial="hidden"
-                  animate={mainControls}
-                  transition={{ duration: 0.5, delay: 0.25 }}
-                  className="max-w-md py-5 text-sm lg:text-xs 2xl:text-sm"
-                >
-                  Aqui você encontrará uma coleção diversificada de projetos em
-                  que trabalhei ao longo dos anos. Meu portfólio abrange uma
-                  ampla gama de trabalhos, desde branding até desenvolvimento
-                  web.
-                </motion.p>
               </div>
 
               {/* /////////////////////////////////////////////////////////////////////////BUTTONS///////////////////////////////////////////////////////////////////////// */}
@@ -415,152 +262,7 @@ function Portfolio() {
             {/* /////////////////////////////////////////////////////////////////////////IMAGES///////////////////////////////////////////////////////////////////////// */}
 
             <div className="grid gap-6 sm:grid-cols-6 grid-cols-3 sm:grid-rows-1 grid-rows-2 text-center cursor-pointer p-10 lg:px-20 2xl:px-32 mb-10 w-full ">
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.35 }}
-                className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
-                onClick={() => {
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-                  makingMagicHappen();
-                  dispatch(particlesOff());
-                  setPostImg(currentModal.container01);
-                  setPostInfo(portfolioData.info.data01);
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={currentImages.img1}
-                  alt=""
-                />
-              </motion.div>
-
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
-                onClick={() => {
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-                  makingMagicHappen();
-                  setPostImg(currentModal.container02);
-                  setPostInfo(portfolioData.info.data02);
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={currentImages.img2}
-                  alt=""
-                />
-              </motion.div>
-
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.45 }}
-                className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
-                onClick={() => {
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-                  makingMagicHappen();
-                  setPostImg(currentModal.container03);
-                  setPostInfo(portfolioData.info.data03);
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={currentImages.img3}
-                  alt=""
-                />
-              </motion.div>
-
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
-                onClick={() => {
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-                  makingMagicHappen();
-                  setPostImg(currentModal.container04);
-                  setPostInfo(portfolioData.info.data04);
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={currentImages.img4}
-                  alt=""
-                />
-              </motion.div>
-
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.55 }}
-                className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
-                onClick={() => {
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-                  makingMagicHappen();
-                  dispatch(particlesOff());
-                  setPostImg(currentModal.container05);
-                  setPostInfo(portfolioData.info.data05);
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={currentImages.img5}
-                  alt=""
-                />
-              </motion.div>
-
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 75 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="bg-black sm:h-[400px] lg:h-80 xl:h-60 2xl:h-[300px] h-[200px] rounded-3xl"
-                onClick={() => {
-                  setModalStatus(true);
-                  dispatch(hideNavbar());
-                  makingMagicHappen();
-                  dispatch(particlesOff());
-                  setPostImg(currentModal.container06);
-                  setPostInfo(portfolioData.info.data06);
-                }}
-              >
-                <img
-                  className="w-full hover:scale-110 transition duration-100 ease-in-out object-cover h-full rounded-xl"
-                  src={currentImages.img6}
-                  alt=""
-                />
-              </motion.div>
+              {renderCards("desktop")}
             </div>
           </div>
         </div>

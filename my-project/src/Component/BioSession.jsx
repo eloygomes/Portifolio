@@ -96,20 +96,6 @@ function BioSession() {
                       }}
                       initial="hidden"
                       animate={mainControls}
-                      transition={{ duration: 0.5, delay: 0.6 }}
-                      className="py-3 sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm  w-fit"
-                    >
-                      Possuo ampla experiência como diretor de arte atuando em
-                      grandes marcas de tecnologia, unindo visão estética e
-                      pensamento técnico.
-                    </motion.h5>
-                    <motion.h5
-                      variants={{
-                        hidden: { opacity: 0, y: 75 },
-                        visible: { opacity: 1, y: 0 },
-                      }}
-                      initial="hidden"
-                      animate={mainControls}
                       transition={{ duration: 0.5, delay: 0.65 }}
                       className="py-3 sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm w-fit"
                     >
@@ -118,6 +104,20 @@ function BioSession() {
                       como HTML5, CSS, SASS, WordPress, SQL, MongoDB,
                       JavaScript, React (JS e Native), TypeScript, Node.js e
                       Python.
+                    </motion.h5>
+                    <motion.h5
+                      variants={{
+                        hidden: { opacity: 0, y: 75 },
+                        visible: { opacity: 1, y: 0 },
+                      }}
+                      initial="hidden"
+                      animate={mainControls}
+                      transition={{ duration: 0.5, delay: 0.6 }}
+                      className="py-3 sm:py-3 md:py-3 lg:py-1 2xl:py-3 text-sm  w-fit"
+                    >
+                      Também atuei como diretor de arte atuando em grandes
+                      marcas de tecnologia, unindo visão estética e pensamento
+                      técnico.
                     </motion.h5>
                   </div>
                   <div className="sm:w-[50%] md:w-[40%] lg:w-[40%] xl:w-full lg:max-w-fit w-full absolute sm:absolute md:absolute lg:absolute xl:relative 2xl:relative sm:right-[-20px] md:right-[-20px] sm:top-[00px] md:top-[40px] lg:top-[10px] flex-col justify-center hidden sm:block md:block lg:block xl:block 2xl:block ">
