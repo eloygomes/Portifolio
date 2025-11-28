@@ -198,7 +198,7 @@ function Portfolio() {
             <div className="flex flex-col  p-5 sm:p-5 md:p-8">
               <div className="sm:w-[50%] md:w-full w-full flex flex-col">
                 <h2 className="text-3xl md:text-4xl font-bold mb-3">
-                  Portifólio
+                  Portfólio
                 </h2>
               </div>
 
@@ -240,7 +240,7 @@ function Portfolio() {
             <div className="w-full flex flex-row p-5 lg:px-20 lg:pb-00 lg:pt-20 2xl:px-32">
               <div className="sm:w-[50%] w-full flex flex-col">
                 <h2 className="text-3xl md:text-4xl font-bold mb-3">
-                  Portifólio
+                  Portfólio
                 </h2>
               </div>
 
