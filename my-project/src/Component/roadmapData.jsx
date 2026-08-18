@@ -1,7 +1,7 @@
 const roadmap = [
   {
     id: "design-marketing",
-    label: "DESIGN/MARKETING",
+    label: "DESIGN",
     title: "Design, UX e Marketing",
     period: "2014 — 2025",
     summary: "Formação em design e marketing digital.",
@@ -150,8 +150,13 @@ const roadmap = [
     title: "Back-end, Banco de Dados & APIs",
     period: "2021 — 2025",
     summary:
-      "Foco em Python, Node.js, bancos relacionais/NoSQL, modelagem de dados e integrações.",
+      "Foco em Python, Node.js, JAVA, bancos relacionais/NoSQL, modelagem de dados e integrações.",
     courses: [
+      {
+        title: "Curso de desenvolvimento JAVA",
+        school: "Udemy",
+        date: "Ago/2026",
+      },
       {
         title: "Modelagem de Dados: Construindo o modelo físico",
         school: "Alura",

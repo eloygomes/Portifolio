@@ -79,7 +79,7 @@ function Home() {
                      tracking-[0.2em] text-white shadow-lg shadow-black/30 transition
                      hover:bg-[#f1354f] active:scale-[0.99]"
                 >
-                  Full Stack Developer
+                  software engineer
                 </motion.h4>
               </div>
             </div>

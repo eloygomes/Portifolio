@@ -1,0 +1,2182 @@
+.formation-v2 {
+  --formation-red: #d6223b;
+  --formation-panel: rgba(63, 54, 88, 0.62);
+  --formation-border: rgba(255, 255, 255, 0.12);
+  isolation: isolate;
+  position: relative;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.formation-v2 *,
+.formation-v2 *::before,
+.formation-v2 *::after {
+  box-sizing: border-box;
+}
+
+.formation-v2 button { font: inherit; }
+
+.formation-shell {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 82px 42px 56px;
+  overflow: hidden;
+  border: 1px solid var(--formation-border);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 83% 8%, rgba(214, 34, 59, 0.15), transparent 28%),
+    linear-gradient(145deg, rgba(46, 38, 72, 0.72), rgba(25, 20, 46, 0.55));
+  box-shadow: 0 32px 90px rgba(10, 7, 22, 0.28);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.formation-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+}
+
+.formation-ambient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.formation-ambient canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.formation-intro {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 34px;
+  margin-bottom: 48px;
+}
+
+.formation-intro > div:first-child { max-width: 650px; }
+
+.formation-kicker,
+.panel-overline {
+  display: block;
+  margin-bottom: 9px;
+  color: #f05a70;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.formation-intro h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 760;
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+}
+
+.formation-intro h2 span { color: var(--formation-red); }
+
+.formation-intro p {
+  max-width: 540px;
+  margin: 19px 0 0;
+  color: rgba(234, 231, 242, 0.67);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.formation-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 15px;
+  background: rgba(13, 10, 25, 0.48);
+  box-shadow: inset 0 1px rgba(255,255,255,.05);
+}
+
+.formation-toggle button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0 17px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  outline: none;
+  color: rgba(255,255,255,.62);
+  background: transparent;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.formation-toggle button:hover,
+.formation-toggle button:focus-visible {
+  color: #fff;
+  border-color: rgba(255,255,255,.16);
+}
+
+.formation-toggle button:focus-visible,
+.formation-area-selector button:focus-visible,
+.formation-load-more:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+
+.formation-toggle button.is-active {
+  color: #fff;
+  background: var(--formation-red);
+  box-shadow: 0 9px 26px rgba(214,34,59,.28);
+}
+
+.formation-toggle svg { font-size: 15px; }
+
+.formation-desktop-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.formation-area-selector.is-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: sticky;
+  top: 104px;
+}
+
+.formation-area-selector button {
+  position: relative;
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) 30px;
+  align-items: center;
+  min-height: 68px;
+  gap: 9px;
+  width: 100%;
+  margin: 0;
+  padding: 10px 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 15px;
+  outline: none;
+  color: rgba(255,255,255,.58);
+  background: rgba(20, 16, 36, .38);
+  text-align: left;
+  transition: transform .2s ease, background .2s ease, color .2s ease, border .2s ease;
+}
+
+.formation-area-selector button::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--formation-red);
+  transform: scaleY(0);
+  transition: transform .2s ease;
+}
+
+.formation-area-selector button:hover {
+  color: #fff;
+  border-color: rgba(255,255,255,.2);
+  transform: translateX(3px);
+}
+
+.formation-area-selector button.is-active {
+  color: #fff;
+  border-color: rgba(214,34,59,.45);
+  background: linear-gradient(100deg, rgba(214,34,59,.2), rgba(255,255,255,.065));
+}
+
+.formation-area-selector button.is-active::before { transform: scaleY(.58); }
+
+.area-number {
+  color: #ef5f73;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.area-label {
+  overflow: hidden;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .11em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.area-count {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 9px;
+  color: rgba(255,255,255,.65);
+  background: rgba(255,255,255,.08);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.formation-panel {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 25px;
+  background: var(--formation-panel);
+  box-shadow: 0 24px 55px rgba(10,7,20,.2), inset 0 1px rgba(255,255,255,.045);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+.formation-panel-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px 30px 25px;
+  border-bottom: 1px solid rgba(255,255,255,.09);
+}
+
+.formation-panel-heading > div:first-child { max-width: 560px; }
+
+.formation-panel-heading h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  font-weight: 710;
+  line-height: 1.16;
+  letter-spacing: -.025em;
+}
+
+.formation-panel-heading p {
+  margin: 9px 0 0;
+  color: rgba(235,232,242,.62);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.panel-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+}
+
+.panel-stats span {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  gap: 7px;
+  padding: 0 10px;
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 9px;
+  color: rgba(255,255,255,.72);
+  background: rgba(18,14,31,.42);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.panel-stats span:last-child {
+  color: #ff8293;
+  border-color: rgba(214,34,59,.32);
+  background: rgba(214,34,59,.09);
+}
+
+.formation-course-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 22px 26px 26px;
+}
+
+.formation-course-list::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  bottom: 26px;
+  left: 31px;
+  width: 1px;
+  background: linear-gradient(var(--formation-red), rgba(255,255,255,.08));
+}
+
+.formation-course-card {
+  position: relative;
+  min-width: 0;
+  min-height: 112px;
+  padding: 18px 17px 16px 27px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255,255,255,.085), rgba(255,255,255,.035));
+  box-shadow: 0 10px 24px rgba(12,8,24,.12);
+  transition: transform .22s ease, border-color .22s ease, background .22s ease;
+}
+
+.formation-course-card:hover {
+  z-index: 1;
+  border-color: rgba(255,255,255,.2);
+  background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.055));
+  transform: translateY(-2px);
+}
+
+.formation-course-card.is-degree {
+  border-color: rgba(218,166,55,.42);
+  background: linear-gradient(135deg, rgba(183,133,38,.3), rgba(110,78,23,.18));
+}
+
+.course-node {
+  position: absolute;
+  top: 25px;
+  left: -1px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #f36579;
+  border-radius: 50%;
+  background: #302640;
+  box-shadow: 0 0 0 4px rgba(214,34,59,.1), 0 0 16px rgba(214,34,59,.4);
+}
+
+.course-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.course-meta time,
+.course-meta > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 7px;
+  border-radius: 6px;
+  color: rgba(255,255,255,.58);
+  background: rgba(12,9,22,.36);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.course-meta .degree-label {
+  color: #f5d583;
+  background: rgba(111,76,17,.42);
+}
+
+.formation-course-card h4 {
+  margin: 0;
+  color: rgba(255,255,255,.91);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.42;
+}
+
+.formation-course-card p {
+  margin: 6px 0 0;
+  color: rgba(255,255,255,.48);
+  font-size: 10px;
+}
+
+.formation-load-more {
+  grid-column: 1 / -1;
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 5px 0 0;
+  padding: 0 16px;
+  border: 1px dashed rgba(255,255,255,.18);
+  border-radius: 13px;
+  outline: none;
+  color: rgba(255,255,255,.75);
+  background: rgba(17,13,29,.25);
+  font-size: 11px;
+  font-weight: 700;
+  transition: color .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.formation-load-more:hover {
+  color: #fff;
+  border-color: rgba(214,34,59,.65);
+  background: rgba(214,34,59,.08);
+}
+
+.formation-load-more span {
+  color: rgba(255,255,255,.36);
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.formation-timeline-panel { position: relative; z-index: 1; }
+.formation-timeline-panel.is-desktop { max-width: 900px; margin-left: auto; }
+
+.timeline-total {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  color: rgba(255,255,255,.48);
+}
+
+.timeline-total strong {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 720;
+  letter-spacing: -.04em;
+}
+
+.timeline-total span {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.formation-course-list.is-timeline {
+  grid-template-columns: 1fr;
+  padding-left: 55px;
+}
+
+.formation-course-list.is-timeline::before { left: 35px; }
+.formation-course-list.is-timeline .formation-course-card { min-height: 96px; }
+
+.formation-footnote {
+  position: relative;
+  z-index: 1;
+  margin: 24px 0 0;
+  color: rgba(255,255,255,.4);
+  font-size: 10px;
+  letter-spacing: .03em;
+  text-align: center;
+}
+
+/* Tablet: touch-first board with a compact area grid. */
+.formation-tablet .formation-shell {
+  max-width: 860px;
+  padding: 68px 30px 42px;
+  border-radius: 28px;
+}
+
+.formation-tablet .formation-intro {
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.formation-tablet .formation-intro h2 { font-size: clamp(3.2rem, 8vw, 4.6rem); }
+
+.formation-tablet .formation-area-selector {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.formation-area-selector.is-tablet button {
+  display: flex;
+  min-height: 82px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  padding: 12px 13px;
+}
+
+.formation-area-selector.is-tablet .area-count {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.formation-tablet .formation-panel-heading { padding: 26px; }
+.formation-tablet .formation-course-list { padding: 20px 22px 24px; }
+.formation-tablet .formation-course-list::before { left: 27px; }
+.formation-tablet .formation-course-list.is-timeline { padding-left: 47px; }
+.formation-tablet .formation-course-list.is-timeline::before { left: 28px; }
+
+/* Phone: one thumb-friendly rail and one focused card stream. */
+.formation-phone .formation-shell {
+  width: calc(100% + 10px);
+  margin-left: -5px;
+  padding: 54px 14px 30px;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 24px;
+}
+
+.formation-phone .formation-intro { display: block; margin-bottom: 24px; }
+.formation-phone .formation-intro h2 { font-size: clamp(2.9rem, 16vw, 4rem); }
+
+.formation-phone .formation-intro p {
+  max-width: 31ch;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+.formation-phone .formation-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin-top: 22px;
+}
+
+.formation-phone .formation-toggle button { min-height: 50px; padding: 0 10px; }
+
+.formation-phone .formation-area-selector {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 9px;
+  margin: 0 -14px 14px;
+  padding: 0 14px 6px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.formation-phone .formation-area-selector::-webkit-scrollbar { display: none; }
+
+.formation-area-selector.is-phone button {
+  grid-template-columns: 26px 1fr;
+  flex: 0 0 72%;
+  min-height: 62px;
+  padding: 10px 13px;
+  scroll-snap-align: center;
+}
+
+.formation-area-selector.is-phone .area-count {
+  position: absolute;
+  top: 50%;
+  right: 11px;
+  transform: translateY(-50%);
+}
+
+.formation-phone .formation-panel { border-radius: 20px; }
+
+.formation-phone .formation-panel-heading {
+  display: block;
+  padding: 22px 18px 18px;
+}
+
+.formation-phone .formation-panel-heading h3 { font-size: 1.35rem; }
+
+.formation-phone .panel-stats {
+  flex-direction: row;
+  align-items: center;
+  margin-top: 17px;
+}
+
+.formation-phone .formation-course-list,
+.formation-phone .formation-course-list.is-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 17px 13px 16px 29px;
+}
+
+.formation-phone .formation-course-list::before,
+.formation-phone .formation-course-list.is-timeline::before {
+  top: 17px;
+  bottom: 16px;
+  left: 20px;
+}
+
+.formation-phone .formation-course-card {
+  width: 100%;
+  min-height: 104px;
+  flex: none;
+  padding: 16px 14px 15px 22px;
+  border-radius: 15px;
+}
+
+.formation-phone .course-node { top: 23px; left: -13px; }
+.formation-phone .course-meta { margin-bottom: 7px; }
+
+.formation-phone .formation-course-card h4 {
+  font-size: 12px;
+  line-height: 1.46;
+}
+
+.formation-phone .formation-load-more {
+  width: 100%;
+  min-height: 52px;
+  flex: none;
+}
+
+.formation-phone .timeline-total { margin-top: 16px; }
+
+@media (max-width: 780px) {
+  .formation-tablet .formation-area-selector { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .formation-tablet .formation-intro { flex-direction: column; }
+  .formation-tablet .formation-toggle { align-self: stretch; }
+  .formation-tablet .formation-toggle button { flex: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .formation-v2 *,
+  .formation-v2 *::before,
+  .formation-v2 *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Refinamento: a Formação passa a usar o mesmo vidro simples do restante do site. */
+.formation-v2 .formation-shell {
+  display: flex;
+  width: 100%;
+  max-width: 1024px;
+  height: min(740px, calc(100dvh - 104px));
+  min-height: 620px;
+  flex-direction: column;
+  padding: 30px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 45px rgba(13, 9, 28, 0.18);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.formation-v2 .formation-shell::before,
+.formation-v2 .formation-ambient {
+  display: none;
+}
+
+.formation-v2 .formation-intro {
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 18px;
+}
+
+.formation-v2 .formation-kicker,
+.formation-v2 .panel-overline {
+  margin-bottom: 5px;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+
+.formation-v2 .formation-intro h2 {
+  font-size: clamp(2.7rem, 5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.formation-v2 .formation-intro p {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.formation-v2 .formation-toggle {
+  padding: 4px;
+  border-radius: 12px;
+  background: rgba(16, 12, 31, 0.5);
+}
+
+.formation-v2 .formation-toggle button {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 9px;
+  font-size: 11px;
+}
+
+.formation-v2 .formation-desktop-layout {
+  display: flex;
+  min-height: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formation-v2 .formation-area-selector.is-desktop,
+.formation-v2 .formation-tablet .formation-area-selector,
+.formation-v2.formation-tablet .formation-area-selector {
+  position: static;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+  margin: 0 0 12px;
+}
+
+.formation-v2 .formation-area-selector.is-desktop {
+  margin: 0;
+}
+
+.formation-v2 .formation-area-selector.is-tablet .area-count {
+  position: static;
+}
+
+.formation-v2 .formation-area-selector button,
+.formation-v2 .formation-area-selector.is-tablet button {
+  display: grid;
+  grid-template-columns: 27px minmax(0, 1fr) 27px;
+  min-height: 50px;
+  padding: 8px 10px;
+  border-color: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.66);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.formation-v2 .formation-area-selector button:hover {
+  transform: none;
+}
+
+.formation-v2 .formation-area-selector button.is-active {
+  border-color: rgba(214, 34, 59, 0.75);
+  background: rgba(214, 34, 59, 0.16);
+}
+
+.formation-v2 .formation-area-selector button::before {
+  inset: auto 10px 0;
+  width: auto;
+  height: 2px;
+  transform: scaleX(0);
+}
+
+.formation-v2 .formation-area-selector button.is-active::before {
+  transform: scaleX(1);
+}
+
+.formation-v2 .area-label {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.formation-v2 .area-count {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+}
+
+.formation-v2 .formation-panel {
+  display: flex;
+  min-height: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow: hidden;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 28px rgba(13, 9, 28, 0.14);
+}
+
+.formation-v2 .formation-panel-heading {
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 16px 20px;
+}
+
+.formation-v2 .formation-panel-heading h3 {
+  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+}
+
+.formation-v2 .formation-panel-heading p {
+  margin-top: 5px;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.formation-v2 .panel-stats {
+  flex-direction: row;
+}
+
+.formation-v2 .formation-course-list,
+.formation-v2 .formation-course-list.is-timeline {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 0;
+  flex: 1 1 auto;
+  align-content: start;
+  padding: 14px 18px 16px 25px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: rgba(214, 34, 59, 0.65) rgba(255, 255, 255, 0.05);
+  scrollbar-width: thin;
+}
+
+.formation-v2 .formation-course-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.formation-v2 .formation-course-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(214, 34, 59, 0.65);
+}
+
+.formation-v2 .formation-course-list::before,
+.formation-v2 .formation-course-list.is-timeline::before {
+  top: 14px;
+  bottom: 16px;
+  left: 17px;
+}
+
+.formation-v2 .formation-course-card,
+.formation-v2 .formation-course-list.is-timeline .formation-course-card {
+  min-height: 88px;
+  padding: 13px 14px 12px 20px;
+  border-color: rgba(255, 255, 255, 0.09);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 6px 16px rgba(10, 7, 22, 0.1);
+}
+
+.formation-v2 .formation-course-card:hover {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.formation-v2 .formation-course-card.is-degree {
+  border-color: rgba(218, 166, 55, 0.5);
+  background: rgba(170, 123, 35, 0.48);
+}
+
+.formation-v2 .course-node {
+  top: 19px;
+  left: -9px;
+}
+
+.formation-v2 .course-meta {
+  margin-bottom: 6px;
+}
+
+.formation-v2 .formation-course-card h4 {
+  font-size: 11px;
+}
+
+.formation-v2 .formation-load-more {
+  min-height: 38px;
+  margin-top: 1px;
+  border-color: rgba(255, 255, 255, 0.15);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.formation-v2 .formation-timeline-panel,
+.formation-v2 .formation-timeline-panel.is-desktop {
+  width: 100%;
+  max-width: 860px;
+  min-height: 0;
+  flex: 1 1 auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.formation-v2 .formation-footnote {
+  flex: 0 0 auto;
+  margin-top: 10px;
+  font-size: 9px;
+}
+
+/* Tablet */
+.formation-v2.formation-tablet .formation-shell {
+  max-width: 820px;
+  height: min(860px, calc(100dvh - 32px));
+  min-height: 660px;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.formation-v2.formation-tablet .formation-intro {
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.formation-v2.formation-tablet .formation-toggle {
+  width: auto;
+}
+
+.formation-v2.formation-tablet .formation-toggle button {
+  flex: initial;
+}
+
+.formation-v2.formation-tablet .formation-panel-heading {
+  padding: 15px 18px;
+}
+
+.formation-v2.formation-tablet .formation-course-list,
+.formation-v2.formation-tablet .formation-course-list.is-timeline {
+  padding: 13px 17px 15px 24px;
+}
+
+/* Smartphone */
+.formation-v2.formation-phone .formation-shell {
+  width: 100%;
+  height: calc(100dvh - 16px);
+  min-height: 540px;
+  max-height: 760px;
+  margin: 0;
+  padding: 16px 12px;
+  border-radius: 14px;
+}
+
+.formation-v2.formation-phone .formation-intro {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.formation-v2.formation-phone .formation-intro h2 {
+  font-size: 2.35rem;
+}
+
+.formation-v2.formation-phone .formation-intro p {
+  max-width: 34ch;
+  margin-top: 5px;
+  font-size: 10px;
+}
+
+.formation-v2.formation-phone .formation-toggle {
+  margin-top: 10px;
+}
+
+.formation-v2.formation-phone .formation-toggle button {
+  min-height: 44px;
+}
+
+.formation-v2.formation-phone .formation-area-selector {
+  flex: 0 0 auto;
+  margin: 0 -12px 10px;
+  padding: 0 12px 4px;
+}
+
+.formation-v2 .formation-area-selector.is-phone button {
+  flex-basis: 66%;
+  min-height: 52px;
+}
+
+.formation-v2.formation-phone .formation-panel-heading {
+  padding: 13px 14px;
+}
+
+.formation-v2.formation-phone .formation-panel-heading h3 {
+  font-size: 1.1rem;
+}
+
+.formation-v2.formation-phone .formation-panel-heading p {
+  font-size: 9px;
+}
+
+.formation-v2.formation-phone .panel-stats {
+  margin-top: 9px;
+}
+
+.formation-v2.formation-phone .formation-course-list,
+.formation-v2.formation-phone .formation-course-list.is-timeline {
+  display: flex;
+  min-height: 0;
+  flex: 1 1 auto;
+  padding: 11px 11px 12px 25px;
+  overflow-y: auto;
+}
+
+.formation-v2.formation-phone .formation-course-list::before,
+.formation-v2.formation-phone .formation-course-list.is-timeline::before {
+  top: 11px;
+  bottom: 12px;
+  left: 16px;
+}
+
+.formation-v2.formation-phone .formation-course-card {
+  min-height: 82px;
+  padding: 12px 12px 11px 18px;
+}
+
+.formation-v2.formation-phone .course-node {
+  top: 18px;
+  left: -13px;
+}
+
+.formation-v2.formation-phone .formation-footnote {
+  display: none;
+}
+
+@media (max-height: 680px) and (min-width: 641px) {
+  .formation-v2 .formation-shell,
+  .formation-v2.formation-tablet .formation-shell {
+    height: calc(100dvh - 20px);
+    min-height: 560px;
+    padding: 20px;
+  }
+
+  .formation-v2 .formation-intro {
+    margin-bottom: 12px;
+  }
+
+  .formation-v2 .formation-intro p {
+    display: none;
+  }
+
+  .formation-v2 .formation-intro h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Refinamento 3: cards em três níveis e trilho cronológico sem sobreposição. */
+.formation-v2 .formation-course-list,
+.formation-v2 .formation-course-list.is-timeline {
+  display: block;
+  padding: 12px 18px 14px;
+}
+
+.formation-v2 .formation-course-list::before,
+.formation-v2 .formation-course-list.is-timeline::before {
+  display: none;
+}
+
+.formation-v2 .formation-course-track {
+  counter-reset: formation-course;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 30px;
+  row-gap: 8px;
+  width: 100%;
+}
+
+.formation-v2 .formation-course-track::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 21px;
+  bottom: 21px;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(214, 34, 59, 0.95),
+    rgba(214, 34, 59, 0.35)
+  );
+  transform: translateX(-0.5px);
+}
+
+.formation-v2 .formation-course-track.has-odd-count::before {
+  bottom: 67px;
+}
+
+.formation-v2 .formation-course-card,
+.formation-v2 .formation-course-list.is-timeline .formation-course-card {
+  height: 88px;
+  min-height: 88px;
+  padding: 10px 12px;
+}
+
+.formation-v2 .course-copy {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.formation-v2 .course-meta {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  width: 100%;
+  margin: 0;
+}
+
+.formation-v2 .formation-course-card h4 {
+  flex: 0 0 auto;
+  margin: 7px 0 5px;
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+.formation-v2 .course-footer {
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.formation-v2 .course-area {
+  display: inline-flex;
+  max-width: 62%;
+  align-items: center;
+  padding: 2px 6px;
+  overflow: hidden;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(16, 12, 31, 0.38);
+  font-size: 7px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.formation-v2 .formation-course-card p {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.formation-v2 .formation-course-card::after {
+  top: 21px;
+  bottom: auto;
+}
+
+.formation-v2 .formation-course-card:nth-of-type(even)::after {
+  top: auto;
+  bottom: 21px;
+}
+
+.formation-v2 .formation-course-card:nth-of-type(odd) .course-node {
+  top: 12px;
+  bottom: auto;
+}
+
+.formation-v2 .formation-course-card:nth-of-type(even) .course-node {
+  top: auto;
+  bottom: 12px;
+}
+
+.formation-v2.formation-phone .formation-course-list,
+.formation-v2.formation-phone .formation-course-list.is-timeline {
+  display: block;
+  padding: 10px 10px 12px 27px;
+}
+
+.formation-v2.formation-phone .formation-course-track {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.formation-v2.formation-phone .formation-course-track::before,
+.formation-v2.formation-phone .formation-course-track.has-odd-count::before {
+  top: 21px;
+  right: auto;
+  bottom: 61px;
+  left: -11px;
+}
+
+.formation-v2.formation-phone .formation-course-card,
+.formation-v2.formation-phone .formation-course-list.is-timeline .formation-course-card {
+  height: 82px;
+  min-height: 82px;
+}
+
+.formation-v2.formation-phone .course-copy {
+  display: flex;
+}
+
+.formation-v2.formation-phone .formation-course-card::after,
+.formation-v2.formation-phone .formation-course-card:nth-of-type(even)::after {
+  top: 21px;
+  bottom: auto;
+  left: -11px;
+}
+
+.formation-v2.formation-phone .formation-course-card:nth-of-type(odd) .course-node,
+.formation-v2.formation-phone .formation-course-card:nth-of-type(even) .course-node {
+  top: 12px;
+  right: auto;
+  bottom: auto;
+  left: -20px;
+}
+
+/* Refinamento 4: uma etapa por linha, ligação inequívoca entre ponto e card. */
+.formation-v2 .formation-course-track,
+.formation-v2 .formation-course-track.has-odd-count {
+  grid-auto-rows: 88px;
+  row-gap: 8px;
+}
+
+.formation-v2 .formation-course-track::before,
+.formation-v2 .formation-course-track.has-odd-count::before {
+  top: 44px;
+  bottom: 44px;
+}
+
+.formation-v2 .formation-course-card::after,
+.formation-v2 .formation-course-card:nth-of-type(even)::after {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+.formation-v2 .formation-course-card:nth-of-type(odd) .course-node,
+.formation-v2 .formation-course-card:nth-of-type(even) .course-node {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+.formation-v2 .course-meta {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formation-v2 .course-school {
+  max-width: 58%;
+  margin: 0 0 0 auto;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 8px;
+  font-weight: 450;
+  line-height: 1.2;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.formation-v2 .formation-course-card h4 {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  margin: 4px 0;
+  text-align: left;
+}
+
+.formation-v2 .course-footer {
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+.formation-v2 .course-footer .degree-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: auto;
+  padding: 2px 6px;
+  border-radius: 5px;
+  color: #ffe19a;
+  background: rgba(99, 65, 9, 0.55);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.formation-v2 .formation-course-card.is-degree {
+  border-color: rgba(229, 178, 65, 0.78);
+  background: rgba(166, 119, 32, 0.62);
+  box-shadow:
+    inset 3px 0 rgba(246, 194, 77, 0.92),
+    0 8px 18px rgba(64, 42, 5, 0.18);
+}
+
+.formation-v2 .formation-course-card.is-degree h4 {
+  color: #fff7e3;
+}
+
+.formation-v2.formation-phone .formation-course-track,
+.formation-v2.formation-phone .formation-course-track.has-odd-count {
+  grid-auto-rows: auto;
+}
+
+.formation-v2.formation-phone .formation-course-track::before,
+.formation-v2.formation-phone .formation-course-track.has-odd-count::before {
+  top: 41px;
+  bottom: 41px;
+}
+
+.formation-v2.formation-phone .formation-course-card::after,
+.formation-v2.formation-phone .formation-course-card:nth-of-type(even)::after {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+.formation-v2.formation-phone .formation-course-card:nth-of-type(odd) .course-node,
+.formation-v2.formation-phone .formation-course-card:nth-of-type(even) .course-node {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+/* Refinamento 2: mais largura, todos os cursos e leitura cronológica explícita. */
+.formation-v2 .formation-shell {
+  max-width: 1320px;
+  height: min(800px, calc(100dvh - 88px));
+}
+
+.formation-v2 .formation-desktop-layout,
+.formation-v2 .formation-area-panel {
+  width: 100%;
+  max-width: none;
+}
+
+.formation-v2 .formation-timeline-panel,
+.formation-v2 .formation-timeline-panel.is-desktop {
+  max-width: none;
+}
+
+.formation-v2 .formation-course-list,
+.formation-v2 .formation-course-list.is-timeline {
+  counter-reset: formation-course;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 30px;
+  row-gap: 7px;
+  padding: 12px 18px 14px;
+}
+
+.formation-v2 .formation-course-list::before,
+.formation-v2 .formation-course-list.is-timeline::before {
+  top: 12px;
+  bottom: 14px;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(214, 34, 59, 0.95),
+    rgba(214, 34, 59, 0.28)
+  );
+}
+
+.formation-v2 .formation-course-card,
+.formation-v2 .formation-course-list.is-timeline .formation-course-card {
+  counter-increment: formation-course;
+  min-height: 52px;
+  padding: 7px 10px;
+  border-radius: 9px;
+}
+
+.formation-v2 .course-copy {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+}
+
+.formation-v2 .formation-course-card::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 16px;
+  height: 1px;
+  background: rgba(214, 34, 59, 0.45);
+}
+
+.formation-v2 .formation-course-card:nth-of-type(odd)::after {
+  right: -16px;
+}
+
+.formation-v2 .formation-course-card:nth-of-type(even)::after {
+  left: -16px;
+}
+
+.formation-v2 .course-node {
+  z-index: 2;
+  top: 16px;
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  border: 1px solid #f36579;
+  background: #4a415d;
+  box-shadow: 0 0 0 3px rgba(214, 34, 59, 0.1);
+}
+
+.formation-v2 .course-node::after {
+  content: counter(formation-course);
+  color: #fff;
+  font-size: 7px;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.formation-v2 .formation-course-card:nth-of-type(odd) .course-node {
+  right: -25px;
+  left: auto;
+}
+
+.formation-v2 .formation-course-card:nth-of-type(even) .course-node {
+  right: auto;
+  left: -25px;
+}
+
+.formation-v2 .course-meta {
+  gap: 4px;
+  margin-bottom: 0;
+}
+
+.formation-v2 .course-meta time,
+.formation-v2 .course-meta > span {
+  padding: 2px 5px;
+  font-size: 7px;
+}
+
+.formation-v2 .formation-course-card h4 {
+  overflow: hidden;
+  display: -webkit-box;
+  font-size: 10px;
+  line-height: 1.3;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.formation-v2 .formation-course-card p {
+  margin: 0;
+  font-size: 8px;
+  white-space: nowrap;
+}
+
+.formation-v2.formation-tablet .formation-shell {
+  width: 100%;
+  max-width: 940px;
+}
+
+.formation-v2.formation-phone .formation-course-list,
+.formation-v2.formation-phone .formation-course-list.is-timeline {
+  counter-reset: formation-course;
+  gap: 6px;
+  padding: 10px 10px 12px 27px;
+}
+
+.formation-v2.formation-phone .formation-course-list::before,
+.formation-v2.formation-phone .formation-course-list.is-timeline::before {
+  top: 10px;
+  bottom: 12px;
+  left: 16px;
+}
+
+.formation-v2.formation-phone .formation-course-card,
+.formation-v2.formation-phone .formation-course-list.is-timeline .formation-course-card {
+  min-height: 62px;
+  padding: 9px 10px;
+}
+
+.formation-v2.formation-phone .course-copy {
+  display: block;
+}
+
+.formation-v2.formation-phone .course-meta {
+  margin-bottom: 4px;
+}
+
+.formation-v2.formation-phone .formation-course-card p {
+  margin-top: 3px;
+}
+
+.formation-v2.formation-phone .formation-course-card::after {
+  top: 19px;
+  left: -11px;
+  width: 11px;
+}
+
+.formation-v2.formation-phone .formation-course-card:nth-of-type(odd) .course-node,
+.formation-v2.formation-phone .formation-course-card:nth-of-type(even) .course-node {
+  top: 11px;
+  right: auto;
+  left: -20px;
+}
+
+@media (max-height: 680px) and (min-width: 641px) {
+  .formation-v2 .formation-shell,
+  .formation-v2.formation-tablet .formation-shell {
+    height: calc(100dvh - 20px);
+    min-height: 560px;
+  }
+}
+
+/* Refinamento 5: hierarquia e alinhamentos internos dos cards. */
+.formation-v2 .course-copy,
+.formation-v2.formation-phone .course-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  column-gap: 8px;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  align-items: start;
+}
+
+.formation-v2 .course-meta {
+  display: contents;
+}
+
+.formation-v2 .course-meta time {
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: start;
+}
+
+.formation-v2 .course-school {
+  grid-row: 1;
+  grid-column: 2;
+  align-self: start;
+  justify-self: end;
+  max-width: 220px;
+  margin: 0;
+}
+
+.formation-v2 .formation-course-card h4 {
+  grid-row: 2;
+  grid-column: 1 / -1;
+  align-self: center;
+  width: 100%;
+  max-height: 2.6em;
+  margin: 3px 0;
+  padding-left: 5px;
+  overflow: hidden;
+  display: block;
+  font-size: 11px;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.formation-v2 .course-footer {
+  grid-row: 3;
+  grid-column: 1 / -1;
+  align-self: end;
+  width: 100%;
+  margin: 0;
+}
+
+.formation-v2 .course-area {
+  margin-left: auto;
+}
+
+/* Refinamento 6: graduação consistente e tipografia interna ampliada. */
+.formation-v2 .formation-course-list .formation-course-card.is-degree,
+.formation-v2 .formation-course-list.is-timeline .formation-course-card.is-degree {
+  border-color: rgba(229, 178, 65, 0.78);
+  background: rgba(166, 119, 32, 0.62);
+  box-shadow:
+    inset 3px 0 rgba(246, 194, 77, 0.92),
+    0 8px 18px rgba(64, 42, 5, 0.18);
+}
+
+.formation-v2 .formation-course-list .formation-course-card.is-degree h4,
+.formation-v2 .formation-course-list.is-timeline .formation-course-card.is-degree h4 {
+  color: #fff7e3;
+}
+
+.formation-v2 .course-meta time {
+  font-size: 7.7px;
+}
+
+.formation-v2 .course-school,
+.formation-v2 .formation-course-card p.course-school {
+  font-size: 8.8px;
+}
+
+.formation-v2 .formation-course-card h4 {
+  font-size: 12.1px;
+}
+
+.formation-v2 .course-area,
+.formation-v2 .course-footer .degree-label {
+  font-size: 7.7px;
+}
+
+/* Smartphone UX: conteúdo primeiro, filtros rápidos e uma única rolagem. */
+.formation-v2.formation-phone {
+  overflow: visible;
+}
+
+.formation-v2.formation-phone .formation-shell {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  padding: 12px 10px 16px;
+  overflow: visible;
+  border-radius: 14px;
+}
+
+.formation-v2.formation-phone .formation-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  margin: 0 2px 8px;
+}
+
+.formation-v2.formation-phone .formation-intro > div:first-child {
+  max-width: none;
+}
+
+.formation-v2.formation-phone .formation-kicker,
+.formation-v2.formation-phone .formation-intro p {
+  display: none;
+}
+
+.formation-v2.formation-phone .formation-intro h2 {
+  font-size: clamp(2rem, 11vw, 2.6rem);
+  line-height: 1;
+}
+
+.formation-v2.formation-phone .formation-mobile-controls {
+  position: sticky;
+  z-index: 20;
+  top: 8px;
+  margin: 0 0 9px;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 13px;
+  background: rgba(31, 24, 50, 0.88);
+  box-shadow: 0 9px 24px rgba(10, 7, 22, 0.2);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.formation-v2.formation-phone .formation-mobile-controls .formation-toggle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  margin: 0;
+  padding: 2px;
+  border: 0;
+  background: transparent;
+}
+
+.formation-v2.formation-phone .formation-mobile-controls .formation-toggle button {
+  min-height: 44px;
+  padding: 0 8px;
+  font-size: 11px;
+}
+
+.formation-v2.formation-phone .formation-area-selector,
+.formation-v2.formation-phone .formation-area-selector.is-phone {
+  display: flex;
+  gap: 7px;
+  margin: 0 -10px 9px;
+  padding: 0 10px 4px;
+  overflow-x: auto;
+  scroll-padding-inline: 10px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+
+.formation-v2.formation-phone .formation-area-selector::-webkit-scrollbar {
+  display: none;
+}
+
+.formation-v2.formation-phone .formation-area-selector.is-phone button {
+  grid-template-columns: minmax(0, 1fr) auto;
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 132px;
+  min-height: 44px;
+  padding: 7px 9px;
+  scroll-snap-align: start;
+}
+
+.formation-v2.formation-phone .formation-area-selector .area-number {
+  display: none;
+}
+
+.formation-v2.formation-phone .formation-area-selector .area-label {
+  overflow: visible;
+  font-size: 8.5px;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.formation-v2.formation-phone .formation-area-selector.is-phone .area-count {
+  position: static;
+  width: 25px;
+  height: 25px;
+  transform: none;
+}
+
+.formation-v2.formation-phone .formation-panel,
+.formation-v2.formation-phone .formation-area-panel,
+.formation-v2.formation-phone .formation-timeline-panel {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  overflow: visible;
+  border-radius: 14px;
+}
+
+.formation-v2.formation-phone .formation-panel-heading {
+  display: flex;
+  min-height: 66px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+}
+
+.formation-v2.formation-phone .formation-panel-heading > div:first-child {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.formation-v2.formation-phone .panel-overline,
+.formation-v2.formation-phone .formation-panel-heading p {
+  display: none;
+}
+
+.formation-v2.formation-phone .formation-panel-heading h3 {
+  overflow: hidden;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+}
+
+.formation-v2.formation-phone .panel-stats {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+}
+
+.formation-v2.formation-phone .panel-stats span {
+  padding: 6px 7px;
+  font-size: 8px;
+  white-space: nowrap;
+}
+
+.formation-v2.formation-phone .timeline-total {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: baseline;
+  gap: 4px;
+  margin: 0;
+}
+
+.formation-v2.formation-phone .timeline-total strong {
+  font-size: 1.35rem;
+}
+
+.formation-v2.formation-phone .timeline-total span {
+  font-size: 7px;
+  letter-spacing: 0.1em;
+}
+
+.formation-v2.formation-phone .formation-course-list,
+.formation-v2.formation-phone .formation-course-list.is-timeline {
+  display: block;
+  min-height: 0;
+  padding: 8px 8px 10px 28px;
+  overflow: visible;
+}
+
+.formation-v2.formation-phone .formation-course-track,
+.formation-v2.formation-phone .formation-course-track.has-odd-count {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formation-v2.formation-phone .formation-course-track::before,
+.formation-v2.formation-phone .formation-course-track.has-odd-count::before {
+  top: 46px;
+  right: auto;
+  bottom: 46px;
+  left: -12px;
+}
+
+.formation-v2.formation-phone .formation-course-card,
+.formation-v2.formation-phone .formation-course-list.is-timeline .formation-course-card {
+  width: 100%;
+  height: 92px;
+  min-height: 92px;
+  padding: 10px 11px;
+  border-radius: 12px;
+}
+
+.formation-v2.formation-phone .formation-course-card::after,
+.formation-v2.formation-phone .formation-course-card:nth-of-type(even)::after {
+  top: 50%;
+  left: -12px;
+  width: 12px;
+  transform: translateY(-50%);
+}
+
+.formation-v2.formation-phone .formation-course-card:nth-of-type(odd) .course-node,
+.formation-v2.formation-phone .formation-course-card:nth-of-type(even) .course-node {
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: -21px;
+  transform: translateY(-50%);
+}
+
+.formation-v2.formation-phone .formation-course-card h4 {
+  font-size: 12.1px;
+}
+
+/* Smartphone UX 2: seleção simples e timelines em modal. */
+.formation-v2.formation-phone .formation-shell > .formation-area-selector.is-phone {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.formation-v2.formation-phone .formation-shell > .formation-area-selector.is-phone button {
+  grid-template-columns: minmax(0, 1fr) auto;
+  width: 100%;
+  min-width: 0;
+  min-height: 64px;
+  padding: 10px;
+  border-radius: 12px;
+  scroll-snap-align: none;
+}
+
+.formation-v2.formation-phone .formation-shell > .formation-area-selector.is-phone .area-label {
+  font-size: 9px;
+  line-height: 1.25;
+  white-space: normal;
+}
+
+.formation-phone-modal-backdrop {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 12px 8px 0;
+  background: rgba(8, 6, 16, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: formation-modal-fade 180ms ease-out both;
+}
+
+.formation-phone-modal.formation-v2 {
+  display: flex;
+  width: min(100%, 480px);
+  height: min(92dvh, 900px);
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 0;
+  border-radius: 24px 24px 0 0;
+  color: rgba(255, 255, 255, 0.94);
+  background: rgba(48, 39, 75, 0.98);
+  box-shadow: 0 -24px 70px rgba(5, 3, 12, 0.5);
+  animation: formation-modal-rise 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.formation-phone-modal-header {
+  display: flex;
+  min-height: 76px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px 11px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(31, 24, 50, 0.62);
+}
+
+.formation-phone-modal-header > div {
+  min-width: 0;
+}
+
+.formation-phone-modal-header span {
+  display: block;
+  margin-bottom: 3px;
+  color: #f36579;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.formation-phone-modal-header h2 {
+  overflow: hidden;
+  margin: 0;
+  color: #fff;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.formation-phone-modal-header button {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  outline: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 23px;
+}
+
+.formation-phone-modal-header button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.formation-phone-modal-content {
+  min-height: 0;
+  flex: 1 1 auto;
+  padding: 8px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: rgba(214, 34, 59, 0.65) rgba(255, 255, 255, 0.05);
+  scrollbar-width: thin;
+}
+
+.formation-phone-modal-content .formation-panel-heading {
+  display: none;
+}
+
+.formation-phone-modal-content .formation-panel,
+.formation-phone-modal-content .formation-area-panel,
+.formation-phone-modal-content .formation-timeline-panel {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.formation-phone-modal-content .formation-course-list,
+.formation-phone-modal-content .formation-course-list.is-timeline {
+  padding-top: 4px;
+  padding-bottom: 8px;
+}
+
+@keyframes formation-modal-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes formation-modal-rise {
+  from { transform: translateY(28px); }
+  to { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .formation-phone-modal-backdrop,
+  .formation-phone-modal.formation-v2 {
+    animation: none;
+  }
+}
+
+/* Smartphone UX 3: Formação isolada e áreas em lista vertical. */
+.formation-v2.formation-phone {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  padding: max(68px, env(safe-area-inset-top)) 10px max(24px, env(safe-area-inset-bottom));
+  scroll-margin-top: 0;
+}
+
+.formation-v2.formation-phone .formation-shell {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+}
+
+.formation-v2.formation-phone .formation-mobile-controls {
+  position: relative;
+  top: auto;
+}
+
+.formation-v2.formation-phone .formation-shell > .formation-area-selector.is-phone {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+
+.formation-v2.formation-phone .formation-shell > .formation-area-selector.is-phone button {
+  min-height: 58px;
+  padding: 10px 12px;
+}
+
+.formation-v2.formation-phone .formation-shell > .formation-area-selector.is-phone .area-label {
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.formation-phone-modal.formation-v2.formation-phone {
+  display: flex;
+  min-height: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+/* Smartphone UX 4: no modal por área, a faixa repete apenas os metadados úteis. */
+.formation-phone-modal-content .formation-area-panel .formation-panel-heading {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  padding: 7px 12px;
+}
+
+.formation-phone-modal-content .formation-area-panel .formation-panel-heading > div:first-child {
+  display: none;
+}
+
+.formation-phone-modal-content .formation-area-panel .panel-stats {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+}
+
+.formation-phone-modal-content .formation-area-panel .panel-stats span {
+  min-height: 34px;
+  padding: 7px 10px;
+}
+
+.formation-phone-modal-content .formation-timeline-panel .formation-panel-heading {
+  display: none;
+}
+
+/* Tablet UX: painel em altura integral e controles com hierarquia vertical. */
+.formation-v2.formation-tablet {
+  min-height: 100svh;
+}
+
+.formation-v2.formation-tablet .formation-shell {
+  height: 100dvh;
+  min-height: 100svh;
+  max-height: none;
+}
+
+.formation-v2.formation-tablet .formation-toggle {
+  align-self: center;
+  height: 32px;
+  flex: 0 0 auto;
+  padding: 2px;
+  border-radius: 8px;
+}
+
+.formation-v2.formation-tablet .formation-toggle button {
+  width: auto;
+  height: 28px;
+  min-height: 28px;
+  flex: 0 0 auto;
+  padding: 0 9px;
+  border-radius: 6px;
+  font-size: 9px;
+}
+
+.formation-v2.formation-tablet .formation-toggle svg {
+  font-size: 12px;
+}
+
+.formation-v2.formation-tablet .formation-area-selector.is-tablet button {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  min-height: 64px;
+  align-content: center;
+  align-items: center;
+  column-gap: 9px;
+  row-gap: 5px;
+  padding: 9px 12px;
+}
+
+.formation-area-selector .area-icon {
+  display: none;
+}
+
+.formation-v2.formation-tablet .formation-area-selector.is-tablet .area-icon {
+  display: grid;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 6px;
+  color: #f36579;
+  background: rgba(214, 34, 59, 0.12);
+}
+
+.formation-v2.formation-tablet .formation-area-selector.is-tablet .area-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.formation-v2.formation-tablet .formation-area-selector.is-tablet .area-number {
+  display: none;
+}
+
+.formation-v2.formation-tablet .formation-area-selector.is-tablet .area-label {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.formation-v2.formation-tablet .formation-area-selector.is-tablet .area-count {
+  display: inline-flex;
+  grid-column: 2;
+  grid-row: 2;
+  position: static;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  border-radius: 0;
+  color: rgba(255, 255, 255, 0.58);
+  background: transparent;
+  font-size: 9px;
+  line-height: 1;
+}
+
+.formation-v2.formation-tablet .formation-area-selector.is-tablet .area-count::after {
+  content: "cursos";
+  margin-left: 3px;
+}
+
+/* Mantém o painel desktop centralizado entre a Bio e a próxima seção. */
+.formation-v2.formation-desktop {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  padding: clamp(44px, 6vh, 72px) 24px;
+}
