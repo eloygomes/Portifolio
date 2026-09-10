@@ -25,6 +25,7 @@
     "react-simple-horizontal-scroll": "^1.1.12",
     "react-vertical-timeline-component": "^3.6.0",
     "redux": "^4.2.1",
+    "three": "^0.180.0",
     "tsparticles": "^2.9.3",
     "tsparticles-engine": "^2.9.3"
   },
