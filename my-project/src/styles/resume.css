@@ -1,0 +1,40 @@
+.resume-page header{position:relative}
+.resume-hero-copy{max-width:52rem}
+.resume-actions{position:absolute;right:0;bottom:8rem;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:1rem}
+.resume-index{display:grid;grid-template-columns:repeat(6,auto);justify-content:space-between;align-items:center;width:100%;gap:1rem;padding:2rem 0;color:var(--text-secondary);font-size:.85rem}
+.resume-index a:hover,.resume-index a:focus-visible,.resume-courses a:hover{color:#D92540}
+.resume-page section{grid-template-columns:40% minmax(0,1fr);gap:2.5rem;scroll-margin-top:7rem}
+.resume-page section>*{min-width:0}
+.resume-page #perfil .resume-prose{max-width:none}
+.resume-prose{font-size:1.05rem;line-height:1.85;color:var(--text-secondary);max-width:70ch}
+.resume-job-description{margin-top:1.25rem}
+.resume-experience article{gap:1.5rem;padding-bottom:3rem;margin-bottom:2.5rem;border-bottom:1px solid var(--border-subtle)}
+.resume-experience article:last-child{margin-bottom:0;padding-bottom:0;border:0}
+.resume-education,.resume-technology-groups{display:grid;gap:2.5rem}
+.resume-education h3{margin:.6rem 0}
+.resume-education span,.resume-education p,.resume-courses p,.resume-languages dd{color:var(--text-secondary)}
+.resume-technology-groups h3{margin-bottom:1rem;font-size:1rem}
+.resume-section-heading{display:flex;align-items:flex-start;gap:.8rem}
+.resume-section-heading>svg{color:#D92540;width:1.5rem;height:1.5rem;margin-top:.35rem;flex:0 0 auto}
+.resume-section-heading h2 span{color:var(--text-secondary);font-weight:400}
+.resume-year-filter{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1rem}
+.resume-year-filter button{appearance:none;border:1px solid var(--border-subtle);border-radius:2rem;background:transparent;color:var(--text-secondary);padding:.55rem .85rem;cursor:pointer;font:inherit;font-size:.78rem;transition:.2s ease}
+.resume-year-filter button span{display:inline-grid;place-items:center;min-width:1.3rem;height:1.3rem;padding:0 .3rem;border-radius:1rem;margin-left:.35rem;background:rgba(255,255,255,.07);font-size:.65rem}
+.resume-year-filter button:hover,.resume-year-filter button:focus-visible,.resume-year-filter button.active{border-color:#D92540;color:#fff;background:rgba(217,37,64,.13)}
+.resume-filter-result{color:var(--text-secondary);font-size:.75rem;margin-bottom:.25rem}
+.resume-courses article{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:1.25rem;padding:1.5rem 0;border-bottom:1px solid var(--border-subtle)}
+.resume-courses article:first-child{padding-top:0}
+.resume-courses article:last-child{border:0;padding-bottom:0}
+.resume-courses h3{font-size:1rem;font-weight:500;line-height:1.6}
+.resume-course-icon{display:grid;place-items:center;width:3rem;height:3rem;border:1px solid var(--border-subtle);border-radius:.6rem;color:#D92540;background:rgba(255,255,255,.025)}
+.resume-course-icon svg{width:1.25rem;height:1.25rem}
+.resume-course-meta{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.8rem;margin-top:.4rem}
+.resume-course-meta span{display:inline-flex;align-items:center;gap:.35rem}
+.resume-course-skills{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.75rem}
+.resume-course-skills span{border:1px solid var(--border-subtle);border-radius:2rem;padding:.3rem .55rem;color:var(--text-secondary);font-size:.65rem}
+.resume-courses a{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;white-space:nowrap;color:#D92540}
+.resume-languages{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.resume-languages dd{margin:.5rem 0 0;font-size:.9rem}
+.resume-page footer a{display:inline-flex;align-items:center;gap:.5rem;overflow-wrap:anywhere}
+@media(max-width:900px){.resume-page section{grid-template-columns:1fr}.resume-actions{position:static;justify-content:flex-start;margin-top:2rem}.resume-index{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:1.25rem}.resume-index a:nth-child(2),.resume-index a:nth-child(5){text-align:center}.resume-index a:nth-child(3n){text-align:right}}
+@media(max-width:640px){.resume-actions{flex-direction:column;align-items:flex-start}.resume-page .resume-actions .button{margin-top:0}.resume-index{display:flex;overflow-x:auto;justify-content:flex-start;gap:1.5rem;padding-bottom:1.25rem;scrollbar-width:none}.resume-index::-webkit-scrollbar{display:none}.resume-index a{flex:0 0 auto;text-align:left!important}.resume-courses article{grid-template-columns:auto minmax(0,1fr);align-items:start;gap:.9rem}.resume-courses article>a{grid-column:2}.resume-course-meta{flex-direction:column}.resume-course-icon{width:2.6rem;height:2.6rem}.resume-languages{grid-template-columns:1fr}.resume-page section{padding:3rem 0}.resume-section-heading h2{font-size:1.65rem}}

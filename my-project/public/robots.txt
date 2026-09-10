@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://eloygomes.com/sitemap.xml
